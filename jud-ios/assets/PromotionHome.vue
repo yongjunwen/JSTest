@@ -8,8 +8,7 @@
 
         <!-- :style="{height:deviceHeight}"-->
         <div class="contentView" :style="{height:deviceHeight}">
-
-            <slider-neighbor class="slider-neighbor" interval="0" neighborAlpha="0.9"
+            <slider-neighbor class="slider-neighbor" neighborAlpha="0.9"
                              neighborSpace="55" neighborScale="0.9" currentItemScale="1"
                              :index="selectIndex" @change="changeEvent">
 
@@ -61,8 +60,9 @@
             PromotionBottom
         },
         data: {
+            test: 'test222',
             selectIndex: 0,
-            buttonBgSelectColor: "#17031c",
+            buttonBgSelectColor: "#000000",
             deviceHeight: 10,
             buttonBgColor: null,
             bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",

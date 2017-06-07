@@ -21,6 +21,7 @@
             <text class="wishText">{{itemProduct.name}}</text>
             <div class="seeDiv"
                  @click="toSeeClick()">
+                <!--<text class="seeText">{{seeContent}}</text>-->
                 <text class="seeText">进去看看</text>
             </div>
 
@@ -33,13 +34,8 @@
         width: 600px;
         height: 940px;
     }
-    .slider-item {
-        /*margin-top: 100px;*/
-        /*margin-bottom: 100px;*/
-        /* margin-bottom: 10px;
-         margin-left: 20px;
-         margin-right: 20px;*/
 
+    .slider-item {
         width: 600px;
         height: 910px;
         background-color: white;
@@ -55,8 +51,8 @@
     .topItemBgImage {
         width: 600px;
         height: 260px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        /*border-top-left-radius: 10px;*/
+        /*border-top-right-radius: 10px;*/
     }
 
     .bottom-image {
@@ -103,6 +99,7 @@
         justify-content: center;
         position: absolute;
     }
+
     .wishText {
         font-size: 25px;
         color: #333333;
@@ -127,7 +124,7 @@
 
 <script>
     export default {
-        data: {},
+        data: {seeContent: '进去看看'},
         props: {
             itemProduct: {
                 type: Object,
@@ -139,5 +136,5 @@
                 console.log('--------toSeeClick----+++')
             }
         }
-    };
+    }
 </script>

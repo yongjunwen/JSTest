@@ -210,7 +210,6 @@
 	//
 	//
 	//
-	//
 
 	exports.default = {
 	    components: {
@@ -219,8 +218,9 @@
 	        PromotionBottom: _PromotionBottom2.default
 	    },
 	    data: {
+	        test: 'test222',
 	        selectIndex: 0,
-	        buttonBgSelectColor: "#17031c",
+	        buttonBgSelectColor: "#000000",
 	        deviceHeight: 10,
 	        buttonBgColor: null,
 	        bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
@@ -539,9 +539,7 @@
 	  },
 	  "topItemBgImage": {
 	    "width": 600,
-	    "height": 260,
-	    "borderTopLeftRadius": 10,
-	    "borderTopRightRadius": 10
+	    "height": 260
 	  },
 	  "bottom-image": {
 	    "marginLeft": 0,
@@ -726,12 +724,9 @@
 	//
 	//
 	//
-	//
-	//
-	//
 
 	exports.default = {
-	    data: {},
+	    data: { seeContent: '进去看看' },
 	    props: {
 	        itemProduct: {
 	            type: Object,
@@ -855,25 +850,27 @@
 	module.exports = {
 	  "slider-item-wish_lamp": {
 	    "width": 600,
-	    "height": 946,
+	    "height": 910,
 	    "borderRadius": 10,
 	    "overflow": "hidden",
 	    "backgroundColor": "rgb(48,131,248)"
 	  },
-	  "text": {
-	    "marginTop": 10,
-	    "marginLeft": 10,
-	    "marginRight": 10,
-	    "fontSize": 20,
-	    "height": 40,
-	    "color": "#000000"
+	  "topItemContent": {
+	    "top": 0,
+	    "width": 600,
+	    "alignItems": "center",
+	    "justifyContent": "center",
+	    "position": "absolute"
 	  },
-	  "image": {
-	    "marginLeft": 10,
-	    "marginRight": -10,
-	    "width": 580,
-	    "height": 580,
-	    "resize": "stretch"
+	  "lineItem": {
+	    "marginTop": 18,
+	    "fontSize": 26,
+	    "color": "#FFFFFF"
+	  },
+	  "topItemContentText": {
+	    "marginTop": 38,
+	    "fontSize": 40,
+	    "color": "#FFFFFF"
 	  }
 	}
 
@@ -926,9 +923,33 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
-	    data: {},
+	    data: {
+	        cardTitle: "心愿灯",
+	        tipContent: '30天内努力为你备好，请持续关注'
+	    },
 	    props: {
 	        wishLampObject: {
 	            type: Object,
@@ -945,10 +966,20 @@
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: ["slider-item-wish_lamp"]
+	  }, [_c('div', {
+	    staticClass: ["topItemContent"]
 	  }, [_c('text', {
-	    staticClass: ["text"]
-	  }, [_vm._v(_vm._s(_vm.wishLampObject.name))])])
-	},staticRenderFns: []}
+	    staticClass: ["topItemContentText"]
+	  }, [_vm._v("心愿灯")]), _c('text', {
+	    staticClass: ["lineItem"]
+	  }, [_vm._v("-·-")]), _c('text', {
+	    staticClass: ["tipContent"]
+	  }, [_vm._v(_vm._s(_vm.tipContent))])]), _vm._m(0)])
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: ["contentDiv"]
+	  }, [_c('div', [_c('image')])])
+	}]}
 	module.exports.render._withStripped = true
 
 /***/ }),
@@ -979,7 +1010,6 @@
 	  }, [_c('slider-neighbor', {
 	    staticClass: ["slider-neighbor"],
 	    attrs: {
-	      "interval": "0",
 	      "neighborAlpha": "0.9",
 	      "neighborSpace": "55",
 	      "neighborScale": "0.9",
