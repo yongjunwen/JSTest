@@ -104,7 +104,8 @@
 	  "contentView": {
 	    "top": 0,
 	    "position": "absolute",
-	    "width": 750
+	    "width": 750,
+	    "justifyContent": "center"
 	  },
 	  "slider-neighbor": {
 	    "top": 0,
@@ -289,7 +290,11 @@
 	    },
 	    created: function created() {
 	        //            获取设备高度
-	        this.deviceHeight = this.$getConfig().env.deviceHeight - 20;
+	        var deviceHeight = this.$getConfig().env.deviceHeight - 20;
+	        var deviceWidth = this.$getConfig().env.deviceWidth;
+
+	        var height = 750 / deviceWidth * deviceHeight;
+	        this.deviceHeight = height;
 	        //                jud.config.deviceHeight;
 	        console.log("---------" + this.deviceHeight);
 	    }
@@ -723,10 +728,14 @@
 	//
 	//
 	//
-	//
 
 	exports.default = {
-	    data: { seeContent: '进去看看' },
+	    data: function data() {
+	        return {
+	            seeContent: '进去看看',
+	            topContentText: '[加入我们，创建未来]'
+	        };
+	    },
 	    props: {
 	        itemProduct: {
 	            type: Object,
@@ -773,7 +782,7 @@
 	    staticClass: ["lineItem"]
 	  }, [_vm._v("-·-")]), _c('text', {
 	    staticClass: ["topItemContentText"]
-	  }, [_vm._v("[加入我们，创建未来]")])])]), _c('image', {
+	  }, [_vm._v(_vm._s(_vm.topContentText))])])]), _c('image', {
 	    staticClass: ["bottom-image"],
 	    attrs: {
 	      "src": _vm.itemProduct.pic
@@ -795,7 +804,7 @@
 	    }
 	  }, [_c('text', {
 	    staticClass: ["seeText"]
-	  }, [_vm._v("进去看看")])])])])
+	  }, [_vm._v(_vm._s(_vm.seeContent))])])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
@@ -866,6 +875,10 @@
 	    "marginTop": 18,
 	    "fontSize": 26,
 	    "color": "#FFFFFF"
+	  },
+	  "tipContent": {
+	    "color": "#FFFFFF",
+	    "fontSize": 26
 	  },
 	  "topItemContentText": {
 	    "marginTop": 38,
@@ -944,11 +957,19 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
-	    data: {
-	        cardTitle: "心愿灯",
-	        tipContent: '30天内努力为你备好，请持续关注'
+	    //        vue子视图引用的话data要写成如下方法样式
+	    data: function data() {
+	        return {
+	            cardTitle: "心愿灯",
+	            tipContent: '30天内努力为你备好，请持续关注'
+	        };
 	    },
 	    props: {
 	        wishLampObject: {
@@ -970,7 +991,7 @@
 	    staticClass: ["topItemContent"]
 	  }, [_c('text', {
 	    staticClass: ["topItemContentText"]
-	  }, [_vm._v("心愿灯")]), _c('text', {
+	  }, [_vm._v(_vm._s(_vm.cardTitle))]), _c('text', {
 	    staticClass: ["lineItem"]
 	  }, [_vm._v("-·-")]), _c('text', {
 	    staticClass: ["tipContent"]

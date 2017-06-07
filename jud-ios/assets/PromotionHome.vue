@@ -71,7 +71,7 @@
                     itemStyle: "1",
                     logoName: "华为",
                     name: "您许的愿望已为您备好，华为",
-                    brandLogo:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496753668189&di=a3af9cf6e8a0736098ff56e9ba464e7b&imgtype=0&src=http%3A%2F%2Fpic40.nipic.com%2F20140418%2F11353228_172109208105_2.jpg",
+                    brandLogo: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496753668189&di=a3af9cf6e8a0736098ff56e9ba464e7b&imgtype=0&src=http%3A%2F%2Fpic40.nipic.com%2F20140418%2F11353228_172109208105_2.jpg",
                     topPic: "https://img20.360buyimg.com/da/jfs/t5611/170/1386290369/74627/83bc5dc2/59263308N4c6c741d.jpg",
                     pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t3226/304/5090006819/188905/a115943a/586078b9N92942b62.jpg!q70.jpg"
                 },
@@ -79,7 +79,7 @@
                     itemStyle: "1",
                     logoName: "小米",
                     name: "您许的愿望已为您备好，小米",
-                    brandLogo:"https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1052774542,692148190&fm=26&gp=0.jpg",
+                    brandLogo: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1052774542,692148190&fm=26&gp=0.jpg",
                     topPic: "https://img1.360buyimg.com/da/jfs/t5878/144/1093343417/94022/3cd88574/5923d027N60c1c8b9.jpg",
                     pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t2008/329/2598526651/294767/23b295e4/570f2dcdN2cc4a19c.jpg!q70.jpg"
                 },
@@ -87,7 +87,7 @@
                     itemStyle: "1",
                     logoName: "格力",
                     name: "您许的愿望已为您备好，格力",
-                    brandLogo:"https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=572491635,2679502336&fm=26&gp=0.jpg",
+                    brandLogo: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=572491635,2679502336&fm=26&gp=0.jpg",
                     topPic: "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1496644651&di=472e2fbb406dadcc758f19f6228be092&src=http://images.ali213.net/picfile/pic/2013-01-22/927_p56.jpg ",
                     pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t2287/140/2518661178/69983/61cb59dc/570e1db2Nf5b0ebe3.jpg!q70.jpg"
                 },
@@ -95,7 +95,7 @@
                     logoName: "心愿灯",
                     itemStyle: "2",
                     name: "要降价!京东和阿里打价格战:刘强东发飙",
-                    brandLogo:"",
+                    brandLogo: "",
                     pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t1870/20/2688983380/490055/66145088/5715bc6aN4933b67c.jpg!q70.jpg"
                 }
             ]
@@ -136,7 +136,11 @@
         },
         created: function () {
 //            获取设备高度
-            this.deviceHeight = this.$getConfig().env.deviceHeight - 20;
+            var deviceHeight = this.$getConfig().env.deviceHeight - 20;
+            var deviceWidth = this.$getConfig().env.deviceWidth;
+
+            var height = 750 / deviceWidth * deviceHeight;
+            this.deviceHeight = height;
 //                jud.config.deviceHeight;
             console.log("---------" + this.deviceHeight)
         }
@@ -165,7 +169,7 @@
         width: 750px;
         /*height: 1100px;*/
         /*mark：目前高度在android上拿到的不准备 设置center就会偏下*/
-        /*justify-content: center;*/
+        justify-content: center;
     }
 
     .slider-neighbor {

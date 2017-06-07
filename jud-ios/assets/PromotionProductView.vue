@@ -10,7 +10,7 @@
                     <image style="width:212px;height: 70px;background-color: aquamarine ; margin-top: 18px;"
                            :src="itemProduct.brandLogo"></image>
                     <text class="lineItem">-·-</text>
-                    <text class="topItemContentText">[加入我们，创建未来]</text>
+                    <text class="topItemContentText">{{topContentText}}</text>
                 </div>
             </div>
 
@@ -21,8 +21,7 @@
             <text class="wishText">{{itemProduct.name}}</text>
             <div class="seeDiv"
                  @click="toSeeClick()">
-                <!--<text class="seeText">{{seeContent}}</text>-->
-                <text class="seeText">进去看看</text>
+                <text class="seeText">{{seeContent}}</text>
             </div>
 
         </div>
@@ -124,7 +123,12 @@
 
 <script>
     export default {
-        data: {seeContent: '进去看看'},
+        data: function () {
+            return {
+                seeContent: '进去看看',
+                topContentText:'[加入我们，创建未来]'
+            }
+        },
         props: {
             itemProduct: {
                 type: Object,

@@ -3,7 +3,7 @@
 
     <div class="slider-item-wish_lamp">
         <div class="topItemContent">
-            <text class="topItemContentText">心愿灯</text>
+            <text class="topItemContentText">{{cardTitle}}</text>
             <text class="lineItem">-·-</text>
             <text class="tipContent">{{tipContent}}</text>
         </div>
@@ -48,6 +48,11 @@
         color: white;
     }
 
+    .tipContent {
+        color: white;
+        font-size: 26px;
+    }
+
     .topItemContentText {
         margin-top: 38px;
         /*margin-left: 10px;*/
@@ -61,9 +66,12 @@
 
 <script>
     export default {
-        data: {
-            cardTitle: "心愿灯",
-            tipContent: '30天内努力为你备好，请持续关注'
+//        vue子视图引用的话data要写成如下方法样式
+        data: function () {
+            return {
+                cardTitle: "心愿灯",
+                tipContent: '30天内努力为你备好，请持续关注'
+            }
         },
         props: {
             wishLampObject: {
