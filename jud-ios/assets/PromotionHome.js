@@ -258,7 +258,6 @@
 
 	        buttonClick: function buttonClick(index) {
 	            this.selectIndex = index;
-	            this.$getConfig().env.deviceWidth;
 	        },
 
 	        changeEvent: function changeEvent(e) {
@@ -289,14 +288,23 @@
 	        }
 	    },
 	    created: function created() {
+	        //
+	        var platform = this.$getConfig().env.platform;
 	        //            获取设备高度
-	        var deviceHeight = this.$getConfig().env.deviceHeight - 20;
+	        var deviceHeight = this.$getConfig().env.deviceHeight;
 	        var deviceWidth = this.$getConfig().env.deviceWidth;
 
 	        var height = 750 / deviceWidth * deviceHeight;
+	        if (platform === "iOS") {
+	            height -= 20;
+	        } else if (platform === "Android") {
+	            height -= 120;
+	        } else {
+	            console.log("=没有匹配到=");
+	        }
 	        this.deviceHeight = height;
 	        //                jud.config.deviceHeight;
-	        console.log("---------" + this.deviceHeight);
+	        console.log("---------" + this.deviceHeight + "height=" + height + "platform=" + platform);
 	    }
 	};
 	module.exports = exports['default'];
