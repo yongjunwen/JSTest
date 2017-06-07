@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>JudSDK.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Pods-JudDemo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>SocketRocket.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1A39B0EB5442720A5FE2F284206354CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>55D8775FECDAF2F91F89C050F4829C4C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B4FDA2D2542D215F60CE66F6B418BB5C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F78AA9245E7D07A77579A3DCE91C2F48</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

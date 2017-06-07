@@ -1,0 +1,1 @@
+../../../../JudSDK/JudSDK/Sources/Component/JUDComponent_internal.h

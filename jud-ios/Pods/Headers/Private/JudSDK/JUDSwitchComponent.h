@@ -1,0 +1,1 @@
+../../../../JudSDK/JudSDK/Sources/Component/JUDSwitchComponent.h

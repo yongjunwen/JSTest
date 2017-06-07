@@ -1,0 +1,228 @@
+<template>
+    <!-- 滑动组件的大背景视图 -->
+    <!--  -->
+    <div class="rootDiv">
+        <div class="bgView" :style="{height:deviceHeight}">
+            <image class="bgImage" :src="bgImage" :style="{height:deviceHeight}"></image>
+        </div>
+
+        <!-- :style="{height:deviceHeight}"-->
+        <div class="contentView">
+
+            <slider-neighbor class="slider-neighbor" interval="0" neighborAlpha="0.9"
+                             neighborSpace="55" neighborScale="0.9" currentItemScale="1"
+                             :index="selectIndex" @change="changeEvent">
+
+                <div @click="clickEvent" v-for="itemProduct in productList">
+
+                    <promotion-product-view :itemProduct="itemProduct"
+                                            v-if="itemProduct.itemStyle==1"></promotion-product-view>
+
+                    <promotion-wish-lamp-view :wishLampObject="itemProduct"
+                                              v-if="itemProduct.itemStyle==2"></promotion-wish-lamp-view>
+                </div>
+
+            </slider-neighbor>
+            <!-- 底部按钮背景视图 -->
+            <!-- :style='{backgroundColor: buttonBgColor} -->
+            <div class="bottomTab">
+                <!--<div v-for="(item,index) in productList" >-->
+                <!--<promotion-bottom :item="item" :index="index" v-if="item"></promotion-bottom>-->
+                <!--</div>-->
+                <div class="bottomTabContentBg">
+
+                    <div class="bottomTextBgDiv" v-for="(itemProduct,index) in productList"
+                         v-bind:style="{'backgroundColor':(index==selectIndex?buttonBgSelectColor:buttonBgColor)}"
+                         @click="buttonClick(index)">
+                        <text class="bottomText">{{itemProduct.logoName}}</text>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--测试代码-->
+        <!--<div class="test" style="align-items: center;-->
+        <!--justify-content: center; background-color: aquamarine; width: 90px; height: 50px">-->
+        <!--<text class="bottomText">测试</text>-->
+        <!--</div>-->
+    </div>
+</template>
+
+<script>
+    import PromotionBottom from './PromotionBottom.vue'
+    import PromotionProductView from './PromotionProductView.vue'
+    import PromotionWishLampView from './PromotionWishLampView.vue'
+
+    const modal = jud.requireModule('modal')
+    export default {
+        components: {
+            PromotionProductView,
+            PromotionWishLampView,
+            PromotionBottom
+        },
+        data: {
+            selectIndex: 0,
+            buttonBgSelectColor: "#17031c",
+            deviceHeight: 10,
+            buttonBgColor: null,
+            bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
+            productList: [
+                {
+                    itemStyle: "1",
+                    logoName: "华为",
+                    name: "京东引领未来，iPad团队引领未来",
+                    brandLogo:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496753668189&di=a3af9cf6e8a0736098ff56e9ba464e7b&imgtype=0&src=http%3A%2F%2Fpic40.nipic.com%2F20140418%2F11353228_172109208105_2.jpg",
+                    topPic: "https://img20.360buyimg.com/da/jfs/t5611/170/1386290369/74627/83bc5dc2/59263308N4c6c741d.jpg",
+                    pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t3226/304/5090006819/188905/a115943a/586078b9N92942b62.jpg!q70.jpg"
+                },
+                {
+                    itemStyle: "1",
+                    logoName: "小米",
+                    name: "百草味携手京东high翻“618全民年中购物节”",
+                    brandLogo:"",
+                    topPic: "https://img1.360buyimg.com/da/jfs/t5878/144/1093343417/94022/3cd88574/5923d027N60c1c8b9.jpg",
+                    pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t2008/329/2598526651/294767/23b295e4/570f2dcdN2cc4a19c.jpg!q70.jpg"
+                },
+                {
+                    itemStyle: "1",
+                    logoName: "格力",
+                    name: "夏日陪你美翻天!荣耀V9京东点评送好礼  ",
+                    brandLogo:"",
+                    topPic: "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1496644651&di=472e2fbb406dadcc758f19f6228be092&src=http://images.ali213.net/picfile/pic/2013-01-22/927_p56.jpg ",
+                    pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t2287/140/2518661178/69983/61cb59dc/570e1db2Nf5b0ebe3.jpg!q70.jpg"
+                },
+                {
+                    logoName: "Apple",
+                    itemStyle: "2",
+                    name: "要降价!京东和阿里打价格战:刘强东发飙",
+                    brandLogo:"",
+                    pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t1870/20/2688983380/490055/66145088/5715bc6aN4933b67c.jpg!q70.jpg"
+                }
+            ]
+        },
+        methods: {
+
+            buttonClick: function (index) {
+                this.selectIndex = index;
+                this.$getConfig().env.deviceWidth;
+            },
+
+            changeEvent: function (e) {
+                var selectIndexStr = e["index"];
+
+//                modal.toast({
+//                    message: selectIndexStr,
+//                    duration: 1.8
+//                })
+
+                this.selectIndex = Number(selectIndexStr);
+                // if(this.selectIndex  == 0){
+                //   this.selectIndex  = 1;
+                // }else{
+                //   this.selectIndex  = 0;
+                // }
+                console.log(e);
+//                和原生端进行通信协议
+                var nativeEventHandle = require('@jud-module/nativeEventHandle');
+
+                var self = this;
+//                nativeEventHandle.handleEvent(
+//                    "kScrollChangeKey", //通信key
+//                    {"index": e},
+//                    function (ret) {
+//                        // ret就是我们传入的{"Hello": "World"}
+//                    });
+            }
+        },
+        created: function () {
+//            获取设备高度
+            this.deviceHeight = this.$getConfig().env.deviceHeight;
+//                jud.config.deviceHeight;
+            console.log("---------" + this.deviceHeight)
+        }
+    }
+</script>
+
+<style scoped>
+
+    .rootDiv {
+        background-color: yellow;
+    }
+
+    .bgView {
+        width: 750px;
+        /*height: 1000px;*/
+    }
+
+    .bgImage {
+        width: 750px;
+        /*height: 1000px;*/
+    }
+
+    .contentView {
+        top: 0;
+        position: absolute;
+        width: 750px;
+        /*mark：高度一定要设置数字否在 android上显示不出来*/
+        height: 1000px;
+        /*justify-content: center;*/
+    }
+
+    .slider-neighbor {
+        top: 0;
+        /*margin-top: 10px;*/
+        width: 750px;
+        /*mark：高度一定要设置数字否在 android上显示不出来*/
+        height: 946px;
+        /*width: 320px;*/
+        /*height: 280px;*/
+        /*border-width: 1px;*/
+        /*border-style: solid;*/
+        /*border-color: #41B883;*/
+        /*justify-content: center;*/
+        align-items: center;
+        /*background-color: #41B883;*/
+    }
+
+    .bottomTab {
+        /*margin-left: 0;*/
+        margin-top: 10px;
+        /*width: 750px;*/
+        height: 90px;
+        /*border-width: 1px;*/
+        /*border-style: solid;*/
+        /*border-color: green;*/
+        /*background-color: darkred;*/
+        /*flex-direction: row;*/
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottomTabContentBg {
+        background-color: rgba(0, 0, 0, 0.7);
+        flex-direction: row;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 40px;
+    }
+
+    .bottomTextBgDiv {
+        width: 130px;
+        height: 90px;
+        align-items: center;
+        justify-content: center;
+        /*background-color: red;*/
+        /*border-radius: 20px;*/
+    }
+
+    .bottomText {
+        /*background-color: white;*/
+        /*  width: 60px;
+        height: 40px;*/
+        /*margin-left: 0;*/
+        font-size: 22px;
+        color: white;
+        /*text-align: center;*/
+    }
+
+</style>

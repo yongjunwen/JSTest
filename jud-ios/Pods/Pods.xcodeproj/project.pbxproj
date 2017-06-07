@@ -1,0 +1,2075 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0033DCD8E991A8F231A9ECED95F565FD /* JUDJSExceptionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D51C80BB5C5F3462FD02C053FCC08B /* JUDJSExceptionInfo.m */; };
+		01025EDBB89C7D4E51AB7896C2BA8EF9 /* JUDBridgeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F16217F6A85A3F34A154401B9D36545 /* JUDBridgeMethod.m */; };
+		0163F095009F0389BAD961D6A9AE5981 /* JUDNavigatorModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3342B0E12B6F4F926BCF60FB08F91777 /* JUDNavigatorModule.m */; };
+		035A200A6C5953A8CA8CF69D1230A802 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9531DF03ACE450B7D55208FFF53E68A /* GLKit.framework */; };
+		043329388B7C7231DD97AD5C00177716 /* JUDLength.h in Headers */ = {isa = PBXBuildFile; fileRef = 48AEFAC62D9FE6426FD780FBB84B8444 /* JUDLength.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0508FC1C5231A2CB4CFBFE2230501FD5 /* JUDComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 686BAC039AAE580B4B336E29858FEF39 /* JUDComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06FB3914D56109C3EB32DA44A700D7C3 /* JUDTextAreaComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BA26EADB1A8ACB7C11FB3EBB565DA56 /* JUDTextAreaComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		085AF407B5D09E0C5C98F098A68DA1B1 /* JUDCanvasComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A4B3EBB53ABB4B2A26F3CCACC82FA56 /* JUDCanvasComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		089708CE977B36A054AB5C2573817F86 /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = A48E25EF791E4F2A3216C75121A09D6F /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A6DDA574428DD9F39BE7E1777FC62C0 /* JUDClipboardModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 9244CCB5D04C86C979873461D2D9A36C /* JUDClipboardModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AB4959700F966E04D3631CA111610EF /* JUDSliderComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F029B4E8D834AB555C9A5073946F19 /* JUDSliderComponent.m */; };
+		0AF2D0B6A4F495606325B730EFAF82A8 /* JUDHandlerFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 4660129A7B709E1CBA5B534A3625D58C /* JUDHandlerFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C9C1E1EB45401C543ABCE221929F564 /* JUDInstanceWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = BDE9CB8ABAC3BD589EEB62F6B6CC7ED0 /* JUDInstanceWrap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D9BCE88FFC4F87FCD88FB21C8C88A6C /* JUDWebViewModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 4668DCFAEC5E2366CFA7648E77D69FDD /* JUDWebViewModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EEF288A7DA2A6B472733CFBAA46190E /* JUDType.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E4F73DBCD1968C0A6400CC683490CD /* JUDType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F28F79E452AA367119FC51124A6869E /* JUDComponentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 00ADA6FD333C11BC66BD044FF732688E /* JUDComponentFactory.m */; };
+		101277BD8D5D6FFE2565588786932D1F /* JUDIndicatorComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5548636D617618B0BAA01678EC858EE4 /* JUDIndicatorComponent.m */; };
+		12701F819B4ADCBD76569DF19767ED51 /* JUDModuleMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AFA2411892AF1C68BBB52264995B71B /* JUDModuleMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1287046BDD8754A88DB027731635A6BB /* JUDSliderComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 1715E568191B183A8E964EEBEA2E4ED8 /* JUDSliderComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13741BB88F7F42434D91DF9B5A8103DF /* SDWebImageDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 00ABF0D48D5BDED4354A2FBFFA25986D /* SDWebImageDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		139671A6D16ECD812BB82B1953440492 /* JUDSDKInstance_private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F1B8AF131C25D7DFA38ADFDEC1D5BC8 /* JUDSDKInstance_private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1479A2A0B847EA3A3C0DAF3A7DB6CC4E /* JUDTimerModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 82DC619D18F15518A3AF7389171C84D9 /* JUDTimerModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14DF0327E2398D4F359176CFA41381AE /* JUDThreadSafeMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 143D57CA1C3DB18006E7BA36DED9E0FC /* JUDThreadSafeMutableDictionary.m */; };
+		15016085063BB11D029B36AACB6313B8 /* JUDAnimationModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 533DE9D25878BB4692EC2B2AA82A2B86 /* JUDAnimationModule.m */; };
+		1682DDDF12D1D4D6F630A4700E39A4E3 /* JUDComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E807757EA0CE9AE37A9E2C49E94BD11 /* JUDComponent.m */; };
+		1744CF9E438C218C1F17C1F0F70BBF2C /* JUDSimulatorShortcutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B07C35B1E542A517D687FEBA0A525F7E /* JUDSimulatorShortcutManager.m */; };
+		18765B25E0422A962B2DC36747B8A6F0 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C15AFDF5376D8A8D8BF944A1C4EFB2 /* SRWebSocket.m */; };
+		18D8EB6ADC9913DDC89B7AC4437DB121 /* SRWebSocket+Jud.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B7E8067664996862E122F962409D76 /* SRWebSocket+Jud.m */; };
+		18F1ED003FCEF574E38F6A3B930BD64A /* JUDComponentMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FF37AE66CAFDB53069A9F2C494CF1F /* JUDComponentMethod.m */; };
+		19177EBA034A64498DD6ECB7985C3A2F /* JUDPolyfillSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 04711AB0A95B5BCFF92AE8105555A81B /* JUDPolyfillSet.m */; };
+		1928162AFB695DCDD8598FDAF2A62EF7 /* JUDRuleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CF841BD89179B2643EB1119501A7336 /* JUDRuleManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		194137580D566BB42593A4354D7527DE /* JUDSimulatorShortcutManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DA56AD7C26FA9A5C76396B5D67F7BDA /* JUDSimulatorShortcutManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A8DE98F0007F6385522E1A3434FD6D7 /* NSArray+Jud.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F6EC543132156D4BC6968C37BDCC6D /* NSArray+Jud.m */; };
+		1AB69886A9451D6831F6510F51A74DA7 /* JUDResourceResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ED1D58104A5B63ADD1A9E404F6B7DCD /* JUDResourceResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B4363510B280065EB4F8E57266A7259 /* JUDImageComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA29D568DB235A7C62464703AEE4D56 /* JUDImageComponent.m */; };
+		1BC357AD463760BA45A1E285C71C85D0 /* JUDJSExceptionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D553899A44F28C69F6A89ABDCAC9E20 /* JUDJSExceptionInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D4DB11D8BEC5509F82AADFFE91538E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F386E088D01213BA0E36F997FDEA26 /* Foundation.framework */; };
+		1DF9D357A871AB7EB977A80AE7705393 /* JUDRoundedRect.h in Headers */ = {isa = PBXBuildFile; fileRef = C2546D50BB053E7E1E66EB4B522AA3D1 /* JUDRoundedRect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EA2C053F595DAD841C77280B48605E5 /* JUDDisplayQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F50DD079123536ABB80DA1E57F6D82 /* JUDDisplayQueue.m */; };
+		1EB6FDDA002BC23A96A1EC132DE81B65 /* JUDComponent+ViewManagement.h in Headers */ = {isa = PBXBuildFile; fileRef = ADE37FC988DF6997C5073BBE85F5CAB0 /* JUDComponent+ViewManagement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FBB35A715B600A61B42C61F677C8C76 /* JUDEventModuleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E6F20B2C06E1D14BE86FDA947ADBCF /* JUDEventModuleProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21748428AB45A79C5D0FC4FF2F2F0EEC /* JUDVideoComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = A446E502DD880A22EFA36A7FD5628CC8 /* JUDVideoComponent.m */; };
+		221E169799DE47E451B5A50E99D1DA5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F386E088D01213BA0E36F997FDEA26 /* Foundation.framework */; };
+		227EE9F8393C0DF00FC4D0D5225E6FC8 /* JUDAppMonitorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C240555E3FE79EB6BFF3B819AACF4591 /* JUDAppMonitorProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24CD39FFD7A1953676DDE4FD07F80814 /* JUDWebSocketHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 56A99DFFA3C3940E9F80B908905ABF09 /* JUDWebSocketHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24D239CB8D269E491E6D316CA0A53744 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E949A2399B741AA46F66D9BD9EAB532 /* UIImage+GIF.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		25116DE9277302C784D2D108F9C5FAB5 /* JUDJSExceptionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EE9C64F14CB91CF6DEFD65AF1DA20E6 /* JUDJSExceptionProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		253641CF09B4656E66FD9EC36FAE4D9E /* NSTimer+Jud.m in Sources */ = {isa = PBXBuildFile; fileRef = AE58529EFF0812690040BDCC41F643CE /* NSTimer+Jud.m */; };
+		256FD286145483B31B51278CC408051D /* JUDStorageModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCFDE9A508B14CBB8B13DA8B107C3F5 /* JUDStorageModule.m */; };
+		25B78EF21CF06A21C89BE650B455AF6B /* JUDWebSocketDefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = AF79E111D5EA1B7652670C07B59D938A /* JUDWebSocketDefaultImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		261B1145981C79D46C4CE56341D634FC /* JUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B613D8F15EFB13C15B3995802E109CA /* JUDLayer.m */; };
+		2689CCA9CE637666B8BF4786C30E9329 /* JUDVideoComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B52539B82EA1A78F3260849FA4D1A2F /* JUDVideoComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2855484E92FD4E3BD84D6E1DA07730BC /* NSObject+JUDSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A7E6804F2E891ED499DA9C2BED6CEE /* NSObject+JUDSwizzle.m */; };
+		2954B425356FA690629D651E0D6BD7F2 /* JUDAppConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 9810420122860C697A40E9CBF8903D21 /* JUDAppConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A1B62487D570B7B3A51CBB79C1216E8 /* JUDMetaModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FF373341BF53C6B728C9A14846D275 /* JUDMetaModule.m */; };
+		2CBE33E4D12AE69432967C48B0023024 /* JUDURLRewriteDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = DE118A97A6762E920F6BB68F49EB42C5 /* JUDURLRewriteDefaultImpl.m */; };
+		2DE32DA0BC8DB5237EE03CFB27BC6892 /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE50F6D84A88926980B18197C9D298 /* SDWebImage-dummy.m */; };
+		2E285EEDDFFDCD0AB3C9408255C8C8A6 /* JUDComponent+PseudoClassManagement.h in Headers */ = {isa = PBXBuildFile; fileRef = DFD8E426D9CD05FFB4B4CAAE3B001EDF /* JUDComponent+PseudoClassManagement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F17D07B0ED031F24FED36FAD59FDB1C /* JUDComponent+PseudoClassManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CF7077BF64A7D42CF754B4A8065161 /* JUDComponent+PseudoClassManagement.m */; };
+		2FC1B1A6AD4CB86CCA19769C44355F09 /* JUDResourceRequestHandlerDefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 42E6AE832D855651D2A896EE4D5B8503 /* JUDResourceRequestHandlerDefaultImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		325A4F89FCA5746C042E96A99FDE3593 /* JUDPolyfillSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B8EC6C383D34298723B10AA5233ED5 /* JUDPolyfillSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3387565624D12881660EDC02067821BE /* JUDAComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C04ED14ED211832CA40F9950920ABB2 /* JUDAComponent.m */; };
+		33B2FBC2661AC0A3C00E98023461F437 /* JUDView.h in Headers */ = {isa = PBXBuildFile; fileRef = 17ED529D9DE51A1055036ED94FA07057 /* JUDView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		354F9E2327182615A6C34FF1FCFA4D90 /* JUDInvocationConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF42019364305FA6D04E216C72DF093 /* JUDInvocationConfig.m */; };
+		357F2988C04DFF25BE8D9946FAC91C6C /* JUDClipboardModule.m in Sources */ = {isa = PBXBuildFile; fileRef = ED1E325FA3E921D440169F013D06F97D /* JUDClipboardModule.m */; };
+		366A3AC3814F9F78A4A5739242313B08 /* JUDBridgeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E3922663038B6650A5F583793773EF /* JUDBridgeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36F22592249ECF4C3545612CC01140A4 /* JUDThreadSafeCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = D1098C54A346742544D8D1BC1F93F16D /* JUDThreadSafeCounter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37C9CC27B3588DF3A369D93C877BE31E /* JUDResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9624CDDB5A29E9B4843CD2B8C7C7E4 /* JUDResourceLoader.m */; };
+		386CF2A337B7EA79537D796AA15885F6 /* JUDMTADefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D7D375FAEFAAF0198868556B3711B9 /* JUDMTADefaultImpl.m */; };
+		3891EC3C45357BBE1D704C16BA159A4C /* JUDStreamModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD4B727E126A595DBDDEC7980EF0D28 /* JUDStreamModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		394F0AD14427491D9B15A5ABB0124B3D /* JUDRootView.h in Headers */ = {isa = PBXBuildFile; fileRef = A8A902893A7FC44E64C4C23F9D17A47C /* JUDRootView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39B2BE1A09966AA0B2DD7AD3242B9356 /* JUDLoadingComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D9C72914CA80A54AA8D6D191B7034C /* JUDLoadingComponent.m */; };
+		3A92924967BD19886CCB641DA72019E9 /* JUDConvert.h in Headers */ = {isa = PBXBuildFile; fileRef = 378C0EEBF33E7E556AB9C75733A03606 /* JUDConvert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A97E6F55F41B46FD0684B1DAEF8A317 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E8E8EF9A44AD10E99F8FA5D47270D /* NSData+ImageContentType.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3B942F926F7F25902F24CC49026D4BC0 /* JUDLoadingComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = FB38C310CB3B633BB032879A34DA0386 /* JUDLoadingComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CDB06008FB3F64B8484C3D1E618420E /* JUDComponent+Display.h in Headers */ = {isa = PBXBuildFile; fileRef = BE6554BDD1D2CB0175EE6B66B214A4BE /* JUDComponent+Display.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D9802AB1AE57AC3EAA97DDDD1B813AB /* JUDLayoutDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 52F1748CD3CE47C5FA6028186D340774 /* JUDLayoutDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3EB29BEAAB9E6FA83313F533FF45A5EE /* JUDEmbedComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C377E0D031A0EE4875992B8203ABF7C7 /* JUDEmbedComponent.m */; };
+		3FB0FE44C0B7D922BFBE992CFAF75E78 /* UIBezierPath+Jud.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4DA734778696C656064400354B0FD9 /* UIBezierPath+Jud.m */; };
+		4095915C15D0F32D88BA3DC042DD13EC /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AFEC0B37D5F03BB85D5F8CC62DE30B /* JavaScriptCore.framework */; };
+		416E024020AD100073B32D27602FE219 /* JUDAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BCF70781DA27D0A4BEC9D8BF1B86D95 /* JUDAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		432FF4FC50352A4EDE5FDC078F283115 /* JUDSDKError.h in Headers */ = {isa = PBXBuildFile; fileRef = D36F2CDA170C0AB953B0174ABBA6B743 /* JUDSDKError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		433097F2ED6CA1335FAC7203A01F100B /* JUDBridgeMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 25589211B0D65642C5881EC2D89359F4 /* JUDBridgeMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4441F12BFE392A21A2596B2982E9A324 /* JUDIndicatorComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = D26EB91E2EF58EE8497BF6769CA4B30D /* JUDIndicatorComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		449259838CE7C4CE4707C7D2CB93AB34 /* JUDComponent+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AECDD4443D5EA70DC85FF983167E9A9 /* JUDComponent+Navigation.m */; };
+		455B699F0959784984FB2DBDA37A7E9E /* JUDWebSocketModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 380F3B033EC20D705AC7B1B819954393 /* JUDWebSocketModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45BD19E1531CD841863EDCE3F59F1BF7 /* JUDBridgeProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = F3A70D12DE4548AA3C9AD7F115420165 /* JUDBridgeProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		476C46A3D10970B7CDEFFD2DD385B9E3 /* JUDTextComponentProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = BA324169BBC456952D3610253E70070D /* JUDTextComponentProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		478BAB67F47F4BC7FEE8EF215D985BEF /* JUDWeakObjectWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C619CCDF93E27A93D101CF932D75DD /* JUDWeakObjectWrapper.m */; };
+		480E46FEFE0E9A884E35A28E4F0988E9 /* JUDSDKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CB08E05848E3E8451FD5E6D3F296B8 /* JUDSDKManager.m */; };
+		49686B25FFA50854FDB2B0CD3B91B858 /* JUDModuleFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 62A6185556741DA592941045093064D4 /* JUDModuleFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49953189944FB69B27E7C1223208AEB6 /* JUDNavigationDefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BFF9742FBED6A9BAF9BEBD8E11E18A8 /* JUDNavigationDefaultImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A1EA2C0FC43A55EC659C9B9F2DB939F /* JUDLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB6C07AF546DCDD7A8B6B228403BB30 /* JUDLoadingIndicator.m */; };
+		4BDAC5C4D3E023F0EDA6DD5EDC157587 /* JUDWebSocketLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 607ABE239DCADCB95283282A5D73B752 /* JUDWebSocketLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C86EE38B32902CE48B073560CA88462 /* JUDCanvasModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CD9617BC98A3BDE5698F837A43E931 /* JUDCanvasModule.m */; };
+		4C90433CFD88F43F03BF646C58F89549 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87BD2CB76C9A0C4AF4E4D82F5E95067D /* CoreMedia.framework */; };
+		4CB43B369E9C12C474C25B0BD283FEA6 /* JUDStorageModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F8DB6075F70A91AB1EAB60289B83963 /* JUDStorageModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D01EE33283337ABAE64C9C2FF0CE347 /* JUDRefreshComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 335D944670FDE85B6A8AD276AE7CDC03 /* JUDRefreshComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D0296E9005CF59710D5D3E71E0FAEC9 /* JUDTextComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 57219347C1D7F2465808F5B7DDC6CB61 /* JUDTextComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D6D06DABE205308D72F93AABF849E02 /* JUDSwitchComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EBD866EEE3F2144AFBF3BE0AA94EBB /* JUDSwitchComponent.m */; };
+		4D94A28B2DCB3EE1D180D7E5A6977740 /* JUDCanvasModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B41795B77DE7533D645062DD3375F05 /* JUDCanvasModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DDE1DCF36414D505DFDF33C0362FCC6 /* JUDAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = 762FF0103878A90E6EB7534ED2FF6205 /* JUDAssert.m */; };
+		4E551595929520B3D1929B753DC65555 /* JUDMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A98F305F238E859CBCB580EAA34E7FE4 /* JUDMonitor.m */; };
+		4EAD18D9548CB2D1C5B2AA3A554E702F /* JUDDatePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 869FC2CEB430F6C047B67E568B269D5B /* JUDDatePickerManager.m */; };
+		4F24314F243E8C6BE5FEA01A1242839E /* JUDResourceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1872D7EB7DF71C56308011BA2E6E0EA5 /* JUDResourceRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5148B227F8B0B74B29BB01809EE881FE /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE262159830F9338389C2C35D2E1AE3 /* UIImageView+WebCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5283CB0085F8648F109AC4E15D6FF590 /* Pods-JudDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B478EEC387474AA7F533F80D1AB133F /* Pods-JudDemo-dummy.m */; };
+		52A5D810E6DFFE692C06059929D0B3AC /* NSTimer+Jud.h in Headers */ = {isa = PBXBuildFile; fileRef = C76002AEFA276F523CDD84A817A4F4D9 /* NSTimer+Jud.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5345F8C0F7BE84C0477C61B1164E432B /* JUDThreadSafeCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 245D7E0D43C259C21857F54CFC4B4CCA /* JUDThreadSafeCounter.m */; };
+		5421AE49953C8A2AFEF630FC612C465D /* JUDModalUIModule.m in Sources */ = {isa = PBXBuildFile; fileRef = C6251A52742DBF4B7724F5649468390A /* JUDModalUIModule.m */; };
+		54A67922F5FE5CEBC5EFACE09E94C348 /* JUDAComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 9903399FBAF26972ABA46D540A0732CF /* JUDAComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		581682275F122523A848D755F29F3405 /* JUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4443748F61BD706D4F41C6612D782DD0 /* JUDView.m */; };
+		58AACAB0AB03AC36889D237F8A935AC5 /* JUDDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = E1A92201E2D375621B3AFE39A7616D08 /* JUDDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59451AB4EE5D0953C360B75AA290375F /* JUDTextInputComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 8103CCE7751D38F287CD0D8A7878DFF1 /* JUDTextInputComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8D6131DB4F16084F421C266FB63B75 /* JUDMetaModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 958E42AB9D78D0097BCBB0FC535134D3 /* JUDMetaModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C5DFFC59900115A4D93AB8888D618C1 /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = F82FD6246F03DA2CF8CCE3A823CD6B07 /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C71815ED8B0F3A3324FAF485F6A495F /* JUDComponent+Events.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CC76C20EA4D8FF2001C4FBA605781E /* JUDComponent+Events.m */; };
+		5C807E2EBDCCF7416B02A85976BDFE67 /* JUDResourceRequestHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F2943E0183D87791F8B05A7483D3618 /* JUDResourceRequestHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CE7A128E4E799103D0A98E137CEEAB8 /* JUDScrollerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 70D081D1D6A90421434609A5E4EA5C7E /* JUDScrollerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D5C5281F6B470F4847927ABE26E616D /* JUDTimerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 733A91B4178C39F80FF385231B731CAF /* JUDTimerModule.m */; };
+		5E78BB091B39B72F6CCA8D32C468F420 /* JUDErrorView.h in Headers */ = {isa = PBXBuildFile; fileRef = B400AE4B6FA94F28F1EF758270E621FA /* JUDErrorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FBE6C1DEA9E0B850034BCDD5E5C926C /* JUDNavigationDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A92F99AC714E5948868E048052085ED6 /* JUDNavigationDefaultImpl.m */; };
+		5FEA3D3A65E5D67E3C41C1E9449B6CF3 /* JUDModuleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 78691E6A62C22D2ACDD79402CE7650EA /* JUDModuleProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60B5ABC9CA572231A6E44C3FFC85CF45 /* JUDSDKEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ACE25935660BDE9A213DD18275BB61A /* JUDSDKEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		611F7E820533D8B3BD832635A41AEDDA /* JUDUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BB4079F16E13DC0C16B693FB6851EE1 /* JUDUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		622C6F5429C198197E5CF036B509B347 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = DCCD7A8814405F28A35B672E72D84593 /* UIImage+MultiFormat.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		623A1D2DBA0BDD2DE3FBFC038FB637FE /* JUDThreadSafeMutableDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B5D3F058D37A2AB4480427B27A50AD4 /* JUDThreadSafeMutableDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64768E9C454CAF96F1C9F1EDE8E5201B /* JUDComponent+Events.h in Headers */ = {isa = PBXBuildFile; fileRef = C7A17118D1EC6135A6C70D2900DA02D9 /* JUDComponent+Events.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64C93BCB3DA3D3D0386A56EB69241D99 /* JUDBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 91592039663363453B6678D6E2DF3500 /* JUDBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64E6042588F602DA0B1F130D8399D0D9 /* JUDWebComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 20F09B14836883F99E442B9003E2182A /* JUDWebComponent.m */; };
+		65607B7AD1C3F84962FB24FB57ED8E44 /* JUDSwitchComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B502DFEE8C0B87386EAFDF9CD5D1A44A /* JUDSwitchComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66219637308166BAEA3C63D98E92ED82 /* JUDComponent+Display.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E68D67F214445DAD4448BD2A05D47F4 /* JUDComponent+Display.m */; };
+		6A73171965ECF86491F7F566FA55E457 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0634807C7EFB2107DCC51C679E0D6D59 /* SDImageCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6B2ED87CEA5BD95D0D6EE2983D8F860C /* JUDScrollerComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = ABA3FA87DDC22B7F91CFBDF13E3E1803 /* JUDScrollerComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B35E412A9B9714D4B290D6D18E4F3D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F386E088D01213BA0E36F997FDEA26 /* Foundation.framework */; };
+		6BB9B624D7890F2C499B83D70B685102 /* JUDResourceRequestHandlerDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7695AAD25BB321A8A87A3C0C580B51B5 /* JUDResourceRequestHandlerDefaultImpl.m */; };
+		6C2C408DB478C7D3C079310B20732392 /* JUDRuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D3BFCFE7D8A678C19CC5AD553DA786 /* JUDRuleManager.m */; };
+		6D94199D8089883A1F9279F8F17CA8AE /* JUDTextInputComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = EB42A6EA4CB98A5AAB013EA1C4BE5AE7 /* JUDTextInputComponent.m */; };
+		6EEB127B02DC3F86907549A5304284A0 /* JUDPickerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE6A8C84465C756E90EBD67B9C0B2D5 /* JUDPickerModule.m */; };
+		6F09400534CD2BDE4FABAB6824D21965 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC01E0A3E83A7D4C47577F96DDCB5437 /* SDWebImageManager.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7351EBFD035F381C73C602C2D6E1F056 /* JUDStreamModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E5A60E7B4A2BE6393F8F9585314B2B /* JUDStreamModule.m */; };
+		74319743BB687F9E9B279062D038FB37 /* JUDResourceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 605A62963AE577D3B2C39FA73693702B /* JUDResourceResponse.m */; };
+		783EF1F2987073ED1D0E7B5F6C965119 /* JUDComponent+GradientColor.h in Headers */ = {isa = PBXBuildFile; fileRef = B9A579B5440252625838ECA25113520F /* JUDComponent+GradientColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		788D3E5B1722EA50D83776F9C3CFBC49 /* JUDDebugTool.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4E72B05F25F5BF13B1378FDF25EDB4 /* JUDDebugTool.m */; };
+		78CB95C0264B1FDC25239A338D12681D /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 6990046A125EB4F328FD360A9CF2B3E2 /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78F77A4EAAD2E659DDF49B1FB942C29E /* JUDCellComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD5779FE4FD06532B5F602D34D38F60 /* JUDCellComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79A1700588C4F69AB551FEAE532D08E2 /* JUDErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E10A73DAC853CBFD00A868C1FA87FC38 /* JUDErrorView.m */; };
+		7A611C10CD4846FFD754180EE837135F /* JUDComponent+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = B928C766B0DB9DE6B4DB399400A85D5D /* JUDComponent+Layout.m */; };
+		7D92890ED536B4C7905442708F91BE75 /* JUDScrollerComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A5AC1420E1E13B5D4C395920B03F0D /* JUDScrollerComponent.m */; };
+		7F07E7CBDB476C0251CA5362B12C753C /* JUDCallJSMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E1B5D46A9FF1C981EA674CF47B9709 /* JUDCallJSMethod.m */; };
+		7F74FCD5D421D52309ED3BBB95E68E00 /* Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9333C3721C2D40F3FBD29D1E2F183F /* Layout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80BCA5AC93A6991976E3C5020AEF15CD /* JUDGlobalEventModule.h in Headers */ = {isa = PBXBuildFile; fileRef = F73A84C8A273D1CF83BB401995D3AC51 /* JUDGlobalEventModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		813E84D55733D70EB5DEB461B63D096E /* JUDInvocationConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 204F501B400365287108ADEF7D8172CD /* JUDInvocationConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81716149AFB01439E110EDD7690C64FF /* JUDConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 132E5A418E2E57B6C274157B9E0B1432 /* JUDConvert.m */; };
+		81C7DCDF79A065E359A1D39E7ECE6E06 /* JUDJSCoreBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A99638121B42F34EFCC79E22CDFA4D4 /* JUDJSCoreBridge.m */; };
+		854A9BA8B095204D4935889255FC59B9 /* JUDImgLoaderProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B469FBFC30D6ABA4FC7C977B078DC871 /* JUDImgLoaderProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		854ADA4059310F841A66DE2AF95BDBA8 /* NSArray+Jud.h in Headers */ = {isa = PBXBuildFile; fileRef = B88EFA630943669A8D203614CF50B938 /* NSArray+Jud.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8551C2F15372510B9ACB20709DAAAC49 /* JUDCommunicateModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F86AE3D589F2A1F3610752D9D743011 /* JUDCommunicateModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8569CE763CA18C2ECE975D57E4CE9A0D /* JUDBridgeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 219D7BDF60A49B28820C1D26DCE7E1CA /* JUDBridgeManager.m */; };
+		8598C5FAC7E9D19D3F3B82F40A430A99 /* JUDMTADefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = EFF63422DE175A2B05A61A6858E36E77 /* JUDMTADefaultImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86A569E02CCC8FDBF421330AD6976CDC /* JUDThreadSafeMutableArray.h in Headers */ = {isa = PBXBuildFile; fileRef = A22F7A5D35A2062CF14EC5BB956E8444 /* JUDThreadSafeMutableArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86CC70B4E83787C43723100EF9B0D84A /* JUDWebSocketDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A401B5918FAB12FCB10491BC3131289C /* JUDWebSocketDefaultImpl.m */; };
+		8733184B7C275F8A5C8A9EF0590BC136 /* JUDComponentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF2FC8D468802E6AEB2F7FD413E85FF /* JUDComponentManager.m */; };
+		8851BE38B798717CA2A1C90030883D85 /* NSObject+JUDSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 875166FAF51486C9748999E8B1A38BB1 /* NSObject+JUDSwizzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89B0778816C7D498EEC1A54BB818EBED /* JUDServiceFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = A78AF1252F0D92B696A7C6A6EA18108F /* JUDServiceFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AD773E77D0B07EC1E0F4228EBDCCB7D /* JUDComponent+GradientColor.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6098EE28EA0DFC945D1757DBBA0AC4 /* JUDComponent+GradientColor.m */; };
+		90E58DCA48BB84435FD053B86D0173FE /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE878361371DA2EBE71F97D1F8FB7CD /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9146E909EFD9A5371B2C17AE8403809B /* JudSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14537E8578EFF4C56395A27F8E01597B /* JudSDK-dummy.m */; };
+		921F4F59AFEA3B42F148B13798BF721B /* JUDLoadingIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = FA331FAB11998331A9EABAA7462D9FBC /* JUDLoadingIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9222F8BED29299C6C9591230E1E9DAF8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874F6BB73ECB74DD87AF253175FA8934 /* Security.framework */; };
+		951F92C61FB0ACC1F2888DE64A6F390E /* JUDListComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = F83CD5746A827624474048EEF5F934A3 /* JUDListComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9564AEC34BE0C6891273E8243A3EBA9B /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EB9557DBAF9EF53CC6DDBD3E6CC73DB /* SDWebImagePrefetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96338C0E02EBACF0E74972E352F604C3 /* JUDJSCoreBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = EE0E391F14F21E0EC3F30A11D6CD6F7C /* JUDJSCoreBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9808FC48166E3D68CCC41BABAC7D46D8 /* JUDCommunicate.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9DBED7A882DAAB06915C74E0AB599C /* JUDCommunicate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99269DDAC167CF658EC9FAEFCDE3BB6E /* JUDListComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CBCFA5E0B0084C8B1BB0582AA9F669A /* JUDListComponent.m */; };
+		9DB91207F047756C6CDD8113D2D74AF5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E854F85DFA4A6F08F39DADAC98E9E88 /* CFNetwork.framework */; };
+		9E6AAFC59D7E86051184A024CFED900C /* JUDDivComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 50D5F94EB9A44D9F9AE6A3F75813CDF6 /* JUDDivComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9ECEE22875464A782BEE337BD61F6FC4 /* JUDURLRewriteProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = F36AEFBC4E5F21A6292D6A62A22C6527 /* JUDURLRewriteProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9EF7C4E7A1FD6CDA45524309CB090682 /* JUDRootViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E76ED4B7A909B358EADA8919F96B153D /* JUDRootViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F530A3AE1BAD7CE57B0865A5457AA39 /* JudSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = EDCAD9593BC023DAB54F48221405EF97 /* JudSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A129119ABE711516C4D76AFACEC6FBD2 /* JUDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FE1CE08BD184C73B1A8C703AA2DCD7 /* JUDLog.m */; };
+		A13F12B83609A55482A21198C668C919 /* JUDWebSocketModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D9829010452703B4E1D6F9A74F2F86D6 /* JUDWebSocketModule.m */; };
+		A189930BDC184617F61DB96EBAF9BCAF /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E46B4EE33A7F16457E89AC19D84DFF8B /* SDWebImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2A07C8473FC6C574AD71C508A41B41E /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 242A5C54A6B3AEE0E6D101ED1063EA05 /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A30895BFCDEA473A286A44E29C550ECC /* JUDModuleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0817A39149436A5997F6BC83E3137632 /* JUDModuleFactory.m */; };
+		A46F1741CB460D4438F98F9528904983 /* JUDPickerModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 91617B73233FB23ECABC9DD051AB698E /* JUDPickerModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7572D8C13B8E967DFBDFCC22288E18B /* JUDCellComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4227DCC6894D076A87A9C20803A4F18C /* JUDCellComponent.m */; };
+		A79579B3671BFF5C2CF0D7E0674A65E7 /* JUDDivComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E8EE86D02965F94394E574B973895B /* JUDDivComponent.m */; };
+		A8938748A3E3FCB333B819316783D489 /* JUDLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5283ED5B4712A3463AC96BE4002D44C4 /* JUDLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8C6485B83A442BF5DE790F4B90ABD3F /* JUDComponentManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 038404F59D2E6693944AA1CE59B7ACD8 /* JUDComponentManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE93DBE316EEA1A7DEF719DC6C7D12A /* JUDComponent_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 552FDFFB81CD4E6A2E5262D0DEC6EF47 /* JUDComponent_internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEB7D9B3D929F59685F8BEDBDB78298 /* JUDDisplayQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = D413024B674D572D1B18112D87F01C8A /* JUDDisplayQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC224025D40AF1E0975FE77D70C23E7A /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A22033C0EBDBAB5C6412D73068C386 /* SDWebImageDecoder.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AC50098D02BA3EB1C0010AF5DC89CACA /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E7705BDA1B4F8069B87DD3B074BD8947 /* SDWebImageDownloaderOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AD247B374AB79F470CF8920A2EA6F3EE /* JUDModuleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F09746AEAA0369FC5F8E1D9084FE04 /* JUDModuleMethod.m */; };
+		AE8631900136B18D71AF43B5470B3039 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EABA3EAD3A9B9982E922AF1559E62DD /* AVFoundation.framework */; };
+		AEB15CAA9CD05D814C8E4FDD3A6F0C08 /* JUDWebViewModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A2700A8FFD5569BD221B4C3BE5B4BA /* JUDWebViewModule.m */; };
+		AF07866106B4E923218A074DF1EA3787 /* JUDDebugLoggerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF83B966DCB8547FFA5AE78B182CF78 /* JUDDebugLoggerBridge.m */; };
+		AF4C8C47C6EC990CFF3A9E94A12639C3 /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = 186DD11D4CF44A616085A91E705F48AA /* NSData+ImageContentType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFC7782D0EA9C41B4C81D4B593ED6827 /* JUDBridgeContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9871DF4EF3AB21792F6FAE9EC08736 /* JUDBridgeContext.m */; };
+		B257F61AA8BE1B4ED81D6CAE945C7FAD /* JUDEmbedComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 2290D5D9701221C7B6A615A2AC9EC25F /* JUDEmbedComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B43A358595B01A7EA550D0400A60B61F /* JUDDomModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 680764D08FB7AE677A95EDDEEBCCF9B3 /* JUDDomModule.m */; };
+		B4A880C1DF02E56470D92407F5AC221C /* SocketRocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5681AE139DD243BB0B40F35475E931F8 /* SocketRocket-dummy.m */; };
+		B51C5DC06B178859510FB825147663C6 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC41A01C0224A85C79D7D42587E0DC3 /* SDWebImageDownloader.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B548325AE5984D0DB6141EF81473A2CC /* JUDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E35891A782C9154C9639B9C90F08217F /* JUDRootViewController.m */; };
+		B6A3782B605971927975259EE12FC581 /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = BFCB2B089AA9699AB48FDDB69149F4CB /* SDImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6E95E5E0E0E2209F925C84D53812E02 /* JUDSliderNeighborComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C81A42BB75A55034E4733AF2DDA0745 /* JUDSliderNeighborComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B712BF9F93975EC4E3348A76BA82E0FC /* JUDModalUIModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E8D2AC57E75CFD28ECC4A8ED3F478C2 /* JUDModalUIModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8AF571C6D5C5DD2271C8324712ED5B2 /* JUDTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F182A0FFF7C517C8287DB7EFDBD8031 /* JUDTransform.m */; };
+		B98C0EAC1BF94C76F2ADEB793DD57444 /* JUDAppConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEF7DD7251CB1C8C6DEDBBC4FD1E29D /* JUDAppConfiguration.m */; };
+		BA5C9C7322C58786CD4F66BE731FA24E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F386E088D01213BA0E36F997FDEA26 /* Foundation.framework */; };
+		BACBE463AEED42217D3235059D913085 /* JUDSDKManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D81FC3E6A01E6ABF34CD380CB86BA3E1 /* JUDSDKManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB6701F1D11ACD943426D5BEC3035C5B /* JUDDebugLoggerBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = B86845BF14B6E14B6B2A18FDDADA5C4C /* JUDDebugLoggerBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBD543539B4B8ABBA3F7098B13E104C8 /* JUDMTAModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D75A7EB2A13BC7F9D6075E2019A4D7 /* JUDMTAModule.m */; };
+		BC1DED9A8499C3FD11C1D4467D2A3443 /* JUDComponentMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 530B1F3A9887E41883097ACF86087D36 /* JUDComponentMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD0CDC457B67F6BAECDC246CF6CD2A85 /* JUDCallJSMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 283E91C78F5B5967F16A7467901FD653 /* JUDCallJSMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE50E42487E3A614883037CFE5BFB2B2 /* JUDGlobalEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BE255DC8115023AA8A36003575A01F /* JUDGlobalEventModule.m */; };
+		BF162E7668B9BCDAC4C75C5C175D63EB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0535CFD3210BF18C089D176CD2E8E9CD /* ImageIO.framework */; };
+		BF92D7B7D236C5766BF375395447D973 /* JUDUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 656F5B93694347E4FB264F7EA1303379 /* JUDUtility.m */; };
+		C0384C388F8B5F8F210F3F987271D624 /* JUDResourceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D383E0BC56C1272A82C561175D5877F /* JUDResourceRequest.m */; };
+		C0A297D2368E61E177D526D379B23069 /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C4028409BB177D0C1A3898EBC984F13A /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C128E98302B648F1B60FA46555397960 /* JUDNetworkProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 556F8922433550DC72607C22616F6BC3 /* JUDNetworkProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2E3ECC306C776D4F21A342C0586BFAE /* JUDSDKInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = C416832186571FF4C258396F78C6B8D4 /* JUDSDKInstance.m */; };
+		C45E6D8BC8303D5AB4B034EDEEB2D09B /* JUDAnimationModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 22BDFF02BF833B6143947A6702449B46 /* JUDAnimationModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4CAA5B8603D03627480EB169EA79236 /* JUDComponent+Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E9E5D74FDBF0970005A315E2FBC8FC9 /* JUDComponent+Layout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C63049FD16C312C2747D53B428F2E5A9 /* JUDSliderNeighborComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 274CC1596CD5CDCCBB6F40E3212F32FC /* JUDSliderNeighborComponent.m */; };
+		C6A1AFA09A32C8A2EFD6A2AA7E2B402A /* JUDComponentFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 729EB0FC82588CD3AB275BAB7F431368 /* JUDComponentFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7B5346A0F0DADBE5392C78172A8291C /* JUDURLRewriteDefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 05EA8886736F2B52A0CED221D31655EA /* JUDURLRewriteDefaultImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C83A1456E9E786DC892E3E3306CBE401 /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 19BB7251F9822714B5DA433E8E22CACA /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C859199FB1EC0242C817BEC64FAAB7A6 /* JUDComponent+ViewManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = EB20BC228B2FB80443032CE326B98078 /* JUDComponent+ViewManagement.m */; };
+		C934FC522BD3557929F7BA1A807D2EB1 /* JUDServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D392DBF743CDDB2E0724B094D5EDB102 /* JUDServiceFactory.m */; };
+		C951E862D1E57EEDF17681030D2EC8B0 /* JUDTextAreaComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 979AA3465F0997B4A103E5ABA6921D6B /* JUDTextAreaComponent.m */; };
+		CA1BB07961F41A9755638184D05F0A4C /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCC0DC38C02647D6DEEDC302B947964 /* UIImageView+HighlightedWebCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CAB03A1E1F3613392EB497AB15A32563 /* SRWebSocket+Jud.h in Headers */ = {isa = PBXBuildFile; fileRef = 28AD65144F9D1FBB67376983216FECFD /* SRWebSocket+Jud.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB26FB6834FF31E885033FC656C089E4 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C963EF06FB0FF9601D9A3AEFDC29D547 /* UIButton+WebCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CC08E6BC9F3E043C533B61F59EF77436 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835EF0E84E82835641A5ECDD6B62D882 /* MediaPlayer.framework */; };
+		CC24F751598AE6C57CE105F875EF082E /* JUDNavigationProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 908D46100B0DD8D8547686D34629B0C7 /* JUDNavigationProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDE177B90C855A907E6F252602775028 /* JUDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 31D40CB833AEAA97A0A91E1011960023 /* JUDLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDECF5AC5C0E02DD03FEDDE50ADDD732 /* JUDSDKEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E4E3B61527E530EF73127C9B11EC1 /* JUDSDKEngine.m */; };
+		D222342F2488AC35B34DFF2D9C4A4181 /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 80E475E06B63A306806ED1070C4AA255 /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D55E9F6D31AC83FB2571C5C72907455D /* JUDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17002C1B1CD3A4C1E1F09D38A79E8737 /* JUDBaseViewController.m */; };
+		D611250D2AEBDAC26937F53D318833AE /* JUDThreadSafeMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 389C663CC836C2C8F05873B7AE8EBCCF /* JUDThreadSafeMutableArray.m */; };
+		D672243B7726AFA63CC3C367689644B1 /* JUDWeakObjectWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2242A7FBB588851AA6CBF89209A436F8 /* JUDWeakObjectWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6AAB1FD4E51B9C9C169B5FF42EAE57E /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 25F0A06FB4B3295C43A855020628F4EC /* SDWebImagePrefetcher.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D8D94C260591C8ABDBF6AFEFAFED2FA3 /* JUDCommunicateModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A47A55AEE280C24D71E6C371EDAAAF /* JUDCommunicateModule.m */; };
+		D9FCE07BBA3024A0903B879DE3FFAE2C /* WXDestroyProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FD8B5F0D8FF71D5D0B0C5A45217D709 /* WXDestroyProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBD56514B3CD3434E2D28C859424EEDC /* JUDSDKInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E300E95F05554AEA76B98EFC9D3FCA1 /* JUDSDKInstance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBEDEB28378AD458708DA395903BF01B /* JUDMTAModule.h in Headers */ = {isa = PBXBuildFile; fileRef = F8C9AE9F6AA6DF7D72FEE611360C6E4A /* JUDMTAModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD9D6622609B22247793AC5B908D706C /* JUDTextComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = C29B834C31F3F12682975E2A8157B828 /* JUDTextComponent.m */; };
+		DE699C14808CAA1B4EE3C1C30D7369D4 /* JUDDebugTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCF52541FB4AA35E6064F58E0AA93E5 /* JUDDebugTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0BAD06F53A3BE0874A92164F1A916AC /* Layout.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D665FEEE669EB395C08C7C9D20EB40B /* Layout.c */; };
+		E11A970A175E2F21E5E24657A1E88EF9 /* JUDResourceLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = B0995CB1803A43E62EA0EC4B3FD23449 /* JUDResourceLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E26754300C4FE5676C1D605E7A1E4C34 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D3C9B81B6221F1D3A4A762046AE9DE /* AVKit.framework */; };
+		E2676F5D985054982EC271257077360F /* JSValue+Jud.m in Sources */ = {isa = PBXBuildFile; fileRef = 000745A3A0B936B5AA583091477D25CD /* JSValue+Jud.m */; };
+		E28DA9AF3B93B2D59F7B9545C53DC8C0 /* JUDWebSocketLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD214D7DFFCCD54826BEDB14B43A19D /* JUDWebSocketLoader.m */; };
+		E379DA5C428FD10E89AE7FEC2041A3D0 /* JUDHandlerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AA9129778D4F0697AC33CC5EE6BC2F /* JUDHandlerFactory.m */; };
+		E440C32FDBE5057BDAABDCF7090A4977 /* JUDRoundedRect.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04041BF7DEA6A186F8CC4C2E59F99380 /* JUDRoundedRect.mm */; };
+		E63622EE726C0717218E74AE87F4AAEF /* JUDMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F5D303DFFE176B2F264CC125F71D3C4 /* JUDMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E63E4E55475DF0C8476A2602B3E9D755 /* JUDDatePickerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C4326D24FBD7D0A8E9EB9FF259C3463 /* JUDDatePickerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E66DCF53F25F498680C8726050ED7B04 /* JUDRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = CF89F5771610A27DDC267C9C58F1F8B7 /* JUDRefreshComponent.m */; };
+		E6C1881CC6FEA1A72146A5BC106A6C80 /* JUDComponent+Navigation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5170708CEE9BD6F7F2E6980B77534F4B /* JUDComponent+Navigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6C81470D0A91B4CBF844F2489A59374 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 962D4B7D5D70AD25481574AACB444271 /* SDWebImageCompat.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E6E6AE8EE135695107676D064B14EE6B /* JUDTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = 0692C58609F348CDA124AEA5AAFED4DD /* JUDTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E79830236A5F4BE959B71DE91175A540 /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C64E58C8546E03EA6D4F759354FC2F4 /* SDWebImageCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB11152CD0B9283A398026003D71D8D4 /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F65CA07337AAACDD9FEEE020C318F9F /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB99E92B45DAA85AF3028D04828FA078 /* JUDCommunicate.m in Sources */ = {isa = PBXBuildFile; fileRef = C14B84317D25EB3AE4EA24E218444B66 /* JUDCommunicate.m */; };
+		EBBE8E0AC01EF6ABB72B4D12673475D2 /* JUDDomModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B6B5180B2AE763ED18CCF1B507CF8DE /* JUDDomModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE071CFF6A3E7E362A9F6BF8BE939B89 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FC73916A62355C3E6A5BFAC9D2B8D6 /* UIView+WebCacheOperation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EE22AC38F82B50EC3B37954196F2D993 /* JUDImageComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = F022DB982F2234DFE941316237E514A5 /* JUDImageComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEA2E3C093682D0A0328153A41173E76 /* UIBezierPath+Jud.h in Headers */ = {isa = PBXBuildFile; fileRef = 66EC276D1821426F24DEBB99AA05C12C /* UIBezierPath+Jud.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2184267D04BE6724AB6A46C08B5E03E /* JUDNavigatorModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 40801EECB2A52E535217EC76959476D8 /* JUDNavigatorModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2D79178AFA35C06D36BA726BCDDA023 /* JUDBridgeContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CB000CAF2A0A2369DA08A8158D9DCA5 /* JUDBridgeContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F73F46F229E78EA49C84BCEE7A090657 /* JUDWebComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F114165395BED0BD10ACA3562DCE77 /* JUDWebComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F899B1C873EC08E1685AC1A923A75FA2 /* JUDInstanceWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 87231E61AF2E2985CFC19362FD6420B7 /* JUDInstanceWrap.m */; };
+		F8C942B50491BB83E8B9728686032C71 /* JUDLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 2610D6443E7AECF55E5F34E5E60CF8AF /* JUDLength.m */; };
+		F8E22CBB9D36456595207F4D99771C84 /* JSValue+Jud.h in Headers */ = {isa = PBXBuildFile; fileRef = 79876C30EF0975B002411EB8F52C2246 /* JSValue+Jud.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC4E405822EE4D9200AE31D2D0F93B67 /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = E3D646F10EB99F7AA783DC8FF4EFCC70 /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCC74E85EE2CAD396D2E53F0D974D2C7 /* JUDCanvasComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F554741B1F7E905E277CECBFEFD2A5 /* JUDCanvasComponent.m */; };
+		FD230133573F9C8D3D6E307590867494 /* JUDRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E5932E561614E8A7606ABB52084C9 /* JUDRootView.m */; };
+		FD3821A0F9A7FF4B4EE9F53F538053C1 /* JUDMTAProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = A87474DC93643F73BC891F64951E4D59 /* JUDMTAProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27FBF066CC3A0CB46977D60DB8BFECAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F78AA9245E7D07A77579A3DCE91C2F48;
+			remoteInfo = JudSDK;
+		};
+		64743BCA140D14C6F3D0ABBD1F9557A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55D8775FECDAF2F91F89C050F4829C4C;
+			remoteInfo = SocketRocket;
+		};
+		BF8C197684E739376B5D8971C8557240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A39B0EB5442720A5FE2F284206354CF;
+			remoteInfo = SDWebImage;
+		};
+		FD8E706E111FDFE535E61AAC429EA189 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55D8775FECDAF2F91F89C050F4829C4C;
+			remoteInfo = SocketRocket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		000745A3A0B936B5AA583091477D25CD /* JSValue+Jud.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSValue+Jud.m"; sourceTree = "<group>"; };
+		00ABF0D48D5BDED4354A2FBFFA25986D /* SDWebImageDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDecoder.h; path = SDWebImage/SDWebImageDecoder.h; sourceTree = "<group>"; };
+		00ADA6FD333C11BC66BD044FF732688E /* JUDComponentFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDComponentFactory.m; sourceTree = "<group>"; };
+		038404F59D2E6693944AA1CE59B7ACD8 /* JUDComponentManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDComponentManager.h; sourceTree = "<group>"; };
+		03F50DD079123536ABB80DA1E57F6D82 /* JUDDisplayQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDDisplayQueue.m; sourceTree = "<group>"; };
+		04041BF7DEA6A186F8CC4C2E59F99380 /* JUDRoundedRect.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = JUDRoundedRect.mm; sourceTree = "<group>"; };
+		04711AB0A95B5BCFF92AE8105555A81B /* JUDPolyfillSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDPolyfillSet.m; sourceTree = "<group>"; };
+		04F386E088D01213BA0E36F997FDEA26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0535CFD3210BF18C089D176CD2E8E9CD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		05EA8886736F2B52A0CED221D31655EA /* JUDURLRewriteDefaultImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDURLRewriteDefaultImpl.h; sourceTree = "<group>"; };
+		0634807C7EFB2107DCC51C679E0D6D59 /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
+		0692C58609F348CDA124AEA5AAFED4DD /* JUDTransform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDTransform.h; sourceTree = "<group>"; };
+		06FF37AE66CAFDB53069A9F2C494CF1F /* JUDComponentMethod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDComponentMethod.m; sourceTree = "<group>"; };
+		0817A39149436A5997F6BC83E3137632 /* JUDModuleFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDModuleFactory.m; sourceTree = "<group>"; };
+		0A9624CDDB5A29E9B4843CD2B8C7C7E4 /* JUDResourceLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDResourceLoader.m; sourceTree = "<group>"; };
+		0B478EEC387474AA7F533F80D1AB133F /* Pods-JudDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JudDemo-dummy.m"; sourceTree = "<group>"; };
+		0BCF70781DA27D0A4BEC9D8BF1B86D95 /* JUDAssert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDAssert.h; sourceTree = "<group>"; };
+		0BE6A8C84465C756E90EBD67B9C0B2D5 /* JUDPickerModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDPickerModule.m; sourceTree = "<group>"; };
+		0C4326D24FBD7D0A8E9EB9FF259C3463 /* JUDDatePickerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDDatePickerManager.h; sourceTree = "<group>"; };
+		0C81A42BB75A55034E4733AF2DDA0745 /* JUDSliderNeighborComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDSliderNeighborComponent.h; sourceTree = "<group>"; };
+		0C9871DF4EF3AB21792F6FAE9EC08736 /* JUDBridgeContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDBridgeContext.m; sourceTree = "<group>"; };
+		0E7E5932E561614E8A7606ABB52084C9 /* JUDRootView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDRootView.m; sourceTree = "<group>"; };
+		0E8D2AC57E75CFD28ECC4A8ED3F478C2 /* JUDModalUIModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDModalUIModule.h; sourceTree = "<group>"; };
+		0EB9557DBAF9EF53CC6DDBD3E6CC73DB /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		0F1B8AF131C25D7DFA38ADFDEC1D5BC8 /* JUDSDKInstance_private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDSDKInstance_private.h; sourceTree = "<group>"; };
+		0FD8B5F0D8FF71D5D0B0C5A45217D709 /* WXDestroyProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WXDestroyProtocol.h; sourceTree = "<group>"; };
+		12A7E6804F2E891ED499DA9C2BED6CEE /* NSObject+JUDSwizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JUDSwizzle.m"; sourceTree = "<group>"; };
+		132E5A418E2E57B6C274157B9E0B1432 /* JUDConvert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDConvert.m; sourceTree = "<group>"; };
+		143D57CA1C3DB18006E7BA36DED9E0FC /* JUDThreadSafeMutableDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDThreadSafeMutableDictionary.m; sourceTree = "<group>"; };
+		14537E8578EFF4C56395A27F8E01597B /* JudSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JudSDK-dummy.m"; sourceTree = "<group>"; };
+		17002C1B1CD3A4C1E1F09D38A79E8737 /* JUDBaseViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDBaseViewController.m; sourceTree = "<group>"; };
+		1715E568191B183A8E964EEBEA2E4ED8 /* JUDSliderComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDSliderComponent.h; sourceTree = "<group>"; };
+		17CC76C20EA4D8FF2001C4FBA605781E /* JUDComponent+Events.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JUDComponent+Events.m"; sourceTree = "<group>"; };
+		17ED529D9DE51A1055036ED94FA07057 /* JUDView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDView.h; sourceTree = "<group>"; };
+		186DD11D4CF44A616085A91E705F48AA /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		1872D7EB7DF71C56308011BA2E6E0EA5 /* JUDResourceRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDResourceRequest.h; sourceTree = "<group>"; };
+		19BB7251F9822714B5DA433E8E22CACA /* SRWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRWebSocket.h; path = SocketRocket/SRWebSocket.h; sourceTree = "<group>"; };
+		1ACE25935660BDE9A213DD18275BB61A /* JUDSDKEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDSDKEngine.h; sourceTree = "<group>"; };
+		1AECDD4443D5EA70DC85FF983167E9A9 /* JUDComponent+Navigation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JUDComponent+Navigation.m"; sourceTree = "<group>"; };
+		1BAAF0CE10C676FC94E3E4735A5B2582 /* SocketRocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SocketRocket.xcconfig; sourceTree = "<group>"; };
+		1BB4079F16E13DC0C16B693FB6851EE1 /* JUDUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDUtility.h; sourceTree = "<group>"; };
+		1BFF9742FBED6A9BAF9BEBD8E11E18A8 /* JUDNavigationDefaultImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDNavigationDefaultImpl.h; sourceTree = "<group>"; };
+		1CE262159830F9338389C2C35D2E1AE3 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		1CF841BD89179B2643EB1119501A7336 /* JUDRuleManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDRuleManager.h; sourceTree = "<group>"; };
+		1D3319D6836A691AEF3B7845B19108AE /* libSocketRocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSocketRocket.a; path = libSocketRocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E300E95F05554AEA76B98EFC9D3FCA1 /* JUDSDKInstance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDSDKInstance.h; sourceTree = "<group>"; };
+		204F501B400365287108ADEF7D8172CD /* JUDInvocationConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDInvocationConfig.h; sourceTree = "<group>"; };
+		20F09B14836883F99E442B9003E2182A /* JUDWebComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDWebComponent.m; sourceTree = "<group>"; };
+		219D7BDF60A49B28820C1D26DCE7E1CA /* JUDBridgeManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDBridgeManager.m; sourceTree = "<group>"; };
+		2242A7FBB588851AA6CBF89209A436F8 /* JUDWeakObjectWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDWeakObjectWrapper.h; sourceTree = "<group>"; };
+		2290D5D9701221C7B6A615A2AC9EC25F /* JUDEmbedComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDEmbedComponent.h; sourceTree = "<group>"; };
+		22BDFF02BF833B6143947A6702449B46 /* JUDAnimationModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDAnimationModule.h; sourceTree = "<group>"; };
+		23F554741B1F7E905E277CECBFEFD2A5 /* JUDCanvasComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDCanvasComponent.m; sourceTree = "<group>"; };
+		242A5C54A6B3AEE0E6D101ED1063EA05 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		245D7E0D43C259C21857F54CFC4B4CCA /* JUDThreadSafeCounter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDThreadSafeCounter.m; sourceTree = "<group>"; };
+		25589211B0D65642C5881EC2D89359F4 /* JUDBridgeMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDBridgeMethod.h; sourceTree = "<group>"; };
+		25F0A06FB4B3295C43A855020628F4EC /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		2610D6443E7AECF55E5F34E5E60CF8AF /* JUDLength.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDLength.m; sourceTree = "<group>"; };
+		26D7D375FAEFAAF0198868556B3711B9 /* JUDMTADefaultImpl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDMTADefaultImpl.m; sourceTree = "<group>"; };
+		274CC1596CD5CDCCBB6F40E3212F32FC /* JUDSliderNeighborComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDSliderNeighborComponent.m; sourceTree = "<group>"; };
+		283E91C78F5B5967F16A7467901FD653 /* JUDCallJSMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDCallJSMethod.h; sourceTree = "<group>"; };
+		28AD65144F9D1FBB67376983216FECFD /* SRWebSocket+Jud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SRWebSocket+Jud.h"; sourceTree = "<group>"; };
+		2A4B3EBB53ABB4B2A26F3CCACC82FA56 /* JUDCanvasComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDCanvasComponent.h; sourceTree = "<group>"; };
+		2B613D8F15EFB13C15B3995802E109CA /* JUDLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDLayer.m; sourceTree = "<group>"; };
+		2E949A2399B741AA46F66D9BD9EAB532 /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/UIImage+GIF.m"; sourceTree = "<group>"; };
+		2F8DB6075F70A91AB1EAB60289B83963 /* JUDStorageModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDStorageModule.h; sourceTree = "<group>"; };
+		30F029B4E8D834AB555C9A5073946F19 /* JUDSliderComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDSliderComponent.m; sourceTree = "<group>"; };
+		31C15AFDF5376D8A8D8BF944A1C4EFB2 /* SRWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRWebSocket.m; path = SocketRocket/SRWebSocket.m; sourceTree = "<group>"; };
+		31D40CB833AEAA97A0A91E1011960023 /* JUDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDLog.h; sourceTree = "<group>"; };
+		3342B0E12B6F4F926BCF60FB08F91777 /* JUDNavigatorModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDNavigatorModule.m; sourceTree = "<group>"; };
+		335D944670FDE85B6A8AD276AE7CDC03 /* JUDRefreshComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDRefreshComponent.h; sourceTree = "<group>"; };
+		378C0EEBF33E7E556AB9C75733A03606 /* JUDConvert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDConvert.h; sourceTree = "<group>"; };
+		380F3B033EC20D705AC7B1B819954393 /* JUDWebSocketModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDWebSocketModule.h; sourceTree = "<group>"; };
+		389C663CC836C2C8F05873B7AE8EBCCF /* JUDThreadSafeMutableArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDThreadSafeMutableArray.m; sourceTree = "<group>"; };
+		3C04ED14ED211832CA40F9950920ABB2 /* JUDAComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDAComponent.m; sourceTree = "<group>"; };
+		3D24F1813EF85DF228F6D9D9AFF11D6A /* main.js */ = {isa = PBXFileReference; includeInIndex = 1; path = main.js; sourceTree = "<group>"; };
+		3DD5779FE4FD06532B5F602D34D38F60 /* JUDCellComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDCellComponent.h; sourceTree = "<group>"; };
+		3DE878361371DA2EBE71F97D1F8FB7CD /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		3E667AF0DA9ACD22C21ABDBA16F7CC83 /* jud_load_error@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; path = "jud_load_error@3x.png"; sourceTree = "<group>"; };
+		3E807757EA0CE9AE37A9E2C49E94BD11 /* JUDComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDComponent.m; sourceTree = "<group>"; };
+		3E9E5D74FDBF0970005A315E2FBC8FC9 /* JUDComponent+Layout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JUDComponent+Layout.h"; sourceTree = "<group>"; };
+		40801EECB2A52E535217EC76959476D8 /* JUDNavigatorModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDNavigatorModule.h; sourceTree = "<group>"; };
+		4227DCC6894D076A87A9C20803A4F18C /* JUDCellComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDCellComponent.m; sourceTree = "<group>"; };
+		42E6AE832D855651D2A896EE4D5B8503 /* JUDResourceRequestHandlerDefaultImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDResourceRequestHandlerDefaultImpl.h; sourceTree = "<group>"; };
+		431735EF82FDB4EF3BADD143FDEE4510 /* Pods-JudDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JudDemo-resources.sh"; sourceTree = "<group>"; };
+		4443748F61BD706D4F41C6612D782DD0 /* JUDView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDView.m; sourceTree = "<group>"; };
+		4660129A7B709E1CBA5B534A3625D58C /* JUDHandlerFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDHandlerFactory.h; sourceTree = "<group>"; };
+		4668DCFAEC5E2366CFA7648E77D69FDD /* JUDWebViewModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDWebViewModule.h; sourceTree = "<group>"; };
+		48AEFAC62D9FE6426FD780FBB84B8444 /* JUDLength.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDLength.h; sourceTree = "<group>"; };
+		48E5A60E7B4A2BE6393F8F9585314B2B /* JUDStreamModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDStreamModule.m; sourceTree = "<group>"; };
+		4A02FEE49E29CA5CB9119386F1FA3431 /* Pods-JudDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JudDemo.release.xcconfig"; sourceTree = "<group>"; };
+		4B41795B77DE7533D645062DD3375F05 /* JUDCanvasModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDCanvasModule.h; sourceTree = "<group>"; };
+		4BCFDE9A508B14CBB8B13DA8B107C3F5 /* JUDStorageModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDStorageModule.m; sourceTree = "<group>"; };
+		4D383E0BC56C1272A82C561175D5877F /* JUDResourceRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDResourceRequest.m; sourceTree = "<group>"; };
+		4D6E8E8EF9A44AD10E99F8FA5D47270D /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		4DF83B966DCB8547FFA5AE78B182CF78 /* JUDDebugLoggerBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDDebugLoggerBridge.m; sourceTree = "<group>"; };
+		4ED1D58104A5B63ADD1A9E404F6B7DCD /* JUDResourceResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDResourceResponse.h; sourceTree = "<group>"; };
+		4F16217F6A85A3F34A154401B9D36545 /* JUDBridgeMethod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDBridgeMethod.m; sourceTree = "<group>"; };
+		4F86AE3D589F2A1F3610752D9D743011 /* JUDCommunicateModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDCommunicateModule.h; sourceTree = "<group>"; };
+		50D5F94EB9A44D9F9AE6A3F75813CDF6 /* JUDDivComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDDivComponent.h; sourceTree = "<group>"; };
+		5170708CEE9BD6F7F2E6980B77534F4B /* JUDComponent+Navigation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JUDComponent+Navigation.h"; sourceTree = "<group>"; };
+		51F6EC543132156D4BC6968C37BDCC6D /* NSArray+Jud.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Jud.m"; sourceTree = "<group>"; };
+		5283ED5B4712A3463AC96BE4002D44C4 /* JUDLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDLayer.h; sourceTree = "<group>"; };
+		52F1748CD3CE47C5FA6028186D340774 /* JUDLayoutDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDLayoutDefine.h; sourceTree = "<group>"; };
+		52FA34D6B3B70E0D83C2033E54E2E9F2 /* JudSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JudSDK-prefix.pch"; sourceTree = "<group>"; };
+		530B1F3A9887E41883097ACF86087D36 /* JUDComponentMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDComponentMethod.h; sourceTree = "<group>"; };
+		533DE9D25878BB4692EC2B2AA82A2B86 /* JUDAnimationModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDAnimationModule.m; sourceTree = "<group>"; };
+		552FDFFB81CD4E6A2E5262D0DEC6EF47 /* JUDComponent_internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDComponent_internal.h; sourceTree = "<group>"; };
+		5548636D617618B0BAA01678EC858EE4 /* JUDIndicatorComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDIndicatorComponent.m; sourceTree = "<group>"; };
+		556F8922433550DC72607C22616F6BC3 /* JUDNetworkProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDNetworkProtocol.h; sourceTree = "<group>"; };
+		5681AE139DD243BB0B40F35475E931F8 /* SocketRocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SocketRocket-dummy.m"; sourceTree = "<group>"; };
+		56A99DFFA3C3940E9F80B908905ABF09 /* JUDWebSocketHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDWebSocketHandler.h; sourceTree = "<group>"; };
+		57219347C1D7F2465808F5B7DDC6CB61 /* JUDTextComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDTextComponent.h; sourceTree = "<group>"; };
+		58F09746AEAA0369FC5F8E1D9084FE04 /* JUDModuleMethod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDModuleMethod.m; sourceTree = "<group>"; };
+		5B5D3F058D37A2AB4480427B27A50AD4 /* JUDThreadSafeMutableDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDThreadSafeMutableDictionary.h; sourceTree = "<group>"; };
+		5B6B5180B2AE763ED18CCF1B507CF8DE /* JUDDomModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDDomModule.h; sourceTree = "<group>"; };
+		5C64E58C8546E03EA6D4F759354FC2F4 /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/SDWebImageCompat.h; sourceTree = "<group>"; };
+		5D553899A44F28C69F6A89ABDCAC9E20 /* JUDJSExceptionInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDJSExceptionInfo.h; sourceTree = "<group>"; };
+		5DA56AD7C26FA9A5C76396B5D67F7BDA /* JUDSimulatorShortcutManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDSimulatorShortcutManager.h; sourceTree = "<group>"; };
+		5EABA3EAD3A9B9982E922AF1559E62DD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		5F2943E0183D87791F8B05A7483D3618 /* JUDResourceRequestHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDResourceRequestHandler.h; sourceTree = "<group>"; };
+		5FEF7DD7251CB1C8C6DEDBBC4FD1E29D /* JUDAppConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDAppConfiguration.m; sourceTree = "<group>"; };
+		605A62963AE577D3B2C39FA73693702B /* JUDResourceResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDResourceResponse.m; sourceTree = "<group>"; };
+		607ABE239DCADCB95283282A5D73B752 /* JUDWebSocketLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDWebSocketLoader.h; sourceTree = "<group>"; };
+		62A6185556741DA592941045093064D4 /* JUDModuleFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDModuleFactory.h; sourceTree = "<group>"; };
+		656F5B93694347E4FB264F7EA1303379 /* JUDUtility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDUtility.m; sourceTree = "<group>"; };
+		66EC276D1821426F24DEBB99AA05C12C /* UIBezierPath+Jud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Jud.h"; sourceTree = "<group>"; };
+		67FF373341BF53C6B728C9A14846D275 /* JUDMetaModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDMetaModule.m; sourceTree = "<group>"; };
+		680764D08FB7AE677A95EDDEEBCCF9B3 /* JUDDomModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDDomModule.m; sourceTree = "<group>"; };
+		686BAC039AAE580B4B336E29858FEF39 /* JUDComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDComponent.h; sourceTree = "<group>"; };
+		6990046A125EB4F328FD360A9CF2B3E2 /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/UIButton+WebCache.h"; sourceTree = "<group>"; };
+		6AFA2411892AF1C68BBB52264995B71B /* JUDModuleMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDModuleMethod.h; sourceTree = "<group>"; };
+		6D665FEEE669EB395C08C7C9D20EB40B /* Layout.c */ = {isa = PBXFileReference; includeInIndex = 1; path = Layout.c; sourceTree = "<group>"; };
+		6E68D67F214445DAD4448BD2A05D47F4 /* JUDComponent+Display.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JUDComponent+Display.m"; sourceTree = "<group>"; };
+		6E854F85DFA4A6F08F39DADAC98E9E88 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		6F65CA07337AAACDD9FEEE020C318F9F /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
+		70D081D1D6A90421434609A5E4EA5C7E /* JUDScrollerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDScrollerProtocol.h; sourceTree = "<group>"; };
+		729EB0FC82588CD3AB275BAB7F431368 /* JUDComponentFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDComponentFactory.h; sourceTree = "<group>"; };
+		72B7E8067664996862E122F962409D76 /* SRWebSocket+Jud.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SRWebSocket+Jud.m"; sourceTree = "<group>"; };
+		733A91B4178C39F80FF385231B731CAF /* JUDTimerModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDTimerModule.m; sourceTree = "<group>"; };
+		73B8EC6C383D34298723B10AA5233ED5 /* JUDPolyfillSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDPolyfillSet.h; sourceTree = "<group>"; };
+		762FF0103878A90E6EB7534ED2FF6205 /* JUDAssert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDAssert.m; sourceTree = "<group>"; };
+		7695AAD25BB321A8A87A3C0C580B51B5 /* JUDResourceRequestHandlerDefaultImpl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDResourceRequestHandlerDefaultImpl.m; sourceTree = "<group>"; };
+		78691E6A62C22D2ACDD79402CE7650EA /* JUDModuleProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDModuleProtocol.h; sourceTree = "<group>"; };
+		78F114165395BED0BD10ACA3562DCE77 /* JUDWebComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDWebComponent.h; sourceTree = "<group>"; };
+		79876C30EF0975B002411EB8F52C2246 /* JSValue+Jud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSValue+Jud.h"; sourceTree = "<group>"; };
+		7A99638121B42F34EFCC79E22CDFA4D4 /* JUDJSCoreBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDJSCoreBridge.m; sourceTree = "<group>"; };
+		7AEE50F6D84A88926980B18197C9D298 /* SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage-dummy.m"; sourceTree = "<group>"; };
+		7BF2FC8D468802E6AEB2F7FD413E85FF /* JUDComponentManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDComponentManager.m; sourceTree = "<group>"; };
+		7EE9C64F14CB91CF6DEFD65AF1DA20E6 /* JUDJSExceptionProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDJSExceptionProtocol.h; sourceTree = "<group>"; };
+		7F182A0FFF7C517C8287DB7EFDBD8031 /* JUDTransform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDTransform.m; sourceTree = "<group>"; };
+		7F5D303DFFE176B2F264CC125F71D3C4 /* JUDMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDMonitor.h; sourceTree = "<group>"; };
+		7F6B4C45948DC904F218D473BF4EB817 /* Pods-JudDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JudDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		80E475E06B63A306806ED1070C4AA255 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = SDWebImage/SDWebImageDownloader.h; sourceTree = "<group>"; };
+		8103CCE7751D38F287CD0D8A7878DFF1 /* JUDTextInputComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDTextInputComponent.h; sourceTree = "<group>"; };
+		81E8EE86D02965F94394E574B973895B /* JUDDivComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDDivComponent.m; sourceTree = "<group>"; };
+		82DC619D18F15518A3AF7389171C84D9 /* JUDTimerModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDTimerModule.h; sourceTree = "<group>"; };
+		835EF0E84E82835641A5ECDD6B62D882 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		85BE255DC8115023AA8A36003575A01F /* JUDGlobalEventModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDGlobalEventModule.m; sourceTree = "<group>"; };
+		85CD9617BC98A3BDE5698F837A43E931 /* JUDCanvasModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDCanvasModule.m; sourceTree = "<group>"; };
+		869FC2CEB430F6C047B67E568B269D5B /* JUDDatePickerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDDatePickerManager.m; sourceTree = "<group>"; };
+		86C619CCDF93E27A93D101CF932D75DD /* JUDWeakObjectWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDWeakObjectWrapper.m; sourceTree = "<group>"; };
+		87231E61AF2E2985CFC19362FD6420B7 /* JUDInstanceWrap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDInstanceWrap.m; sourceTree = "<group>"; };
+		874F6BB73ECB74DD87AF253175FA8934 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		875166FAF51486C9748999E8B1A38BB1 /* NSObject+JUDSwizzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+JUDSwizzle.h"; sourceTree = "<group>"; };
+		87BD2CB76C9A0C4AF4E4D82F5E95067D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		8AA29D568DB235A7C62464703AEE4D56 /* JUDImageComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDImageComponent.m; sourceTree = "<group>"; };
+		8CB000CAF2A0A2369DA08A8158D9DCA5 /* JUDBridgeContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDBridgeContext.h; sourceTree = "<group>"; };
+		8CBCFA5E0B0084C8B1BB0582AA9F669A /* JUDListComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDListComponent.m; sourceTree = "<group>"; };
+		8FCF52541FB4AA35E6064F58E0AA93E5 /* JUDDebugTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDDebugTool.h; sourceTree = "<group>"; };
+		908D46100B0DD8D8547686D34629B0C7 /* JUDNavigationProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDNavigationProtocol.h; sourceTree = "<group>"; };
+		91592039663363453B6678D6E2DF3500 /* JUDBaseViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDBaseViewController.h; sourceTree = "<group>"; };
+		91617B73233FB23ECABC9DD051AB698E /* JUDPickerModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDPickerModule.h; sourceTree = "<group>"; };
+		91D3BFCFE7D8A678C19CC5AD553DA786 /* JUDRuleManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDRuleManager.m; sourceTree = "<group>"; };
+		91D3C9B81B6221F1D3A4A762046AE9DE /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/AVKit.framework; sourceTree = DEVELOPER_DIR; };
+		9244CCB5D04C86C979873461D2D9A36C /* JUDClipboardModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDClipboardModule.h; sourceTree = "<group>"; };
+		9270A25D5ED709CD547CB90D268BF258 /* SDWebImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.xcconfig; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		958E42AB9D78D0097BCBB0FC535134D3 /* JUDMetaModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDMetaModule.h; sourceTree = "<group>"; };
+		962D4B7D5D70AD25481574AACB444271 /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/SDWebImageCompat.m; sourceTree = "<group>"; };
+		96A89A8B034726576269CB2EC3A845E1 /* JudSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JudSDK.xcconfig; sourceTree = "<group>"; };
+		979AA3465F0997B4A103E5ABA6921D6B /* JUDTextAreaComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDTextAreaComponent.m; sourceTree = "<group>"; };
+		97A5AC1420E1E13B5D4C395920B03F0D /* JUDScrollerComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDScrollerComponent.m; sourceTree = "<group>"; };
+		9810420122860C697A40E9CBF8903D21 /* JUDAppConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDAppConfiguration.h; sourceTree = "<group>"; };
+		9903399FBAF26972ABA46D540A0732CF /* JUDAComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDAComponent.h; sourceTree = "<group>"; };
+		9A633F4EFD7ADF657D5E037F4533B5D0 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSDWebImage.a; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AD4B727E126A595DBDDEC7980EF0D28 /* JUDStreamModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDStreamModule.h; sourceTree = "<group>"; };
+		9B52539B82EA1A78F3260849FA4D1A2F /* JUDVideoComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDVideoComponent.h; sourceTree = "<group>"; };
+		9BA26EADB1A8ACB7C11FB3EBB565DA56 /* JUDTextAreaComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDTextAreaComponent.h; sourceTree = "<group>"; };
+		9F9944DB85C99E0DE88D99C760984FB3 /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
+		9F9E4E3B61527E530EF73127C9B11EC1 /* JUDSDKEngine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDSDKEngine.m; sourceTree = "<group>"; };
+		A22F7A5D35A2062CF14EC5BB956E8444 /* JUDThreadSafeMutableArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDThreadSafeMutableArray.h; sourceTree = "<group>"; };
+		A23FD25AB053555A67AF0ED5A7FC0A21 /* Pods-JudDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JudDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A2D51C80BB5C5F3462FD02C053FCC08B /* JUDJSExceptionInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDJSExceptionInfo.m; sourceTree = "<group>"; };
+		A401B5918FAB12FCB10491BC3131289C /* JUDWebSocketDefaultImpl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDWebSocketDefaultImpl.m; sourceTree = "<group>"; };
+		A446E502DD880A22EFA36A7FD5628CC8 /* JUDVideoComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDVideoComponent.m; sourceTree = "<group>"; };
+		A48E25EF791E4F2A3216C75121A09D6F /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
+		A78AF1252F0D92B696A7C6A6EA18108F /* JUDServiceFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDServiceFactory.h; sourceTree = "<group>"; };
+		A87474DC93643F73BC891F64951E4D59 /* JUDMTAProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDMTAProtocol.h; sourceTree = "<group>"; };
+		A8A902893A7FC44E64C4C23F9D17A47C /* JUDRootView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDRootView.h; sourceTree = "<group>"; };
+		A8AA9129778D4F0697AC33CC5EE6BC2F /* JUDHandlerFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDHandlerFactory.m; sourceTree = "<group>"; };
+		A92F99AC714E5948868E048052085ED6 /* JUDNavigationDefaultImpl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDNavigationDefaultImpl.m; sourceTree = "<group>"; };
+		A98F305F238E859CBCB580EAA34E7FE4 /* JUDMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDMonitor.m; sourceTree = "<group>"; };
+		A9A2700A8FFD5569BD221B4C3BE5B4BA /* JUDWebViewModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDWebViewModule.m; sourceTree = "<group>"; };
+		AA9333C3721C2D40F3FBD29D1E2F183F /* Layout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Layout.h; sourceTree = "<group>"; };
+		AB4DA734778696C656064400354B0FD9 /* UIBezierPath+Jud.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Jud.m"; sourceTree = "<group>"; };
+		ABA3FA87DDC22B7F91CFBDF13E3E1803 /* JUDScrollerComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDScrollerComponent.h; sourceTree = "<group>"; };
+		ABCC0DC38C02647D6DEEDC302B947964 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
+		ADE37FC988DF6997C5073BBE85F5CAB0 /* JUDComponent+ViewManagement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JUDComponent+ViewManagement.h"; sourceTree = "<group>"; };
+		AE58529EFF0812690040BDCC41F643CE /* NSTimer+Jud.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Jud.m"; sourceTree = "<group>"; };
+		AE9DBED7A882DAAB06915C74E0AB599C /* JUDCommunicate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDCommunicate.h; sourceTree = "<group>"; };
+		AF79E111D5EA1B7652670C07B59D938A /* JUDWebSocketDefaultImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDWebSocketDefaultImpl.h; sourceTree = "<group>"; };
+		B07C35B1E542A517D687FEBA0A525F7E /* JUDSimulatorShortcutManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDSimulatorShortcutManager.m; sourceTree = "<group>"; };
+		B0995CB1803A43E62EA0EC4B3FD23449 /* JUDResourceLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDResourceLoader.h; sourceTree = "<group>"; };
+		B1AFEC0B37D5F03BB85D5F8CC62DE30B /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		B400AE4B6FA94F28F1EF758270E621FA /* JUDErrorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDErrorView.h; sourceTree = "<group>"; };
+		B469FBFC30D6ABA4FC7C977B078DC871 /* JUDImgLoaderProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDImgLoaderProtocol.h; sourceTree = "<group>"; };
+		B502DFEE8C0B87386EAFDF9CD5D1A44A /* JUDSwitchComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDSwitchComponent.h; sourceTree = "<group>"; };
+		B6CB08E05848E3E8451FD5E6D3F296B8 /* JUDSDKManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDSDKManager.m; sourceTree = "<group>"; };
+		B7E4F73DBCD1968C0A6400CC683490CD /* JUDType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDType.h; sourceTree = "<group>"; };
+		B86845BF14B6E14B6B2A18FDDADA5C4C /* JUDDebugLoggerBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDDebugLoggerBridge.h; sourceTree = "<group>"; };
+		B88EFA630943669A8D203614CF50B938 /* NSArray+Jud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSArray+Jud.h"; sourceTree = "<group>"; };
+		B8FC73916A62355C3E6A5BFAC9D2B8D6 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		B928C766B0DB9DE6B4DB399400A85D5D /* JUDComponent+Layout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JUDComponent+Layout.m"; sourceTree = "<group>"; };
+		B9A579B5440252625838ECA25113520F /* JUDComponent+GradientColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JUDComponent+GradientColor.h"; sourceTree = "<group>"; };
+		BA324169BBC456952D3610253E70070D /* JUDTextComponentProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDTextComponentProtocol.h; sourceTree = "<group>"; };
+		BBB6C07AF546DCDD7A8B6B228403BB30 /* JUDLoadingIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDLoadingIndicator.m; sourceTree = "<group>"; };
+		BD6098EE28EA0DFC945D1757DBBA0AC4 /* JUDComponent+GradientColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JUDComponent+GradientColor.m"; sourceTree = "<group>"; };
+		BDE9CB8ABAC3BD589EEB62F6B6CC7ED0 /* JUDInstanceWrap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDInstanceWrap.h; sourceTree = "<group>"; };
+		BE6554BDD1D2CB0175EE6B66B214A4BE /* JUDComponent+Display.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JUDComponent+Display.h"; sourceTree = "<group>"; };
+		BFCB2B089AA9699AB48FDDB69149F4CB /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
+		C0CF7077BF64A7D42CF754B4A8065161 /* JUDComponent+PseudoClassManagement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JUDComponent+PseudoClassManagement.m"; sourceTree = "<group>"; };
+		C14B84317D25EB3AE4EA24E218444B66 /* JUDCommunicate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDCommunicate.m; sourceTree = "<group>"; };
+		C240555E3FE79EB6BFF3B819AACF4591 /* JUDAppMonitorProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDAppMonitorProtocol.h; sourceTree = "<group>"; };
+		C2546D50BB053E7E1E66EB4B522AA3D1 /* JUDRoundedRect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDRoundedRect.h; sourceTree = "<group>"; };
+		C29B834C31F3F12682975E2A8157B828 /* JUDTextComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDTextComponent.m; sourceTree = "<group>"; };
+		C2EBD866EEE3F2144AFBF3BE0AA94EBB /* JUDSwitchComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDSwitchComponent.m; sourceTree = "<group>"; };
+		C377E0D031A0EE4875992B8203ABF7C7 /* JUDEmbedComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDEmbedComponent.m; sourceTree = "<group>"; };
+		C4028409BB177D0C1A3898EBC984F13A /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
+		C416832186571FF4C258396F78C6B8D4 /* JUDSDKInstance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDSDKInstance.m; sourceTree = "<group>"; };
+		C6251A52742DBF4B7724F5649468390A /* JUDModalUIModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDModalUIModule.m; sourceTree = "<group>"; };
+		C76002AEFA276F523CDD84A817A4F4D9 /* NSTimer+Jud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Jud.h"; sourceTree = "<group>"; };
+		C7A17118D1EC6135A6C70D2900DA02D9 /* JUDComponent+Events.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JUDComponent+Events.h"; sourceTree = "<group>"; };
+		C8A22033C0EBDBAB5C6412D73068C386 /* SDWebImageDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDecoder.m; path = SDWebImage/SDWebImageDecoder.m; sourceTree = "<group>"; };
+		C8E6F20B2C06E1D14BE86FDA947ADBCF /* JUDEventModuleProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDEventModuleProtocol.h; sourceTree = "<group>"; };
+		C963EF06FB0FF9601D9A3AEFDC29D547 /* UIButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+WebCache.m"; path = "SDWebImage/UIButton+WebCache.m"; sourceTree = "<group>"; };
+		C9D9C72914CA80A54AA8D6D191B7034C /* JUDLoadingComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDLoadingComponent.m; sourceTree = "<group>"; };
+		C9FE1CE08BD184C73B1A8C703AA2DCD7 /* JUDLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDLog.m; sourceTree = "<group>"; };
+		CCD214D7DFFCCD54826BEDB14B43A19D /* JUDWebSocketLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDWebSocketLoader.m; sourceTree = "<group>"; };
+		CF89F5771610A27DDC267C9C58F1F8B7 /* JUDRefreshComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDRefreshComponent.m; sourceTree = "<group>"; };
+		D0E1B5D46A9FF1C981EA674CF47B9709 /* JUDCallJSMethod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDCallJSMethod.m; sourceTree = "<group>"; };
+		D1098C54A346742544D8D1BC1F93F16D /* JUDThreadSafeCounter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDThreadSafeCounter.h; sourceTree = "<group>"; };
+		D26EB91E2EF58EE8497BF6769CA4B30D /* JUDIndicatorComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDIndicatorComponent.h; sourceTree = "<group>"; };
+		D36F2CDA170C0AB953B0174ABBA6B743 /* JUDSDKError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDSDKError.h; sourceTree = "<group>"; };
+		D392DBF743CDDB2E0724B094D5EDB102 /* JUDServiceFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDServiceFactory.m; sourceTree = "<group>"; };
+		D413024B674D572D1B18112D87F01C8A /* JUDDisplayQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDDisplayQueue.h; sourceTree = "<group>"; };
+		D6E3922663038B6650A5F583793773EF /* JUDBridgeManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDBridgeManager.h; sourceTree = "<group>"; };
+		D81FC3E6A01E6ABF34CD380CB86BA3E1 /* JUDSDKManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDSDKManager.h; sourceTree = "<group>"; };
+		D9531DF03ACE450B7D55208FFF53E68A /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
+		D9829010452703B4E1D6F9A74F2F86D6 /* JUDWebSocketModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDWebSocketModule.m; sourceTree = "<group>"; };
+		DB7D5BE360C6467522B6F78FBD76E3D4 /* Pods-JudDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JudDemo-frameworks.sh"; sourceTree = "<group>"; };
+		DCCD7A8814405F28A35B672E72D84593 /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "SDWebImage/UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		DE118A97A6762E920F6BB68F49EB42C5 /* JUDURLRewriteDefaultImpl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDURLRewriteDefaultImpl.m; sourceTree = "<group>"; };
+		DFD8E426D9CD05FFB4B4CAAE3B001EDF /* JUDComponent+PseudoClassManagement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JUDComponent+PseudoClassManagement.h"; sourceTree = "<group>"; };
+		E0A47A55AEE280C24D71E6C371EDAAAF /* JUDCommunicateModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDCommunicateModule.m; sourceTree = "<group>"; };
+		E10A73DAC853CBFD00A868C1FA87FC38 /* JUDErrorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDErrorView.m; sourceTree = "<group>"; };
+		E1A92201E2D375621B3AFE39A7616D08 /* JUDDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDDefine.h; sourceTree = "<group>"; };
+		E2D75A7EB2A13BC7F9D6075E2019A4D7 /* JUDMTAModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDMTAModule.m; sourceTree = "<group>"; };
+		E35891A782C9154C9639B9C90F08217F /* JUDRootViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDRootViewController.m; sourceTree = "<group>"; };
+		E3D646F10EB99F7AA783DC8FF4EFCC70 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
+		E46B4EE33A7F16457E89AC19D84DFF8B /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
+		E76ED4B7A909B358EADA8919F96B153D /* JUDRootViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDRootViewController.h; sourceTree = "<group>"; };
+		E7705BDA1B4F8069B87DD3B074BD8947 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		E8A0EEF8168F03A8F1281E0EF1BAE5B6 /* libJudSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJudSDK.a; path = libJudSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB20BC228B2FB80443032CE326B98078 /* JUDComponent+ViewManagement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JUDComponent+ViewManagement.m"; sourceTree = "<group>"; };
+		EB42A6EA4CB98A5AAB013EA1C4BE5AE7 /* JUDTextInputComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDTextInputComponent.m; sourceTree = "<group>"; };
+		EC01E0A3E83A7D4C47577F96DDCB5437 /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
+		EC4E72B05F25F5BF13B1378FDF25EDB4 /* JUDDebugTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDDebugTool.m; sourceTree = "<group>"; };
+		ECC41A01C0224A85C79D7D42587E0DC3 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
+		ED1E325FA3E921D440169F013D06F97D /* JUDClipboardModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDClipboardModule.m; sourceTree = "<group>"; };
+		EDCAD9593BC023DAB54F48221405EF97 /* JudSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JudSDK.h; sourceTree = "<group>"; };
+		EE0E391F14F21E0EC3F30A11D6CD6F7C /* JUDJSCoreBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDJSCoreBridge.h; sourceTree = "<group>"; };
+		EFF63422DE175A2B05A61A6858E36E77 /* JUDMTADefaultImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDMTADefaultImpl.h; sourceTree = "<group>"; };
+		F022DB982F2234DFE941316237E514A5 /* JUDImageComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDImageComponent.h; sourceTree = "<group>"; };
+		F36AEFBC4E5F21A6292D6A62A22C6527 /* JUDURLRewriteProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDURLRewriteProtocol.h; sourceTree = "<group>"; };
+		F3A70D12DE4548AA3C9AD7F115420165 /* JUDBridgeProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDBridgeProtocol.h; sourceTree = "<group>"; };
+		F5B43D6906DC53500AAA52FDFC3CBEEC /* Pods-JudDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JudDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F73A84C8A273D1CF83BB401995D3AC51 /* JUDGlobalEventModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDGlobalEventModule.h; sourceTree = "<group>"; };
+		F773ACB3D43292F272F8BA8C46678DE9 /* libPods-JudDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-JudDemo.a"; path = "libPods-JudDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F82FD6246F03DA2CF8CCE3A823CD6B07 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		F83CD5746A827624474048EEF5F934A3 /* JUDListComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDListComponent.h; sourceTree = "<group>"; };
+		F8C9AE9F6AA6DF7D72FEE611360C6E4A /* JUDMTAModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDMTAModule.h; sourceTree = "<group>"; };
+		FA331FAB11998331A9EABAA7462D9FBC /* JUDLoadingIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDLoadingIndicator.h; sourceTree = "<group>"; };
+		FAF42019364305FA6D04E216C72DF093 /* JUDInvocationConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JUDInvocationConfig.m; sourceTree = "<group>"; };
+		FB38C310CB3B633BB032879A34DA0386 /* JUDLoadingComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JUDLoadingComponent.h; sourceTree = "<group>"; };
+		FCF39F2CEAB18F0D6C1BFB6B6CE7BD6B /* SocketRocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60A6450FDDBDDB680E7BDD1CC537452C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D4DB11D8BEC5509F82AADFFE91538E5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BEC08620DC7582971AA79DA41E8902D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE8631900136B18D71AF43B5470B3039 /* AVFoundation.framework in Frameworks */,
+				E26754300C4FE5676C1D605E7A1E4C34 /* AVKit.framework in Frameworks */,
+				4C90433CFD88F43F03BF646C58F89549 /* CoreMedia.framework in Frameworks */,
+				6B35E412A9B9714D4B290D6D18E4F3D9 /* Foundation.framework in Frameworks */,
+				035A200A6C5953A8CA8CF69D1230A802 /* GLKit.framework in Frameworks */,
+				4095915C15D0F32D88BA3DC042DD13EC /* JavaScriptCore.framework in Frameworks */,
+				CC08E6BC9F3E043C533B61F59EF77436 /* MediaPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B49F95BAD65333EBE151CA105C3A8252 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DB91207F047756C6CDD8113D2D74AF5 /* CFNetwork.framework in Frameworks */,
+				221E169799DE47E451B5A50E99D1DA5C /* Foundation.framework in Frameworks */,
+				9222F8BED29299C6C9591230E1E9DAF8 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF00BDD94499D204EADF75A1D3AD7F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA5C9C7322C58786CD4F66BE731FA24E /* Foundation.framework in Frameworks */,
+				BF162E7668B9BCDAC4C75C5C175D63EB /* ImageIO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		022D42250271CB36D35734B21E94FF93 /* JudSDK */ = {
+			isa = PBXGroup;
+			children = (
+				703A361B39565B813704DA6178B48A38 /* Sources */,
+			);
+			name = JudSDK;
+			path = JudSDK;
+			sourceTree = "<group>";
+		};
+		04C44C18B9608525EE33661397598181 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1872D7EB7DF71C56308011BA2E6E0EA5 /* JUDResourceRequest.h */,
+				4D383E0BC56C1272A82C561175D5877F /* JUDResourceRequest.m */,
+				5F2943E0183D87791F8B05A7483D3618 /* JUDResourceRequestHandler.h */,
+				42E6AE832D855651D2A896EE4D5B8503 /* JUDResourceRequestHandlerDefaultImpl.h */,
+				7695AAD25BB321A8A87A3C0C580B51B5 /* JUDResourceRequestHandlerDefaultImpl.m */,
+				4ED1D58104A5B63ADD1A9E404F6B7DCD /* JUDResourceResponse.h */,
+				605A62963AE577D3B2C39FA73693702B /* JUDResourceResponse.m */,
+			);
+			name = Network;
+			path = Network;
+			sourceTree = "<group>";
+		};
+		150F8E873626A041F50900A37FF37D4E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				186DD11D4CF44A616085A91E705F48AA /* NSData+ImageContentType.h */,
+				4D6E8E8EF9A44AD10E99F8FA5D47270D /* NSData+ImageContentType.m */,
+				BFCB2B089AA9699AB48FDDB69149F4CB /* SDImageCache.h */,
+				0634807C7EFB2107DCC51C679E0D6D59 /* SDImageCache.m */,
+				5C64E58C8546E03EA6D4F759354FC2F4 /* SDWebImageCompat.h */,
+				962D4B7D5D70AD25481574AACB444271 /* SDWebImageCompat.m */,
+				00ABF0D48D5BDED4354A2FBFFA25986D /* SDWebImageDecoder.h */,
+				C8A22033C0EBDBAB5C6412D73068C386 /* SDWebImageDecoder.m */,
+				80E475E06B63A306806ED1070C4AA255 /* SDWebImageDownloader.h */,
+				ECC41A01C0224A85C79D7D42587E0DC3 /* SDWebImageDownloader.m */,
+				3DE878361371DA2EBE71F97D1F8FB7CD /* SDWebImageDownloaderOperation.h */,
+				E7705BDA1B4F8069B87DD3B074BD8947 /* SDWebImageDownloaderOperation.m */,
+				E46B4EE33A7F16457E89AC19D84DFF8B /* SDWebImageManager.h */,
+				EC01E0A3E83A7D4C47577F96DDCB5437 /* SDWebImageManager.m */,
+				A48E25EF791E4F2A3216C75121A09D6F /* SDWebImageOperation.h */,
+				0EB9557DBAF9EF53CC6DDBD3E6CC73DB /* SDWebImagePrefetcher.h */,
+				25F0A06FB4B3295C43A855020628F4EC /* SDWebImagePrefetcher.m */,
+				6990046A125EB4F328FD360A9CF2B3E2 /* UIButton+WebCache.h */,
+				C963EF06FB0FF9601D9A3AEFDC29D547 /* UIButton+WebCache.m */,
+				6F65CA07337AAACDD9FEEE020C318F9F /* UIImage+GIF.h */,
+				2E949A2399B741AA46F66D9BD9EAB532 /* UIImage+GIF.m */,
+				F82FD6246F03DA2CF8CCE3A823CD6B07 /* UIImage+MultiFormat.h */,
+				DCCD7A8814405F28A35B672E72D84593 /* UIImage+MultiFormat.m */,
+				E3D646F10EB99F7AA783DC8FF4EFCC70 /* UIImageView+HighlightedWebCache.h */,
+				ABCC0DC38C02647D6DEEDC302B947964 /* UIImageView+HighlightedWebCache.m */,
+				242A5C54A6B3AEE0E6D101ED1063EA05 /* UIImageView+WebCache.h */,
+				1CE262159830F9338389C2C35D2E1AE3 /* UIImageView+WebCache.m */,
+				C4028409BB177D0C1A3898EBC984F13A /* UIView+WebCacheOperation.h */,
+				B8FC73916A62355C3E6A5BFAC9D2B8D6 /* UIView+WebCacheOperation.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		28A535E761E9E4BBB194D7D53CCEF336 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33279B40B490206D5518FFFDBDF8DBF3 /* JudSDK */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		28B661DCA24D8DEB28ECCFA1F9ACFDBC /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				1ACE25935660BDE9A213DD18275BB61A /* JUDSDKEngine.h */,
+				9F9E4E3B61527E530EF73127C9B11EC1 /* JUDSDKEngine.m */,
+				D36F2CDA170C0AB953B0174ABBA6B743 /* JUDSDKError.h */,
+			);
+			name = Engine;
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		2B680D49ECB142C831F1A90029BE638F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				96A89A8B034726576269CB2EC3A845E1 /* JudSDK.xcconfig */,
+				14537E8578EFF4C56395A27F8E01597B /* JudSDK-dummy.m */,
+				52FA34D6B3B70E0D83C2033E54E2E9F2 /* JudSDK-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Pods/Target Support Files/JudSDK";
+			sourceTree = "<group>";
+		};
+		2C97CDE967ABA9D0CBC2A4FCE52713BC /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				C7A17118D1EC6135A6C70D2900DA02D9 /* JUDComponent+Events.h */,
+				17CC76C20EA4D8FF2001C4FBA605781E /* JUDComponent+Events.m */,
+			);
+			name = Events;
+			path = Events;
+			sourceTree = "<group>";
+		};
+		33279B40B490206D5518FFFDBDF8DBF3 /* JudSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F1431D1808B6B0B45BF25CB0E3A47FF1 /* Resources */,
+			);
+			name = JudSDK;
+			path = JudSDK;
+			sourceTree = "<group>";
+		};
+		49FE9E035B69ECB641855CDF598985E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				686BAC039AAE580B4B336E29858FEF39 /* JUDComponent.h */,
+				3E807757EA0CE9AE37A9E2C49E94BD11 /* JUDComponent.m */,
+				5170708CEE9BD6F7F2E6980B77534F4B /* JUDComponent+Navigation.h */,
+				1AECDD4443D5EA70DC85FF983167E9A9 /* JUDComponent+Navigation.m */,
+				5D553899A44F28C69F6A89ABDCAC9E20 /* JUDJSExceptionInfo.h */,
+				A2D51C80BB5C5F3462FD02C053FCC08B /* JUDJSExceptionInfo.m */,
+				1E300E95F05554AEA76B98EFC9D3FCA1 /* JUDSDKInstance.h */,
+				C416832186571FF4C258396F78C6B8D4 /* JUDSDKInstance.m */,
+				0F1B8AF131C25D7DFA38ADFDEC1D5BC8 /* JUDSDKInstance_private.h */,
+			);
+			name = Model;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D96D4D237D7521A68C4CF3EAB569A28 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				19BB7251F9822714B5DA433E8E22CACA /* SRWebSocket.h */,
+				31C15AFDF5376D8A8D8BF944A1C4EFB2 /* SRWebSocket.m */,
+				AB570E010B39EC09477C8ED3EF4CE655 /* Support Files */,
+			);
+			name = SocketRocket;
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+		5E3AB2F5FA5DA88D486442235EF67318 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5EABA3EAD3A9B9982E922AF1559E62DD /* AVFoundation.framework */,
+				91D3C9B81B6221F1D3A4A762046AE9DE /* AVKit.framework */,
+				6E854F85DFA4A6F08F39DADAC98E9E88 /* CFNetwork.framework */,
+				87BD2CB76C9A0C4AF4E4D82F5E95067D /* CoreMedia.framework */,
+				04F386E088D01213BA0E36F997FDEA26 /* Foundation.framework */,
+				D9531DF03ACE450B7D55208FFF53E68A /* GLKit.framework */,
+				0535CFD3210BF18C089D176CD2E8E9CD /* ImageIO.framework */,
+				B1AFEC0B37D5F03BB85D5F8CC62DE30B /* JavaScriptCore.framework */,
+				835EF0E84E82835641A5ECDD6B62D882 /* MediaPlayer.framework */,
+				874F6BB73ECB74DD87AF253175FA8934 /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6489E2D5C916ED3EF389167A62BBD017 /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				7F5D303DFFE176B2F264CC125F71D3C4 /* JUDMonitor.h */,
+				A98F305F238E859CBCB580EAA34E7FE4 /* JUDMonitor.m */,
+			);
+			name = Monitor;
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		6F7E8222A8CD561D468DB989C06742DB /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C240555E3FE79EB6BFF3B819AACF4591 /* JUDAppMonitorProtocol.h */,
+				F3A70D12DE4548AA3C9AD7F115420165 /* JUDBridgeProtocol.h */,
+				C8E6F20B2C06E1D14BE86FDA947ADBCF /* JUDEventModuleProtocol.h */,
+				B469FBFC30D6ABA4FC7C977B078DC871 /* JUDImgLoaderProtocol.h */,
+				7EE9C64F14CB91CF6DEFD65AF1DA20E6 /* JUDJSExceptionProtocol.h */,
+				78691E6A62C22D2ACDD79402CE7650EA /* JUDModuleProtocol.h */,
+				A87474DC93643F73BC891F64951E4D59 /* JUDMTAProtocol.h */,
+				908D46100B0DD8D8547686D34629B0C7 /* JUDNavigationProtocol.h */,
+				556F8922433550DC72607C22616F6BC3 /* JUDNetworkProtocol.h */,
+				70D081D1D6A90421434609A5E4EA5C7E /* JUDScrollerProtocol.h */,
+				BA324169BBC456952D3610253E70070D /* JUDTextComponentProtocol.h */,
+				F36AEFBC4E5F21A6292D6A62A22C6527 /* JUDURLRewriteProtocol.h */,
+				0FD8B5F0D8FF71D5D0B0C5A45217D709 /* WXDestroyProtocol.h */,
+			);
+			name = Protocol;
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		703A361B39565B813704DA6178B48A38 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EDCAD9593BC023DAB54F48221405EF97 /* JudSDK.h */,
+				AC2AE695A94872BCEB38DE2333E8758D /* Bridge */,
+				DF7AC2C9F593CBE1F5C9D5551EBF7FC8 /* Component */,
+				FDB858821B4DAF2DCB2A5097BAAB77B9 /* Controller */,
+				807A96E48948453D1AAE850F3C8355EC /* Debug */,
+				E970079E96843DA4E6CC1CC08FFFBBC9 /* Display */,
+				28B661DCA24D8DEB28ECCFA1F9ACFDBC /* Engine */,
+				2C97CDE967ABA9D0CBC2A4FCE52713BC /* Events */,
+				73649381991564873FE79AE44671A2F5 /* Handler */,
+				E7C6FAEF6AE9810BDDA308FFA7354F71 /* Layout */,
+				AD0082CC54EBD280C44CDEE9607D1AE1 /* Loader */,
+				EDA732D61A2C53B5F05EA2173DE05706 /* Manager */,
+				49FE9E035B69ECB641855CDF598985E4 /* Model */,
+				976D01DFF79A21B16EAA4A49200E2C36 /* Module */,
+				6489E2D5C916ED3EF389167A62BBD017 /* Monitor */,
+				04C44C18B9608525EE33661397598181 /* Network */,
+				6F7E8222A8CD561D468DB989C06742DB /* Protocol */,
+				D64423DA251150C4BA469FB2C707F48F /* Utility */,
+				9D5F9FE56E39707EB6C09D01C8A20CE0 /* View */,
+				7739811ECD557DC57A508E76057D45D8 /* WebSocket */,
+			);
+			name = Sources;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		73649381991564873FE79AE44671A2F5 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				EFF63422DE175A2B05A61A6858E36E77 /* JUDMTADefaultImpl.h */,
+				26D7D375FAEFAAF0198868556B3711B9 /* JUDMTADefaultImpl.m */,
+				1BFF9742FBED6A9BAF9BEBD8E11E18A8 /* JUDNavigationDefaultImpl.h */,
+				A92F99AC714E5948868E048052085ED6 /* JUDNavigationDefaultImpl.m */,
+				05EA8886736F2B52A0CED221D31655EA /* JUDURLRewriteDefaultImpl.h */,
+				DE118A97A6762E920F6BB68F49EB42C5 /* JUDURLRewriteDefaultImpl.m */,
+			);
+			name = Handler;
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		7739811ECD557DC57A508E76057D45D8 /* WebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				AF79E111D5EA1B7652670C07B59D938A /* JUDWebSocketDefaultImpl.h */,
+				A401B5918FAB12FCB10491BC3131289C /* JUDWebSocketDefaultImpl.m */,
+				56A99DFFA3C3940E9F80B908905ABF09 /* JUDWebSocketHandler.h */,
+				28AD65144F9D1FBB67376983216FECFD /* SRWebSocket+Jud.h */,
+				72B7E8067664996862E122F962409D76 /* SRWebSocket+Jud.m */,
+			);
+			name = WebSocket;
+			path = WebSocket;
+			sourceTree = "<group>";
+		};
+		7A3CCDDE514AC965138E38617FDE2FE5 /* Pods-JudDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A23FD25AB053555A67AF0ED5A7FC0A21 /* Pods-JudDemo-acknowledgements.markdown */,
+				7F6B4C45948DC904F218D473BF4EB817 /* Pods-JudDemo-acknowledgements.plist */,
+				0B478EEC387474AA7F533F80D1AB133F /* Pods-JudDemo-dummy.m */,
+				DB7D5BE360C6467522B6F78FBD76E3D4 /* Pods-JudDemo-frameworks.sh */,
+				431735EF82FDB4EF3BADD143FDEE4510 /* Pods-JudDemo-resources.sh */,
+				F5B43D6906DC53500AAA52FDFC3CBEEC /* Pods-JudDemo.debug.xcconfig */,
+				4A02FEE49E29CA5CB9119386F1FA3431 /* Pods-JudDemo.release.xcconfig */,
+			);
+			name = "Pods-JudDemo";
+			path = "Target Support Files/Pods-JudDemo";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				CBD9AE7EDAD63F795E9CC9F4BCAD0BEF /* Development Pods */,
+				876F80F8AFD1240ED0B7B9EA9C5BFAD8 /* Frameworks */,
+				8C2498AC5D088ABE080BD1FC250434DC /* Pods */,
+				D3B31841C36AF17F424B628F81C4291B /* Products */,
+				9D4FA9BD952D59B39C77188C1724F62F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		807A96E48948453D1AAE850F3C8355EC /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				8FCF52541FB4AA35E6064F58E0AA93E5 /* JUDDebugTool.h */,
+				EC4E72B05F25F5BF13B1378FDF25EDB4 /* JUDDebugTool.m */,
+			);
+			name = Debug;
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		807F7BECF0924B035CE4DF483B3B4A79 /* JudSDK */ = {
+			isa = PBXGroup;
+			children = (
+				022D42250271CB36D35734B21E94FF93 /* JudSDK */,
+				28A535E761E9E4BBB194D7D53CCEF336 /* Resources */,
+				2B680D49ECB142C831F1A90029BE638F /* Support Files */,
+			);
+			name = JudSDK;
+			path = ../JudSDK;
+			sourceTree = "<group>";
+		};
+		876F80F8AFD1240ED0B7B9EA9C5BFAD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E3AB2F5FA5DA88D486442235EF67318 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		87EBBC9C28EC9B82B5F7DEC1FCA01011 /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				150F8E873626A041F50900A37FF37D4E /* Core */,
+				BF8EDDF1F1F3A04187370A410978C9D8 /* Support Files */,
+			);
+			name = SDWebImage;
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		8C2498AC5D088ABE080BD1FC250434DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87EBBC9C28EC9B82B5F7DEC1FCA01011 /* SDWebImage */,
+				4D96D4D237D7521A68C4CF3EAB569A28 /* SocketRocket */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		976D01DFF79A21B16EAA4A49200E2C36 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				22BDFF02BF833B6143947A6702449B46 /* JUDAnimationModule.h */,
+				533DE9D25878BB4692EC2B2AA82A2B86 /* JUDAnimationModule.m */,
+				4B41795B77DE7533D645062DD3375F05 /* JUDCanvasModule.h */,
+				85CD9617BC98A3BDE5698F837A43E931 /* JUDCanvasModule.m */,
+				9244CCB5D04C86C979873461D2D9A36C /* JUDClipboardModule.h */,
+				ED1E325FA3E921D440169F013D06F97D /* JUDClipboardModule.m */,
+				AE9DBED7A882DAAB06915C74E0AB599C /* JUDCommunicate.h */,
+				C14B84317D25EB3AE4EA24E218444B66 /* JUDCommunicate.m */,
+				4F86AE3D589F2A1F3610752D9D743011 /* JUDCommunicateModule.h */,
+				E0A47A55AEE280C24D71E6C371EDAAAF /* JUDCommunicateModule.m */,
+				5B6B5180B2AE763ED18CCF1B507CF8DE /* JUDDomModule.h */,
+				680764D08FB7AE677A95EDDEEBCCF9B3 /* JUDDomModule.m */,
+				F73A84C8A273D1CF83BB401995D3AC51 /* JUDGlobalEventModule.h */,
+				85BE255DC8115023AA8A36003575A01F /* JUDGlobalEventModule.m */,
+				BDE9CB8ABAC3BD589EEB62F6B6CC7ED0 /* JUDInstanceWrap.h */,
+				87231E61AF2E2985CFC19362FD6420B7 /* JUDInstanceWrap.m */,
+				958E42AB9D78D0097BCBB0FC535134D3 /* JUDMetaModule.h */,
+				67FF373341BF53C6B728C9A14846D275 /* JUDMetaModule.m */,
+				0E8D2AC57E75CFD28ECC4A8ED3F478C2 /* JUDModalUIModule.h */,
+				C6251A52742DBF4B7724F5649468390A /* JUDModalUIModule.m */,
+				F8C9AE9F6AA6DF7D72FEE611360C6E4A /* JUDMTAModule.h */,
+				E2D75A7EB2A13BC7F9D6075E2019A4D7 /* JUDMTAModule.m */,
+				40801EECB2A52E535217EC76959476D8 /* JUDNavigatorModule.h */,
+				3342B0E12B6F4F926BCF60FB08F91777 /* JUDNavigatorModule.m */,
+				91617B73233FB23ECABC9DD051AB698E /* JUDPickerModule.h */,
+				0BE6A8C84465C756E90EBD67B9C0B2D5 /* JUDPickerModule.m */,
+				2F8DB6075F70A91AB1EAB60289B83963 /* JUDStorageModule.h */,
+				4BCFDE9A508B14CBB8B13DA8B107C3F5 /* JUDStorageModule.m */,
+				9AD4B727E126A595DBDDEC7980EF0D28 /* JUDStreamModule.h */,
+				48E5A60E7B4A2BE6393F8F9585314B2B /* JUDStreamModule.m */,
+				82DC619D18F15518A3AF7389171C84D9 /* JUDTimerModule.h */,
+				733A91B4178C39F80FF385231B731CAF /* JUDTimerModule.m */,
+				380F3B033EC20D705AC7B1B819954393 /* JUDWebSocketModule.h */,
+				D9829010452703B4E1D6F9A74F2F86D6 /* JUDWebSocketModule.m */,
+				4668DCFAEC5E2366CFA7648E77D69FDD /* JUDWebViewModule.h */,
+				A9A2700A8FFD5569BD221B4C3BE5B4BA /* JUDWebViewModule.m */,
+			);
+			name = Module;
+			path = Module;
+			sourceTree = "<group>";
+		};
+		9D4FA9BD952D59B39C77188C1724F62F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A3CCDDE514AC965138E38617FDE2FE5 /* Pods-JudDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9D5F9FE56E39707EB6C09D01C8A20CE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DFD8E426D9CD05FFB4B4CAAE3B001EDF /* JUDComponent+PseudoClassManagement.h */,
+				C0CF7077BF64A7D42CF754B4A8065161 /* JUDComponent+PseudoClassManagement.m */,
+				ADE37FC988DF6997C5073BBE85F5CAB0 /* JUDComponent+ViewManagement.h */,
+				EB20BC228B2FB80443032CE326B98078 /* JUDComponent+ViewManagement.m */,
+				B400AE4B6FA94F28F1EF758270E621FA /* JUDErrorView.h */,
+				E10A73DAC853CBFD00A868C1FA87FC38 /* JUDErrorView.m */,
+				A8A902893A7FC44E64C4C23F9D17A47C /* JUDRootView.h */,
+				0E7E5932E561614E8A7606ABB52084C9 /* JUDRootView.m */,
+				17ED529D9DE51A1055036ED94FA07057 /* JUDView.h */,
+				4443748F61BD706D4F41C6612D782DD0 /* JUDView.m */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		AB570E010B39EC09477C8ED3EF4CE655 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BAAF0CE10C676FC94E3E4735A5B2582 /* SocketRocket.xcconfig */,
+				5681AE139DD243BB0B40F35475E931F8 /* SocketRocket-dummy.m */,
+				FCF39F2CEAB18F0D6C1BFB6B6CE7BD6B /* SocketRocket-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SocketRocket";
+			sourceTree = "<group>";
+		};
+		AC2AE695A94872BCEB38DE2333E8758D /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				79876C30EF0975B002411EB8F52C2246 /* JSValue+Jud.h */,
+				000745A3A0B936B5AA583091477D25CD /* JSValue+Jud.m */,
+				8CB000CAF2A0A2369DA08A8158D9DCA5 /* JUDBridgeContext.h */,
+				0C9871DF4EF3AB21792F6FAE9EC08736 /* JUDBridgeContext.m */,
+				25589211B0D65642C5881EC2D89359F4 /* JUDBridgeMethod.h */,
+				4F16217F6A85A3F34A154401B9D36545 /* JUDBridgeMethod.m */,
+				283E91C78F5B5967F16A7467901FD653 /* JUDCallJSMethod.h */,
+				D0E1B5D46A9FF1C981EA674CF47B9709 /* JUDCallJSMethod.m */,
+				530B1F3A9887E41883097ACF86087D36 /* JUDComponentMethod.h */,
+				06FF37AE66CAFDB53069A9F2C494CF1F /* JUDComponentMethod.m */,
+				B86845BF14B6E14B6B2A18FDDADA5C4C /* JUDDebugLoggerBridge.h */,
+				4DF83B966DCB8547FFA5AE78B182CF78 /* JUDDebugLoggerBridge.m */,
+				EE0E391F14F21E0EC3F30A11D6CD6F7C /* JUDJSCoreBridge.h */,
+				7A99638121B42F34EFCC79E22CDFA4D4 /* JUDJSCoreBridge.m */,
+				6AFA2411892AF1C68BBB52264995B71B /* JUDModuleMethod.h */,
+				58F09746AEAA0369FC5F8E1D9084FE04 /* JUDModuleMethod.m */,
+				73B8EC6C383D34298723B10AA5233ED5 /* JUDPolyfillSet.h */,
+				04711AB0A95B5BCFF92AE8105555A81B /* JUDPolyfillSet.m */,
+			);
+			name = Bridge;
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		AD0082CC54EBD280C44CDEE9607D1AE1 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				B0995CB1803A43E62EA0EC4B3FD23449 /* JUDResourceLoader.h */,
+				0A9624CDDB5A29E9B4843CD2B8C7C7E4 /* JUDResourceLoader.m */,
+				607ABE239DCADCB95283282A5D73B752 /* JUDWebSocketLoader.h */,
+				CCD214D7DFFCCD54826BEDB14B43A19D /* JUDWebSocketLoader.m */,
+			);
+			name = Loader;
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		BF8EDDF1F1F3A04187370A410978C9D8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9270A25D5ED709CD547CB90D268BF258 /* SDWebImage.xcconfig */,
+				7AEE50F6D84A88926980B18197C9D298 /* SDWebImage-dummy.m */,
+				9F9944DB85C99E0DE88D99C760984FB3 /* SDWebImage-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SDWebImage";
+			sourceTree = "<group>";
+		};
+		CBD9AE7EDAD63F795E9CC9F4BCAD0BEF /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				807F7BECF0924B035CE4DF483B3B4A79 /* JudSDK */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		D3B31841C36AF17F424B628F81C4291B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8A0EEF8168F03A8F1281E0EF1BAE5B6 /* libJudSDK.a */,
+				F773ACB3D43292F272F8BA8C46678DE9 /* libPods-JudDemo.a */,
+				9A633F4EFD7ADF657D5E037F4533B5D0 /* libSDWebImage.a */,
+				1D3319D6836A691AEF3B7845B19108AE /* libSocketRocket.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D64423DA251150C4BA469FB2C707F48F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9810420122860C697A40E9CBF8903D21 /* JUDAppConfiguration.h */,
+				5FEF7DD7251CB1C8C6DEDBBC4FD1E29D /* JUDAppConfiguration.m */,
+				0BCF70781DA27D0A4BEC9D8BF1B86D95 /* JUDAssert.h */,
+				762FF0103878A90E6EB7534ED2FF6205 /* JUDAssert.m */,
+				378C0EEBF33E7E556AB9C75733A03606 /* JUDConvert.h */,
+				132E5A418E2E57B6C274157B9E0B1432 /* JUDConvert.m */,
+				E1A92201E2D375621B3AFE39A7616D08 /* JUDDefine.h */,
+				48AEFAC62D9FE6426FD780FBB84B8444 /* JUDLength.h */,
+				2610D6443E7AECF55E5F34E5E60CF8AF /* JUDLength.m */,
+				31D40CB833AEAA97A0A91E1011960023 /* JUDLog.h */,
+				C9FE1CE08BD184C73B1A8C703AA2DCD7 /* JUDLog.m */,
+				5DA56AD7C26FA9A5C76396B5D67F7BDA /* JUDSimulatorShortcutManager.h */,
+				B07C35B1E542A517D687FEBA0A525F7E /* JUDSimulatorShortcutManager.m */,
+				D1098C54A346742544D8D1BC1F93F16D /* JUDThreadSafeCounter.h */,
+				245D7E0D43C259C21857F54CFC4B4CCA /* JUDThreadSafeCounter.m */,
+				A22F7A5D35A2062CF14EC5BB956E8444 /* JUDThreadSafeMutableArray.h */,
+				389C663CC836C2C8F05873B7AE8EBCCF /* JUDThreadSafeMutableArray.m */,
+				5B5D3F058D37A2AB4480427B27A50AD4 /* JUDThreadSafeMutableDictionary.h */,
+				143D57CA1C3DB18006E7BA36DED9E0FC /* JUDThreadSafeMutableDictionary.m */,
+				B7E4F73DBCD1968C0A6400CC683490CD /* JUDType.h */,
+				1BB4079F16E13DC0C16B693FB6851EE1 /* JUDUtility.h */,
+				656F5B93694347E4FB264F7EA1303379 /* JUDUtility.m */,
+				2242A7FBB588851AA6CBF89209A436F8 /* JUDWeakObjectWrapper.h */,
+				86C619CCDF93E27A93D101CF932D75DD /* JUDWeakObjectWrapper.m */,
+				B88EFA630943669A8D203614CF50B938 /* NSArray+Jud.h */,
+				51F6EC543132156D4BC6968C37BDCC6D /* NSArray+Jud.m */,
+				875166FAF51486C9748999E8B1A38BB1 /* NSObject+JUDSwizzle.h */,
+				12A7E6804F2E891ED499DA9C2BED6CEE /* NSObject+JUDSwizzle.m */,
+				C76002AEFA276F523CDD84A817A4F4D9 /* NSTimer+Jud.h */,
+				AE58529EFF0812690040BDCC41F643CE /* NSTimer+Jud.m */,
+			);
+			name = Utility;
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		DF7AC2C9F593CBE1F5C9D5551EBF7FC8 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				9903399FBAF26972ABA46D540A0732CF /* JUDAComponent.h */,
+				3C04ED14ED211832CA40F9950920ABB2 /* JUDAComponent.m */,
+				2A4B3EBB53ABB4B2A26F3CCACC82FA56 /* JUDCanvasComponent.h */,
+				23F554741B1F7E905E277CECBFEFD2A5 /* JUDCanvasComponent.m */,
+				3DD5779FE4FD06532B5F602D34D38F60 /* JUDCellComponent.h */,
+				4227DCC6894D076A87A9C20803A4F18C /* JUDCellComponent.m */,
+				B9A579B5440252625838ECA25113520F /* JUDComponent+GradientColor.h */,
+				BD6098EE28EA0DFC945D1757DBBA0AC4 /* JUDComponent+GradientColor.m */,
+				552FDFFB81CD4E6A2E5262D0DEC6EF47 /* JUDComponent_internal.h */,
+				50D5F94EB9A44D9F9AE6A3F75813CDF6 /* JUDDivComponent.h */,
+				81E8EE86D02965F94394E574B973895B /* JUDDivComponent.m */,
+				2290D5D9701221C7B6A615A2AC9EC25F /* JUDEmbedComponent.h */,
+				C377E0D031A0EE4875992B8203ABF7C7 /* JUDEmbedComponent.m */,
+				F022DB982F2234DFE941316237E514A5 /* JUDImageComponent.h */,
+				8AA29D568DB235A7C62464703AEE4D56 /* JUDImageComponent.m */,
+				D26EB91E2EF58EE8497BF6769CA4B30D /* JUDIndicatorComponent.h */,
+				5548636D617618B0BAA01678EC858EE4 /* JUDIndicatorComponent.m */,
+				F83CD5746A827624474048EEF5F934A3 /* JUDListComponent.h */,
+				8CBCFA5E0B0084C8B1BB0582AA9F669A /* JUDListComponent.m */,
+				FB38C310CB3B633BB032879A34DA0386 /* JUDLoadingComponent.h */,
+				C9D9C72914CA80A54AA8D6D191B7034C /* JUDLoadingComponent.m */,
+				FA331FAB11998331A9EABAA7462D9FBC /* JUDLoadingIndicator.h */,
+				BBB6C07AF546DCDD7A8B6B228403BB30 /* JUDLoadingIndicator.m */,
+				335D944670FDE85B6A8AD276AE7CDC03 /* JUDRefreshComponent.h */,
+				CF89F5771610A27DDC267C9C58F1F8B7 /* JUDRefreshComponent.m */,
+				ABA3FA87DDC22B7F91CFBDF13E3E1803 /* JUDScrollerComponent.h */,
+				97A5AC1420E1E13B5D4C395920B03F0D /* JUDScrollerComponent.m */,
+				1715E568191B183A8E964EEBEA2E4ED8 /* JUDSliderComponent.h */,
+				30F029B4E8D834AB555C9A5073946F19 /* JUDSliderComponent.m */,
+				0C81A42BB75A55034E4733AF2DDA0745 /* JUDSliderNeighborComponent.h */,
+				274CC1596CD5CDCCBB6F40E3212F32FC /* JUDSliderNeighborComponent.m */,
+				B502DFEE8C0B87386EAFDF9CD5D1A44A /* JUDSwitchComponent.h */,
+				C2EBD866EEE3F2144AFBF3BE0AA94EBB /* JUDSwitchComponent.m */,
+				9BA26EADB1A8ACB7C11FB3EBB565DA56 /* JUDTextAreaComponent.h */,
+				979AA3465F0997B4A103E5ABA6921D6B /* JUDTextAreaComponent.m */,
+				57219347C1D7F2465808F5B7DDC6CB61 /* JUDTextComponent.h */,
+				C29B834C31F3F12682975E2A8157B828 /* JUDTextComponent.m */,
+				8103CCE7751D38F287CD0D8A7878DFF1 /* JUDTextInputComponent.h */,
+				EB42A6EA4CB98A5AAB013EA1C4BE5AE7 /* JUDTextInputComponent.m */,
+				0692C58609F348CDA124AEA5AAFED4DD /* JUDTransform.h */,
+				7F182A0FFF7C517C8287DB7EFDBD8031 /* JUDTransform.m */,
+				9B52539B82EA1A78F3260849FA4D1A2F /* JUDVideoComponent.h */,
+				A446E502DD880A22EFA36A7FD5628CC8 /* JUDVideoComponent.m */,
+				78F114165395BED0BD10ACA3562DCE77 /* JUDWebComponent.h */,
+				20F09B14836883F99E442B9003E2182A /* JUDWebComponent.m */,
+			);
+			name = Component;
+			path = Component;
+			sourceTree = "<group>";
+		};
+		E7C6FAEF6AE9810BDDA308FFA7354F71 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				3E9E5D74FDBF0970005A315E2FBC8FC9 /* JUDComponent+Layout.h */,
+				B928C766B0DB9DE6B4DB399400A85D5D /* JUDComponent+Layout.m */,
+				52F1748CD3CE47C5FA6028186D340774 /* JUDLayoutDefine.h */,
+				6D665FEEE669EB395C08C7C9D20EB40B /* Layout.c */,
+				AA9333C3721C2D40F3FBD29D1E2F183F /* Layout.h */,
+			);
+			name = Layout;
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		E970079E96843DA4E6CC1CC08FFFBBC9 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				BE6554BDD1D2CB0175EE6B66B214A4BE /* JUDComponent+Display.h */,
+				6E68D67F214445DAD4448BD2A05D47F4 /* JUDComponent+Display.m */,
+				D413024B674D572D1B18112D87F01C8A /* JUDDisplayQueue.h */,
+				03F50DD079123536ABB80DA1E57F6D82 /* JUDDisplayQueue.m */,
+				5283ED5B4712A3463AC96BE4002D44C4 /* JUDLayer.h */,
+				2B613D8F15EFB13C15B3995802E109CA /* JUDLayer.m */,
+				C2546D50BB053E7E1E66EB4B522AA3D1 /* JUDRoundedRect.h */,
+				04041BF7DEA6A186F8CC4C2E59F99380 /* JUDRoundedRect.mm */,
+				66EC276D1821426F24DEBB99AA05C12C /* UIBezierPath+Jud.h */,
+				AB4DA734778696C656064400354B0FD9 /* UIBezierPath+Jud.m */,
+			);
+			name = Display;
+			path = Display;
+			sourceTree = "<group>";
+		};
+		EDA732D61A2C53B5F05EA2173DE05706 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D6E3922663038B6650A5F583793773EF /* JUDBridgeManager.h */,
+				219D7BDF60A49B28820C1D26DCE7E1CA /* JUDBridgeManager.m */,
+				729EB0FC82588CD3AB275BAB7F431368 /* JUDComponentFactory.h */,
+				00ADA6FD333C11BC66BD044FF732688E /* JUDComponentFactory.m */,
+				038404F59D2E6693944AA1CE59B7ACD8 /* JUDComponentManager.h */,
+				7BF2FC8D468802E6AEB2F7FD413E85FF /* JUDComponentManager.m */,
+				0C4326D24FBD7D0A8E9EB9FF259C3463 /* JUDDatePickerManager.h */,
+				869FC2CEB430F6C047B67E568B269D5B /* JUDDatePickerManager.m */,
+				4660129A7B709E1CBA5B534A3625D58C /* JUDHandlerFactory.h */,
+				A8AA9129778D4F0697AC33CC5EE6BC2F /* JUDHandlerFactory.m */,
+				204F501B400365287108ADEF7D8172CD /* JUDInvocationConfig.h */,
+				FAF42019364305FA6D04E216C72DF093 /* JUDInvocationConfig.m */,
+				62A6185556741DA592941045093064D4 /* JUDModuleFactory.h */,
+				0817A39149436A5997F6BC83E3137632 /* JUDModuleFactory.m */,
+				1CF841BD89179B2643EB1119501A7336 /* JUDRuleManager.h */,
+				91D3BFCFE7D8A678C19CC5AD553DA786 /* JUDRuleManager.m */,
+				D81FC3E6A01E6ABF34CD380CB86BA3E1 /* JUDSDKManager.h */,
+				B6CB08E05848E3E8451FD5E6D3F296B8 /* JUDSDKManager.m */,
+				A78AF1252F0D92B696A7C6A6EA18108F /* JUDServiceFactory.h */,
+				D392DBF743CDDB2E0724B094D5EDB102 /* JUDServiceFactory.m */,
+			);
+			name = Manager;
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F1431D1808B6B0B45BF25CB0E3A47FF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E667AF0DA9ACD22C21ABDBA16F7CC83 /* jud_load_error@3x.png */,
+				3D24F1813EF85DF228F6D9D9AFF11D6A /* main.js */,
+			);
+			name = Resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FDB858821B4DAF2DCB2A5097BAAB77B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				91592039663363453B6678D6E2DF3500 /* JUDBaseViewController.h */,
+				17002C1B1CD3A4C1E1F09D38A79E8737 /* JUDBaseViewController.m */,
+				E76ED4B7A909B358EADA8919F96B153D /* JUDRootViewController.h */,
+				E35891A782C9154C9639B9C90F08217F /* JUDRootViewController.m */,
+			);
+			name = Controller;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1D6A7D108E6CFE865C20F092C31F39EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8E22CBB9D36456595207F4D99771C84 /* JSValue+Jud.h in Headers */,
+				54A67922F5FE5CEBC5EFACE09E94C348 /* JUDAComponent.h in Headers */,
+				C45E6D8BC8303D5AB4B034EDEEB2D09B /* JUDAnimationModule.h in Headers */,
+				2954B425356FA690629D651E0D6BD7F2 /* JUDAppConfiguration.h in Headers */,
+				227EE9F8393C0DF00FC4D0D5225E6FC8 /* JUDAppMonitorProtocol.h in Headers */,
+				416E024020AD100073B32D27602FE219 /* JUDAssert.h in Headers */,
+				64C93BCB3DA3D3D0386A56EB69241D99 /* JUDBaseViewController.h in Headers */,
+				F2D79178AFA35C06D36BA726BCDDA023 /* JUDBridgeContext.h in Headers */,
+				366A3AC3814F9F78A4A5739242313B08 /* JUDBridgeManager.h in Headers */,
+				433097F2ED6CA1335FAC7203A01F100B /* JUDBridgeMethod.h in Headers */,
+				45BD19E1531CD841863EDCE3F59F1BF7 /* JUDBridgeProtocol.h in Headers */,
+				BD0CDC457B67F6BAECDC246CF6CD2A85 /* JUDCallJSMethod.h in Headers */,
+				085AF407B5D09E0C5C98F098A68DA1B1 /* JUDCanvasComponent.h in Headers */,
+				4D94A28B2DCB3EE1D180D7E5A6977740 /* JUDCanvasModule.h in Headers */,
+				78F77A4EAAD2E659DDF49B1FB942C29E /* JUDCellComponent.h in Headers */,
+				0A6DDA574428DD9F39BE7E1777FC62C0 /* JUDClipboardModule.h in Headers */,
+				9808FC48166E3D68CCC41BABAC7D46D8 /* JUDCommunicate.h in Headers */,
+				8551C2F15372510B9ACB20709DAAAC49 /* JUDCommunicateModule.h in Headers */,
+				3CDB06008FB3F64B8484C3D1E618420E /* JUDComponent+Display.h in Headers */,
+				64768E9C454CAF96F1C9F1EDE8E5201B /* JUDComponent+Events.h in Headers */,
+				783EF1F2987073ED1D0E7B5F6C965119 /* JUDComponent+GradientColor.h in Headers */,
+				C4CAA5B8603D03627480EB169EA79236 /* JUDComponent+Layout.h in Headers */,
+				E6C1881CC6FEA1A72146A5BC106A6C80 /* JUDComponent+Navigation.h in Headers */,
+				2E285EEDDFFDCD0AB3C9408255C8C8A6 /* JUDComponent+PseudoClassManagement.h in Headers */,
+				1EB6FDDA002BC23A96A1EC132DE81B65 /* JUDComponent+ViewManagement.h in Headers */,
+				0508FC1C5231A2CB4CFBFE2230501FD5 /* JUDComponent.h in Headers */,
+				AAE93DBE316EEA1A7DEF719DC6C7D12A /* JUDComponent_internal.h in Headers */,
+				C6A1AFA09A32C8A2EFD6A2AA7E2B402A /* JUDComponentFactory.h in Headers */,
+				A8C6485B83A442BF5DE790F4B90ABD3F /* JUDComponentManager.h in Headers */,
+				BC1DED9A8499C3FD11C1D4467D2A3443 /* JUDComponentMethod.h in Headers */,
+				3A92924967BD19886CCB641DA72019E9 /* JUDConvert.h in Headers */,
+				E63E4E55475DF0C8476A2602B3E9D755 /* JUDDatePickerManager.h in Headers */,
+				BB6701F1D11ACD943426D5BEC3035C5B /* JUDDebugLoggerBridge.h in Headers */,
+				DE699C14808CAA1B4EE3C1C30D7369D4 /* JUDDebugTool.h in Headers */,
+				58AACAB0AB03AC36889D237F8A935AC5 /* JUDDefine.h in Headers */,
+				AAEB7D9B3D929F59685F8BEDBDB78298 /* JUDDisplayQueue.h in Headers */,
+				9E6AAFC59D7E86051184A024CFED900C /* JUDDivComponent.h in Headers */,
+				EBBE8E0AC01EF6ABB72B4D12673475D2 /* JUDDomModule.h in Headers */,
+				B257F61AA8BE1B4ED81D6CAE945C7FAD /* JUDEmbedComponent.h in Headers */,
+				5E78BB091B39B72F6CCA8D32C468F420 /* JUDErrorView.h in Headers */,
+				1FBB35A715B600A61B42C61F677C8C76 /* JUDEventModuleProtocol.h in Headers */,
+				80BCA5AC93A6991976E3C5020AEF15CD /* JUDGlobalEventModule.h in Headers */,
+				0AF2D0B6A4F495606325B730EFAF82A8 /* JUDHandlerFactory.h in Headers */,
+				EE22AC38F82B50EC3B37954196F2D993 /* JUDImageComponent.h in Headers */,
+				854A9BA8B095204D4935889255FC59B9 /* JUDImgLoaderProtocol.h in Headers */,
+				4441F12BFE392A21A2596B2982E9A324 /* JUDIndicatorComponent.h in Headers */,
+				0C9C1E1EB45401C543ABCE221929F564 /* JUDInstanceWrap.h in Headers */,
+				813E84D55733D70EB5DEB461B63D096E /* JUDInvocationConfig.h in Headers */,
+				96338C0E02EBACF0E74972E352F604C3 /* JUDJSCoreBridge.h in Headers */,
+				1BC357AD463760BA45A1E285C71C85D0 /* JUDJSExceptionInfo.h in Headers */,
+				25116DE9277302C784D2D108F9C5FAB5 /* JUDJSExceptionProtocol.h in Headers */,
+				A8938748A3E3FCB333B819316783D489 /* JUDLayer.h in Headers */,
+				3D9802AB1AE57AC3EAA97DDDD1B813AB /* JUDLayoutDefine.h in Headers */,
+				043329388B7C7231DD97AD5C00177716 /* JUDLength.h in Headers */,
+				951F92C61FB0ACC1F2888DE64A6F390E /* JUDListComponent.h in Headers */,
+				3B942F926F7F25902F24CC49026D4BC0 /* JUDLoadingComponent.h in Headers */,
+				921F4F59AFEA3B42F148B13798BF721B /* JUDLoadingIndicator.h in Headers */,
+				CDE177B90C855A907E6F252602775028 /* JUDLog.h in Headers */,
+				5A8D6131DB4F16084F421C266FB63B75 /* JUDMetaModule.h in Headers */,
+				B712BF9F93975EC4E3348A76BA82E0FC /* JUDModalUIModule.h in Headers */,
+				49686B25FFA50854FDB2B0CD3B91B858 /* JUDModuleFactory.h in Headers */,
+				12701F819B4ADCBD76569DF19767ED51 /* JUDModuleMethod.h in Headers */,
+				5FEA3D3A65E5D67E3C41C1E9449B6CF3 /* JUDModuleProtocol.h in Headers */,
+				E63622EE726C0717218E74AE87F4AAEF /* JUDMonitor.h in Headers */,
+				8598C5FAC7E9D19D3F3B82F40A430A99 /* JUDMTADefaultImpl.h in Headers */,
+				DBEDEB28378AD458708DA395903BF01B /* JUDMTAModule.h in Headers */,
+				FD3821A0F9A7FF4B4EE9F53F538053C1 /* JUDMTAProtocol.h in Headers */,
+				49953189944FB69B27E7C1223208AEB6 /* JUDNavigationDefaultImpl.h in Headers */,
+				CC24F751598AE6C57CE105F875EF082E /* JUDNavigationProtocol.h in Headers */,
+				F2184267D04BE6724AB6A46C08B5E03E /* JUDNavigatorModule.h in Headers */,
+				C128E98302B648F1B60FA46555397960 /* JUDNetworkProtocol.h in Headers */,
+				A46F1741CB460D4438F98F9528904983 /* JUDPickerModule.h in Headers */,
+				325A4F89FCA5746C042E96A99FDE3593 /* JUDPolyfillSet.h in Headers */,
+				4D01EE33283337ABAE64C9C2FF0CE347 /* JUDRefreshComponent.h in Headers */,
+				E11A970A175E2F21E5E24657A1E88EF9 /* JUDResourceLoader.h in Headers */,
+				4F24314F243E8C6BE5FEA01A1242839E /* JUDResourceRequest.h in Headers */,
+				5C807E2EBDCCF7416B02A85976BDFE67 /* JUDResourceRequestHandler.h in Headers */,
+				2FC1B1A6AD4CB86CCA19769C44355F09 /* JUDResourceRequestHandlerDefaultImpl.h in Headers */,
+				1AB69886A9451D6831F6510F51A74DA7 /* JUDResourceResponse.h in Headers */,
+				394F0AD14427491D9B15A5ABB0124B3D /* JUDRootView.h in Headers */,
+				9EF7C4E7A1FD6CDA45524309CB090682 /* JUDRootViewController.h in Headers */,
+				1DF9D357A871AB7EB977A80AE7705393 /* JUDRoundedRect.h in Headers */,
+				1928162AFB695DCDD8598FDAF2A62EF7 /* JUDRuleManager.h in Headers */,
+				6B2ED87CEA5BD95D0D6EE2983D8F860C /* JUDScrollerComponent.h in Headers */,
+				5CE7A128E4E799103D0A98E137CEEAB8 /* JUDScrollerProtocol.h in Headers */,
+				9F530A3AE1BAD7CE57B0865A5457AA39 /* JudSDK.h in Headers */,
+				60B5ABC9CA572231A6E44C3FFC85CF45 /* JUDSDKEngine.h in Headers */,
+				432FF4FC50352A4EDE5FDC078F283115 /* JUDSDKError.h in Headers */,
+				DBD56514B3CD3434E2D28C859424EEDC /* JUDSDKInstance.h in Headers */,
+				139671A6D16ECD812BB82B1953440492 /* JUDSDKInstance_private.h in Headers */,
+				BACBE463AEED42217D3235059D913085 /* JUDSDKManager.h in Headers */,
+				89B0778816C7D498EEC1A54BB818EBED /* JUDServiceFactory.h in Headers */,
+				194137580D566BB42593A4354D7527DE /* JUDSimulatorShortcutManager.h in Headers */,
+				1287046BDD8754A88DB027731635A6BB /* JUDSliderComponent.h in Headers */,
+				B6E95E5E0E0E2209F925C84D53812E02 /* JUDSliderNeighborComponent.h in Headers */,
+				4CB43B369E9C12C474C25B0BD283FEA6 /* JUDStorageModule.h in Headers */,
+				3891EC3C45357BBE1D704C16BA159A4C /* JUDStreamModule.h in Headers */,
+				65607B7AD1C3F84962FB24FB57ED8E44 /* JUDSwitchComponent.h in Headers */,
+				06FB3914D56109C3EB32DA44A700D7C3 /* JUDTextAreaComponent.h in Headers */,
+				4D0296E9005CF59710D5D3E71E0FAEC9 /* JUDTextComponent.h in Headers */,
+				476C46A3D10970B7CDEFFD2DD385B9E3 /* JUDTextComponentProtocol.h in Headers */,
+				59451AB4EE5D0953C360B75AA290375F /* JUDTextInputComponent.h in Headers */,
+				36F22592249ECF4C3545612CC01140A4 /* JUDThreadSafeCounter.h in Headers */,
+				86A569E02CCC8FDBF421330AD6976CDC /* JUDThreadSafeMutableArray.h in Headers */,
+				623A1D2DBA0BDD2DE3FBFC038FB637FE /* JUDThreadSafeMutableDictionary.h in Headers */,
+				1479A2A0B847EA3A3C0DAF3A7DB6CC4E /* JUDTimerModule.h in Headers */,
+				E6E6AE8EE135695107676D064B14EE6B /* JUDTransform.h in Headers */,
+				0EEF288A7DA2A6B472733CFBAA46190E /* JUDType.h in Headers */,
+				C7B5346A0F0DADBE5392C78172A8291C /* JUDURLRewriteDefaultImpl.h in Headers */,
+				9ECEE22875464A782BEE337BD61F6FC4 /* JUDURLRewriteProtocol.h in Headers */,
+				611F7E820533D8B3BD832635A41AEDDA /* JUDUtility.h in Headers */,
+				2689CCA9CE637666B8BF4786C30E9329 /* JUDVideoComponent.h in Headers */,
+				33B2FBC2661AC0A3C00E98023461F437 /* JUDView.h in Headers */,
+				D672243B7726AFA63CC3C367689644B1 /* JUDWeakObjectWrapper.h in Headers */,
+				F73F46F229E78EA49C84BCEE7A090657 /* JUDWebComponent.h in Headers */,
+				25B78EF21CF06A21C89BE650B455AF6B /* JUDWebSocketDefaultImpl.h in Headers */,
+				24CD39FFD7A1953676DDE4FD07F80814 /* JUDWebSocketHandler.h in Headers */,
+				4BDAC5C4D3E023F0EDA6DD5EDC157587 /* JUDWebSocketLoader.h in Headers */,
+				455B699F0959784984FB2DBDA37A7E9E /* JUDWebSocketModule.h in Headers */,
+				0D9BCE88FFC4F87FCD88FB21C8C88A6C /* JUDWebViewModule.h in Headers */,
+				7F74FCD5D421D52309ED3BBB95E68E00 /* Layout.h in Headers */,
+				854ADA4059310F841A66DE2AF95BDBA8 /* NSArray+Jud.h in Headers */,
+				8851BE38B798717CA2A1C90030883D85 /* NSObject+JUDSwizzle.h in Headers */,
+				52A5D810E6DFFE692C06059929D0B3AC /* NSTimer+Jud.h in Headers */,
+				CAB03A1E1F3613392EB497AB15A32563 /* SRWebSocket+Jud.h in Headers */,
+				EEA2E3C093682D0A0328153A41173E76 /* UIBezierPath+Jud.h in Headers */,
+				D9FCE07BBA3024A0903B879DE3FFAE2C /* WXDestroyProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6D492B811EBBF964DD9EECD42994258 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C83A1456E9E786DC892E3E3306CBE401 /* SRWebSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B95E4146FD0FEE3DE97C691647905A64 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF4C8C47C6EC990CFF3A9E94A12639C3 /* NSData+ImageContentType.h in Headers */,
+				B6A3782B605971927975259EE12FC581 /* SDImageCache.h in Headers */,
+				E79830236A5F4BE959B71DE91175A540 /* SDWebImageCompat.h in Headers */,
+				13741BB88F7F42434D91DF9B5A8103DF /* SDWebImageDecoder.h in Headers */,
+				D222342F2488AC35B34DFF2D9C4A4181 /* SDWebImageDownloader.h in Headers */,
+				90E58DCA48BB84435FD053B86D0173FE /* SDWebImageDownloaderOperation.h in Headers */,
+				A189930BDC184617F61DB96EBAF9BCAF /* SDWebImageManager.h in Headers */,
+				089708CE977B36A054AB5C2573817F86 /* SDWebImageOperation.h in Headers */,
+				9564AEC34BE0C6891273E8243A3EBA9B /* SDWebImagePrefetcher.h in Headers */,
+				78CB95C0264B1FDC25239A338D12681D /* UIButton+WebCache.h in Headers */,
+				EB11152CD0B9283A398026003D71D8D4 /* UIImage+GIF.h in Headers */,
+				5C5DFFC59900115A4D93AB8888D618C1 /* UIImage+MultiFormat.h in Headers */,
+				FC4E405822EE4D9200AE31D2D0F93B67 /* UIImageView+HighlightedWebCache.h in Headers */,
+				A2A07C8473FC6C574AD71C508A41B41E /* UIImageView+WebCache.h in Headers */,
+				C0A297D2368E61E177D526D379B23069 /* UIView+WebCacheOperation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1A39B0EB5442720A5FE2F284206354CF /* SDWebImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40FC5FC33610C6655670C954B1ECB6F8 /* Build configuration list for PBXNativeTarget "SDWebImage" */;
+			buildPhases = (
+				5C719397129F58CB5C90904641DF573C /* Sources */,
+				CF00BDD94499D204EADF75A1D3AD7F5F /* Frameworks */,
+				B95E4146FD0FEE3DE97C691647905A64 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDWebImage;
+			productName = SDWebImage;
+			productReference = 9A633F4EFD7ADF657D5E037F4533B5D0 /* libSDWebImage.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		55D8775FECDAF2F91F89C050F4829C4C /* SocketRocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F7BB76F50AF69834E97F21E7A9E1258 /* Build configuration list for PBXNativeTarget "SocketRocket" */;
+			buildPhases = (
+				BA1096C804A1270E04A1DBD542E23881 /* Sources */,
+				B49F95BAD65333EBE151CA105C3A8252 /* Frameworks */,
+				B6D492B811EBBF964DD9EECD42994258 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocketRocket;
+			productName = SocketRocket;
+			productReference = 1D3319D6836A691AEF3B7845B19108AE /* libSocketRocket.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B4FDA2D2542D215F60CE66F6B418BB5C /* Pods-JudDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E17A79B515C93A90A81014AD4FD3DCD /* Build configuration list for PBXNativeTarget "Pods-JudDemo" */;
+			buildPhases = (
+				6143CD7D6DBA7E57EF5AC0C7F801C38B /* Sources */,
+				60A6450FDDBDDB680E7BDD1CC537452C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5FAF2153CA0E46A4911ED50E8026E4B /* PBXTargetDependency */,
+				C6BF2FEB24B76282C126680684232382 /* PBXTargetDependency */,
+				B68DC7DDA2429CEBFEE8A834F45A505A /* PBXTargetDependency */,
+			);
+			name = "Pods-JudDemo";
+			productName = "Pods-JudDemo";
+			productReference = F773ACB3D43292F272F8BA8C46678DE9 /* libPods-JudDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F78AA9245E7D07A77579A3DCE91C2F48 /* JudSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C4F881CE941E1EC5EC9EA46B40D1D4A /* Build configuration list for PBXNativeTarget "JudSDK" */;
+			buildPhases = (
+				50B6C39EED00ED6E26A7E8E1594B8EF0 /* Sources */,
+				7BEC08620DC7582971AA79DA41E8902D /* Frameworks */,
+				1D6A7D108E6CFE865C20F092C31F39EB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEF2DB9440A9F46646BFF3F5031FF9F3 /* PBXTargetDependency */,
+			);
+			name = JudSDK;
+			productName = JudSDK;
+			productReference = E8A0EEF8168F03A8F1281E0EF1BAE5B6 /* libJudSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = D3B31841C36AF17F424B628F81C4291B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F78AA9245E7D07A77579A3DCE91C2F48 /* JudSDK */,
+				B4FDA2D2542D215F60CE66F6B418BB5C /* Pods-JudDemo */,
+				1A39B0EB5442720A5FE2F284206354CF /* SDWebImage */,
+				55D8775FECDAF2F91F89C050F4829C4C /* SocketRocket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50B6C39EED00ED6E26A7E8E1594B8EF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2676F5D985054982EC271257077360F /* JSValue+Jud.m in Sources */,
+				3387565624D12881660EDC02067821BE /* JUDAComponent.m in Sources */,
+				15016085063BB11D029B36AACB6313B8 /* JUDAnimationModule.m in Sources */,
+				B98C0EAC1BF94C76F2ADEB793DD57444 /* JUDAppConfiguration.m in Sources */,
+				4DDE1DCF36414D505DFDF33C0362FCC6 /* JUDAssert.m in Sources */,
+				D55E9F6D31AC83FB2571C5C72907455D /* JUDBaseViewController.m in Sources */,
+				AFC7782D0EA9C41B4C81D4B593ED6827 /* JUDBridgeContext.m in Sources */,
+				8569CE763CA18C2ECE975D57E4CE9A0D /* JUDBridgeManager.m in Sources */,
+				01025EDBB89C7D4E51AB7896C2BA8EF9 /* JUDBridgeMethod.m in Sources */,
+				7F07E7CBDB476C0251CA5362B12C753C /* JUDCallJSMethod.m in Sources */,
+				FCC74E85EE2CAD396D2E53F0D974D2C7 /* JUDCanvasComponent.m in Sources */,
+				4C86EE38B32902CE48B073560CA88462 /* JUDCanvasModule.m in Sources */,
+				A7572D8C13B8E967DFBDFCC22288E18B /* JUDCellComponent.m in Sources */,
+				357F2988C04DFF25BE8D9946FAC91C6C /* JUDClipboardModule.m in Sources */,
+				EB99E92B45DAA85AF3028D04828FA078 /* JUDCommunicate.m in Sources */,
+				D8D94C260591C8ABDBF6AFEFAFED2FA3 /* JUDCommunicateModule.m in Sources */,
+				66219637308166BAEA3C63D98E92ED82 /* JUDComponent+Display.m in Sources */,
+				5C71815ED8B0F3A3324FAF485F6A495F /* JUDComponent+Events.m in Sources */,
+				8AD773E77D0B07EC1E0F4228EBDCCB7D /* JUDComponent+GradientColor.m in Sources */,
+				7A611C10CD4846FFD754180EE837135F /* JUDComponent+Layout.m in Sources */,
+				449259838CE7C4CE4707C7D2CB93AB34 /* JUDComponent+Navigation.m in Sources */,
+				2F17D07B0ED031F24FED36FAD59FDB1C /* JUDComponent+PseudoClassManagement.m in Sources */,
+				C859199FB1EC0242C817BEC64FAAB7A6 /* JUDComponent+ViewManagement.m in Sources */,
+				1682DDDF12D1D4D6F630A4700E39A4E3 /* JUDComponent.m in Sources */,
+				0F28F79E452AA367119FC51124A6869E /* JUDComponentFactory.m in Sources */,
+				8733184B7C275F8A5C8A9EF0590BC136 /* JUDComponentManager.m in Sources */,
+				18F1ED003FCEF574E38F6A3B930BD64A /* JUDComponentMethod.m in Sources */,
+				81716149AFB01439E110EDD7690C64FF /* JUDConvert.m in Sources */,
+				4EAD18D9548CB2D1C5B2AA3A554E702F /* JUDDatePickerManager.m in Sources */,
+				AF07866106B4E923218A074DF1EA3787 /* JUDDebugLoggerBridge.m in Sources */,
+				788D3E5B1722EA50D83776F9C3CFBC49 /* JUDDebugTool.m in Sources */,
+				1EA2C053F595DAD841C77280B48605E5 /* JUDDisplayQueue.m in Sources */,
+				A79579B3671BFF5C2CF0D7E0674A65E7 /* JUDDivComponent.m in Sources */,
+				B43A358595B01A7EA550D0400A60B61F /* JUDDomModule.m in Sources */,
+				3EB29BEAAB9E6FA83313F533FF45A5EE /* JUDEmbedComponent.m in Sources */,
+				79A1700588C4F69AB551FEAE532D08E2 /* JUDErrorView.m in Sources */,
+				BE50E42487E3A614883037CFE5BFB2B2 /* JUDGlobalEventModule.m in Sources */,
+				E379DA5C428FD10E89AE7FEC2041A3D0 /* JUDHandlerFactory.m in Sources */,
+				1B4363510B280065EB4F8E57266A7259 /* JUDImageComponent.m in Sources */,
+				101277BD8D5D6FFE2565588786932D1F /* JUDIndicatorComponent.m in Sources */,
+				F899B1C873EC08E1685AC1A923A75FA2 /* JUDInstanceWrap.m in Sources */,
+				354F9E2327182615A6C34FF1FCFA4D90 /* JUDInvocationConfig.m in Sources */,
+				81C7DCDF79A065E359A1D39E7ECE6E06 /* JUDJSCoreBridge.m in Sources */,
+				0033DCD8E991A8F231A9ECED95F565FD /* JUDJSExceptionInfo.m in Sources */,
+				261B1145981C79D46C4CE56341D634FC /* JUDLayer.m in Sources */,
+				F8C942B50491BB83E8B9728686032C71 /* JUDLength.m in Sources */,
+				99269DDAC167CF658EC9FAEFCDE3BB6E /* JUDListComponent.m in Sources */,
+				39B2BE1A09966AA0B2DD7AD3242B9356 /* JUDLoadingComponent.m in Sources */,
+				4A1EA2C0FC43A55EC659C9B9F2DB939F /* JUDLoadingIndicator.m in Sources */,
+				A129119ABE711516C4D76AFACEC6FBD2 /* JUDLog.m in Sources */,
+				2A1B62487D570B7B3A51CBB79C1216E8 /* JUDMetaModule.m in Sources */,
+				5421AE49953C8A2AFEF630FC612C465D /* JUDModalUIModule.m in Sources */,
+				A30895BFCDEA473A286A44E29C550ECC /* JUDModuleFactory.m in Sources */,
+				AD247B374AB79F470CF8920A2EA6F3EE /* JUDModuleMethod.m in Sources */,
+				4E551595929520B3D1929B753DC65555 /* JUDMonitor.m in Sources */,
+				386CF2A337B7EA79537D796AA15885F6 /* JUDMTADefaultImpl.m in Sources */,
+				BBD543539B4B8ABBA3F7098B13E104C8 /* JUDMTAModule.m in Sources */,
+				5FBE6C1DEA9E0B850034BCDD5E5C926C /* JUDNavigationDefaultImpl.m in Sources */,
+				0163F095009F0389BAD961D6A9AE5981 /* JUDNavigatorModule.m in Sources */,
+				6EEB127B02DC3F86907549A5304284A0 /* JUDPickerModule.m in Sources */,
+				19177EBA034A64498DD6ECB7985C3A2F /* JUDPolyfillSet.m in Sources */,
+				E66DCF53F25F498680C8726050ED7B04 /* JUDRefreshComponent.m in Sources */,
+				37C9CC27B3588DF3A369D93C877BE31E /* JUDResourceLoader.m in Sources */,
+				C0384C388F8B5F8F210F3F987271D624 /* JUDResourceRequest.m in Sources */,
+				6BB9B624D7890F2C499B83D70B685102 /* JUDResourceRequestHandlerDefaultImpl.m in Sources */,
+				74319743BB687F9E9B279062D038FB37 /* JUDResourceResponse.m in Sources */,
+				FD230133573F9C8D3D6E307590867494 /* JUDRootView.m in Sources */,
+				B548325AE5984D0DB6141EF81473A2CC /* JUDRootViewController.m in Sources */,
+				E440C32FDBE5057BDAABDCF7090A4977 /* JUDRoundedRect.mm in Sources */,
+				6C2C408DB478C7D3C079310B20732392 /* JUDRuleManager.m in Sources */,
+				7D92890ED536B4C7905442708F91BE75 /* JUDScrollerComponent.m in Sources */,
+				9146E909EFD9A5371B2C17AE8403809B /* JudSDK-dummy.m in Sources */,
+				CDECF5AC5C0E02DD03FEDDE50ADDD732 /* JUDSDKEngine.m in Sources */,
+				C2E3ECC306C776D4F21A342C0586BFAE /* JUDSDKInstance.m in Sources */,
+				480E46FEFE0E9A884E35A28E4F0988E9 /* JUDSDKManager.m in Sources */,
+				C934FC522BD3557929F7BA1A807D2EB1 /* JUDServiceFactory.m in Sources */,
+				1744CF9E438C218C1F17C1F0F70BBF2C /* JUDSimulatorShortcutManager.m in Sources */,
+				0AB4959700F966E04D3631CA111610EF /* JUDSliderComponent.m in Sources */,
+				C63049FD16C312C2747D53B428F2E5A9 /* JUDSliderNeighborComponent.m in Sources */,
+				256FD286145483B31B51278CC408051D /* JUDStorageModule.m in Sources */,
+				7351EBFD035F381C73C602C2D6E1F056 /* JUDStreamModule.m in Sources */,
+				4D6D06DABE205308D72F93AABF849E02 /* JUDSwitchComponent.m in Sources */,
+				C951E862D1E57EEDF17681030D2EC8B0 /* JUDTextAreaComponent.m in Sources */,
+				DD9D6622609B22247793AC5B908D706C /* JUDTextComponent.m in Sources */,
+				6D94199D8089883A1F9279F8F17CA8AE /* JUDTextInputComponent.m in Sources */,
+				5345F8C0F7BE84C0477C61B1164E432B /* JUDThreadSafeCounter.m in Sources */,
+				D611250D2AEBDAC26937F53D318833AE /* JUDThreadSafeMutableArray.m in Sources */,
+				14DF0327E2398D4F359176CFA41381AE /* JUDThreadSafeMutableDictionary.m in Sources */,
+				5D5C5281F6B470F4847927ABE26E616D /* JUDTimerModule.m in Sources */,
+				B8AF571C6D5C5DD2271C8324712ED5B2 /* JUDTransform.m in Sources */,
+				2CBE33E4D12AE69432967C48B0023024 /* JUDURLRewriteDefaultImpl.m in Sources */,
+				BF92D7B7D236C5766BF375395447D973 /* JUDUtility.m in Sources */,
+				21748428AB45A79C5D0FC4FF2F2F0EEC /* JUDVideoComponent.m in Sources */,
+				581682275F122523A848D755F29F3405 /* JUDView.m in Sources */,
+				478BAB67F47F4BC7FEE8EF215D985BEF /* JUDWeakObjectWrapper.m in Sources */,
+				64E6042588F602DA0B1F130D8399D0D9 /* JUDWebComponent.m in Sources */,
+				86CC70B4E83787C43723100EF9B0D84A /* JUDWebSocketDefaultImpl.m in Sources */,
+				E28DA9AF3B93B2D59F7B9545C53DC8C0 /* JUDWebSocketLoader.m in Sources */,
+				A13F12B83609A55482A21198C668C919 /* JUDWebSocketModule.m in Sources */,
+				AEB15CAA9CD05D814C8E4FDD3A6F0C08 /* JUDWebViewModule.m in Sources */,
+				E0BAD06F53A3BE0874A92164F1A916AC /* Layout.c in Sources */,
+				1A8DE98F0007F6385522E1A3434FD6D7 /* NSArray+Jud.m in Sources */,
+				2855484E92FD4E3BD84D6E1DA07730BC /* NSObject+JUDSwizzle.m in Sources */,
+				253641CF09B4656E66FD9EC36FAE4D9E /* NSTimer+Jud.m in Sources */,
+				18D8EB6ADC9913DDC89B7AC4437DB121 /* SRWebSocket+Jud.m in Sources */,
+				3FB0FE44C0B7D922BFBE992CFAF75E78 /* UIBezierPath+Jud.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C719397129F58CB5C90904641DF573C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A97E6F55F41B46FD0684B1DAEF8A317 /* NSData+ImageContentType.m in Sources */,
+				6A73171965ECF86491F7F566FA55E457 /* SDImageCache.m in Sources */,
+				2DE32DA0BC8DB5237EE03CFB27BC6892 /* SDWebImage-dummy.m in Sources */,
+				E6C81470D0A91B4CBF844F2489A59374 /* SDWebImageCompat.m in Sources */,
+				AC224025D40AF1E0975FE77D70C23E7A /* SDWebImageDecoder.m in Sources */,
+				B51C5DC06B178859510FB825147663C6 /* SDWebImageDownloader.m in Sources */,
+				AC50098D02BA3EB1C0010AF5DC89CACA /* SDWebImageDownloaderOperation.m in Sources */,
+				6F09400534CD2BDE4FABAB6824D21965 /* SDWebImageManager.m in Sources */,
+				D6AAB1FD4E51B9C9C169B5FF42EAE57E /* SDWebImagePrefetcher.m in Sources */,
+				CB26FB6834FF31E885033FC656C089E4 /* UIButton+WebCache.m in Sources */,
+				24D239CB8D269E491E6D316CA0A53744 /* UIImage+GIF.m in Sources */,
+				622C6F5429C198197E5CF036B509B347 /* UIImage+MultiFormat.m in Sources */,
+				CA1BB07961F41A9755638184D05F0A4C /* UIImageView+HighlightedWebCache.m in Sources */,
+				5148B227F8B0B74B29BB01809EE881FE /* UIImageView+WebCache.m in Sources */,
+				EE071CFF6A3E7E362A9F6BF8BE939B89 /* UIView+WebCacheOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6143CD7D6DBA7E57EF5AC0C7F801C38B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5283CB0085F8648F109AC4E15D6FF590 /* Pods-JudDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA1096C804A1270E04A1DBD542E23881 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4A880C1DF02E56470D92407F5AC221C /* SocketRocket-dummy.m in Sources */,
+				18765B25E0422A962B2DC36747B8A6F0 /* SRWebSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5FAF2153CA0E46A4911ED50E8026E4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JudSDK;
+			target = F78AA9245E7D07A77579A3DCE91C2F48 /* JudSDK */;
+			targetProxy = 27FBF066CC3A0CB46977D60DB8BFECAA /* PBXContainerItemProxy */;
+		};
+		B68DC7DDA2429CEBFEE8A834F45A505A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SocketRocket;
+			target = 55D8775FECDAF2F91F89C050F4829C4C /* SocketRocket */;
+			targetProxy = 64743BCA140D14C6F3D0ABBD1F9557A1 /* PBXContainerItemProxy */;
+		};
+		BEF2DB9440A9F46646BFF3F5031FF9F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SocketRocket;
+			target = 55D8775FECDAF2F91F89C050F4829C4C /* SocketRocket */;
+			targetProxy = FD8E706E111FDFE535E61AAC429EA189 /* PBXContainerItemProxy */;
+		};
+		C6BF2FEB24B76282C126680684232382 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDWebImage;
+			target = 1A39B0EB5442720A5FE2F284206354CF /* SDWebImage */;
+			targetProxy = BF8C197684E739376B5D8971C8557240 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0CA338D11CABB8B036E4DEE277218E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BAAF0CE10C676FC94E3E4735A5B2582 /* SocketRocket.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		19C2C90646EF1C21253716533A98D6CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96A89A8B034726576269CB2EC3A845E1 /* JudSDK.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JudSDK/JudSDK-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		59BD531D104EDCD6694064D2EB9FF1E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9270A25D5ED709CD547CB90D268BF258 /* SDWebImage.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		79B0C2E66EFA9917ED6EDDB8FC6A7684 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9026DB4C05DD8452D081906C95964EE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5B43D6906DC53500AAA52FDFC3CBEEC /* Pods-JudDemo.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		90EFB1393FA7FD86DF1137140C0B280E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BAAF0CE10C676FC94E3E4735A5B2582 /* SocketRocket.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		97ABA82D97071C9295A48542074A8721 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96A89A8B034726576269CB2EC3A845E1 /* JudSDK.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JudSDK/JudSDK-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B0A89DAEC4313917201070443D5CAC4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9270A25D5ED709CD547CB90D268BF258 /* SDWebImage.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CF7953F66E785E8876EB4D370D777D50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FFBE4349FE7C25346E5C24C8E3112880 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A02FEE49E29CA5CB9119386F1FA3431 /* Pods-JudDemo.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C4F881CE941E1EC5EC9EA46B40D1D4A /* Build configuration list for PBXNativeTarget "JudSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97ABA82D97071C9295A48542074A8721 /* Debug */,
+				19C2C90646EF1C21253716533A98D6CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F7BB76F50AF69834E97F21E7A9E1258 /* Build configuration list for PBXNativeTarget "SocketRocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90EFB1393FA7FD86DF1137140C0B280E /* Debug */,
+				0CA338D11CABB8B036E4DEE277218E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF7953F66E785E8876EB4D370D777D50 /* Debug */,
+				79B0C2E66EFA9917ED6EDDB8FC6A7684 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E17A79B515C93A90A81014AD4FD3DCD /* Build configuration list for PBXNativeTarget "Pods-JudDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9026DB4C05DD8452D081906C95964EE7 /* Debug */,
+				FFBE4349FE7C25346E5C24C8E3112880 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40FC5FC33610C6655670C954B1ECB6F8 /* Build configuration list for PBXNativeTarget "SDWebImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59BD531D104EDCD6694064D2EB9FF1E3 /* Debug */,
+				B0A89DAEC4313917201070443D5CAC4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

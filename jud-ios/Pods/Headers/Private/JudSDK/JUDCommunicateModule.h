@@ -1,0 +1,1 @@
+../../../../JudSDK/JudSDK/Sources/Module/JUDCommunicateModule.h

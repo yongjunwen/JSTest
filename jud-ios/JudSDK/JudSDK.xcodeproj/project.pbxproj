@@ -1,0 +1,1700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A42AF881C23B33E00818EA6 /* JudSDK_MTL.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 2A42AF871C23B33E00818EA6 /* JudSDK_MTL.h */; };
+		2A42AF8A1C23B33E00818EA6 /* JudSDK_MTL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A42AF891C23B33E00818EA6 /* JudSDK_MTL.m */; };
+		59AC02511D2A7E6E00355112 /* jud_load_error@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AC02501D2A7E6E00355112 /* jud_load_error@3x.png */; };
+		74B80E6C1C3FB32C00239FB9 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 74B80E6B1C3FB32C00239FB9 /* main.js */; };
+		B38663C91EE15507006D0932 /* JSValue+Jud.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662CD1EE15506006D0932 /* JSValue+Jud.h */; };
+		B38663CA1EE15507006D0932 /* JSValue+Jud.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662CE1EE15506006D0932 /* JSValue+Jud.m */; };
+		B38663CB1EE15507006D0932 /* JUDBridgeContext.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662CF1EE15506006D0932 /* JUDBridgeContext.h */; };
+		B38663CC1EE15507006D0932 /* JUDBridgeContext.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662D01EE15506006D0932 /* JUDBridgeContext.m */; };
+		B38663CD1EE15507006D0932 /* JUDBridgeMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662D11EE15506006D0932 /* JUDBridgeMethod.h */; };
+		B38663CE1EE15507006D0932 /* JUDBridgeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662D21EE15506006D0932 /* JUDBridgeMethod.m */; };
+		B38663CF1EE15507006D0932 /* JUDCallJSMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662D31EE15506006D0932 /* JUDCallJSMethod.h */; };
+		B38663D01EE15507006D0932 /* JUDCallJSMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662D41EE15506006D0932 /* JUDCallJSMethod.m */; };
+		B38663D11EE15507006D0932 /* JUDComponentMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662D51EE15506006D0932 /* JUDComponentMethod.h */; };
+		B38663D21EE15507006D0932 /* JUDComponentMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662D61EE15506006D0932 /* JUDComponentMethod.m */; };
+		B38663D31EE15507006D0932 /* JUDDebugLoggerBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662D71EE15506006D0932 /* JUDDebugLoggerBridge.h */; };
+		B38663D41EE15507006D0932 /* JUDDebugLoggerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662D81EE15506006D0932 /* JUDDebugLoggerBridge.m */; };
+		B38663D51EE15507006D0932 /* JUDJSCoreBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662D91EE15506006D0932 /* JUDJSCoreBridge.h */; };
+		B38663D61EE15507006D0932 /* JUDJSCoreBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662DA1EE15506006D0932 /* JUDJSCoreBridge.m */; };
+		B38663D71EE15507006D0932 /* JUDModuleMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662DB1EE15506006D0932 /* JUDModuleMethod.h */; };
+		B38663D81EE15507006D0932 /* JUDModuleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662DC1EE15506006D0932 /* JUDModuleMethod.m */; };
+		B38663D91EE15507006D0932 /* JUDPolyfillSet.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662DD1EE15506006D0932 /* JUDPolyfillSet.h */; };
+		B38663DA1EE15507006D0932 /* JUDPolyfillSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662DE1EE15506006D0932 /* JUDPolyfillSet.m */; };
+		B38663DB1EE15507006D0932 /* JUDAComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662E01EE15506006D0932 /* JUDAComponent.h */; };
+		B38663DC1EE15507006D0932 /* JUDAComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662E11EE15506006D0932 /* JUDAComponent.m */; };
+		B38663DD1EE15507006D0932 /* JUDCanvasComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662E21EE15506006D0932 /* JUDCanvasComponent.h */; };
+		B38663DE1EE15507006D0932 /* JUDCanvasComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662E31EE15506006D0932 /* JUDCanvasComponent.m */; };
+		B38663DF1EE15507006D0932 /* JUDCellComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662E41EE15506006D0932 /* JUDCellComponent.h */; };
+		B38663E01EE15507006D0932 /* JUDCellComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662E51EE15506006D0932 /* JUDCellComponent.m */; };
+		B38663E11EE15507006D0932 /* JUDComponent+GradientColor.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662E61EE15506006D0932 /* JUDComponent+GradientColor.h */; };
+		B38663E21EE15507006D0932 /* JUDComponent+GradientColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662E71EE15506006D0932 /* JUDComponent+GradientColor.m */; };
+		B38663E31EE15507006D0932 /* JUDComponent_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662E81EE15506006D0932 /* JUDComponent_internal.h */; };
+		B38663E41EE15507006D0932 /* JUDDivComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662E91EE15506006D0932 /* JUDDivComponent.h */; };
+		B38663E51EE15507006D0932 /* JUDDivComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662EA1EE15506006D0932 /* JUDDivComponent.m */; };
+		B38663E61EE15507006D0932 /* JUDEmbedComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662EB1EE15506006D0932 /* JUDEmbedComponent.h */; };
+		B38663E71EE15507006D0932 /* JUDEmbedComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662EC1EE15506006D0932 /* JUDEmbedComponent.m */; };
+		B38663E81EE15507006D0932 /* JUDImageComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662ED1EE15506006D0932 /* JUDImageComponent.h */; };
+		B38663E91EE15507006D0932 /* JUDImageComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662EE1EE15506006D0932 /* JUDImageComponent.m */; };
+		B38663EA1EE15507006D0932 /* JUDIndicatorComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662EF1EE15506006D0932 /* JUDIndicatorComponent.h */; };
+		B38663EB1EE15507006D0932 /* JUDIndicatorComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662F01EE15506006D0932 /* JUDIndicatorComponent.m */; };
+		B38663EC1EE15507006D0932 /* JUDListComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662F11EE15506006D0932 /* JUDListComponent.h */; };
+		B38663ED1EE15507006D0932 /* JUDListComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662F21EE15506006D0932 /* JUDListComponent.m */; };
+		B38663EE1EE15507006D0932 /* JUDLoadingComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662F31EE15506006D0932 /* JUDLoadingComponent.h */; };
+		B38663EF1EE15507006D0932 /* JUDLoadingComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662F41EE15506006D0932 /* JUDLoadingComponent.m */; };
+		B38663F01EE15507006D0932 /* JUDLoadingIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662F51EE15506006D0932 /* JUDLoadingIndicator.h */; };
+		B38663F11EE15507006D0932 /* JUDLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662F61EE15506006D0932 /* JUDLoadingIndicator.m */; };
+		B38663F21EE15507006D0932 /* JUDRefreshComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662F71EE15506006D0932 /* JUDRefreshComponent.h */; };
+		B38663F31EE15507006D0932 /* JUDRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662F81EE15506006D0932 /* JUDRefreshComponent.m */; };
+		B38663F41EE15507006D0932 /* JUDScrollerComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662F91EE15506006D0932 /* JUDScrollerComponent.h */; };
+		B38663F51EE15507006D0932 /* JUDScrollerComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662FA1EE15506006D0932 /* JUDScrollerComponent.m */; };
+		B38663F61EE15507006D0932 /* JUDSliderComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662FB1EE15506006D0932 /* JUDSliderComponent.h */; };
+		B38663F71EE15507006D0932 /* JUDSliderComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662FC1EE15506006D0932 /* JUDSliderComponent.m */; };
+		B38663F81EE15507006D0932 /* JUDSliderNeighborComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662FD1EE15506006D0932 /* JUDSliderNeighborComponent.h */; };
+		B38663F91EE15507006D0932 /* JUDSliderNeighborComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38662FE1EE15506006D0932 /* JUDSliderNeighborComponent.m */; };
+		B38663FA1EE15507006D0932 /* JUDSwitchComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38662FF1EE15506006D0932 /* JUDSwitchComponent.h */; };
+		B38663FB1EE15507006D0932 /* JUDSwitchComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663001EE15506006D0932 /* JUDSwitchComponent.m */; };
+		B38663FC1EE15507006D0932 /* JUDTextAreaComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663011EE15506006D0932 /* JUDTextAreaComponent.h */; };
+		B38663FD1EE15507006D0932 /* JUDTextAreaComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663021EE15506006D0932 /* JUDTextAreaComponent.m */; };
+		B38663FE1EE15507006D0932 /* JUDTextComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663031EE15506006D0932 /* JUDTextComponent.h */; };
+		B38663FF1EE15507006D0932 /* JUDTextComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663041EE15506006D0932 /* JUDTextComponent.m */; };
+		B38664001EE15507006D0932 /* JUDTextInputComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663051EE15506006D0932 /* JUDTextInputComponent.h */; };
+		B38664011EE15507006D0932 /* JUDTextInputComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663061EE15506006D0932 /* JUDTextInputComponent.m */; };
+		B38664021EE15507006D0932 /* JUDTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663071EE15506006D0932 /* JUDTransform.h */; };
+		B38664031EE15507006D0932 /* JUDTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663081EE15506006D0932 /* JUDTransform.m */; };
+		B38664041EE15507006D0932 /* JUDVideoComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663091EE15506006D0932 /* JUDVideoComponent.h */; };
+		B38664051EE15507006D0932 /* JUDVideoComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B386630A1EE15506006D0932 /* JUDVideoComponent.m */; };
+		B38664061EE15507006D0932 /* JUDWebComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B386630B1EE15506006D0932 /* JUDWebComponent.h */; };
+		B38664071EE15507006D0932 /* JUDWebComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B386630C1EE15506006D0932 /* JUDWebComponent.m */; };
+		B38664081EE15507006D0932 /* JUDBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B386630E1EE15506006D0932 /* JUDBaseViewController.h */; };
+		B38664091EE15507006D0932 /* JUDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B386630F1EE15506006D0932 /* JUDBaseViewController.m */; };
+		B386640A1EE15507006D0932 /* JUDRootViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663101EE15506006D0932 /* JUDRootViewController.h */; };
+		B386640B1EE15507006D0932 /* JUDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663111EE15506006D0932 /* JUDRootViewController.m */; };
+		B386640C1EE15507006D0932 /* JUDDebugTool.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663131EE15506006D0932 /* JUDDebugTool.h */; };
+		B386640D1EE15507006D0932 /* JUDDebugTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663141EE15506006D0932 /* JUDDebugTool.m */; };
+		B386640E1EE15507006D0932 /* JUDComponent+Display.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663161EE15506006D0932 /* JUDComponent+Display.h */; };
+		B386640F1EE15507006D0932 /* JUDComponent+Display.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663171EE15506006D0932 /* JUDComponent+Display.m */; };
+		B38664101EE15507006D0932 /* JUDDisplayQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663181EE15506006D0932 /* JUDDisplayQueue.h */; };
+		B38664111EE15507006D0932 /* JUDDisplayQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663191EE15506006D0932 /* JUDDisplayQueue.m */; };
+		B38664121EE15507006D0932 /* JUDLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = B386631A1EE15506006D0932 /* JUDLayer.h */; };
+		B38664131EE15507006D0932 /* JUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B386631B1EE15506006D0932 /* JUDLayer.m */; };
+		B38664141EE15507006D0932 /* JUDRoundedRect.h in Headers */ = {isa = PBXBuildFile; fileRef = B386631C1EE15506006D0932 /* JUDRoundedRect.h */; };
+		B38664151EE15507006D0932 /* JUDRoundedRect.mm in Sources */ = {isa = PBXBuildFile; fileRef = B386631D1EE15506006D0932 /* JUDRoundedRect.mm */; };
+		B38664161EE15507006D0932 /* UIBezierPath+Jud.h in Headers */ = {isa = PBXBuildFile; fileRef = B386631E1EE15506006D0932 /* UIBezierPath+Jud.h */; };
+		B38664171EE15507006D0932 /* UIBezierPath+Jud.m in Sources */ = {isa = PBXBuildFile; fileRef = B386631F1EE15506006D0932 /* UIBezierPath+Jud.m */; };
+		B38664181EE15507006D0932 /* JUDSDKEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663211EE15506006D0932 /* JUDSDKEngine.h */; };
+		B38664191EE15507006D0932 /* JUDSDKEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663221EE15506006D0932 /* JUDSDKEngine.m */; };
+		B386641A1EE15507006D0932 /* JUDSDKError.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663231EE15506006D0932 /* JUDSDKError.h */; };
+		B386641B1EE15507006D0932 /* JUDComponent+Events.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663251EE15506006D0932 /* JUDComponent+Events.h */; };
+		B386641C1EE15507006D0932 /* JUDComponent+Events.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663261EE15506006D0932 /* JUDComponent+Events.m */; };
+		B386641D1EE15507006D0932 /* JUDMTADefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663281EE15506006D0932 /* JUDMTADefaultImpl.h */; };
+		B386641E1EE15507006D0932 /* JUDMTADefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663291EE15506006D0932 /* JUDMTADefaultImpl.m */; };
+		B386641F1EE15507006D0932 /* JUDNavigationDefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = B386632A1EE15506006D0932 /* JUDNavigationDefaultImpl.h */; };
+		B38664201EE15507006D0932 /* JUDNavigationDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = B386632B1EE15506006D0932 /* JUDNavigationDefaultImpl.m */; };
+		B38664211EE15507006D0932 /* JUDURLRewriteDefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = B386632C1EE15506006D0932 /* JUDURLRewriteDefaultImpl.h */; };
+		B38664221EE15507006D0932 /* JUDURLRewriteDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = B386632D1EE15506006D0932 /* JUDURLRewriteDefaultImpl.m */; };
+		B38664231EE15507006D0932 /* JudSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B386632E1EE15506006D0932 /* JudSDK.h */; };
+		B38664241EE15507006D0932 /* JUDComponent+Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663301EE15506006D0932 /* JUDComponent+Layout.h */; };
+		B38664251EE15507006D0932 /* JUDComponent+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663311EE15506006D0932 /* JUDComponent+Layout.m */; };
+		B38664261EE15507006D0932 /* JUDLayoutDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663321EE15506006D0932 /* JUDLayoutDefine.h */; };
+		B38664271EE15507006D0932 /* Layout.c in Sources */ = {isa = PBXBuildFile; fileRef = B38663331EE15506006D0932 /* Layout.c */; };
+		B38664281EE15507006D0932 /* Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663341EE15506006D0932 /* Layout.h */; };
+		B38664291EE15507006D0932 /* JUDResourceLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663361EE15506006D0932 /* JUDResourceLoader.h */; };
+		B386642A1EE15507006D0932 /* JUDResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663371EE15506006D0932 /* JUDResourceLoader.m */; };
+		B386642B1EE15507006D0932 /* JUDWebSocketLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663381EE15506006D0932 /* JUDWebSocketLoader.h */; };
+		B386642C1EE15507006D0932 /* JUDWebSocketLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663391EE15506006D0932 /* JUDWebSocketLoader.m */; };
+		B386642D1EE15507006D0932 /* JUDBridgeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B386633B1EE15506006D0932 /* JUDBridgeManager.h */; };
+		B386642E1EE15507006D0932 /* JUDBridgeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B386633C1EE15506006D0932 /* JUDBridgeManager.m */; };
+		B386642F1EE15507006D0932 /* JUDComponentFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = B386633D1EE15506006D0932 /* JUDComponentFactory.h */; };
+		B38664301EE15507006D0932 /* JUDComponentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B386633E1EE15506006D0932 /* JUDComponentFactory.m */; };
+		B38664311EE15507006D0932 /* JUDComponentManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B386633F1EE15506006D0932 /* JUDComponentManager.h */; };
+		B38664321EE15507006D0932 /* JUDComponentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663401EE15506006D0932 /* JUDComponentManager.m */; };
+		B38664331EE15507006D0932 /* JUDDatePickerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663411EE15506006D0932 /* JUDDatePickerManager.h */; };
+		B38664341EE15507006D0932 /* JUDDatePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663421EE15506006D0932 /* JUDDatePickerManager.m */; };
+		B38664351EE15507006D0932 /* JUDHandlerFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663431EE15506006D0932 /* JUDHandlerFactory.h */; };
+		B38664361EE15507006D0932 /* JUDHandlerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663441EE15506006D0932 /* JUDHandlerFactory.m */; };
+		B38664371EE15507006D0932 /* JUDInvocationConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663451EE15506006D0932 /* JUDInvocationConfig.h */; };
+		B38664381EE15507006D0932 /* JUDInvocationConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663461EE15506006D0932 /* JUDInvocationConfig.m */; };
+		B38664391EE15507006D0932 /* JUDModuleFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663471EE15506006D0932 /* JUDModuleFactory.h */; };
+		B386643A1EE15507006D0932 /* JUDModuleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663481EE15506006D0932 /* JUDModuleFactory.m */; };
+		B386643B1EE15507006D0932 /* JUDRuleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663491EE15506006D0932 /* JUDRuleManager.h */; };
+		B386643C1EE15507006D0932 /* JUDRuleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B386634A1EE15506006D0932 /* JUDRuleManager.m */; };
+		B386643D1EE15507006D0932 /* JUDSDKManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B386634B1EE15506006D0932 /* JUDSDKManager.h */; };
+		B386643E1EE15507006D0932 /* JUDSDKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B386634C1EE15506006D0932 /* JUDSDKManager.m */; };
+		B386643F1EE15507006D0932 /* JUDServiceFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = B386634D1EE15506006D0932 /* JUDServiceFactory.h */; };
+		B38664401EE15507006D0932 /* JUDServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B386634E1EE15506006D0932 /* JUDServiceFactory.m */; };
+		B38664411EE15507006D0932 /* JUDComponent+Navigation.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663501EE15506006D0932 /* JUDComponent+Navigation.h */; };
+		B38664421EE15507006D0932 /* JUDComponent+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663511EE15506006D0932 /* JUDComponent+Navigation.m */; };
+		B38664431EE15507006D0932 /* JUDComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663521EE15506006D0932 /* JUDComponent.h */; };
+		B38664441EE15507006D0932 /* JUDComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663531EE15506006D0932 /* JUDComponent.m */; };
+		B38664451EE15507006D0932 /* JUDJSExceptionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663541EE15506006D0932 /* JUDJSExceptionInfo.h */; };
+		B38664461EE15507006D0932 /* JUDJSExceptionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663551EE15506006D0932 /* JUDJSExceptionInfo.m */; };
+		B38664471EE15507006D0932 /* JUDSDKInstance.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663561EE15506006D0932 /* JUDSDKInstance.h */; };
+		B38664481EE15507006D0932 /* JUDSDKInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663571EE15506006D0932 /* JUDSDKInstance.m */; };
+		B38664491EE15507006D0932 /* JUDSDKInstance_private.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663581EE15506006D0932 /* JUDSDKInstance_private.h */; };
+		B386644A1EE15507006D0932 /* JUDAnimationModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B386635A1EE15506006D0932 /* JUDAnimationModule.h */; };
+		B386644B1EE15507006D0932 /* JUDAnimationModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B386635B1EE15506006D0932 /* JUDAnimationModule.m */; };
+		B386644C1EE15507006D0932 /* JUDCanvasModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B386635C1EE15506006D0932 /* JUDCanvasModule.h */; };
+		B386644D1EE15507006D0932 /* JUDCanvasModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B386635D1EE15506006D0932 /* JUDCanvasModule.m */; };
+		B386644E1EE15507006D0932 /* JUDClipboardModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B386635E1EE15506006D0932 /* JUDClipboardModule.h */; };
+		B386644F1EE15507006D0932 /* JUDClipboardModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B386635F1EE15506006D0932 /* JUDClipboardModule.m */; };
+		B38664501EE15507006D0932 /* JUDCommunicate.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663601EE15506006D0932 /* JUDCommunicate.h */; };
+		B38664511EE15507006D0932 /* JUDCommunicate.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663611EE15506006D0932 /* JUDCommunicate.m */; };
+		B38664521EE15507006D0932 /* JUDCommunicateModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663621EE15506006D0932 /* JUDCommunicateModule.h */; };
+		B38664531EE15507006D0932 /* JUDCommunicateModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663631EE15506006D0932 /* JUDCommunicateModule.m */; };
+		B38664541EE15507006D0932 /* JUDDomModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663641EE15506006D0932 /* JUDDomModule.h */; };
+		B38664551EE15507006D0932 /* JUDDomModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663651EE15506006D0932 /* JUDDomModule.m */; };
+		B38664561EE15507006D0932 /* JUDGlobalEventModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663661EE15506006D0932 /* JUDGlobalEventModule.h */; };
+		B38664571EE15507006D0932 /* JUDGlobalEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663671EE15506006D0932 /* JUDGlobalEventModule.m */; };
+		B38664581EE15507006D0932 /* JUDInstanceWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663681EE15506006D0932 /* JUDInstanceWrap.h */; };
+		B38664591EE15507006D0932 /* JUDInstanceWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663691EE15506006D0932 /* JUDInstanceWrap.m */; };
+		B386645A1EE15507006D0932 /* JUDMetaModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B386636A1EE15506006D0932 /* JUDMetaModule.h */; };
+		B386645B1EE15507006D0932 /* JUDMetaModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B386636B1EE15506006D0932 /* JUDMetaModule.m */; };
+		B386645C1EE15507006D0932 /* JUDModalUIModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B386636C1EE15506006D0932 /* JUDModalUIModule.h */; };
+		B386645D1EE15507006D0932 /* JUDModalUIModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B386636D1EE15506006D0932 /* JUDModalUIModule.m */; };
+		B386645E1EE15507006D0932 /* JUDMTAModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B386636E1EE15506006D0932 /* JUDMTAModule.h */; };
+		B386645F1EE15507006D0932 /* JUDMTAModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B386636F1EE15506006D0932 /* JUDMTAModule.m */; };
+		B38664601EE15507006D0932 /* JUDNavigatorModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663701EE15506006D0932 /* JUDNavigatorModule.h */; };
+		B38664611EE15507006D0932 /* JUDNavigatorModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663711EE15506006D0932 /* JUDNavigatorModule.m */; };
+		B38664621EE15507006D0932 /* JUDPickerModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663721EE15506006D0932 /* JUDPickerModule.h */; };
+		B38664631EE15507006D0932 /* JUDPickerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663731EE15506006D0932 /* JUDPickerModule.m */; };
+		B38664641EE15507006D0932 /* JUDStorageModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663741EE15506006D0932 /* JUDStorageModule.h */; };
+		B38664651EE15507006D0932 /* JUDStorageModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663751EE15506006D0932 /* JUDStorageModule.m */; };
+		B38664661EE15507006D0932 /* JUDStreamModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663761EE15506006D0932 /* JUDStreamModule.h */; };
+		B38664671EE15507006D0932 /* JUDStreamModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663771EE15506006D0932 /* JUDStreamModule.m */; };
+		B38664681EE15507006D0932 /* JUDTimerModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663781EE15506006D0932 /* JUDTimerModule.h */; };
+		B38664691EE15507006D0932 /* JUDTimerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663791EE15506006D0932 /* JUDTimerModule.m */; };
+		B386646A1EE15507006D0932 /* JUDWebSocketModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B386637A1EE15506006D0932 /* JUDWebSocketModule.h */; };
+		B386646B1EE15507006D0932 /* JUDWebSocketModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B386637B1EE15506006D0932 /* JUDWebSocketModule.m */; };
+		B386646C1EE15507006D0932 /* JUDWebViewModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B386637C1EE15506006D0932 /* JUDWebViewModule.h */; };
+		B386646D1EE15507006D0932 /* JUDWebViewModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B386637D1EE15506006D0932 /* JUDWebViewModule.m */; };
+		B386646E1EE15507006D0932 /* JUDMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = B386637F1EE15506006D0932 /* JUDMonitor.h */; };
+		B386646F1EE15507006D0932 /* JUDMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663801EE15506006D0932 /* JUDMonitor.m */; };
+		B38664701EE15507006D0932 /* JUDResourceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663821EE15506006D0932 /* JUDResourceRequest.h */; };
+		B38664711EE15507006D0932 /* JUDResourceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663831EE15506006D0932 /* JUDResourceRequest.m */; };
+		B38664721EE15507006D0932 /* JUDResourceRequestHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663841EE15506006D0932 /* JUDResourceRequestHandler.h */; };
+		B38664731EE15507006D0932 /* JUDResourceRequestHandlerDefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663851EE15506006D0932 /* JUDResourceRequestHandlerDefaultImpl.h */; };
+		B38664741EE15507006D0932 /* JUDResourceRequestHandlerDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663861EE15506006D0932 /* JUDResourceRequestHandlerDefaultImpl.m */; };
+		B38664751EE15507006D0932 /* JUDResourceResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663871EE15506006D0932 /* JUDResourceResponse.h */; };
+		B38664761EE15507006D0932 /* JUDResourceResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663881EE15506006D0932 /* JUDResourceResponse.m */; };
+		B38664771EE15507006D0932 /* JUDAppMonitorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B386638A1EE15506006D0932 /* JUDAppMonitorProtocol.h */; };
+		B38664781EE15507006D0932 /* JUDBridgeProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B386638B1EE15506006D0932 /* JUDBridgeProtocol.h */; };
+		B38664791EE15507006D0932 /* JUDEventModuleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B386638C1EE15506006D0932 /* JUDEventModuleProtocol.h */; };
+		B386647A1EE15507006D0932 /* JUDImgLoaderProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B386638D1EE15506006D0932 /* JUDImgLoaderProtocol.h */; };
+		B386647B1EE15507006D0932 /* JUDJSExceptionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B386638E1EE15506006D0932 /* JUDJSExceptionProtocol.h */; };
+		B386647C1EE15507006D0932 /* JUDModuleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B386638F1EE15506006D0932 /* JUDModuleProtocol.h */; };
+		B386647D1EE15507006D0932 /* JUDMTAProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663901EE15506006D0932 /* JUDMTAProtocol.h */; };
+		B386647E1EE15507006D0932 /* JUDNavigationProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663911EE15506006D0932 /* JUDNavigationProtocol.h */; };
+		B386647F1EE15507006D0932 /* JUDNetworkProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663921EE15506006D0932 /* JUDNetworkProtocol.h */; };
+		B38664801EE15507006D0932 /* JUDScrollerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663931EE15506006D0932 /* JUDScrollerProtocol.h */; };
+		B38664811EE15507006D0932 /* JUDTextComponentProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663941EE15506006D0932 /* JUDTextComponentProtocol.h */; };
+		B38664821EE15507006D0932 /* JUDURLRewriteProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663951EE15506006D0932 /* JUDURLRewriteProtocol.h */; };
+		B38664831EE15507006D0932 /* WXDestroyProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663961EE15506006D0932 /* WXDestroyProtocol.h */; };
+		B38664841EE15507006D0932 /* JudSDK-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = B38663981EE15506006D0932 /* JudSDK-Prefix.pch */; };
+		B38664851EE15507006D0932 /* JUDAppConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = B386639A1EE15506006D0932 /* JUDAppConfiguration.h */; };
+		B38664861EE15507006D0932 /* JUDAppConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B386639B1EE15506006D0932 /* JUDAppConfiguration.m */; };
+		B38664871EE15507006D0932 /* JUDAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = B386639C1EE15506006D0932 /* JUDAssert.h */; };
+		B38664881EE15507006D0932 /* JUDAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = B386639D1EE15506006D0932 /* JUDAssert.m */; };
+		B38664891EE15507006D0932 /* JUDConvert.h in Headers */ = {isa = PBXBuildFile; fileRef = B386639E1EE15506006D0932 /* JUDConvert.h */; };
+		B386648A1EE15507006D0932 /* JUDConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = B386639F1EE15506006D0932 /* JUDConvert.m */; };
+		B386648B1EE15507006D0932 /* JUDDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663A01EE15506006D0932 /* JUDDefine.h */; };
+		B386648C1EE15507006D0932 /* JUDLength.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663A11EE15506006D0932 /* JUDLength.h */; };
+		B386648D1EE15507006D0932 /* JUDLength.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663A21EE15506006D0932 /* JUDLength.m */; };
+		B386648E1EE15507006D0932 /* JUDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663A31EE15506006D0932 /* JUDLog.h */; };
+		B386648F1EE15507006D0932 /* JUDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663A41EE15506006D0932 /* JUDLog.m */; };
+		B38664901EE15507006D0932 /* JUDSimulatorShortcutManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663A51EE15506006D0932 /* JUDSimulatorShortcutManager.h */; };
+		B38664911EE15507006D0932 /* JUDSimulatorShortcutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663A61EE15506006D0932 /* JUDSimulatorShortcutManager.m */; };
+		B38664921EE15507006D0932 /* JUDThreadSafeCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663A71EE15506006D0932 /* JUDThreadSafeCounter.h */; };
+		B38664931EE15507006D0932 /* JUDThreadSafeCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663A81EE15506006D0932 /* JUDThreadSafeCounter.m */; };
+		B38664941EE15507006D0932 /* JUDThreadSafeMutableArray.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663A91EE15506006D0932 /* JUDThreadSafeMutableArray.h */; };
+		B38664951EE15507006D0932 /* JUDThreadSafeMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663AA1EE15506006D0932 /* JUDThreadSafeMutableArray.m */; };
+		B38664961EE15507006D0932 /* JUDThreadSafeMutableDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663AB1EE15506006D0932 /* JUDThreadSafeMutableDictionary.h */; };
+		B38664971EE15507006D0932 /* JUDThreadSafeMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663AC1EE15506006D0932 /* JUDThreadSafeMutableDictionary.m */; };
+		B38664981EE15507006D0932 /* JUDType.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663AD1EE15506006D0932 /* JUDType.h */; };
+		B38664991EE15507006D0932 /* JUDUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663AE1EE15506006D0932 /* JUDUtility.h */; };
+		B386649A1EE15507006D0932 /* JUDUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663AF1EE15506006D0932 /* JUDUtility.m */; };
+		B386649B1EE15507006D0932 /* JUDWeakObjectWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663B01EE15506006D0932 /* JUDWeakObjectWrapper.h */; };
+		B386649C1EE15507006D0932 /* JUDWeakObjectWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663B11EE15506006D0932 /* JUDWeakObjectWrapper.m */; };
+		B386649D1EE15507006D0932 /* NSArray+Jud.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663B21EE15506006D0932 /* NSArray+Jud.h */; };
+		B386649E1EE15507006D0932 /* NSArray+Jud.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663B31EE15506006D0932 /* NSArray+Jud.m */; };
+		B386649F1EE15507006D0932 /* NSObject+JUDSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663B41EE15506006D0932 /* NSObject+JUDSwizzle.h */; };
+		B38664A01EE15507006D0932 /* NSObject+JUDSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663B51EE15506006D0932 /* NSObject+JUDSwizzle.m */; };
+		B38664A11EE15507006D0932 /* NSTimer+Jud.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663B61EE15507006D0932 /* NSTimer+Jud.h */; };
+		B38664A21EE15507006D0932 /* NSTimer+Jud.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663B71EE15507006D0932 /* NSTimer+Jud.m */; };
+		B38664A31EE15507006D0932 /* JUDComponent+PseudoClassManagement.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663B91EE15507006D0932 /* JUDComponent+PseudoClassManagement.h */; };
+		B38664A41EE15507006D0932 /* JUDComponent+PseudoClassManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663BA1EE15507006D0932 /* JUDComponent+PseudoClassManagement.m */; };
+		B38664A51EE15507006D0932 /* JUDComponent+ViewManagement.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663BB1EE15507006D0932 /* JUDComponent+ViewManagement.h */; };
+		B38664A61EE15507006D0932 /* JUDComponent+ViewManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663BC1EE15507006D0932 /* JUDComponent+ViewManagement.m */; };
+		B38664A71EE15507006D0932 /* JUDErrorView.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663BD1EE15507006D0932 /* JUDErrorView.h */; };
+		B38664A81EE15507006D0932 /* JUDErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663BE1EE15507006D0932 /* JUDErrorView.m */; };
+		B38664A91EE15507006D0932 /* JUDRootView.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663BF1EE15507006D0932 /* JUDRootView.h */; };
+		B38664AA1EE15507006D0932 /* JUDRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663C01EE15507006D0932 /* JUDRootView.m */; };
+		B38664AB1EE15507006D0932 /* JUDView.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663C11EE15507006D0932 /* JUDView.h */; };
+		B38664AC1EE15507006D0932 /* JUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663C21EE15507006D0932 /* JUDView.m */; };
+		B38664AD1EE15507006D0932 /* JUDWebSocketDefaultImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663C41EE15507006D0932 /* JUDWebSocketDefaultImpl.h */; };
+		B38664AE1EE15507006D0932 /* JUDWebSocketDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663C51EE15507006D0932 /* JUDWebSocketDefaultImpl.m */; };
+		B38664AF1EE15507006D0932 /* JUDWebSocketHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663C61EE15507006D0932 /* JUDWebSocketHandler.h */; };
+		B38664B01EE15507006D0932 /* SRWebSocket+Jud.h in Headers */ = {isa = PBXBuildFile; fileRef = B38663C71EE15507006D0932 /* SRWebSocket+Jud.h */; };
+		B38664B11EE15507006D0932 /* SRWebSocket+Jud.m in Sources */ = {isa = PBXBuildFile; fileRef = B38663C81EE15507006D0932 /* SRWebSocket+Jud.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2A42AF831C23B33E00818EA6 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				2A42AF881C23B33E00818EA6 /* JudSDK_MTL.h in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1C1A2BEC1D91172800539AA1 /* JUDConvertTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDConvertTests.m; sourceTree = "<group>"; };
+		2A27E7D71C3E360B00D7A552 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRWebSocket.h; path = dependency/SRWebSocket.h; sourceTree = "<group>"; };
+		2A27E7D81C3E360B00D7A552 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRWebSocket.m; path = dependency/SRWebSocket.m; sourceTree = "<group>"; };
+		2A42AF851C23B33E00818EA6 /* libJudSDK_MTL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJudSDK_MTL.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A42AF871C23B33E00818EA6 /* JudSDK_MTL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JudSDK_MTL.h; sourceTree = "<group>"; };
+		2A42AF891C23B33E00818EA6 /* JudSDK_MTL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JudSDK_MTL.m; sourceTree = "<group>"; };
+		591324A21D49B7F1004E89ED /* JUDTimerModuleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDTimerModuleTests.m; sourceTree = "<group>"; };
+		596FDD651D3F52700082CD5B /* JUDAnimationModuleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDAnimationModuleTests.m; sourceTree = "<group>"; };
+		596FDD671D3F9EFF0082CD5B /* TestSupportUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSupportUtils.h; sourceTree = "<group>"; };
+		596FDD681D3F9EFF0082CD5B /* TestSupportUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSupportUtils.m; sourceTree = "<group>"; };
+		597334B01D4D9E7F00988789 /* JUDSDKManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDSDKManagerTests.m; sourceTree = "<group>"; };
+		597334B21D4DE1A600988789 /* JUDBridgeMethodTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDBridgeMethodTests.m; sourceTree = "<group>"; };
+		598805AC1D52D8C800EDED2C /* JUDStorageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDStorageTests.m; sourceTree = "<group>"; };
+		5996BD6F1D49EC0600C0FEA6 /* JUDInstanceWrapTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDInstanceWrapTests.m; sourceTree = "<group>"; };
+		5996BD741D4D8A0E00C0FEA6 /* JUDSDKEngineTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDSDKEngineTests.m; sourceTree = "<group>"; };
+		59AC02501D2A7E6E00355112 /* jud_load_error@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jud_load_error@3x.png"; sourceTree = "<group>"; };
+		740938EA1D3D026600DBB801 /* JUDComponentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDComponentTests.m; sourceTree = "<group>"; };
+		740938ED1D3D079100DBB801 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		740938F41D3D0DDE00DBB801 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		740938F61D3D0DFD00DBB801 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		740938F81D3D0E0300DBB801 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		740938FA1D3D0E1700DBB801 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		7469869B1C4DEAC20054A57E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		74B80E6B1C3FB32C00239FB9 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
+		74B8BF001DC49AFE004A6027 /* JUDRootViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDRootViewTests.m; sourceTree = "<group>"; };
+		74C8963F1D2AC2210043B82A /* JudSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JudSDKTests.m; sourceTree = "<group>"; };
+		74C896411D2AC2210043B82A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74EF31BE1DE5ED5900667A07 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		74EF31C21DE6935600667A07 /* JUDURLRewriteTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDURLRewriteTests.m; sourceTree = "<group>"; };
+		74EF31C41DE6AADD00667A07 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = WeexSDKTests/dependency/libOCMock.a; sourceTree = "<group>"; };
+		74F7BFF41DC782EC004D0871 /* testRootView.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = testRootView.js; sourceTree = "<group>"; };
+		77D160FD1C02DBE70010B15B /* JudSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JudSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38662CD1EE15506006D0932 /* JSValue+Jud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSValue+Jud.h"; sourceTree = "<group>"; };
+		B38662CE1EE15506006D0932 /* JSValue+Jud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSValue+Jud.m"; sourceTree = "<group>"; };
+		B38662CF1EE15506006D0932 /* JUDBridgeContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDBridgeContext.h; sourceTree = "<group>"; };
+		B38662D01EE15506006D0932 /* JUDBridgeContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDBridgeContext.m; sourceTree = "<group>"; };
+		B38662D11EE15506006D0932 /* JUDBridgeMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDBridgeMethod.h; sourceTree = "<group>"; };
+		B38662D21EE15506006D0932 /* JUDBridgeMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDBridgeMethod.m; sourceTree = "<group>"; };
+		B38662D31EE15506006D0932 /* JUDCallJSMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDCallJSMethod.h; sourceTree = "<group>"; };
+		B38662D41EE15506006D0932 /* JUDCallJSMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDCallJSMethod.m; sourceTree = "<group>"; };
+		B38662D51EE15506006D0932 /* JUDComponentMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDComponentMethod.h; sourceTree = "<group>"; };
+		B38662D61EE15506006D0932 /* JUDComponentMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDComponentMethod.m; sourceTree = "<group>"; };
+		B38662D71EE15506006D0932 /* JUDDebugLoggerBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDDebugLoggerBridge.h; sourceTree = "<group>"; };
+		B38662D81EE15506006D0932 /* JUDDebugLoggerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDDebugLoggerBridge.m; sourceTree = "<group>"; };
+		B38662D91EE15506006D0932 /* JUDJSCoreBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDJSCoreBridge.h; sourceTree = "<group>"; };
+		B38662DA1EE15506006D0932 /* JUDJSCoreBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDJSCoreBridge.m; sourceTree = "<group>"; };
+		B38662DB1EE15506006D0932 /* JUDModuleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDModuleMethod.h; sourceTree = "<group>"; };
+		B38662DC1EE15506006D0932 /* JUDModuleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDModuleMethod.m; sourceTree = "<group>"; };
+		B38662DD1EE15506006D0932 /* JUDPolyfillSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDPolyfillSet.h; sourceTree = "<group>"; };
+		B38662DE1EE15506006D0932 /* JUDPolyfillSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDPolyfillSet.m; sourceTree = "<group>"; };
+		B38662E01EE15506006D0932 /* JUDAComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDAComponent.h; sourceTree = "<group>"; };
+		B38662E11EE15506006D0932 /* JUDAComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDAComponent.m; sourceTree = "<group>"; };
+		B38662E21EE15506006D0932 /* JUDCanvasComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDCanvasComponent.h; sourceTree = "<group>"; };
+		B38662E31EE15506006D0932 /* JUDCanvasComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDCanvasComponent.m; sourceTree = "<group>"; };
+		B38662E41EE15506006D0932 /* JUDCellComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDCellComponent.h; sourceTree = "<group>"; };
+		B38662E51EE15506006D0932 /* JUDCellComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDCellComponent.m; sourceTree = "<group>"; };
+		B38662E61EE15506006D0932 /* JUDComponent+GradientColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JUDComponent+GradientColor.h"; sourceTree = "<group>"; };
+		B38662E71EE15506006D0932 /* JUDComponent+GradientColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JUDComponent+GradientColor.m"; sourceTree = "<group>"; };
+		B38662E81EE15506006D0932 /* JUDComponent_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDComponent_internal.h; sourceTree = "<group>"; };
+		B38662E91EE15506006D0932 /* JUDDivComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDDivComponent.h; sourceTree = "<group>"; };
+		B38662EA1EE15506006D0932 /* JUDDivComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDDivComponent.m; sourceTree = "<group>"; };
+		B38662EB1EE15506006D0932 /* JUDEmbedComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDEmbedComponent.h; sourceTree = "<group>"; };
+		B38662EC1EE15506006D0932 /* JUDEmbedComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDEmbedComponent.m; sourceTree = "<group>"; };
+		B38662ED1EE15506006D0932 /* JUDImageComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDImageComponent.h; sourceTree = "<group>"; };
+		B38662EE1EE15506006D0932 /* JUDImageComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDImageComponent.m; sourceTree = "<group>"; };
+		B38662EF1EE15506006D0932 /* JUDIndicatorComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDIndicatorComponent.h; sourceTree = "<group>"; };
+		B38662F01EE15506006D0932 /* JUDIndicatorComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDIndicatorComponent.m; sourceTree = "<group>"; };
+		B38662F11EE15506006D0932 /* JUDListComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDListComponent.h; sourceTree = "<group>"; };
+		B38662F21EE15506006D0932 /* JUDListComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDListComponent.m; sourceTree = "<group>"; };
+		B38662F31EE15506006D0932 /* JUDLoadingComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDLoadingComponent.h; sourceTree = "<group>"; };
+		B38662F41EE15506006D0932 /* JUDLoadingComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDLoadingComponent.m; sourceTree = "<group>"; };
+		B38662F51EE15506006D0932 /* JUDLoadingIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDLoadingIndicator.h; sourceTree = "<group>"; };
+		B38662F61EE15506006D0932 /* JUDLoadingIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDLoadingIndicator.m; sourceTree = "<group>"; };
+		B38662F71EE15506006D0932 /* JUDRefreshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDRefreshComponent.h; sourceTree = "<group>"; };
+		B38662F81EE15506006D0932 /* JUDRefreshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDRefreshComponent.m; sourceTree = "<group>"; };
+		B38662F91EE15506006D0932 /* JUDScrollerComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDScrollerComponent.h; sourceTree = "<group>"; };
+		B38662FA1EE15506006D0932 /* JUDScrollerComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDScrollerComponent.m; sourceTree = "<group>"; };
+		B38662FB1EE15506006D0932 /* JUDSliderComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDSliderComponent.h; sourceTree = "<group>"; };
+		B38662FC1EE15506006D0932 /* JUDSliderComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDSliderComponent.m; sourceTree = "<group>"; };
+		B38662FD1EE15506006D0932 /* JUDSliderNeighborComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDSliderNeighborComponent.h; sourceTree = "<group>"; };
+		B38662FE1EE15506006D0932 /* JUDSliderNeighborComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDSliderNeighborComponent.m; sourceTree = "<group>"; };
+		B38662FF1EE15506006D0932 /* JUDSwitchComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDSwitchComponent.h; sourceTree = "<group>"; };
+		B38663001EE15506006D0932 /* JUDSwitchComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDSwitchComponent.m; sourceTree = "<group>"; };
+		B38663011EE15506006D0932 /* JUDTextAreaComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDTextAreaComponent.h; sourceTree = "<group>"; };
+		B38663021EE15506006D0932 /* JUDTextAreaComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDTextAreaComponent.m; sourceTree = "<group>"; };
+		B38663031EE15506006D0932 /* JUDTextComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDTextComponent.h; sourceTree = "<group>"; };
+		B38663041EE15506006D0932 /* JUDTextComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDTextComponent.m; sourceTree = "<group>"; };
+		B38663051EE15506006D0932 /* JUDTextInputComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDTextInputComponent.h; sourceTree = "<group>"; };
+		B38663061EE15506006D0932 /* JUDTextInputComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDTextInputComponent.m; sourceTree = "<group>"; };
+		B38663071EE15506006D0932 /* JUDTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDTransform.h; sourceTree = "<group>"; };
+		B38663081EE15506006D0932 /* JUDTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDTransform.m; sourceTree = "<group>"; };
+		B38663091EE15506006D0932 /* JUDVideoComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDVideoComponent.h; sourceTree = "<group>"; };
+		B386630A1EE15506006D0932 /* JUDVideoComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDVideoComponent.m; sourceTree = "<group>"; };
+		B386630B1EE15506006D0932 /* JUDWebComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDWebComponent.h; sourceTree = "<group>"; };
+		B386630C1EE15506006D0932 /* JUDWebComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDWebComponent.m; sourceTree = "<group>"; };
+		B386630E1EE15506006D0932 /* JUDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDBaseViewController.h; sourceTree = "<group>"; };
+		B386630F1EE15506006D0932 /* JUDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDBaseViewController.m; sourceTree = "<group>"; };
+		B38663101EE15506006D0932 /* JUDRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDRootViewController.h; sourceTree = "<group>"; };
+		B38663111EE15506006D0932 /* JUDRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDRootViewController.m; sourceTree = "<group>"; };
+		B38663131EE15506006D0932 /* JUDDebugTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDDebugTool.h; sourceTree = "<group>"; };
+		B38663141EE15506006D0932 /* JUDDebugTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDDebugTool.m; sourceTree = "<group>"; };
+		B38663161EE15506006D0932 /* JUDComponent+Display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JUDComponent+Display.h"; sourceTree = "<group>"; };
+		B38663171EE15506006D0932 /* JUDComponent+Display.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JUDComponent+Display.m"; sourceTree = "<group>"; };
+		B38663181EE15506006D0932 /* JUDDisplayQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDDisplayQueue.h; sourceTree = "<group>"; };
+		B38663191EE15506006D0932 /* JUDDisplayQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDDisplayQueue.m; sourceTree = "<group>"; };
+		B386631A1EE15506006D0932 /* JUDLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDLayer.h; sourceTree = "<group>"; };
+		B386631B1EE15506006D0932 /* JUDLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDLayer.m; sourceTree = "<group>"; };
+		B386631C1EE15506006D0932 /* JUDRoundedRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDRoundedRect.h; sourceTree = "<group>"; };
+		B386631D1EE15506006D0932 /* JUDRoundedRect.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JUDRoundedRect.mm; sourceTree = "<group>"; };
+		B386631E1EE15506006D0932 /* UIBezierPath+Jud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+Jud.h"; sourceTree = "<group>"; };
+		B386631F1EE15506006D0932 /* UIBezierPath+Jud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+Jud.m"; sourceTree = "<group>"; };
+		B38663211EE15506006D0932 /* JUDSDKEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDSDKEngine.h; sourceTree = "<group>"; };
+		B38663221EE15506006D0932 /* JUDSDKEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDSDKEngine.m; sourceTree = "<group>"; };
+		B38663231EE15506006D0932 /* JUDSDKError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDSDKError.h; sourceTree = "<group>"; };
+		B38663251EE15506006D0932 /* JUDComponent+Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JUDComponent+Events.h"; sourceTree = "<group>"; };
+		B38663261EE15506006D0932 /* JUDComponent+Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JUDComponent+Events.m"; sourceTree = "<group>"; };
+		B38663281EE15506006D0932 /* JUDMTADefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDMTADefaultImpl.h; sourceTree = "<group>"; };
+		B38663291EE15506006D0932 /* JUDMTADefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDMTADefaultImpl.m; sourceTree = "<group>"; };
+		B386632A1EE15506006D0932 /* JUDNavigationDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDNavigationDefaultImpl.h; sourceTree = "<group>"; };
+		B386632B1EE15506006D0932 /* JUDNavigationDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDNavigationDefaultImpl.m; sourceTree = "<group>"; };
+		B386632C1EE15506006D0932 /* JUDURLRewriteDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDURLRewriteDefaultImpl.h; sourceTree = "<group>"; };
+		B386632D1EE15506006D0932 /* JUDURLRewriteDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDURLRewriteDefaultImpl.m; sourceTree = "<group>"; };
+		B386632E1EE15506006D0932 /* JudSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JudSDK.h; sourceTree = "<group>"; };
+		B38663301EE15506006D0932 /* JUDComponent+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JUDComponent+Layout.h"; sourceTree = "<group>"; };
+		B38663311EE15506006D0932 /* JUDComponent+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JUDComponent+Layout.m"; sourceTree = "<group>"; };
+		B38663321EE15506006D0932 /* JUDLayoutDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDLayoutDefine.h; sourceTree = "<group>"; };
+		B38663331EE15506006D0932 /* Layout.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Layout.c; sourceTree = "<group>"; };
+		B38663341EE15506006D0932 /* Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layout.h; sourceTree = "<group>"; };
+		B38663361EE15506006D0932 /* JUDResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDResourceLoader.h; sourceTree = "<group>"; };
+		B38663371EE15506006D0932 /* JUDResourceLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDResourceLoader.m; sourceTree = "<group>"; };
+		B38663381EE15506006D0932 /* JUDWebSocketLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDWebSocketLoader.h; sourceTree = "<group>"; };
+		B38663391EE15506006D0932 /* JUDWebSocketLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDWebSocketLoader.m; sourceTree = "<group>"; };
+		B386633B1EE15506006D0932 /* JUDBridgeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDBridgeManager.h; sourceTree = "<group>"; };
+		B386633C1EE15506006D0932 /* JUDBridgeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDBridgeManager.m; sourceTree = "<group>"; };
+		B386633D1EE15506006D0932 /* JUDComponentFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDComponentFactory.h; sourceTree = "<group>"; };
+		B386633E1EE15506006D0932 /* JUDComponentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDComponentFactory.m; sourceTree = "<group>"; };
+		B386633F1EE15506006D0932 /* JUDComponentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDComponentManager.h; sourceTree = "<group>"; };
+		B38663401EE15506006D0932 /* JUDComponentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDComponentManager.m; sourceTree = "<group>"; };
+		B38663411EE15506006D0932 /* JUDDatePickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDDatePickerManager.h; sourceTree = "<group>"; };
+		B38663421EE15506006D0932 /* JUDDatePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDDatePickerManager.m; sourceTree = "<group>"; };
+		B38663431EE15506006D0932 /* JUDHandlerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDHandlerFactory.h; sourceTree = "<group>"; };
+		B38663441EE15506006D0932 /* JUDHandlerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDHandlerFactory.m; sourceTree = "<group>"; };
+		B38663451EE15506006D0932 /* JUDInvocationConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDInvocationConfig.h; sourceTree = "<group>"; };
+		B38663461EE15506006D0932 /* JUDInvocationConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDInvocationConfig.m; sourceTree = "<group>"; };
+		B38663471EE15506006D0932 /* JUDModuleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDModuleFactory.h; sourceTree = "<group>"; };
+		B38663481EE15506006D0932 /* JUDModuleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDModuleFactory.m; sourceTree = "<group>"; };
+		B38663491EE15506006D0932 /* JUDRuleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDRuleManager.h; sourceTree = "<group>"; };
+		B386634A1EE15506006D0932 /* JUDRuleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDRuleManager.m; sourceTree = "<group>"; };
+		B386634B1EE15506006D0932 /* JUDSDKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDSDKManager.h; sourceTree = "<group>"; };
+		B386634C1EE15506006D0932 /* JUDSDKManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDSDKManager.m; sourceTree = "<group>"; };
+		B386634D1EE15506006D0932 /* JUDServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDServiceFactory.h; sourceTree = "<group>"; };
+		B386634E1EE15506006D0932 /* JUDServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDServiceFactory.m; sourceTree = "<group>"; };
+		B38663501EE15506006D0932 /* JUDComponent+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JUDComponent+Navigation.h"; sourceTree = "<group>"; };
+		B38663511EE15506006D0932 /* JUDComponent+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JUDComponent+Navigation.m"; sourceTree = "<group>"; };
+		B38663521EE15506006D0932 /* JUDComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDComponent.h; sourceTree = "<group>"; };
+		B38663531EE15506006D0932 /* JUDComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDComponent.m; sourceTree = "<group>"; };
+		B38663541EE15506006D0932 /* JUDJSExceptionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDJSExceptionInfo.h; sourceTree = "<group>"; };
+		B38663551EE15506006D0932 /* JUDJSExceptionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDJSExceptionInfo.m; sourceTree = "<group>"; };
+		B38663561EE15506006D0932 /* JUDSDKInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDSDKInstance.h; sourceTree = "<group>"; };
+		B38663571EE15506006D0932 /* JUDSDKInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDSDKInstance.m; sourceTree = "<group>"; };
+		B38663581EE15506006D0932 /* JUDSDKInstance_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDSDKInstance_private.h; sourceTree = "<group>"; };
+		B386635A1EE15506006D0932 /* JUDAnimationModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDAnimationModule.h; sourceTree = "<group>"; };
+		B386635B1EE15506006D0932 /* JUDAnimationModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDAnimationModule.m; sourceTree = "<group>"; };
+		B386635C1EE15506006D0932 /* JUDCanvasModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDCanvasModule.h; sourceTree = "<group>"; };
+		B386635D1EE15506006D0932 /* JUDCanvasModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDCanvasModule.m; sourceTree = "<group>"; };
+		B386635E1EE15506006D0932 /* JUDClipboardModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDClipboardModule.h; sourceTree = "<group>"; };
+		B386635F1EE15506006D0932 /* JUDClipboardModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDClipboardModule.m; sourceTree = "<group>"; };
+		B38663601EE15506006D0932 /* JUDCommunicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDCommunicate.h; sourceTree = "<group>"; };
+		B38663611EE15506006D0932 /* JUDCommunicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDCommunicate.m; sourceTree = "<group>"; };
+		B38663621EE15506006D0932 /* JUDCommunicateModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDCommunicateModule.h; sourceTree = "<group>"; };
+		B38663631EE15506006D0932 /* JUDCommunicateModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDCommunicateModule.m; sourceTree = "<group>"; };
+		B38663641EE15506006D0932 /* JUDDomModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDDomModule.h; sourceTree = "<group>"; };
+		B38663651EE15506006D0932 /* JUDDomModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDDomModule.m; sourceTree = "<group>"; };
+		B38663661EE15506006D0932 /* JUDGlobalEventModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDGlobalEventModule.h; sourceTree = "<group>"; };
+		B38663671EE15506006D0932 /* JUDGlobalEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDGlobalEventModule.m; sourceTree = "<group>"; };
+		B38663681EE15506006D0932 /* JUDInstanceWrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDInstanceWrap.h; sourceTree = "<group>"; };
+		B38663691EE15506006D0932 /* JUDInstanceWrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDInstanceWrap.m; sourceTree = "<group>"; };
+		B386636A1EE15506006D0932 /* JUDMetaModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDMetaModule.h; sourceTree = "<group>"; };
+		B386636B1EE15506006D0932 /* JUDMetaModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDMetaModule.m; sourceTree = "<group>"; };
+		B386636C1EE15506006D0932 /* JUDModalUIModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDModalUIModule.h; sourceTree = "<group>"; };
+		B386636D1EE15506006D0932 /* JUDModalUIModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDModalUIModule.m; sourceTree = "<group>"; };
+		B386636E1EE15506006D0932 /* JUDMTAModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDMTAModule.h; sourceTree = "<group>"; };
+		B386636F1EE15506006D0932 /* JUDMTAModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDMTAModule.m; sourceTree = "<group>"; };
+		B38663701EE15506006D0932 /* JUDNavigatorModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDNavigatorModule.h; sourceTree = "<group>"; };
+		B38663711EE15506006D0932 /* JUDNavigatorModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDNavigatorModule.m; sourceTree = "<group>"; };
+		B38663721EE15506006D0932 /* JUDPickerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDPickerModule.h; sourceTree = "<group>"; };
+		B38663731EE15506006D0932 /* JUDPickerModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDPickerModule.m; sourceTree = "<group>"; };
+		B38663741EE15506006D0932 /* JUDStorageModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDStorageModule.h; sourceTree = "<group>"; };
+		B38663751EE15506006D0932 /* JUDStorageModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDStorageModule.m; sourceTree = "<group>"; };
+		B38663761EE15506006D0932 /* JUDStreamModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDStreamModule.h; sourceTree = "<group>"; };
+		B38663771EE15506006D0932 /* JUDStreamModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDStreamModule.m; sourceTree = "<group>"; };
+		B38663781EE15506006D0932 /* JUDTimerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDTimerModule.h; sourceTree = "<group>"; };
+		B38663791EE15506006D0932 /* JUDTimerModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDTimerModule.m; sourceTree = "<group>"; };
+		B386637A1EE15506006D0932 /* JUDWebSocketModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDWebSocketModule.h; sourceTree = "<group>"; };
+		B386637B1EE15506006D0932 /* JUDWebSocketModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDWebSocketModule.m; sourceTree = "<group>"; };
+		B386637C1EE15506006D0932 /* JUDWebViewModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDWebViewModule.h; sourceTree = "<group>"; };
+		B386637D1EE15506006D0932 /* JUDWebViewModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDWebViewModule.m; sourceTree = "<group>"; };
+		B386637F1EE15506006D0932 /* JUDMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDMonitor.h; sourceTree = "<group>"; };
+		B38663801EE15506006D0932 /* JUDMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDMonitor.m; sourceTree = "<group>"; };
+		B38663821EE15506006D0932 /* JUDResourceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDResourceRequest.h; sourceTree = "<group>"; };
+		B38663831EE15506006D0932 /* JUDResourceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDResourceRequest.m; sourceTree = "<group>"; };
+		B38663841EE15506006D0932 /* JUDResourceRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDResourceRequestHandler.h; sourceTree = "<group>"; };
+		B38663851EE15506006D0932 /* JUDResourceRequestHandlerDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDResourceRequestHandlerDefaultImpl.h; sourceTree = "<group>"; };
+		B38663861EE15506006D0932 /* JUDResourceRequestHandlerDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDResourceRequestHandlerDefaultImpl.m; sourceTree = "<group>"; };
+		B38663871EE15506006D0932 /* JUDResourceResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDResourceResponse.h; sourceTree = "<group>"; };
+		B38663881EE15506006D0932 /* JUDResourceResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDResourceResponse.m; sourceTree = "<group>"; };
+		B386638A1EE15506006D0932 /* JUDAppMonitorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDAppMonitorProtocol.h; sourceTree = "<group>"; };
+		B386638B1EE15506006D0932 /* JUDBridgeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDBridgeProtocol.h; sourceTree = "<group>"; };
+		B386638C1EE15506006D0932 /* JUDEventModuleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDEventModuleProtocol.h; sourceTree = "<group>"; };
+		B386638D1EE15506006D0932 /* JUDImgLoaderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDImgLoaderProtocol.h; sourceTree = "<group>"; };
+		B386638E1EE15506006D0932 /* JUDJSExceptionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDJSExceptionProtocol.h; sourceTree = "<group>"; };
+		B386638F1EE15506006D0932 /* JUDModuleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDModuleProtocol.h; sourceTree = "<group>"; };
+		B38663901EE15506006D0932 /* JUDMTAProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDMTAProtocol.h; sourceTree = "<group>"; };
+		B38663911EE15506006D0932 /* JUDNavigationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDNavigationProtocol.h; sourceTree = "<group>"; };
+		B38663921EE15506006D0932 /* JUDNetworkProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDNetworkProtocol.h; sourceTree = "<group>"; };
+		B38663931EE15506006D0932 /* JUDScrollerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDScrollerProtocol.h; sourceTree = "<group>"; };
+		B38663941EE15506006D0932 /* JUDTextComponentProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDTextComponentProtocol.h; sourceTree = "<group>"; };
+		B38663951EE15506006D0932 /* JUDURLRewriteProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDURLRewriteProtocol.h; sourceTree = "<group>"; };
+		B38663961EE15506006D0932 /* WXDestroyProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXDestroyProtocol.h; sourceTree = "<group>"; };
+		B38663981EE15506006D0932 /* JudSDK-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JudSDK-Prefix.pch"; sourceTree = "<group>"; };
+		B386639A1EE15506006D0932 /* JUDAppConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDAppConfiguration.h; sourceTree = "<group>"; };
+		B386639B1EE15506006D0932 /* JUDAppConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDAppConfiguration.m; sourceTree = "<group>"; };
+		B386639C1EE15506006D0932 /* JUDAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDAssert.h; sourceTree = "<group>"; };
+		B386639D1EE15506006D0932 /* JUDAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDAssert.m; sourceTree = "<group>"; };
+		B386639E1EE15506006D0932 /* JUDConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDConvert.h; sourceTree = "<group>"; };
+		B386639F1EE15506006D0932 /* JUDConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDConvert.m; sourceTree = "<group>"; };
+		B38663A01EE15506006D0932 /* JUDDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDDefine.h; sourceTree = "<group>"; };
+		B38663A11EE15506006D0932 /* JUDLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDLength.h; sourceTree = "<group>"; };
+		B38663A21EE15506006D0932 /* JUDLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDLength.m; sourceTree = "<group>"; };
+		B38663A31EE15506006D0932 /* JUDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDLog.h; sourceTree = "<group>"; };
+		B38663A41EE15506006D0932 /* JUDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDLog.m; sourceTree = "<group>"; };
+		B38663A51EE15506006D0932 /* JUDSimulatorShortcutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDSimulatorShortcutManager.h; sourceTree = "<group>"; };
+		B38663A61EE15506006D0932 /* JUDSimulatorShortcutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDSimulatorShortcutManager.m; sourceTree = "<group>"; };
+		B38663A71EE15506006D0932 /* JUDThreadSafeCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDThreadSafeCounter.h; sourceTree = "<group>"; };
+		B38663A81EE15506006D0932 /* JUDThreadSafeCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDThreadSafeCounter.m; sourceTree = "<group>"; };
+		B38663A91EE15506006D0932 /* JUDThreadSafeMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDThreadSafeMutableArray.h; sourceTree = "<group>"; };
+		B38663AA1EE15506006D0932 /* JUDThreadSafeMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDThreadSafeMutableArray.m; sourceTree = "<group>"; };
+		B38663AB1EE15506006D0932 /* JUDThreadSafeMutableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDThreadSafeMutableDictionary.h; sourceTree = "<group>"; };
+		B38663AC1EE15506006D0932 /* JUDThreadSafeMutableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDThreadSafeMutableDictionary.m; sourceTree = "<group>"; };
+		B38663AD1EE15506006D0932 /* JUDType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDType.h; sourceTree = "<group>"; };
+		B38663AE1EE15506006D0932 /* JUDUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDUtility.h; sourceTree = "<group>"; };
+		B38663AF1EE15506006D0932 /* JUDUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDUtility.m; sourceTree = "<group>"; };
+		B38663B01EE15506006D0932 /* JUDWeakObjectWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDWeakObjectWrapper.h; sourceTree = "<group>"; };
+		B38663B11EE15506006D0932 /* JUDWeakObjectWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDWeakObjectWrapper.m; sourceTree = "<group>"; };
+		B38663B21EE15506006D0932 /* NSArray+Jud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Jud.h"; sourceTree = "<group>"; };
+		B38663B31EE15506006D0932 /* NSArray+Jud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Jud.m"; sourceTree = "<group>"; };
+		B38663B41EE15506006D0932 /* NSObject+JUDSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JUDSwizzle.h"; sourceTree = "<group>"; };
+		B38663B51EE15506006D0932 /* NSObject+JUDSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JUDSwizzle.m"; sourceTree = "<group>"; };
+		B38663B61EE15507006D0932 /* NSTimer+Jud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Jud.h"; sourceTree = "<group>"; };
+		B38663B71EE15507006D0932 /* NSTimer+Jud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Jud.m"; sourceTree = "<group>"; };
+		B38663B91EE15507006D0932 /* JUDComponent+PseudoClassManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JUDComponent+PseudoClassManagement.h"; sourceTree = "<group>"; };
+		B38663BA1EE15507006D0932 /* JUDComponent+PseudoClassManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JUDComponent+PseudoClassManagement.m"; sourceTree = "<group>"; };
+		B38663BB1EE15507006D0932 /* JUDComponent+ViewManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JUDComponent+ViewManagement.h"; sourceTree = "<group>"; };
+		B38663BC1EE15507006D0932 /* JUDComponent+ViewManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JUDComponent+ViewManagement.m"; sourceTree = "<group>"; };
+		B38663BD1EE15507006D0932 /* JUDErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDErrorView.h; sourceTree = "<group>"; };
+		B38663BE1EE15507006D0932 /* JUDErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDErrorView.m; sourceTree = "<group>"; };
+		B38663BF1EE15507006D0932 /* JUDRootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDRootView.h; sourceTree = "<group>"; };
+		B38663C01EE15507006D0932 /* JUDRootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDRootView.m; sourceTree = "<group>"; };
+		B38663C11EE15507006D0932 /* JUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDView.h; sourceTree = "<group>"; };
+		B38663C21EE15507006D0932 /* JUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDView.m; sourceTree = "<group>"; };
+		B38663C41EE15507006D0932 /* JUDWebSocketDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDWebSocketDefaultImpl.h; sourceTree = "<group>"; };
+		B38663C51EE15507006D0932 /* JUDWebSocketDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDWebSocketDefaultImpl.m; sourceTree = "<group>"; };
+		B38663C61EE15507006D0932 /* JUDWebSocketHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUDWebSocketHandler.h; sourceTree = "<group>"; };
+		B38663C71EE15507006D0932 /* SRWebSocket+Jud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SRWebSocket+Jud.h"; sourceTree = "<group>"; };
+		B38663C81EE15507006D0932 /* SRWebSocket+Jud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SRWebSocket+Jud.m"; sourceTree = "<group>"; };
+		C401945D1E344E8300D19C31 /* JUDFloatCompareTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDFloatCompareTests.m; sourceTree = "<group>"; };
+		DC9867431D826D1E000AF388 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		DC9F46821D61AC8800A88239 /* JUDStreamModuleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDStreamModuleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A42AF821C23B33E00818EA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77D160F91C02DBE70010B15B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A27E7D61C3E360400D7A552 /* dependency */ = {
+			isa = PBXGroup;
+			children = (
+				2A27E7D71C3E360B00D7A552 /* SRWebSocket.h */,
+				2A27E7D81C3E360B00D7A552 /* SRWebSocket.m */,
+			);
+			name = dependency;
+			sourceTree = "<group>";
+		};
+		2A42AF861C23B33E00818EA6 /* JudSDK_MTL */ = {
+			isa = PBXGroup;
+			children = (
+				2A42AF871C23B33E00818EA6 /* JudSDK_MTL.h */,
+				2A42AF891C23B33E00818EA6 /* JudSDK_MTL.m */,
+			);
+			path = JudSDK_MTL;
+			sourceTree = "<group>";
+		};
+		74C8963E1D2AC2210043B82A /* JudSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				74EF31C11DE6932900667A07 /* handler */,
+				74F7BFF31DC782DF004D0871 /* Resources */,
+				DC9F46841D61AC9100A88239 /* module */,
+				74C8963F1D2AC2210043B82A /* JudSDKTests.m */,
+				74C896411D2AC2210043B82A /* Info.plist */,
+				740938EA1D3D026600DBB801 /* JUDComponentTests.m */,
+				5996BD6F1D49EC0600C0FEA6 /* JUDInstanceWrapTests.m */,
+				5996BD741D4D8A0E00C0FEA6 /* JUDSDKEngineTests.m */,
+				597334B21D4DE1A600988789 /* JUDBridgeMethodTests.m */,
+				597334B01D4D9E7F00988789 /* JUDSDKManagerTests.m */,
+				596FDD671D3F9EFF0082CD5B /* TestSupportUtils.h */,
+				596FDD681D3F9EFF0082CD5B /* TestSupportUtils.m */,
+				1C1A2BEC1D91172800539AA1 /* JUDConvertTests.m */,
+				74B8BF001DC49AFE004A6027 /* JUDRootViewTests.m */,
+				C401945D1E344E8300D19C31 /* JUDFloatCompareTests.m */,
+			);
+			path = JudSDKTests;
+			sourceTree = "<group>";
+		};
+		74EF31C11DE6932900667A07 /* handler */ = {
+			isa = PBXGroup;
+			children = (
+				74EF31C21DE6935600667A07 /* JUDURLRewriteTests.m */,
+			);
+			name = handler;
+			sourceTree = "<group>";
+		};
+		74F7BFF31DC782DF004D0871 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				74F7BFF41DC782EC004D0871 /* testRootView.js */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		77D160F31C02DBE70010B15B = {
+			isa = PBXGroup;
+			children = (
+				77D160FF1C02DBE70010B15B /* JudSDK */,
+				2A42AF861C23B33E00818EA6 /* JudSDK_MTL */,
+				74C8963E1D2AC2210043B82A /* JudSDKTests */,
+				77D160FE1C02DBE70010B15B /* Products */,
+				A5818E244F9E235722E3B938 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		77D160FE1C02DBE70010B15B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77D160FD1C02DBE70010B15B /* JudSDK.framework */,
+				2A42AF851C23B33E00818EA6 /* libJudSDK_MTL.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77D160FF1C02DBE70010B15B /* JudSDK */ = {
+			isa = PBXGroup;
+			children = (
+				2A27E7D61C3E360400D7A552 /* dependency */,
+				77D161171C02DCB90010B15B /* Resources */,
+				B38662CB1EE15506006D0932 /* Sources */,
+			);
+			path = JudSDK;
+			sourceTree = "<group>";
+		};
+		77D161171C02DCB90010B15B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59AC02501D2A7E6E00355112 /* jud_load_error@3x.png */,
+				74B80E6B1C3FB32C00239FB9 /* main.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A5818E244F9E235722E3B938 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74EF31C41DE6AADD00667A07 /* libOCMock.a */,
+				74EF31BE1DE5ED5900667A07 /* libstdc++.tbd */,
+				DC9867431D826D1E000AF388 /* GLKit.framework */,
+				740938FA1D3D0E1700DBB801 /* AVKit.framework */,
+				740938F81D3D0E0300DBB801 /* MediaPlayer.framework */,
+				740938F61D3D0DFD00DBB801 /* CoreMedia.framework */,
+				740938F41D3D0DDE00DBB801 /* AVFoundation.framework */,
+				740938ED1D3D079100DBB801 /* JavaScriptCore.framework */,
+				7469869B1C4DEAC20054A57E /* libicucore.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B38662CB1EE15506006D0932 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B38662CC1EE15506006D0932 /* Bridge */,
+				B38662DF1EE15506006D0932 /* Component */,
+				B386630D1EE15506006D0932 /* Controller */,
+				B38663121EE15506006D0932 /* Debug */,
+				B38663151EE15506006D0932 /* Display */,
+				B38663201EE15506006D0932 /* Engine */,
+				B38663241EE15506006D0932 /* Events */,
+				B38663271EE15506006D0932 /* Handler */,
+				B386632E1EE15506006D0932 /* JudSDK.h */,
+				B386632F1EE15506006D0932 /* Layout */,
+				B38663351EE15506006D0932 /* Loader */,
+				B386633A1EE15506006D0932 /* Manager */,
+				B386634F1EE15506006D0932 /* Model */,
+				B38663591EE15506006D0932 /* Module */,
+				B386637E1EE15506006D0932 /* Monitor */,
+				B38663811EE15506006D0932 /* Network */,
+				B38663891EE15506006D0932 /* Protocol */,
+				B38663971EE15506006D0932 /* Supporting Files */,
+				B38663991EE15506006D0932 /* Utility */,
+				B38663B81EE15507006D0932 /* View */,
+				B38663C31EE15507006D0932 /* WebSocket */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B38662CC1EE15506006D0932 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				B38662CD1EE15506006D0932 /* JSValue+Jud.h */,
+				B38662CE1EE15506006D0932 /* JSValue+Jud.m */,
+				B38662CF1EE15506006D0932 /* JUDBridgeContext.h */,
+				B38662D01EE15506006D0932 /* JUDBridgeContext.m */,
+				B38662D11EE15506006D0932 /* JUDBridgeMethod.h */,
+				B38662D21EE15506006D0932 /* JUDBridgeMethod.m */,
+				B38662D31EE15506006D0932 /* JUDCallJSMethod.h */,
+				B38662D41EE15506006D0932 /* JUDCallJSMethod.m */,
+				B38662D51EE15506006D0932 /* JUDComponentMethod.h */,
+				B38662D61EE15506006D0932 /* JUDComponentMethod.m */,
+				B38662D71EE15506006D0932 /* JUDDebugLoggerBridge.h */,
+				B38662D81EE15506006D0932 /* JUDDebugLoggerBridge.m */,
+				B38662D91EE15506006D0932 /* JUDJSCoreBridge.h */,
+				B38662DA1EE15506006D0932 /* JUDJSCoreBridge.m */,
+				B38662DB1EE15506006D0932 /* JUDModuleMethod.h */,
+				B38662DC1EE15506006D0932 /* JUDModuleMethod.m */,
+				B38662DD1EE15506006D0932 /* JUDPolyfillSet.h */,
+				B38662DE1EE15506006D0932 /* JUDPolyfillSet.m */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		B38662DF1EE15506006D0932 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				B38662E01EE15506006D0932 /* JUDAComponent.h */,
+				B38662E11EE15506006D0932 /* JUDAComponent.m */,
+				B38662E21EE15506006D0932 /* JUDCanvasComponent.h */,
+				B38662E31EE15506006D0932 /* JUDCanvasComponent.m */,
+				B38662E41EE15506006D0932 /* JUDCellComponent.h */,
+				B38662E51EE15506006D0932 /* JUDCellComponent.m */,
+				B38662E61EE15506006D0932 /* JUDComponent+GradientColor.h */,
+				B38662E71EE15506006D0932 /* JUDComponent+GradientColor.m */,
+				B38662E81EE15506006D0932 /* JUDComponent_internal.h */,
+				B38662E91EE15506006D0932 /* JUDDivComponent.h */,
+				B38662EA1EE15506006D0932 /* JUDDivComponent.m */,
+				B38662EB1EE15506006D0932 /* JUDEmbedComponent.h */,
+				B38662EC1EE15506006D0932 /* JUDEmbedComponent.m */,
+				B38662ED1EE15506006D0932 /* JUDImageComponent.h */,
+				B38662EE1EE15506006D0932 /* JUDImageComponent.m */,
+				B38662EF1EE15506006D0932 /* JUDIndicatorComponent.h */,
+				B38662F01EE15506006D0932 /* JUDIndicatorComponent.m */,
+				B38662F11EE15506006D0932 /* JUDListComponent.h */,
+				B38662F21EE15506006D0932 /* JUDListComponent.m */,
+				B38662F31EE15506006D0932 /* JUDLoadingComponent.h */,
+				B38662F41EE15506006D0932 /* JUDLoadingComponent.m */,
+				B38662F51EE15506006D0932 /* JUDLoadingIndicator.h */,
+				B38662F61EE15506006D0932 /* JUDLoadingIndicator.m */,
+				B38662F71EE15506006D0932 /* JUDRefreshComponent.h */,
+				B38662F81EE15506006D0932 /* JUDRefreshComponent.m */,
+				B38662F91EE15506006D0932 /* JUDScrollerComponent.h */,
+				B38662FA1EE15506006D0932 /* JUDScrollerComponent.m */,
+				B38662FB1EE15506006D0932 /* JUDSliderComponent.h */,
+				B38662FC1EE15506006D0932 /* JUDSliderComponent.m */,
+				B38662FD1EE15506006D0932 /* JUDSliderNeighborComponent.h */,
+				B38662FE1EE15506006D0932 /* JUDSliderNeighborComponent.m */,
+				B38662FF1EE15506006D0932 /* JUDSwitchComponent.h */,
+				B38663001EE15506006D0932 /* JUDSwitchComponent.m */,
+				B38663011EE15506006D0932 /* JUDTextAreaComponent.h */,
+				B38663021EE15506006D0932 /* JUDTextAreaComponent.m */,
+				B38663031EE15506006D0932 /* JUDTextComponent.h */,
+				B38663041EE15506006D0932 /* JUDTextComponent.m */,
+				B38663051EE15506006D0932 /* JUDTextInputComponent.h */,
+				B38663061EE15506006D0932 /* JUDTextInputComponent.m */,
+				B38663071EE15506006D0932 /* JUDTransform.h */,
+				B38663081EE15506006D0932 /* JUDTransform.m */,
+				B38663091EE15506006D0932 /* JUDVideoComponent.h */,
+				B386630A1EE15506006D0932 /* JUDVideoComponent.m */,
+				B386630B1EE15506006D0932 /* JUDWebComponent.h */,
+				B386630C1EE15506006D0932 /* JUDWebComponent.m */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		B386630D1EE15506006D0932 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B386630E1EE15506006D0932 /* JUDBaseViewController.h */,
+				B386630F1EE15506006D0932 /* JUDBaseViewController.m */,
+				B38663101EE15506006D0932 /* JUDRootViewController.h */,
+				B38663111EE15506006D0932 /* JUDRootViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B38663121EE15506006D0932 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				B38663131EE15506006D0932 /* JUDDebugTool.h */,
+				B38663141EE15506006D0932 /* JUDDebugTool.m */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		B38663151EE15506006D0932 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				B38663161EE15506006D0932 /* JUDComponent+Display.h */,
+				B38663171EE15506006D0932 /* JUDComponent+Display.m */,
+				B38663181EE15506006D0932 /* JUDDisplayQueue.h */,
+				B38663191EE15506006D0932 /* JUDDisplayQueue.m */,
+				B386631A1EE15506006D0932 /* JUDLayer.h */,
+				B386631B1EE15506006D0932 /* JUDLayer.m */,
+				B386631C1EE15506006D0932 /* JUDRoundedRect.h */,
+				B386631D1EE15506006D0932 /* JUDRoundedRect.mm */,
+				B386631E1EE15506006D0932 /* UIBezierPath+Jud.h */,
+				B386631F1EE15506006D0932 /* UIBezierPath+Jud.m */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
+		B38663201EE15506006D0932 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				B38663211EE15506006D0932 /* JUDSDKEngine.h */,
+				B38663221EE15506006D0932 /* JUDSDKEngine.m */,
+				B38663231EE15506006D0932 /* JUDSDKError.h */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		B38663241EE15506006D0932 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				B38663251EE15506006D0932 /* JUDComponent+Events.h */,
+				B38663261EE15506006D0932 /* JUDComponent+Events.m */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		B38663271EE15506006D0932 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				B38663281EE15506006D0932 /* JUDMTADefaultImpl.h */,
+				B38663291EE15506006D0932 /* JUDMTADefaultImpl.m */,
+				B386632A1EE15506006D0932 /* JUDNavigationDefaultImpl.h */,
+				B386632B1EE15506006D0932 /* JUDNavigationDefaultImpl.m */,
+				B386632C1EE15506006D0932 /* JUDURLRewriteDefaultImpl.h */,
+				B386632D1EE15506006D0932 /* JUDURLRewriteDefaultImpl.m */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		B386632F1EE15506006D0932 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				B38663301EE15506006D0932 /* JUDComponent+Layout.h */,
+				B38663311EE15506006D0932 /* JUDComponent+Layout.m */,
+				B38663321EE15506006D0932 /* JUDLayoutDefine.h */,
+				B38663331EE15506006D0932 /* Layout.c */,
+				B38663341EE15506006D0932 /* Layout.h */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		B38663351EE15506006D0932 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				B38663361EE15506006D0932 /* JUDResourceLoader.h */,
+				B38663371EE15506006D0932 /* JUDResourceLoader.m */,
+				B38663381EE15506006D0932 /* JUDWebSocketLoader.h */,
+				B38663391EE15506006D0932 /* JUDWebSocketLoader.m */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		B386633A1EE15506006D0932 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B386633B1EE15506006D0932 /* JUDBridgeManager.h */,
+				B386633C1EE15506006D0932 /* JUDBridgeManager.m */,
+				B386633D1EE15506006D0932 /* JUDComponentFactory.h */,
+				B386633E1EE15506006D0932 /* JUDComponentFactory.m */,
+				B386633F1EE15506006D0932 /* JUDComponentManager.h */,
+				B38663401EE15506006D0932 /* JUDComponentManager.m */,
+				B38663411EE15506006D0932 /* JUDDatePickerManager.h */,
+				B38663421EE15506006D0932 /* JUDDatePickerManager.m */,
+				B38663431EE15506006D0932 /* JUDHandlerFactory.h */,
+				B38663441EE15506006D0932 /* JUDHandlerFactory.m */,
+				B38663451EE15506006D0932 /* JUDInvocationConfig.h */,
+				B38663461EE15506006D0932 /* JUDInvocationConfig.m */,
+				B38663471EE15506006D0932 /* JUDModuleFactory.h */,
+				B38663481EE15506006D0932 /* JUDModuleFactory.m */,
+				B38663491EE15506006D0932 /* JUDRuleManager.h */,
+				B386634A1EE15506006D0932 /* JUDRuleManager.m */,
+				B386634B1EE15506006D0932 /* JUDSDKManager.h */,
+				B386634C1EE15506006D0932 /* JUDSDKManager.m */,
+				B386634D1EE15506006D0932 /* JUDServiceFactory.h */,
+				B386634E1EE15506006D0932 /* JUDServiceFactory.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B386634F1EE15506006D0932 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B38663501EE15506006D0932 /* JUDComponent+Navigation.h */,
+				B38663511EE15506006D0932 /* JUDComponent+Navigation.m */,
+				B38663521EE15506006D0932 /* JUDComponent.h */,
+				B38663531EE15506006D0932 /* JUDComponent.m */,
+				B38663541EE15506006D0932 /* JUDJSExceptionInfo.h */,
+				B38663551EE15506006D0932 /* JUDJSExceptionInfo.m */,
+				B38663561EE15506006D0932 /* JUDSDKInstance.h */,
+				B38663571EE15506006D0932 /* JUDSDKInstance.m */,
+				B38663581EE15506006D0932 /* JUDSDKInstance_private.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B38663591EE15506006D0932 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				B386635A1EE15506006D0932 /* JUDAnimationModule.h */,
+				B386635B1EE15506006D0932 /* JUDAnimationModule.m */,
+				B386635C1EE15506006D0932 /* JUDCanvasModule.h */,
+				B386635D1EE15506006D0932 /* JUDCanvasModule.m */,
+				B386635E1EE15506006D0932 /* JUDClipboardModule.h */,
+				B386635F1EE15506006D0932 /* JUDClipboardModule.m */,
+				B38663601EE15506006D0932 /* JUDCommunicate.h */,
+				B38663611EE15506006D0932 /* JUDCommunicate.m */,
+				B38663621EE15506006D0932 /* JUDCommunicateModule.h */,
+				B38663631EE15506006D0932 /* JUDCommunicateModule.m */,
+				B38663641EE15506006D0932 /* JUDDomModule.h */,
+				B38663651EE15506006D0932 /* JUDDomModule.m */,
+				B38663661EE15506006D0932 /* JUDGlobalEventModule.h */,
+				B38663671EE15506006D0932 /* JUDGlobalEventModule.m */,
+				B38663681EE15506006D0932 /* JUDInstanceWrap.h */,
+				B38663691EE15506006D0932 /* JUDInstanceWrap.m */,
+				B386636A1EE15506006D0932 /* JUDMetaModule.h */,
+				B386636B1EE15506006D0932 /* JUDMetaModule.m */,
+				B386636C1EE15506006D0932 /* JUDModalUIModule.h */,
+				B386636D1EE15506006D0932 /* JUDModalUIModule.m */,
+				B386636E1EE15506006D0932 /* JUDMTAModule.h */,
+				B386636F1EE15506006D0932 /* JUDMTAModule.m */,
+				B38663701EE15506006D0932 /* JUDNavigatorModule.h */,
+				B38663711EE15506006D0932 /* JUDNavigatorModule.m */,
+				B38663721EE15506006D0932 /* JUDPickerModule.h */,
+				B38663731EE15506006D0932 /* JUDPickerModule.m */,
+				B38663741EE15506006D0932 /* JUDStorageModule.h */,
+				B38663751EE15506006D0932 /* JUDStorageModule.m */,
+				B38663761EE15506006D0932 /* JUDStreamModule.h */,
+				B38663771EE15506006D0932 /* JUDStreamModule.m */,
+				B38663781EE15506006D0932 /* JUDTimerModule.h */,
+				B38663791EE15506006D0932 /* JUDTimerModule.m */,
+				B386637A1EE15506006D0932 /* JUDWebSocketModule.h */,
+				B386637B1EE15506006D0932 /* JUDWebSocketModule.m */,
+				B386637C1EE15506006D0932 /* JUDWebViewModule.h */,
+				B386637D1EE15506006D0932 /* JUDWebViewModule.m */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		B386637E1EE15506006D0932 /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				B386637F1EE15506006D0932 /* JUDMonitor.h */,
+				B38663801EE15506006D0932 /* JUDMonitor.m */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		B38663811EE15506006D0932 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B38663821EE15506006D0932 /* JUDResourceRequest.h */,
+				B38663831EE15506006D0932 /* JUDResourceRequest.m */,
+				B38663841EE15506006D0932 /* JUDResourceRequestHandler.h */,
+				B38663851EE15506006D0932 /* JUDResourceRequestHandlerDefaultImpl.h */,
+				B38663861EE15506006D0932 /* JUDResourceRequestHandlerDefaultImpl.m */,
+				B38663871EE15506006D0932 /* JUDResourceResponse.h */,
+				B38663881EE15506006D0932 /* JUDResourceResponse.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B38663891EE15506006D0932 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B386638A1EE15506006D0932 /* JUDAppMonitorProtocol.h */,
+				B386638B1EE15506006D0932 /* JUDBridgeProtocol.h */,
+				B386638C1EE15506006D0932 /* JUDEventModuleProtocol.h */,
+				B386638D1EE15506006D0932 /* JUDImgLoaderProtocol.h */,
+				B386638E1EE15506006D0932 /* JUDJSExceptionProtocol.h */,
+				B386638F1EE15506006D0932 /* JUDModuleProtocol.h */,
+				B38663901EE15506006D0932 /* JUDMTAProtocol.h */,
+				B38663911EE15506006D0932 /* JUDNavigationProtocol.h */,
+				B38663921EE15506006D0932 /* JUDNetworkProtocol.h */,
+				B38663931EE15506006D0932 /* JUDScrollerProtocol.h */,
+				B38663941EE15506006D0932 /* JUDTextComponentProtocol.h */,
+				B38663951EE15506006D0932 /* JUDURLRewriteProtocol.h */,
+				B38663961EE15506006D0932 /* WXDestroyProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B38663971EE15506006D0932 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B38663981EE15506006D0932 /* JudSDK-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B38663991EE15506006D0932 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B386639A1EE15506006D0932 /* JUDAppConfiguration.h */,
+				B386639B1EE15506006D0932 /* JUDAppConfiguration.m */,
+				B386639C1EE15506006D0932 /* JUDAssert.h */,
+				B386639D1EE15506006D0932 /* JUDAssert.m */,
+				B386639E1EE15506006D0932 /* JUDConvert.h */,
+				B386639F1EE15506006D0932 /* JUDConvert.m */,
+				B38663A01EE15506006D0932 /* JUDDefine.h */,
+				B38663A11EE15506006D0932 /* JUDLength.h */,
+				B38663A21EE15506006D0932 /* JUDLength.m */,
+				B38663A31EE15506006D0932 /* JUDLog.h */,
+				B38663A41EE15506006D0932 /* JUDLog.m */,
+				B38663A51EE15506006D0932 /* JUDSimulatorShortcutManager.h */,
+				B38663A61EE15506006D0932 /* JUDSimulatorShortcutManager.m */,
+				B38663A71EE15506006D0932 /* JUDThreadSafeCounter.h */,
+				B38663A81EE15506006D0932 /* JUDThreadSafeCounter.m */,
+				B38663A91EE15506006D0932 /* JUDThreadSafeMutableArray.h */,
+				B38663AA1EE15506006D0932 /* JUDThreadSafeMutableArray.m */,
+				B38663AB1EE15506006D0932 /* JUDThreadSafeMutableDictionary.h */,
+				B38663AC1EE15506006D0932 /* JUDThreadSafeMutableDictionary.m */,
+				B38663AD1EE15506006D0932 /* JUDType.h */,
+				B38663AE1EE15506006D0932 /* JUDUtility.h */,
+				B38663AF1EE15506006D0932 /* JUDUtility.m */,
+				B38663B01EE15506006D0932 /* JUDWeakObjectWrapper.h */,
+				B38663B11EE15506006D0932 /* JUDWeakObjectWrapper.m */,
+				B38663B21EE15506006D0932 /* NSArray+Jud.h */,
+				B38663B31EE15506006D0932 /* NSArray+Jud.m */,
+				B38663B41EE15506006D0932 /* NSObject+JUDSwizzle.h */,
+				B38663B51EE15506006D0932 /* NSObject+JUDSwizzle.m */,
+				B38663B61EE15507006D0932 /* NSTimer+Jud.h */,
+				B38663B71EE15507006D0932 /* NSTimer+Jud.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		B38663B81EE15507006D0932 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B38663B91EE15507006D0932 /* JUDComponent+PseudoClassManagement.h */,
+				B38663BA1EE15507006D0932 /* JUDComponent+PseudoClassManagement.m */,
+				B38663BB1EE15507006D0932 /* JUDComponent+ViewManagement.h */,
+				B38663BC1EE15507006D0932 /* JUDComponent+ViewManagement.m */,
+				B38663BD1EE15507006D0932 /* JUDErrorView.h */,
+				B38663BE1EE15507006D0932 /* JUDErrorView.m */,
+				B38663BF1EE15507006D0932 /* JUDRootView.h */,
+				B38663C01EE15507006D0932 /* JUDRootView.m */,
+				B38663C11EE15507006D0932 /* JUDView.h */,
+				B38663C21EE15507006D0932 /* JUDView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B38663C31EE15507006D0932 /* WebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				B38663C41EE15507006D0932 /* JUDWebSocketDefaultImpl.h */,
+				B38663C51EE15507006D0932 /* JUDWebSocketDefaultImpl.m */,
+				B38663C61EE15507006D0932 /* JUDWebSocketHandler.h */,
+				B38663C71EE15507006D0932 /* SRWebSocket+Jud.h */,
+				B38663C81EE15507006D0932 /* SRWebSocket+Jud.m */,
+			);
+			path = WebSocket;
+			sourceTree = "<group>";
+		};
+		DC9F46841D61AC9100A88239 /* module */ = {
+			isa = PBXGroup;
+			children = (
+				598805AC1D52D8C800EDED2C /* JUDStorageTests.m */,
+				596FDD651D3F52700082CD5B /* JUDAnimationModuleTests.m */,
+				591324A21D49B7F1004E89ED /* JUDTimerModuleTests.m */,
+				DC9F46821D61AC8800A88239 /* JUDStreamModuleTests.m */,
+			);
+			name = module;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		77D160FA1C02DBE70010B15B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B38664831EE15507006D0932 /* WXDestroyProtocol.h in Headers */,
+				B386646C1EE15507006D0932 /* JUDWebViewModule.h in Headers */,
+				B38664771EE15507006D0932 /* JUDAppMonitorProtocol.h in Headers */,
+				B38663F01EE15507006D0932 /* JUDLoadingIndicator.h in Headers */,
+				B386643D1EE15507006D0932 /* JUDSDKManager.h in Headers */,
+				B38664AF1EE15507006D0932 /* JUDWebSocketHandler.h in Headers */,
+				B38664471EE15507006D0932 /* JUDSDKInstance.h in Headers */,
+				B386645E1EE15507006D0932 /* JUDMTAModule.h in Headers */,
+				B38664211EE15507006D0932 /* JUDURLRewriteDefaultImpl.h in Headers */,
+				B38664871EE15507006D0932 /* JUDAssert.h in Headers */,
+				B38663DB1EE15507006D0932 /* JUDAComponent.h in Headers */,
+				B386642D1EE15507006D0932 /* JUDBridgeManager.h in Headers */,
+				B386641A1EE15507006D0932 /* JUDSDKError.h in Headers */,
+				B38663D51EE15507006D0932 /* JUDJSCoreBridge.h in Headers */,
+				B38664501EE15507006D0932 /* JUDCommunicate.h in Headers */,
+				B38664331EE15507006D0932 /* JUDDatePickerManager.h in Headers */,
+				B386640E1EE15507006D0932 /* JUDComponent+Display.h in Headers */,
+				B386643F1EE15507006D0932 /* JUDServiceFactory.h in Headers */,
+				B38664A91EE15507006D0932 /* JUDRootView.h in Headers */,
+				B38664731EE15507006D0932 /* JUDResourceRequestHandlerDefaultImpl.h in Headers */,
+				B38664AB1EE15507006D0932 /* JUDView.h in Headers */,
+				B38664041EE15507006D0932 /* JUDVideoComponent.h in Headers */,
+				B386649D1EE15507006D0932 /* NSArray+Jud.h in Headers */,
+				B38664311EE15507006D0932 /* JUDComponentManager.h in Headers */,
+				B386642B1EE15507006D0932 /* JUDWebSocketLoader.h in Headers */,
+				B38664991EE15507006D0932 /* JUDUtility.h in Headers */,
+				B38663FE1EE15507006D0932 /* JUDTextComponent.h in Headers */,
+				B38663F61EE15507006D0932 /* JUDSliderComponent.h in Headers */,
+				B38664601EE15507006D0932 /* JUDNavigatorModule.h in Headers */,
+				B38664001EE15507006D0932 /* JUDTextInputComponent.h in Headers */,
+				B38664231EE15507006D0932 /* JudSDK.h in Headers */,
+				B38664701EE15507006D0932 /* JUDResourceRequest.h in Headers */,
+				B386642F1EE15507006D0932 /* JUDComponentFactory.h in Headers */,
+				B38664B01EE15507006D0932 /* SRWebSocket+Jud.h in Headers */,
+				B386646A1EE15507006D0932 /* JUDWebSocketModule.h in Headers */,
+				B38664901EE15507006D0932 /* JUDSimulatorShortcutManager.h in Headers */,
+				B38664491EE15507006D0932 /* JUDSDKInstance_private.h in Headers */,
+				B386645C1EE15507006D0932 /* JUDModalUIModule.h in Headers */,
+				B38663EA1EE15507006D0932 /* JUDIndicatorComponent.h in Headers */,
+				B38663E81EE15507006D0932 /* JUDImageComponent.h in Headers */,
+				B38664961EE15507006D0932 /* JUDThreadSafeMutableDictionary.h in Headers */,
+				B38663D71EE15507006D0932 /* JUDModuleMethod.h in Headers */,
+				B386640C1EE15507006D0932 /* JUDDebugTool.h in Headers */,
+				B38664081EE15507006D0932 /* JUDBaseViewController.h in Headers */,
+				B38664A31EE15507006D0932 /* JUDComponent+PseudoClassManagement.h in Headers */,
+				B38663CF1EE15507006D0932 /* JUDCallJSMethod.h in Headers */,
+				B38664921EE15507006D0932 /* JUDThreadSafeCounter.h in Headers */,
+				B38664621EE15507006D0932 /* JUDPickerModule.h in Headers */,
+				B38664A11EE15507006D0932 /* NSTimer+Jud.h in Headers */,
+				B386641B1EE15507006D0932 /* JUDComponent+Events.h in Headers */,
+				B386647D1EE15507006D0932 /* JUDMTAProtocol.h in Headers */,
+				B38663E41EE15507006D0932 /* JUDDivComponent.h in Headers */,
+				B38664391EE15507006D0932 /* JUDModuleFactory.h in Headers */,
+				B38664681EE15507006D0932 /* JUDTimerModule.h in Headers */,
+				B38664811EE15507006D0932 /* JUDTextComponentProtocol.h in Headers */,
+				B38664791EE15507006D0932 /* JUDEventModuleProtocol.h in Headers */,
+				B38664581EE15507006D0932 /* JUDInstanceWrap.h in Headers */,
+				B38664891EE15507006D0932 /* JUDConvert.h in Headers */,
+				B386648B1EE15507006D0932 /* JUDDefine.h in Headers */,
+				B38664561EE15507006D0932 /* JUDGlobalEventModule.h in Headers */,
+				B38663D31EE15507006D0932 /* JUDDebugLoggerBridge.h in Headers */,
+				B386648C1EE15507006D0932 /* JUDLength.h in Headers */,
+				B38663FC1EE15507006D0932 /* JUDTextAreaComponent.h in Headers */,
+				B38664541EE15507006D0932 /* JUDDomModule.h in Headers */,
+				B38664371EE15507006D0932 /* JUDInvocationConfig.h in Headers */,
+				B38664841EE15507006D0932 /* JudSDK-Prefix.pch in Headers */,
+				B38664411EE15507006D0932 /* JUDComponent+Navigation.h in Headers */,
+				B38664521EE15507006D0932 /* JUDCommunicateModule.h in Headers */,
+				B38663E31EE15507006D0932 /* JUDComponent_internal.h in Headers */,
+				B38664261EE15507006D0932 /* JUDLayoutDefine.h in Headers */,
+				B386644E1EE15507006D0932 /* JUDClipboardModule.h in Headers */,
+				B386647B1EE15507006D0932 /* JUDJSExceptionProtocol.h in Headers */,
+				B38664121EE15507006D0932 /* JUDLayer.h in Headers */,
+				B386641D1EE15507006D0932 /* JUDMTADefaultImpl.h in Headers */,
+				B38664AD1EE15507006D0932 /* JUDWebSocketDefaultImpl.h in Headers */,
+				B38664351EE15507006D0932 /* JUDHandlerFactory.h in Headers */,
+				B386647F1EE15507006D0932 /* JUDNetworkProtocol.h in Headers */,
+				B38664181EE15507006D0932 /* JUDSDKEngine.h in Headers */,
+				B38664141EE15507006D0932 /* JUDRoundedRect.h in Headers */,
+				B38664241EE15507006D0932 /* JUDComponent+Layout.h in Headers */,
+				B386643B1EE15507006D0932 /* JUDRuleManager.h in Headers */,
+				B386646E1EE15507006D0932 /* JUDMonitor.h in Headers */,
+				B38663F81EE15507006D0932 /* JUDSliderNeighborComponent.h in Headers */,
+				B386648E1EE15507006D0932 /* JUDLog.h in Headers */,
+				B386644A1EE15507006D0932 /* JUDAnimationModule.h in Headers */,
+				B38664721EE15507006D0932 /* JUDResourceRequestHandler.h in Headers */,
+				B386649F1EE15507006D0932 /* NSObject+JUDSwizzle.h in Headers */,
+				B38664A51EE15507006D0932 /* JUDComponent+ViewManagement.h in Headers */,
+				B38664021EE15507006D0932 /* JUDTransform.h in Headers */,
+				B38663E11EE15507006D0932 /* JUDComponent+GradientColor.h in Headers */,
+				B386647A1EE15507006D0932 /* JUDImgLoaderProtocol.h in Headers */,
+				B38664981EE15507006D0932 /* JUDType.h in Headers */,
+				B38664641EE15507006D0932 /* JUDStorageModule.h in Headers */,
+				B386647C1EE15507006D0932 /* JUDModuleProtocol.h in Headers */,
+				B38664851EE15507006D0932 /* JUDAppConfiguration.h in Headers */,
+				B38664A71EE15507006D0932 /* JUDErrorView.h in Headers */,
+				B38664451EE15507006D0932 /* JUDJSExceptionInfo.h in Headers */,
+				B386645A1EE15507006D0932 /* JUDMetaModule.h in Headers */,
+				B38663DD1EE15507006D0932 /* JUDCanvasComponent.h in Headers */,
+				B38664751EE15507006D0932 /* JUDResourceResponse.h in Headers */,
+				B386641F1EE15507006D0932 /* JUDNavigationDefaultImpl.h in Headers */,
+				B38663DF1EE15507006D0932 /* JUDCellComponent.h in Headers */,
+				B38664781EE15507006D0932 /* JUDBridgeProtocol.h in Headers */,
+				B38663EC1EE15507006D0932 /* JUDListComponent.h in Headers */,
+				B38663F41EE15507006D0932 /* JUDScrollerComponent.h in Headers */,
+				B38664281EE15507006D0932 /* Layout.h in Headers */,
+				B38664941EE15507006D0932 /* JUDThreadSafeMutableArray.h in Headers */,
+				B38663C91EE15507006D0932 /* JSValue+Jud.h in Headers */,
+				B38663CD1EE15507006D0932 /* JUDBridgeMethod.h in Headers */,
+				B38664101EE15507006D0932 /* JUDDisplayQueue.h in Headers */,
+				B38663F21EE15507006D0932 /* JUDRefreshComponent.h in Headers */,
+				B386649B1EE15507006D0932 /* JUDWeakObjectWrapper.h in Headers */,
+				B38663EE1EE15507006D0932 /* JUDLoadingComponent.h in Headers */,
+				B38663E61EE15507006D0932 /* JUDEmbedComponent.h in Headers */,
+				B386644C1EE15507006D0932 /* JUDCanvasModule.h in Headers */,
+				B38664061EE15507006D0932 /* JUDWebComponent.h in Headers */,
+				B38664161EE15507006D0932 /* UIBezierPath+Jud.h in Headers */,
+				B38664801EE15507006D0932 /* JUDScrollerProtocol.h in Headers */,
+				B38663D11EE15507006D0932 /* JUDComponentMethod.h in Headers */,
+				B38664431EE15507006D0932 /* JUDComponent.h in Headers */,
+				B38663D91EE15507006D0932 /* JUDPolyfillSet.h in Headers */,
+				B38664821EE15507006D0932 /* JUDURLRewriteProtocol.h in Headers */,
+				B38663FA1EE15507006D0932 /* JUDSwitchComponent.h in Headers */,
+				B38663CB1EE15507006D0932 /* JUDBridgeContext.h in Headers */,
+				B386647E1EE15507006D0932 /* JUDNavigationProtocol.h in Headers */,
+				B386640A1EE15507006D0932 /* JUDRootViewController.h in Headers */,
+				B38664661EE15507006D0932 /* JUDStreamModule.h in Headers */,
+				B38664291EE15507006D0932 /* JUDResourceLoader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2A42AF841C23B33E00818EA6 /* JudSDK_MTL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A42AF8B1C23B33E00818EA6 /* Build configuration list for PBXNativeTarget "JudSDK_MTL" */;
+			buildPhases = (
+				2A42AF811C23B33E00818EA6 /* Sources */,
+				2A42AF821C23B33E00818EA6 /* Frameworks */,
+				2A42AF831C23B33E00818EA6 /* Copy Files */,
+				2A42AF8E1C23B35900818EA6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JudSDK_MTL;
+			productName = WeexSDK_MTL;
+			productReference = 2A42AF851C23B33E00818EA6 /* libJudSDK_MTL.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		77D160FC1C02DBE70010B15B /* JudSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77D161111C02DBE70010B15B /* Build configuration list for PBXNativeTarget "JudSDK" */;
+			buildPhases = (
+				59D3CA601D003832008835DC /* Generate Public Header */,
+				77D160F81C02DBE70010B15B /* Sources */,
+				77D160F91C02DBE70010B15B /* Frameworks */,
+				77D160FA1C02DBE70010B15B /* Headers */,
+				77D160FB1C02DBE70010B15B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JudSDK;
+			productName = WeexSDK;
+			productReference = 77D160FD1C02DBE70010B15B /* JudSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77D160F41C02DBE70010B15B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = taobao;
+				TargetAttributes = {
+					2A42AF841C23B33E00818EA6 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = "Xing Zhang";
+					};
+					77D160FC1C02DBE70010B15B = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 77D160F71C02DBE70010B15B /* Build configuration list for PBXProject "JudSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 77D160F31C02DBE70010B15B;
+			productRefGroup = 77D160FE1C02DBE70010B15B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77D160FC1C02DBE70010B15B /* JudSDK */,
+				2A42AF841C23B33E00818EA6 /* JudSDK_MTL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77D160FB1C02DBE70010B15B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74B80E6C1C3FB32C00239FB9 /* main.js in Resources */,
+				59AC02511D2A7E6E00355112 /* jud_load_error@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A42AF8E1C23B35900818EA6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\nFMK_NAME=${PROJECT_NAME}\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\nOPEN_DIR=${SRCROOT}/Products\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\necho xcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos \"CODE_SIGN_IDENTITY=${CODE_SIGN_IDENTITY}\" clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos \"CODE_SIGN_IDENTITY=${CODE_SIGN_IDENTITY}\" clean build\nif [ \"$?\" != \"0\" ]; then\nexit 1\nfi\necho xcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator \"CODE_SIGN_IDENTITY=${CODE_SIGN_IDENTITY}\" clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator \"CODE_SIGN_IDENTITY=${CODE_SIGN_IDENTITY}\" clean build\nif [ \"$?\" != \"0\" ]; then\nexit 1\nfi\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\nmkdir -p \"${INSTALL_DIR}\"\ncp -R \"${SIMULATOR_DIR}/\" \"${INSTALL_DIR}/\"\n# 移除签名资源和 Info.plist\nrm \"${INSTALL_DIR}/Info.plist\"\nrm -rf \"${INSTALL_DIR}/_CodeSignature\"\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\nopen \"${OPEN_DIR}\"\nrm -r \"${WRK_DIR}\"";
+		};
+		59D3CA601D003832008835DC /* Generate Public Header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Public Header";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A42AF811C23B33E00818EA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A42AF8A1C23B33E00818EA6 /* JudSDK_MTL.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77D160F81C02DBE70010B15B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B38664591EE15507006D0932 /* JUDInstanceWrap.m in Sources */,
+				B386641E1EE15507006D0932 /* JUDMTADefaultImpl.m in Sources */,
+				B38664A81EE15507006D0932 /* JUDErrorView.m in Sources */,
+				B38663CC1EE15507006D0932 /* JUDBridgeContext.m in Sources */,
+				B38663D01EE15507006D0932 /* JUDCallJSMethod.m in Sources */,
+				B38664A41EE15507006D0932 /* JUDComponent+PseudoClassManagement.m in Sources */,
+				B38663E71EE15507006D0932 /* JUDEmbedComponent.m in Sources */,
+				B38664401EE15507006D0932 /* JUDServiceFactory.m in Sources */,
+				B38663DA1EE15507006D0932 /* JUDPolyfillSet.m in Sources */,
+				B386640F1EE15507006D0932 /* JUDComponent+Display.m in Sources */,
+				B38664441EE15507006D0932 /* JUDComponent.m in Sources */,
+				B38664691EE15507006D0932 /* JUDTimerModule.m in Sources */,
+				B38664761EE15507006D0932 /* JUDResourceResponse.m in Sources */,
+				B38663E51EE15507006D0932 /* JUDDivComponent.m in Sources */,
+				B38663FF1EE15507006D0932 /* JUDTextComponent.m in Sources */,
+				B38664571EE15507006D0932 /* JUDGlobalEventModule.m in Sources */,
+				B38664251EE15507006D0932 /* JUDComponent+Layout.m in Sources */,
+				B386642A1EE15507006D0932 /* JUDResourceLoader.m in Sources */,
+				B386646D1EE15507006D0932 /* JUDWebViewModule.m in Sources */,
+				B38664361EE15507006D0932 /* JUDHandlerFactory.m in Sources */,
+				B38663D41EE15507006D0932 /* JUDDebugLoggerBridge.m in Sources */,
+				B38664AE1EE15507006D0932 /* JUDWebSocketDefaultImpl.m in Sources */,
+				B38664341EE15507006D0932 /* JUDDatePickerManager.m in Sources */,
+				B386644B1EE15507006D0932 /* JUDAnimationModule.m in Sources */,
+				B38663DE1EE15507006D0932 /* JUDCanvasComponent.m in Sources */,
+				B386644D1EE15507006D0932 /* JUDCanvasModule.m in Sources */,
+				B38663EB1EE15507006D0932 /* JUDIndicatorComponent.m in Sources */,
+				B38663E91EE15507006D0932 /* JUDImageComponent.m in Sources */,
+				B38664931EE15507006D0932 /* JUDThreadSafeCounter.m in Sources */,
+				B38664151EE15507006D0932 /* JUDRoundedRect.mm in Sources */,
+				B38664201EE15507006D0932 /* JUDNavigationDefaultImpl.m in Sources */,
+				B38664191EE15507006D0932 /* JUDSDKEngine.m in Sources */,
+				B38664031EE15507006D0932 /* JUDTransform.m in Sources */,
+				B386640B1EE15507006D0932 /* JUDRootViewController.m in Sources */,
+				B38664051EE15507006D0932 /* JUDVideoComponent.m in Sources */,
+				B38664881EE15507006D0932 /* JUDAssert.m in Sources */,
+				B38663ED1EE15507006D0932 /* JUDListComponent.m in Sources */,
+				B38664321EE15507006D0932 /* JUDComponentManager.m in Sources */,
+				B38664071EE15507006D0932 /* JUDWebComponent.m in Sources */,
+				B386643C1EE15507006D0932 /* JUDRuleManager.m in Sources */,
+				B38663CE1EE15507006D0932 /* JUDBridgeMethod.m in Sources */,
+				B38664091EE15507006D0932 /* JUDBaseViewController.m in Sources */,
+				B38663DC1EE15507006D0932 /* JUDAComponent.m in Sources */,
+				B38664011EE15507006D0932 /* JUDTextInputComponent.m in Sources */,
+				B38663EF1EE15507006D0932 /* JUDLoadingComponent.m in Sources */,
+				B38663E01EE15507006D0932 /* JUDCellComponent.m in Sources */,
+				B38664461EE15507006D0932 /* JUDJSExceptionInfo.m in Sources */,
+				B38664111EE15507006D0932 /* JUDDisplayQueue.m in Sources */,
+				B38664AC1EE15507006D0932 /* JUDView.m in Sources */,
+				B38664911EE15507006D0932 /* JUDSimulatorShortcutManager.m in Sources */,
+				B38664AA1EE15507006D0932 /* JUDRootView.m in Sources */,
+				B38664531EE15507006D0932 /* JUDCommunicateModule.m in Sources */,
+				B386641C1EE15507006D0932 /* JUDComponent+Events.m in Sources */,
+				B386645B1EE15507006D0932 /* JUDMetaModule.m in Sources */,
+				B38663F91EE15507006D0932 /* JUDSliderNeighborComponent.m in Sources */,
+				B38664B11EE15507006D0932 /* SRWebSocket+Jud.m in Sources */,
+				B386644F1EE15507006D0932 /* JUDClipboardModule.m in Sources */,
+				B38663F71EE15507006D0932 /* JUDSliderComponent.m in Sources */,
+				B38664381EE15507006D0932 /* JUDInvocationConfig.m in Sources */,
+				B386648D1EE15507006D0932 /* JUDLength.m in Sources */,
+				B386649E1EE15507006D0932 /* NSArray+Jud.m in Sources */,
+				B38664421EE15507006D0932 /* JUDComponent+Navigation.m in Sources */,
+				B386643A1EE15507006D0932 /* JUDModuleFactory.m in Sources */,
+				B386645D1EE15507006D0932 /* JUDModalUIModule.m in Sources */,
+				B386642C1EE15507006D0932 /* JUDWebSocketLoader.m in Sources */,
+				B38664861EE15507006D0932 /* JUDAppConfiguration.m in Sources */,
+				B38664A21EE15507006D0932 /* NSTimer+Jud.m in Sources */,
+				B386648A1EE15507006D0932 /* JUDConvert.m in Sources */,
+				B38663F11EE15507006D0932 /* JUDLoadingIndicator.m in Sources */,
+				B38664511EE15507006D0932 /* JUDCommunicate.m in Sources */,
+				B38664A61EE15507006D0932 /* JUDComponent+ViewManagement.m in Sources */,
+				B386646B1EE15507006D0932 /* JUDWebSocketModule.m in Sources */,
+				B38664671EE15507006D0932 /* JUDStreamModule.m in Sources */,
+				B386646F1EE15507006D0932 /* JUDMonitor.m in Sources */,
+				B38664971EE15507006D0932 /* JUDThreadSafeMutableDictionary.m in Sources */,
+				B38663D61EE15507006D0932 /* JUDJSCoreBridge.m in Sources */,
+				B38664711EE15507006D0932 /* JUDResourceRequest.m in Sources */,
+				B38664A01EE15507006D0932 /* NSObject+JUDSwizzle.m in Sources */,
+				B386649A1EE15507006D0932 /* JUDUtility.m in Sources */,
+				B38663D21EE15507006D0932 /* JUDComponentMethod.m in Sources */,
+				B38663D81EE15507006D0932 /* JUDModuleMethod.m in Sources */,
+				B38663F31EE15507006D0932 /* JUDRefreshComponent.m in Sources */,
+				B38663F51EE15507006D0932 /* JUDScrollerComponent.m in Sources */,
+				B38664221EE15507006D0932 /* JUDURLRewriteDefaultImpl.m in Sources */,
+				B38664131EE15507006D0932 /* JUDLayer.m in Sources */,
+				B386643E1EE15507006D0932 /* JUDSDKManager.m in Sources */,
+				B38663FB1EE15507006D0932 /* JUDSwitchComponent.m in Sources */,
+				B38664481EE15507006D0932 /* JUDSDKInstance.m in Sources */,
+				B386645F1EE15507006D0932 /* JUDMTAModule.m in Sources */,
+				B38664951EE15507006D0932 /* JUDThreadSafeMutableArray.m in Sources */,
+				B38663CA1EE15507006D0932 /* JSValue+Jud.m in Sources */,
+				B386642E1EE15507006D0932 /* JUDBridgeManager.m in Sources */,
+				B38664741EE15507006D0932 /* JUDResourceRequestHandlerDefaultImpl.m in Sources */,
+				B386649C1EE15507006D0932 /* JUDWeakObjectWrapper.m in Sources */,
+				B38664171EE15507006D0932 /* UIBezierPath+Jud.m in Sources */,
+				B38664551EE15507006D0932 /* JUDDomModule.m in Sources */,
+				B38663E21EE15507006D0932 /* JUDComponent+GradientColor.m in Sources */,
+				B38663FD1EE15507006D0932 /* JUDTextAreaComponent.m in Sources */,
+				B38664631EE15507006D0932 /* JUDPickerModule.m in Sources */,
+				B386640D1EE15507006D0932 /* JUDDebugTool.m in Sources */,
+				B38664611EE15507006D0932 /* JUDNavigatorModule.m in Sources */,
+				B38664301EE15507006D0932 /* JUDComponentFactory.m in Sources */,
+				B38664271EE15507006D0932 /* Layout.c in Sources */,
+				B386648F1EE15507006D0932 /* JUDLog.m in Sources */,
+				B38664651EE15507006D0932 /* JUDStorageModule.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2A42AF8C1C23B33E00818EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2A42AF8D1C23B33E00818EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		77D1610F1C02DBE70010B15B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				PODS_ROOT = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 x86_64 i386";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		77D161101C02DBE70010B15B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = (
+					"-fembed-bitcode",
+					"-Wno-unused-command-line-argument",
+				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				PODS_ROOT = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 i386 x86_64";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		77D161121C02DBE70010B15B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "JudSDK/Sources/Supporting Files/JudSDK-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JudSDK/Dependency",
+				);
+				INFOPLIST_FILE = JudSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"-isystem",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Security\"",
+				);
+				PODS_ROOT = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jingdong.JiuDing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 x86_64 i386";
+			};
+			name = Debug;
+		};
+		77D161131C02DBE70010B15B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "JudSDK/Sources/Supporting Files/JudSDK-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JudSDK/Dependency",
+				);
+				INFOPLIST_FILE = JudSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"-isystem",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Security\"",
+				);
+				PODS_ROOT = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jingdong.JiuDing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 x86_64 i386";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A42AF8B1C23B33E00818EA6 /* Build configuration list for PBXNativeTarget "JudSDK_MTL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A42AF8C1C23B33E00818EA6 /* Debug */,
+				2A42AF8D1C23B33E00818EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77D160F71C02DBE70010B15B /* Build configuration list for PBXProject "JudSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77D1610F1C02DBE70010B15B /* Debug */,
+				77D161101C02DBE70010B15B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77D161111C02DBE70010B15B /* Build configuration list for PBXNativeTarget "JudSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77D161121C02DBE70010B15B /* Debug */,
+				77D161131C02DBE70010B15B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77D160F41C02DBE70010B15B /* Project object */;
+}

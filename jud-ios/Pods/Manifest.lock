@@ -1,0 +1,25 @@
+PODS:
+  - JudSDK (1.1.0):
+    - SocketRocket
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
+  - SocketRocket (0.4.2)
+
+DEPENDENCIES:
+  - JudSDK (from `./JudSDK/`)
+  - SDWebImage (= 3.7.5)
+  - SocketRocket (= 0.4.2)
+
+EXTERNAL SOURCES:
+  JudSDK:
+    :path: ./JudSDK/
+
+SPEC CHECKSUMS:
+  JudSDK: c14d7cf06f8b4b6aea710dce9e19de57d38c76be
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SocketRocket: ffe08119b00ef982f6c37052a4705a057c8494ad
+
+PODFILE CHECKSUM: d7985fa747f83d59289e73cd67b525aeee0a8ca1
+
+COCOAPODS: 1.2.0

@@ -1,0 +1,47 @@
+{
+  "name": "JudSDK",
+  "version": "1.1.0",
+  "summary": "JudSDK iOS Source .",
+  "description": "A framework for building Mobile cross-platform UI",
+  "homepage": "https://treasureu.github.io/",
+  "license": {
+    "type": "Copyright",
+    "text": "           JUD-INC copyright\n"
+  },
+  "authors": {
+    "chengajianfeng": "673302055@163.com"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": "JudSDK/Sources/**/*.{h,m,mm,c}",
+  "resources": [
+    "JudSDK/Resources/main.js",
+    "JudSDK/Resources/jud_load_error@3x.png"
+  ],
+  "requires_arc": true,
+  "prefix_header_file": "JudSDK/Sources/Supporting Files/JudSDK-Prefix.pch",
+  "xcconfig": {
+    "OTHER_LINK_FLAG": "$(inherited) -ObjC"
+  },
+  "user_target_xcconfig": {
+    "FRAMEWORK_SEARCH_PATHS": "'$(PODS_ROOT)/JudSDK'"
+  },
+  "frameworks": [
+    "CoreMedia",
+    "MediaPlayer",
+    "AVFoundation",
+    "AVKit",
+    "JavaScriptCore",
+    "GLKit"
+  ],
+  "dependencies": {
+    "SocketRocket": [
+
+    ]
+  },
+  "libraries": "stdc++"
+}

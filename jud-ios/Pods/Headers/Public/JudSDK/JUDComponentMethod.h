@@ -1,0 +1,1 @@
+../../../../JudSDK/JudSDK/Sources/Bridge/JUDComponentMethod.h

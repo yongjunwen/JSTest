@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "92449E85650E44313C6C8397A93D383FEA409F28",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "92449E85650E44313C6C8397A93D383FEA409F28" : 9223372036854775807,
+    "08CE5DEC8EBE1D82719FF3AF1F9682567D0A463B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C8101F52-F391-41E0-938C-CB79EC45787C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "92449E85650E44313C6C8397A93D383FEA409F28" : "JudSDK\/",
+    "08CE5DEC8EBE1D82719FF3AF1F9682567D0A463B" : "..\/..\/..\/.."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "JudSDK",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "JudSDK.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/source.jd.com\/app\/jud.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "08CE5DEC8EBE1D82719FF3AF1F9682567D0A463B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/source.jd.com\/app\/jud-ios-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "92449E85650E44313C6C8397A93D383FEA409F28"
+    }
+  ]
+}
