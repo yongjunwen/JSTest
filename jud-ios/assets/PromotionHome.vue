@@ -7,7 +7,7 @@
         </div>
 
         <!-- :style="{height:deviceHeight}"-->
-        <div class="contentView">
+        <div class="contentView" :style="{height:deviceHeight}">
 
             <slider-neighbor class="slider-neighbor" interval="0" neighborAlpha="0.9"
                              neighborSpace="55" neighborScale="0.9" currentItemScale="1"
@@ -164,7 +164,7 @@
         position: absolute;
         width: 750px;
         /*mark：高度一定要设置数字否在 android上显示不出来*/
-        height: 1100px;
+        /*height: 1100px;*/
         /*justify-content: center;*/
     }
 

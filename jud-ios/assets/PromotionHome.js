@@ -104,8 +104,7 @@
 	  "contentView": {
 	    "top": 0,
 	    "position": "absolute",
-	    "width": 750,
-	    "height": 1100
+	    "width": 750
 	  },
 	  "slider-neighbor": {
 	    "top": 0,
@@ -855,7 +854,10 @@
 	      "src": _vm.bgImage
 	    }
 	  })]), _c('div', {
-	    staticClass: ["contentView"]
+	    staticClass: ["contentView"],
+	    style: {
+	      height: _vm.deviceHeight
+	    }
 	  }, [_c('slider-neighbor', {
 	    staticClass: ["slider-neighbor"],
 	    attrs: {
