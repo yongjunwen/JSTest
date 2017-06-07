@@ -104,13 +104,11 @@
 	  "contentView": {
 	    "top": 0,
 	    "position": "absolute",
-	    "width": 750,
-	    "height": 1000
+	    "width": 750
 	  },
 	  "slider-neighbor": {
 	    "top": 0,
 	    "width": 750,
-	    "height": 1000,
 	    "alignItems": "center"
 	  },
 	  "bottomTab": {
@@ -854,7 +852,10 @@
 	      "src": _vm.bgImage
 	    }
 	  })]), _c('div', {
-	    staticClass: ["contentView"]
+	    staticClass: ["contentView"],
+	    style: {
+	      height: _vm.deviceHeight
+	    }
 	  }, [_c('slider-neighbor', {
 	    staticClass: ["slider-neighbor"],
 	    attrs: {
