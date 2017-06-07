@@ -136,7 +136,7 @@
         },
         created: function () {
 //            获取设备高度
-            this.deviceHeight = this.$getConfig().env.deviceHeight;
+            this.deviceHeight = this.$getConfig().env.deviceHeight - 20;
 //                jud.config.deviceHeight;
             console.log("---------" + this.deviceHeight)
         }
@@ -165,7 +165,7 @@
         width: 750px;
         /*mark：高度一定要设置数字否在 android上显示不出来*/
         /*height: 1100px;*/
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .slider-neighbor {
@@ -185,8 +185,7 @@
     }
 
     .bottomTab {
-        /*margin-left: 0;*/
-        margin-top: 10px;
+        /*margin-top: 10px;*/
         /*width: 750px;*/
         height: 90px;
         /*border-width: 1px;*/

@@ -105,7 +105,7 @@
 	    "top": 0,
 	    "position": "absolute",
 	    "width": 750,
-	    "justifyContent": "center"
+	    "justifyContent": "space-between"
 	  },
 	  "slider-neighbor": {
 	    "top": 0,
@@ -114,7 +114,6 @@
 	    "alignItems": "center"
 	  },
 	  "bottomTab": {
-	    "marginTop": 10,
 	    "height": 90,
 	    "justifyContent": "center",
 	    "alignItems": "center"
@@ -290,7 +289,7 @@
 	    },
 	    created: function created() {
 	        //            获取设备高度
-	        this.deviceHeight = this.$getConfig().env.deviceHeight;
+	        this.deviceHeight = this.$getConfig().env.deviceHeight - 20;
 	        //                jud.config.deviceHeight;
 	        console.log("---------" + this.deviceHeight);
 	    }
