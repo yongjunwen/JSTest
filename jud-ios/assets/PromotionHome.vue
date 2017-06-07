@@ -163,9 +163,9 @@
         top: 0;
         position: absolute;
         width: 750px;
-        /*mark：高度一定要设置数字否在 android上显示不出来*/
         /*height: 1100px;*/
-        justify-content: center;
+        /*mark：目前高度在android上拿到的不准备 设置center就会偏下*/
+        /*justify-content: center;*/
     }
 
     .slider-neighbor {
