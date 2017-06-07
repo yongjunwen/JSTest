@@ -164,7 +164,7 @@
         position: absolute;
         width: 750px;
         /*mark：高度一定要设置数字否在 android上显示不出来*/
-        height: 1000px;
+        height: 1100px;
         /*justify-content: center;*/
     }
 
