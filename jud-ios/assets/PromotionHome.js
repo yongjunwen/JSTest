@@ -104,7 +104,8 @@
 	  "contentView": {
 	    "top": 0,
 	    "position": "absolute",
-	    "width": 750
+	    "width": 750,
+	    "justifyContent": "center"
 	  },
 	  "slider-neighbor": {
 	    "top": 0,
