@@ -68,10 +68,10 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/wenyongjun/JD/jud/judpack/judpack-ios/bin/templates/assets/jdhomejud_sliderNeighbor.vue"
+	__vue_options__.__file = "/Users/wenyongjun/private_workspace/JSTestFolder/jud-ios/assets/PromotionHome.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-4586d76e"
+	__vue_options__._scopeId = "data-v-3b147f4e"
 	__vue_options__.style = __vue_options__.style || {}
 	__vue_styles__.forEach(function (module) {
 	  for (var name in module) {
@@ -104,15 +104,17 @@
 	  "contentView": {
 	    "top": 0,
 	    "position": "absolute",
-	    "width": 750
+	    "width": 750,
+	    "height": 1000
 	  },
 	  "slider-neighbor": {
 	    "top": 0,
 	    "width": 750,
+	    "height": 946,
 	    "alignItems": "center"
 	  },
 	  "bottomTab": {
-	    "marginTop": 30,
+	    "marginTop": 10,
 	    "height": 90,
 	    "justifyContent": "center",
 	    "alignItems": "center"
@@ -161,6 +163,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var modal = jud.requireModule('modal'); //
+	//
 	//
 	//
 	//
@@ -321,10 +324,10 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/wenyongjun/JD/jud/judpack/judpack-ios/bin/templates/assets/PromotionBottom.vue"
+	__vue_options__.__file = "/Users/wenyongjun/private_workspace/JSTestFolder/jud-ios/assets/PromotionBottom.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-50428622"
+	__vue_options__._scopeId = "data-v-7d7f61b6"
 	__vue_options__.style = __vue_options__.style || {}
 	__vue_styles__.forEach(function (module) {
 	  for (var name in module) {
@@ -498,10 +501,10 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/wenyongjun/JD/jud/judpack/judpack-ios/bin/templates/assets/PromotionProductView.vue"
+	__vue_options__.__file = "/Users/wenyongjun/private_workspace/JSTestFolder/jud-ios/assets/PromotionProductView.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-3585dd66"
+	__vue_options__._scopeId = "data-v-e4d91bac"
 	__vue_options__.style = __vue_options__.style || {}
 	__vue_styles__.forEach(function (module) {
 	  for (var name in module) {
@@ -715,10 +718,10 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/wenyongjun/JD/jud/judpack/judpack-ios/bin/templates/assets/PromotionWishLampView.vue"
+	__vue_options__.__file = "/Users/wenyongjun/private_workspace/JSTestFolder/jud-ios/assets/PromotionWishLampView.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-04f2569b"
+	__vue_options__._scopeId = "data-v-6768115e"
 	__vue_options__.style = __vue_options__.style || {}
 	__vue_styles__.forEach(function (module) {
 	  for (var name in module) {
@@ -852,10 +855,7 @@
 	      "src": _vm.bgImage
 	    }
 	  })]), _c('div', {
-	    staticClass: ["contentView"],
-	    style: {
-	      height: _vm.deviceHeight
-	    }
+	    staticClass: ["contentView"]
 	  }, [_c('slider-neighbor', {
 	    staticClass: ["slider-neighbor"],
 	    attrs: {
