@@ -14,8 +14,10 @@
         /*margin-bottom: 100px;*/
         width: 600px;
         height: 946px;
-        flex: auto;
-        background-color: green;
+        border-radius: 10px;
+        overflow:hidden;
+        /*background-color: rgba(48, 131, 248, 0.7);*/
+        background-color: rgb(48, 131, 248);
     }
 
     .text {

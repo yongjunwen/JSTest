@@ -105,15 +105,16 @@
 	    "top": 0,
 	    "position": "absolute",
 	    "width": 750,
-	    "justifyContent": "space-between"
+	    "justifyContent": "center"
 	  },
 	  "slider-neighbor": {
 	    "top": 0,
 	    "width": 750,
-	    "height": 946,
+	    "height": 940,
 	    "alignItems": "center"
 	  },
 	  "bottomTab": {
+	    "marginTop": 10,
 	    "height": 90,
 	    "justifyContent": "center",
 	    "alignItems": "center"
@@ -227,26 +228,26 @@
 	        productList: [{
 	            itemStyle: "1",
 	            logoName: "华为",
-	            name: "京东引领未来，iPad团队引领未来",
+	            name: "您许的愿望已为您备好，华为",
 	            brandLogo: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496753668189&di=a3af9cf6e8a0736098ff56e9ba464e7b&imgtype=0&src=http%3A%2F%2Fpic40.nipic.com%2F20140418%2F11353228_172109208105_2.jpg",
 	            topPic: "https://img20.360buyimg.com/da/jfs/t5611/170/1386290369/74627/83bc5dc2/59263308N4c6c741d.jpg",
 	            pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t3226/304/5090006819/188905/a115943a/586078b9N92942b62.jpg!q70.jpg"
 	        }, {
 	            itemStyle: "1",
 	            logoName: "小米",
-	            name: "百草味携手京东high翻“618全民年中购物节”",
-	            brandLogo: "",
+	            name: "您许的愿望已为您备好，小米",
+	            brandLogo: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1052774542,692148190&fm=26&gp=0.jpg",
 	            topPic: "https://img1.360buyimg.com/da/jfs/t5878/144/1093343417/94022/3cd88574/5923d027N60c1c8b9.jpg",
 	            pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t2008/329/2598526651/294767/23b295e4/570f2dcdN2cc4a19c.jpg!q70.jpg"
 	        }, {
 	            itemStyle: "1",
 	            logoName: "格力",
-	            name: "夏日陪你美翻天!荣耀V9京东点评送好礼  ",
-	            brandLogo: "",
+	            name: "您许的愿望已为您备好，格力",
+	            brandLogo: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=572491635,2679502336&fm=26&gp=0.jpg",
 	            topPic: "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1496644651&di=472e2fbb406dadcc758f19f6228be092&src=http://images.ali213.net/picfile/pic/2013-01-22/927_p56.jpg ",
 	            pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t2287/140/2518661178/69983/61cb59dc/570e1db2Nf5b0ebe3.jpg!q70.jpg"
 	        }, {
-	            logoName: "Apple",
+	            logoName: "心愿灯",
 	            itemStyle: "2",
 	            name: "要降价!京东和阿里打价格战:刘强东发飙",
 	            brandLogo: "",
@@ -522,10 +523,14 @@
 /***/ (function(module, exports) {
 
 	module.exports = {
+	  "rootDiv": {
+	    "width": 600,
+	    "height": 940
+	  },
 	  "slider-item": {
 	    "width": 600,
-	    "height": 946,
-	    "backgroundColor": "#FF0000",
+	    "height": 910,
+	    "backgroundColor": "#FFFFFF",
 	    "borderRadius": 10,
 	    "overflow": "hidden"
 	  },
@@ -543,7 +548,7 @@
 	    "marginLeft": 0,
 	    "marginRight": 0,
 	    "width": 600,
-	    "height": 650
+	    "height": 550
 	  },
 	  "topItemContent": {
 	    "top": 0,
@@ -552,9 +557,40 @@
 	    "justifyContent": "center",
 	    "position": "absolute"
 	  },
-	  "topItemContentText": {
-	    "fontSize": 20,
+	  "lineItem": {
+	    "marginTop": 18,
+	    "fontSize": 26,
 	    "color": "#FFFFFF"
+	  },
+	  "topItemContentText": {
+	    "marginTop": 18,
+	    "fontSize": 26,
+	    "color": "#FFFFFF"
+	  },
+	  "bottomDiv": {
+	    "bottom": 0,
+	    "width": 600,
+	    "alignItems": "center",
+	    "justifyContent": "center",
+	    "position": "absolute"
+	  },
+	  "wishText": {
+	    "fontSize": 25,
+	    "color": "#333333"
+	  },
+	  "seeDiv": {
+	    "marginTop": 10,
+	    "backgroundColor": "#db74c9",
+	    "borderRadius": 40,
+	    "overflow": "hidden",
+	    "height": 60,
+	    "width": 200,
+	    "justifyContent": "center",
+	    "alignItems": "center"
+	  },
+	  "seeText": {
+	    "color": "#FFFFFF",
+	    "fontSize": 22
 	  }
 	}
 
@@ -562,11 +598,65 @@
 /* 9 */
 /***/ (function(module, exports) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	//
 	//
 	//
@@ -648,9 +738,14 @@
 	            type: Object,
 	            default: {}
 	        }
+	    },
+	    methods: {
+	        toSeeClick: function toSeeClick() {
+	            console.log('--------toSeeClick----+++');
+	        }
 	    }
 	};
-	module.exports = exports["default"];
+	module.exports = exports['default'];
 
 /***/ }),
 /* 10 */
@@ -658,6 +753,8 @@
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
+	    staticClass: ["rootDiv"]
+	  }, [_c('div', {
 	    staticClass: ["slider-item"]
 	  }, [_c('div', {
 	    staticClass: ["topItemBg"]
@@ -672,21 +769,39 @@
 	    staticStyle: {
 	      width: "212px",
 	      height: "70px",
-	      backgroundColor: "aquamarine"
+	      backgroundColor: "aquamarine",
+	      marginTop: "18px"
 	    },
 	    attrs: {
 	      "src": _vm.itemProduct.brandLogo
 	    }
 	  }), _c('text', {
+	    staticClass: ["lineItem"]
+	  }, [_vm._v("-·-")]), _c('text', {
 	    staticClass: ["topItemContentText"]
-	  }, [_vm._v("[加入我们，创建未来]")])])]), _c('text', {
-	    staticClass: ["text"]
-	  }, [_vm._v(_vm._s(_vm.itemProduct.name))]), _c('image', {
+	  }, [_vm._v("[加入我们，创建未来]")])])]), _c('image', {
 	    staticClass: ["bottom-image"],
 	    attrs: {
 	      "src": _vm.itemProduct.pic
 	    }
-	  })])
+	  })]), _c('div', {
+	    staticClass: ["bottomDiv"],
+	    staticStyle: {
+	      justifyContent: "center",
+	      alignItems: "center"
+	    }
+	  }, [_c('text', {
+	    staticClass: ["wishText"]
+	  }, [_vm._v(_vm._s(_vm.itemProduct.name))]), _c('div', {
+	    staticClass: ["seeDiv"],
+	    on: {
+	      "click": function($event) {
+	        _vm.toSeeClick()
+	      }
+	    }
+	  }, [_c('text', {
+	    staticClass: ["seeText"]
+	  }, [_vm._v("进去看看")])])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
@@ -742,7 +857,9 @@
 	  "slider-item-wish_lamp": {
 	    "width": 600,
 	    "height": 946,
-	    "backgroundColor": "#008000"
+	    "borderRadius": 10,
+	    "overflow": "hidden",
+	    "backgroundColor": "rgb(48,131,248)"
 	  },
 	  "text": {
 	    "marginTop": 10,
@@ -770,6 +887,8 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	//
+	//
 	//
 	//
 	//
