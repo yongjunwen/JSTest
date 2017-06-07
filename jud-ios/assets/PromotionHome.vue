@@ -173,7 +173,7 @@
         /*margin-top: 10px;*/
         width: 750px;
         /*mark：高度一定要设置数字否在 android上显示不出来*/
-        height: 946px;
+        /*height: 946px;*/
         /*width: 320px;*/
         /*height: 280px;*/
         /*border-width: 1px;*/

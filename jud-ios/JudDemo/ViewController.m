@@ -83,7 +83,7 @@
     _instance.updateFinish = ^(UIView *view) {
         NSLog(@"update Finish");
     };
-    NSString *url = [NSString stringWithFormat:@"file://%@/jdhomejud_sliderNeighbor.js",[NSBundle mainBundle].bundlePath];
+    NSString *url = [NSString stringWithFormat:@"file://%@/PromotionHome.js",[NSBundle mainBundle].bundlePath];
     
     [_instance renderWithURL:[NSURL URLWithString:url] options:@{@"bundleUrl":url} data:nil];
 }

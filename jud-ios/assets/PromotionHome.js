@@ -110,7 +110,6 @@
 	  "slider-neighbor": {
 	    "top": 0,
 	    "width": 750,
-	    "height": 946,
 	    "alignItems": "center"
 	  },
 	  "bottomTab": {
