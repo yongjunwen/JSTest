@@ -105,7 +105,7 @@
 	    "top": 0,
 	    "position": "absolute",
 	    "width": 750,
-	    "height": 1100
+	    "height": 1000
 	  },
 	  "slider-neighbor": {
 	    "top": 0,
