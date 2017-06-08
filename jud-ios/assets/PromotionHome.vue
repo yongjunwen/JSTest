@@ -141,7 +141,7 @@
             var deviceWidth = this.$getConfig().env.deviceWidth;
 
             var height = 750 / deviceWidth * deviceHeight;
-            
+
 //            设备类型匹配
             if (platform === "iOS") {
                 height -= 20;
@@ -152,6 +152,7 @@
             } else {
                 console.log("=没有匹配到=")
             }
+            height -= 200;
             this.deviceHeight = height;
 //                jud.config.deviceHeight;
             console.log("---------" + this.deviceHeight + "height=" + height + "platform=" + platform)

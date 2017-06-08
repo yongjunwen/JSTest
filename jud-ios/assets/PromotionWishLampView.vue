@@ -46,7 +46,9 @@
 
             <!--底部文案区域-->
             <div class="bottom" style="align-items: center;justify-content: center">
-                <text class="bottomTipContent">{{bottomTipContent}}</text>
+                <div>
+                    <text class="bottomTipContent">{{bottomTipContent}}</text>
+                </div>
             </div>
         </div>
     </div>

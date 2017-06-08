@@ -306,6 +306,7 @@
 	        } else {
 	            console.log("=没有匹配到=");
 	        }
+	        height -= 200;
 	        this.deviceHeight = height;
 	        //                jud.config.deviceHeight;
 	        console.log("---------" + this.deviceHeight + "height=" + height + "platform=" + platform);
@@ -1066,6 +1067,8 @@
 	//
 	//
 	//
+	//
+	//
 
 	module.exports = exports["default"];
 
@@ -1390,9 +1393,9 @@
 	      alignItems: "center",
 	      justifyContent: "center"
 	    }
-	  }, [_c('text', {
+	  }, [_c('div', [_c('text', {
 	    staticClass: ["bottomTipContent"]
-	  }, [_vm._v(_vm._s(_vm.bottomTipContent))])])])])
+	  }, [_vm._v(_vm._s(_vm.bottomTipContent))])])])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
