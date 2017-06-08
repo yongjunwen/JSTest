@@ -33,7 +33,8 @@
                     <div class="bottomTextBgDiv" v-for="(itemProduct,index) in productList"
                          v-bind:style="{'backgroundColor':(index==selectIndex?buttonBgSelectColor:buttonBgColor)}"
                          @click="buttonClick(index)">
-                        <text class="bottomText">{{itemProduct.logoName}}</text>
+                        <!--<text class="bottomText">{{itemProduct.logoName}}</text>-->
+                        <image class="bottomTabImage" :src="itemProduct.tabImage" style="width: 100px;height: 70px "></image>
                     </div>
                 </div>
             </div>
@@ -70,6 +71,7 @@
                 {
                     itemStyle: "1",
                     logoName: "华为",
+                    tabImage: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1496912449&di=1d908831b09e08208c79e53dce78fc73&src=http://pic.qiantucdn.com/58pic/12/38/18/13758PIC4GV.jpg",
                     name: "您许的愿望已为您备好，华为",
                     brandLogo: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496753668189&di=a3af9cf6e8a0736098ff56e9ba464e7b&imgtype=0&src=http%3A%2F%2Fpic40.nipic.com%2F20140418%2F11353228_172109208105_2.jpg",
                     topPic: "https://img20.360buyimg.com/da/jfs/t5611/170/1386290369/74627/83bc5dc2/59263308N4c6c741d.jpg",
@@ -78,6 +80,7 @@
                 {
                     itemStyle: "1",
                     logoName: "小米",
+                    tabImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497517343&di=baff522d5450339011176b5c1fea1302&imgtype=jpg&er=1&src=http%3A%2F%2Fm.qqzhi.com%2Fupload%2Fimg_0_96973789D2128229081_23.jpg",
                     name: "您许的愿望已为您备好，小米",
                     brandLogo: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1052774542,692148190&fm=26&gp=0.jpg",
                     topPic: "https://img1.360buyimg.com/da/jfs/t5878/144/1093343417/94022/3cd88574/5923d027N60c1c8b9.jpg",
@@ -86,6 +89,7 @@
                 {
                     itemStyle: "1",
                     logoName: "格力",
+                    tabImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922663211&di=fd30c4a8b7b1ba325925c91cb2a32586&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F12%2F57%2F08%2F92G58PICHbX.jpg",
                     name: "您许的愿望已为您备好，格力",
                     brandLogo: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=572491635,2679502336&fm=26&gp=0.jpg",
                     topPic: "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1496644651&di=472e2fbb406dadcc758f19f6228be092&src=http://images.ali213.net/picfile/pic/2013-01-22/927_p56.jpg ",
@@ -94,6 +98,7 @@
                 {
                     logoName: "心愿灯",
                     itemStyle: "2",
+                    tabImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg",
                     name: "要降价!京东和阿里打价格战:刘强东发飙",
                     brandLogo: "",
                     pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t1870/20/2688983380/490055/66145088/5715bc6aN4933b67c.jpg!q70.jpg"
