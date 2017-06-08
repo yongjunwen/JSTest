@@ -56,7 +56,7 @@
 	__vue_exports__ = __webpack_require__(2)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(15)
+	var __vue_template__ = __webpack_require__(19)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -295,10 +295,14 @@
 	        var deviceWidth = this.$getConfig().env.deviceWidth;
 
 	        var height = 750 / deviceWidth * deviceHeight;
+
+	        //            设备类型匹配
 	        if (platform === "iOS") {
 	            height -= 20;
+	            console.log("=匹配到=iOS");
 	        } else if (platform === "Android") {
-	            height -= 120;
+	            height -= 320;
+	            console.log("=匹配到=Android");
 	        } else {
 	            console.log("=没有匹配到=");
 	        }
@@ -590,11 +594,8 @@
 	  },
 	  "seeDiv": {
 	    "marginTop": 10,
-	    "backgroundColor": "#db74c9",
-	    "borderRadius": 40,
-	    "overflow": "hidden",
-	    "height": 60,
-	    "width": 200,
+	    "height": 76,
+	    "width": 216,
 	    "justifyContent": "center",
 	    "alignItems": "center"
 	  },
@@ -736,11 +737,14 @@
 	//
 	//
 	//
+	//
+	//
 
 	exports.default = {
 	    data: function data() {
 	        return {
 	            seeContent: '进去看看',
+	            seeButtonImage: 'see_button.png',
 	            topContentText: '[加入我们，创建未来]'
 	        };
 	    },
@@ -810,9 +814,15 @@
 	        _vm.toSeeClick()
 	      }
 	    }
-	  }, [_c('text', {
-	    staticClass: ["seeText"]
-	  }, [_vm._v(_vm._s(_vm.seeContent))])])])])
+	  }, [_c('image', {
+	    staticStyle: {
+	      width: "216px",
+	      height: "76px"
+	    },
+	    attrs: {
+	      "src": _vm.seeButtonImage
+	    }
+	  })])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
@@ -831,7 +841,7 @@
 	__vue_exports__ = __webpack_require__(13)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(14)
+	var __vue_template__ = __webpack_require__(18)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -865,38 +875,284 @@
 /***/ (function(module, exports) {
 
 	module.exports = {
-	  "slider-item-wish_lamp": {
-	    "width": 600,
-	    "height": 910,
+	  "rooDiv": {
+	    "width": 610,
+	    "height": 950,
 	    "borderRadius": 10,
-	    "overflow": "hidden",
-	    "backgroundColor": "rgb(48,131,248)"
+	    "overflow": "hidden"
+	  },
+	  "bgImage": {
+	    "width": 610,
+	    "height": 950
 	  },
 	  "topItemContent": {
-	    "top": 0,
-	    "width": 600,
-	    "alignItems": "center",
-	    "justifyContent": "center",
-	    "position": "absolute"
+	    "width": 600
+	  },
+	  "topItemContentText": {
+	    "marginTop": 56,
+	    "fontSize": 40,
+	    "color": "#FFFFFF"
 	  },
 	  "lineItem": {
-	    "marginTop": 18,
+	    "marginTop": 22,
 	    "fontSize": 26,
 	    "color": "#FFFFFF"
 	  },
 	  "tipContent": {
+	    "marginTop": 34,
 	    "color": "#FFFFFF",
 	    "fontSize": 26
 	  },
-	  "topItemContentText": {
-	    "marginTop": 38,
-	    "fontSize": 40,
-	    "color": "#FFFFFF"
+	  "contentDiv": {
+	    "position": "absolute",
+	    "top": 0
+	  },
+	  "bottomTipContent": {
+	    "marginTop": 40,
+	    "color": "#FFFFFF",
+	    "fontSize": 26
 	  }
 	}
 
 /***/ }),
 /* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _PromotionWishLampItemView = __webpack_require__(14);
+
+	var _PromotionWishLampItemView2 = _interopRequireDefault(_PromotionWishLampItemView);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	    components: {
+	        PromotionWishLampItemView: _PromotionWishLampItemView2.default
+	    },
+	    //        vue子视图引用的话data要写成如下方法样式
+	    data: function data() {
+	        return {
+	            cardTitle: "心愿灯",
+	            wishLampBg: "wish_lamp_bg_image.png",
+	            tipContent: '30天内努力为你备好，请持续关注',
+	            bottomTipContent: '每天仅有有1次许愿机会'
+	        };
+	    },
+	    props: {
+	        wishLampObject: {
+	            type: Object,
+	            default: {}
+	        }
+	    }
+	}; //
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	module.exports = exports["default"];
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = []
+
+	/* styles */
+	__vue_styles__.push(__webpack_require__(15)
+	)
+
+	/* script */
+	__vue_exports__ = __webpack_require__(16)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(17)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/wenyongjun/private_workspace/JSTestFolder/jud-ios/assets/PromotionWishLampItemView.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__._scopeId = "data-v-108af511"
+	__vue_options__.style = __vue_options__.style || {}
+	__vue_styles__.forEach(function (module) {
+	  for (var name in module) {
+	    __vue_options__.style[name] = module[name]
+	  }
+	})
+	if (typeof __register_static_styles__ === "function") {
+	  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+	}
+
+	module.exports = __vue_exports__
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+	module.exports = {
+	  "rootDiv": {
+	    "backgroundColor": "#BC8F8F"
+	  },
+	  "lampItem": {
+	    "backgroundColor": "#8B0000",
+	    "width": 132
+	  },
+	  "lampIconBg": {
+	    "width": 132,
+	    "height": 144,
+	    "justifyContent": "center",
+	    "alignItems": "center"
+	  },
+	  "lampIcon": {
+	    "width": 132,
+	    "height": 144
+	  },
+	  "lampButtonBg": {
+	    "width": 132,
+	    "height": 46,
+	    "justifyContent": "center",
+	    "alignItems": "center"
+	  },
+	  "lampButtonIcon": {
+	    "width": 126,
+	    "height": 46
+	  },
+	  "lanmpButtonText": {
+	    "color": "#FFFFFF",
+	    "fontSize": 20
+	  }
+	}
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports) {
 
 	"use strict";
@@ -970,12 +1226,18 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
 	    //        vue子视图引用的话data要写成如下方法样式
 	    data: function data() {
 	        return {
 	            cardTitle: "心愿灯",
+	            wishLampIcon: "wish_lamp_icon.png",
+	            withLampButtonIcon: "wish_lamp_button.png",
 	            tipContent: '30天内努力为你备好，请持续关注'
 	        };
 	    },
@@ -984,35 +1246,158 @@
 	            type: Object,
 	            default: {}
 	        }
+	    },
+	    methods: {
+	        clickLampEvent: function clickLampEvent() {
+	            console.log('=======clickLampEvent======');
+	        }
 	    }
 	};
 	module.exports = exports["default"];
 
 /***/ }),
-/* 14 */
+/* 17 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["slider-item-wish_lamp"]
+	    staticClass: ["rootDiv"]
+	  }, [_c('div', {
+	    staticClass: ["lampItem"],
+	    on: {
+	      "click": function($event) {
+	        _vm.clickLampEvent()
+	      }
+	    }
+	  }, [_c('div', {
+	    staticClass: ["lampIconBg"],
+	    staticStyle: {
+	      backgroundColor: "aquamarine"
+	    }
+	  }, [_c('image', {
+	    staticClass: ["lampIcon"],
+	    attrs: {
+	      "src": _vm.wishLampIcon
+	    }
+	  }), _vm._m(0)]), _c('div', {
+	    staticClass: ["lampButtonBg"]
+	  }, [_c('image', {
+	    staticClass: ["lampButtonIcon"],
+	    attrs: {
+	      "src": _vm.withLampButtonIcon
+	    }
+	  }), _vm._m(1)])])])
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticStyle: {
+	      position: "absolute",
+	      top: "0",
+	      justifyContent: "center",
+	      alignItems: "center",
+	      width: "132px",
+	      height: "144px"
+	    }
+	  }, [_c('image', {
+	    staticClass: ["brandLogo"],
+	    staticStyle: {
+	      backgroundColor: "rosybrown",
+	      width: "96px",
+	      height: "60px"
+	    }
+	  })])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticStyle: {
+	      position: "absolute",
+	      top: "0",
+	      justifyContent: "center",
+	      alignItems: "center",
+	      width: "132px",
+	      height: "46px"
+	    }
+	  }, [_c('text', {
+	    staticClass: ["lanmpButtonText"]
+	  }, [_vm._v("点亮")])])
+	}]}
+	module.exports.render._withStripped = true
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: ["rooDiv"]
+	  }, [_c('div', {
+	    staticClass: ["bgImageDiv"]
+	  }, [_c('image', {
+	    staticClass: ["bgImage"],
+	    attrs: {
+	      "src": _vm.wishLampBg
+	    }
+	  })]), _c('div', {
+	    staticClass: ["contentDiv"]
 	  }, [_c('div', {
 	    staticClass: ["topItemContent"]
+	  }, [_c('div', {
+	    staticStyle: {
+	      alignItems: "center",
+	      justifyContent: "center"
+	    }
 	  }, [_c('text', {
 	    staticClass: ["topItemContentText"]
 	  }, [_vm._v(_vm._s(_vm.cardTitle))]), _c('text', {
 	    staticClass: ["lineItem"]
 	  }, [_vm._v("-·-")]), _c('text', {
 	    staticClass: ["tipContent"]
-	  }, [_vm._v(_vm._s(_vm.tipContent))])]), _vm._m(0)])
-	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: ["contentDiv"]
-	  }, [_c('div', [_c('image')])])
-	}]}
+	  }, [_vm._v(_vm._s(_vm.tipContent))])])]), _c('div', {
+	    staticStyle: {
+	      flexDirection: "row",
+	      marginLeft: "62px"
+	    }
+	  }, [_c('div', {
+	    staticStyle: {
+	      backgroundColor: "white",
+	      marginTop: "60px"
+	    }
+	  }, [_c('promotion-wish-lamp-item-view'), _c('promotion-wish-lamp-item-view', {
+	    staticStyle: {
+	      marginTop: "50px"
+	    }
+	  })], 1), _c('div', {
+	    staticStyle: {
+	      backgroundColor: "yellow",
+	      marginTop: "120px",
+	      marginLeft: "43px"
+	    }
+	  }, [_c('promotion-wish-lamp-item-view'), _c('promotion-wish-lamp-item-view', {
+	    staticStyle: {
+	      marginTop: "50px"
+	    }
+	  })], 1), _c('div', {
+	    staticStyle: {
+	      backgroundColor: "yellow",
+	      marginTop: "30px",
+	      marginLeft: "43px"
+	    }
+	  }, [_c('promotion-wish-lamp-item-view'), _c('promotion-wish-lamp-item-view', {
+	    staticStyle: {
+	      marginTop: "50px"
+	    }
+	  })], 1)]), _c('div', {
+	    staticClass: ["bottom"],
+	    staticStyle: {
+	      alignItems: "center",
+	      justifyContent: "center"
+	    }
+	  }, [_c('text', {
+	    staticClass: ["bottomTipContent"]
+	  }, [_vm._v(_vm._s(_vm.bottomTipContent))])])])])
+	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
 /***/ }),
-/* 15 */
+/* 19 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

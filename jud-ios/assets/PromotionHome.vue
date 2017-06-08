@@ -141,10 +141,14 @@
             var deviceWidth = this.$getConfig().env.deviceWidth;
 
             var height = 750 / deviceWidth * deviceHeight;
+            
+//            设备类型匹配
             if (platform === "iOS") {
                 height -= 20;
+                console.log("=匹配到=iOS")
             } else if (platform === "Android") {
-                height -= 120;
+                height -= 320;
+                console.log("=匹配到=Android")
             } else {
                 console.log("=没有匹配到=")
             }

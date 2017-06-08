@@ -21,7 +21,9 @@
             <text class="wishText">{{itemProduct.name}}</text>
             <div class="seeDiv"
                  @click="toSeeClick()">
-                <text class="seeText">{{seeContent}}</text>
+                <!--<text class="seeText">{{seeContent}}</text>-->
+                <image style="width:216px;height: 76px ;"
+                       :src="seeButtonImage"></image>
             </div>
 
         </div>
@@ -106,11 +108,11 @@
 
     .seeDiv {
         margin-top: 10px;
-        background-color: #db74c9;
-        border-radius: 40px;
-        overflow: hidden;
-        height: 60px;
-        width: 200px;
+        /*background-color: #db74c9;*/
+        /*border-radius: 40px;*/
+        /*overflow: hidden;*/
+        height: 76px;
+        width: 216px;
         justify-content: center;
         align-items: center;
     }
@@ -126,6 +128,7 @@
         data: function () {
             return {
                 seeContent: '进去看看',
+                seeButtonImage: 'see_button.png',
                 topContentText:'[加入我们，创建未来]'
             }
         },
