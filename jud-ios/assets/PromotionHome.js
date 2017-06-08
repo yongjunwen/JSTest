@@ -301,7 +301,7 @@
 	            height -= 20;
 	            console.log("=匹配到=iOS");
 	        } else if (platform === "android") {
-	            height -= 120;
+	            height -= 200;
 	            console.log("=匹配到=Android");
 	        } else {
 	            console.log("=没有匹配到=");
