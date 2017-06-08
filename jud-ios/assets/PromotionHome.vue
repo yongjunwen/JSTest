@@ -135,7 +135,7 @@
         },
         created: function () {
             //
-            var platform = this.$getConfig().env.platform;
+            var platform = this.$getConfig().env.platform.toLowerCase();
 //            获取设备高度
             var deviceHeight = this.$getConfig().env.deviceHeight;
             var deviceWidth = this.$getConfig().env.deviceWidth;
@@ -143,17 +143,17 @@
             var height = 750 / deviceWidth * deviceHeight;
 
 //            设备类型匹配
-            if (platform === "iOS") {
+            if (platform === "ios") {
                 height -= 20;
                 console.log("=匹配到=iOS")
-            } else if (platform === "Android") {
+            } else if (platform === "android") {
                 height -= 320;
                 console.log("=匹配到=Android")
             } else {
                 console.log("=没有匹配到=")
             }
 //            todo：此处的高度减去200为了测试android获取高度不准确的问题 待删除
-            height -= 200;
+//            height -= 200;
             this.deviceHeight = height;
 //                jud.config.deviceHeight;
             console.log("---------" + this.deviceHeight + "height=" + height + "platform=" + platform)
