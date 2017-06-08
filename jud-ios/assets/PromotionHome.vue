@@ -10,7 +10,7 @@
         <div class="contentView" :style="{height:deviceHeight}">
             <slider-neighbor class="slider-neighbor" neighborAlpha="0.9"
                              neighborSpace="55" neighborScale="0.9" currentItemScale="1"
-                             :index="selectIndex" @change="changeEvent">
+                             :index="selectIndex" @change="changeEvent" :style="{height:sliderHeight}">
 
                 <div @click="clickEvent" v-for="itemProduct in productList">
 
@@ -34,7 +34,8 @@
                          v-bind:style="{'backgroundColor':(index==selectIndex?buttonBgSelectColor:buttonBgColor)}"
                          @click="buttonClick(index)">
                         <!--<text class="bottomText">{{itemProduct.logoName}}</text>-->
-                        <image class="bottomTabImage" :src="itemProduct.tabImage" style="width: 100px;height: 70px "></image>
+                        <image class="bottomTabImage" :src="itemProduct.tabImage"
+                               style="width: 100px;height: 70px "></image>
                     </div>
                 </div>
             </div>
@@ -65,6 +66,7 @@
             selectIndex: 0,
             buttonBgSelectColor: "#000000",
             deviceHeight: 10,
+            sliderHeight:0,
             buttonBgColor: null,
             bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
             productList: [
@@ -147,6 +149,9 @@
 
             var height = 750 / deviceWidth * deviceHeight;
 
+            var sliderHeight = 940 * deviceWidth / 750;
+            this.sliderHeight = sliderHeight;
+
 //            设备类型匹配
             if (platform === "ios") {
                 height -= 20;
@@ -157,10 +162,9 @@
             } else {
                 console.log("=没有匹配到=")
             }
-//            todo：此处的高度减去200为了测试android获取高度不准确的问题 待删除
-//            height -= 200;
             this.deviceHeight = height;
 //                jud.config.deviceHeight;
+            console.log("-----deviceHeight----" + deviceHeight)
             console.log("---------" + this.deviceHeight + "height=" + height + "platform=" + platform)
         }
     }
@@ -186,7 +190,6 @@
         top: 0;
         position: absolute;
         width: 750px;
-        /*height: 1100px;*/
         /*mark：目前高度在android上拿到的不准备 设置center就会偏下*/
         justify-content: center;
     }

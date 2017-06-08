@@ -20,7 +20,7 @@
             <div style="flex-direction: row; margin-left: 62px">
 
                 <!--第一组：上下排列方式-->
-                <div style="background-color: white ;margin-top: 60px;">
+                <div style="margin-top: 60px;">
                     <promotion-wish-lamp-item-view></promotion-wish-lamp-item-view>
                     <promotion-wish-lamp-item-view
                             style="margin-top: 50px;"></promotion-wish-lamp-item-view>
@@ -28,7 +28,7 @@
                 </div>
 
                 <!--第二组：上下排列方式-->
-                <div style="background-color: yellow;;margin-top: 120px; margin-left: 43px;">
+                <div style="margin-top: 120px; margin-left: 43px;">
                     <promotion-wish-lamp-item-view></promotion-wish-lamp-item-view>
                     <promotion-wish-lamp-item-view
                             style="margin-top: 50px;"></promotion-wish-lamp-item-view>
@@ -36,7 +36,7 @@
                 </div>
 
                 <!--第三组：上下排列方式-->
-                <div style="background-color: yellow;;margin-top: 30px; margin-left: 43px;">
+                <div style=";margin-top: 30px; margin-left: 43px;">
                     <promotion-wish-lamp-item-view></promotion-wish-lamp-item-view>
                     <promotion-wish-lamp-item-view
                             style="margin-top: 50px;"></promotion-wish-lamp-item-view>
