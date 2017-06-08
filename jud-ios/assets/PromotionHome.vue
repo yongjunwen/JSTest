@@ -152,6 +152,7 @@
             } else {
                 console.log("=没有匹配到=")
             }
+//            todo：此处的高度减去200为了测试android获取高度不准确的问题 待删除
             height -= 200;
             this.deviceHeight = height;
 //                jud.config.deviceHeight;
