@@ -1,20 +1,22 @@
 <!--单个心愿灯卡灯笼视图-->
 <template>
-
+    <!--lampState 1是正常状态 2是已点亮 3是不可点亮变灰状态-->
     <div class="rootDiv">
+        <!---->
         <div class="lampItem" @click="clickLampEvent()">
 
             <div class="lampIconBg" style="background-color: aquamarine">
                 <image class="lampIcon" :src="wishLampIcon"></image>
                 <div style="position: absolute;top: 0;justify-content: center;align-items: center;width: 132px;height: 144px">
                     <image class="brandLogo"
-                           style="background-color: rosybrown;width: 96px;height: 60px;"></image>
+                           style="background-color: rosybrown;width: 96px;height: 60px;"
+                           :src="wishLampItem.brandIcon"></image>
                 </div>
             </div>
             <div class="lampButtonBg">
                 <image class="lampButtonIcon" :src="withLampButtonIcon"></image>
                 <div style="position: absolute;top: 0;justify-content: center;align-items: center;width: 132px;height: 46px">
-                    <text class="lanmpButtonText">点亮</text>
+                    <text class="lanmpButtonText">{{lampText}}</text>
                 </div>
             </div>
         </div>
@@ -74,20 +76,53 @@
         data: function () {
             return {
                 cardTitle: "心愿灯",
+                lampText: '点亮',
                 wishLampIcon: "wish_lamp_icon.png",
                 withLampButtonIcon: "wish_lamp_button.png",
                 tipContent: '30天内努力为你备好，请持续关注'
             }
         },
         props: {
-            wishLampObject: {
+            wishLampItem: {
                 type: Object,
                 default: {}
             },
         },
-        methods:{
-            clickLampEvent:function () {
+        watch: {
+            wishLampItem: {
+                handler: function (wishLampItem) {
+                    console.log("watch=====wishLampItem");
+                    if (this.wishLampItem.lampState === '2') {
+                        this.lampText = "已点亮"
+                    } else if (this.wishLampItem.lampState === '3') {
+                        this.lampText = "已变灰"
+                    }
+                },
+                deep: true
+            }
+        },
+        mounted: function () {
+            if (this.wishLampItem.lampState === '2') {
+                this.lampText = "已点亮"
+            } else if (this.wishLampItem.lampState === '3') {
+                this.lampText = "已变灰"
+            }
+
+        },
+        methods: {
+            clickLampEvent: function () {
+//                lampState 1是正常状态 2是已点亮 3是不可点亮变灰状态
+//                如果lampState是2 || 3直接return掉 因为 点亮后不再允许再点亮
+                if (this.wishLampItem.lampState === '2' || this.wishLampItem.lampState === '3') {
+                    console.log('==已经不能再点击了')
+//                    todo:show alert 不允许再点亮许愿灯文案提示
+                    return;
+                }
                 console.log('=======clickLampEvent======');
+//                this.lampText = "已点亮";
+//                this.wishLampItem.lampState = '2'; //todo:同时通知其他变成3的状态
+
+                this.$emit('changeLampState', this.wishLampItem.brandId);
             }
         }
     };

@@ -18,28 +18,38 @@
             </div>
             <!--灯笼显示区域 按行排列-->
             <div style="flex-direction: row; margin-left: 62px">
-
+                <!--v-for="lampItem in wishLampObject.brandList"-->
                 <!--第一组：上下排列方式-->
                 <div style="margin-top: 60px;">
-                    <promotion-wish-lamp-item-view></promotion-wish-lamp-item-view>
-                    <promotion-wish-lamp-item-view
-                            style="margin-top: 50px;"></promotion-wish-lamp-item-view>
+                    <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[0]"
+                                                   :wishLampItem="wishLampObject.brandList[0]"
+                                                   v-on:changeLampState='changeLampStateEvent'
+                    ></promotion-wish-lamp-item-view>
+                    <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[3]"
+                                                   style="margin-top: 50px;"
+                                                   :wishLampItem="wishLampObject.brandList[3]"
+                    ></promotion-wish-lamp-item-view>
 
                 </div>
 
                 <!--第二组：上下排列方式-->
                 <div style="margin-top: 120px; margin-left: 43px;">
-                    <promotion-wish-lamp-item-view></promotion-wish-lamp-item-view>
-                    <promotion-wish-lamp-item-view
-                            style="margin-top: 50px;"></promotion-wish-lamp-item-view>
+                    <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[1]"
+                                                   :wishLampItem="wishLampObject.brandList[1]"
+                    ></promotion-wish-lamp-item-view>
+                    <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[4]"
+                                                   style="margin-top: 50px;"
+                                                   :wishLampItem="wishLampObject.brandList[4]"></promotion-wish-lamp-item-view>
 
                 </div>
 
                 <!--第三组：上下排列方式-->
                 <div style=";margin-top: 30px; margin-left: 43px;">
-                    <promotion-wish-lamp-item-view></promotion-wish-lamp-item-view>
-                    <promotion-wish-lamp-item-view
-                            style="margin-top: 50px;"></promotion-wish-lamp-item-view>
+                    <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[2]"
+                                                   :wishLampItem="wishLampObject.brandList[2]"></promotion-wish-lamp-item-view>
+                    <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[5]"
+                                                   style="margin-top: 50px;"
+                                                   :wishLampItem="wishLampObject.brandList[5]"></promotion-wish-lamp-item-view>
 
                 </div>
             </div>
@@ -137,6 +147,29 @@
                 type: Object,
                 default: {}
             },
+        },
+        methods: {
+            itemClick: function (index) {
+                console.log('itemClick=====');
+            },
+            changeLampStateEvent: function (lampItem) {
+                console.log('changeLampStateEvent=====' + lampItem + '获取到');
+                console.log('array=' + this.wishLampObject.brandList)
+
+                this.wishLampObject.brandList.forEach(function (item, index) {
+                    console.log('brandId=' + item['brandId'])
+                    if (item['brandId'] === lampItem) {
+                        item['lampState'] = '2';
+                        console.log('changeLampStateEvent====lampState=2');
+                    } else {
+                        console.log('changeLampStateEvent====lampState=3');
+                        item['lampState'] = '3';
+                    }
+                });
+//                for (var item in this.wishLampObject.brandList) {
+//
+//                }
+            }
         }
-    }
+    };
 </script>

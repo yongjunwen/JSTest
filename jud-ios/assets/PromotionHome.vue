@@ -66,7 +66,7 @@
             selectIndex: 0,
             buttonBgSelectColor: "#000000",
             deviceHeight: 10,
-            sliderHeight:0,
+            sliderHeight: 0,
             buttonBgColor: null,
             bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
             productList: [
@@ -103,7 +103,38 @@
                     tabImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg",
                     name: "要降价!京东和阿里打价格战:刘强东发飙",
                     brandLogo: "",
-                    pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t1870/20/2688983380/490055/66145088/5715bc6aN4933b67c.jpg!q70.jpg"
+                    pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t1870/20/2688983380/490055/66145088/5715bc6aN4933b67c.jpg!q70.jpg",
+                    brandList: [{
+                        lampState: '1',
+                        brandId: '111',
+                        brandIcon: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg'
+                    },
+                        {
+                            lampState: '1',
+                            brandId: '112',
+                            brandIcon: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497517343&di=baff522d5450339011176b5c1fea1302&imgtype=jpg&er=1&src=http%3A%2F%2Fm.qqzhi.com%2Fupload%2Fimg_0_96973789D2128229081_23.jpg'
+                        },
+                        {
+                            lampState: '1',
+                            brandId: '113',
+                            brandIcon: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922663211&di=fd30c4a8b7b1ba325925c91cb2a32586&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F12%2F57%2F08%2F92G58PICHbX.jpg'
+                        },
+                        {
+                            lampState: '1',
+                            brandId: '114',
+                            brandIcon: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg'
+                        },
+                        {
+                            lampState: '1',
+                            brandId: '115',
+                            brandIcon: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg'
+                        },
+                        {
+                            lampState: '1',
+                            brandId: '116',
+                            brandIcon: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg'
+                        }
+                    ]
                 }
             ]
         },
@@ -147,9 +178,14 @@
             var deviceHeight = this.$getConfig().env.deviceHeight;
             var deviceWidth = this.$getConfig().env.deviceWidth;
 
+            console.log("*==deviceHeight=" + deviceHeight + "==deviceWidth=" + deviceWidth);
+
             var height = 750 / deviceWidth * deviceHeight;
 
-            var sliderHeight = 940 * deviceWidth / 750;
+            var sliderHeight = 940;
+//            var sliderHeight = 940 * deviceWidth / 750;
+
+//            var sliderHeight =   750 * (750/940);
             this.sliderHeight = sliderHeight;
 
 //            设备类型匹配
@@ -163,9 +199,8 @@
                 console.log("=没有匹配到=")
             }
             this.deviceHeight = height;
-//                jud.config.deviceHeight;
-            console.log("-----deviceHeight----" + deviceHeight)
-            console.log("---------" + this.deviceHeight + "height=" + height + "platform=" + platform)
+
+            console.log("*==处理后" + this.deviceHeight + "height=" + height + "platform=" + platform)
         }
     }
 </script>

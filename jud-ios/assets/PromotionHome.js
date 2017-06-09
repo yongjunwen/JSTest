@@ -258,7 +258,32 @@
 	            tabImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg",
 	            name: "要降价!京东和阿里打价格战:刘强东发飙",
 	            brandLogo: "",
-	            pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t1870/20/2688983380/490055/66145088/5715bc6aN4933b67c.jpg!q70.jpg"
+	            pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t1870/20/2688983380/490055/66145088/5715bc6aN4933b67c.jpg!q70.jpg",
+	            brandList: [{
+	                lampState: '1',
+	                brandId: '111',
+	                brandIcon: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg'
+	            }, {
+	                lampState: '1',
+	                brandId: '112',
+	                brandIcon: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497517343&di=baff522d5450339011176b5c1fea1302&imgtype=jpg&er=1&src=http%3A%2F%2Fm.qqzhi.com%2Fupload%2Fimg_0_96973789D2128229081_23.jpg'
+	            }, {
+	                lampState: '1',
+	                brandId: '113',
+	                brandIcon: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922663211&di=fd30c4a8b7b1ba325925c91cb2a32586&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F12%2F57%2F08%2F92G58PICHbX.jpg'
+	            }, {
+	                lampState: '1',
+	                brandId: '114',
+	                brandIcon: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg'
+	            }, {
+	                lampState: '1',
+	                brandId: '115',
+	                brandIcon: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg'
+	            }, {
+	                lampState: '1',
+	                brandId: '116',
+	                brandIcon: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg'
+	            }]
 	        }]
 	    },
 	    methods: {
@@ -301,9 +326,14 @@
 	        var deviceHeight = this.$getConfig().env.deviceHeight;
 	        var deviceWidth = this.$getConfig().env.deviceWidth;
 
+	        console.log("*==deviceHeight=" + deviceHeight + "==deviceWidth=" + deviceWidth);
+
 	        var height = 750 / deviceWidth * deviceHeight;
 
-	        var sliderHeight = 940 * deviceWidth / 750;
+	        var sliderHeight = 940;
+	        //            var sliderHeight = 940 * deviceWidth / 750;
+
+	        //            var sliderHeight =   750 * (750/940);
 	        this.sliderHeight = sliderHeight;
 
 	        //            设备类型匹配
@@ -317,9 +347,8 @@
 	            console.log("=没有匹配到=");
 	        }
 	        this.deviceHeight = height;
-	        //                jud.config.deviceHeight;
-	        console.log("-----deviceHeight----" + deviceHeight);
-	        console.log("---------" + this.deviceHeight + "height=" + height + "platform=" + platform);
+
+	        console.log("*==处理后" + this.deviceHeight + "height=" + height + "platform=" + platform);
 	    }
 	};
 	module.exports = exports['default'];
@@ -959,8 +988,41 @@
 	            type: Object,
 	            default: {}
 	        }
+	    },
+	    methods: {
+	        itemClick: function itemClick(index) {
+	            console.log('itemClick=====');
+	        },
+	        changeLampStateEvent: function changeLampStateEvent(lampItem) {
+	            console.log('changeLampStateEvent=====' + lampItem + '获取到');
+	            console.log('array=' + this.wishLampObject.brandList);
+
+	            this.wishLampObject.brandList.forEach(function (item, index) {
+	                console.log('brandId=' + item['brandId']);
+	                if (item['brandId'] === lampItem) {
+	                    item['lampState'] = '2';
+	                    console.log('changeLampStateEvent====lampState=2');
+	                } else {
+	                    console.log('changeLampStateEvent====lampState=3');
+	                    item['lampState'] = '3';
+	                }
+	            });
+	            //                for (var item in this.wishLampObject.brandList) {
+	            //
+	            //                }
+	        }
 	    }
 	}; //
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	//
 	//
 	//
@@ -1243,26 +1305,60 @@
 	//
 	//
 	//
+	//
+	//
 
 	exports.default = {
 	    //        vue子视图引用的话data要写成如下方法样式
 	    data: function data() {
 	        return {
 	            cardTitle: "心愿灯",
+	            lampText: '点亮',
 	            wishLampIcon: "wish_lamp_icon.png",
 	            withLampButtonIcon: "wish_lamp_button.png",
 	            tipContent: '30天内努力为你备好，请持续关注'
 	        };
 	    },
 	    props: {
-	        wishLampObject: {
+	        wishLampItem: {
 	            type: Object,
 	            default: {}
 	        }
 	    },
+	    watch: {
+	        wishLampItem: {
+	            handler: function handler(wishLampItem) {
+	                console.log("watch=====wishLampItem");
+	                if (this.wishLampItem.lampState === '2') {
+	                    this.lampText = "已点亮";
+	                } else if (this.wishLampItem.lampState === '3') {
+	                    this.lampText = "已变灰";
+	                }
+	            },
+	            deep: true
+	        }
+	    },
+	    mounted: function mounted() {
+	        if (this.wishLampItem.lampState === '2') {
+	            this.lampText = "已点亮";
+	        } else if (this.wishLampItem.lampState === '3') {
+	            this.lampText = "已变灰";
+	        }
+	    },
 	    methods: {
 	        clickLampEvent: function clickLampEvent() {
+	            //                lampState 1是正常状态 2是已点亮 3是不可点亮变灰状态
+	            //                如果lampState是2 || 3直接return掉 因为 点亮后不再允许再点亮
+	            if (this.wishLampItem.lampState === '2' || this.wishLampItem.lampState === '3') {
+	                console.log('==已经不能再点击了');
+	                //                    todo:show alert 不允许再点亮许愿灯文案提示
+	                return;
+	            }
 	            console.log('=======clickLampEvent======');
+	            //                this.lampText = "已点亮";
+	            //                this.wishLampItem.lampState = '2'; //todo:同时通知其他变成3的状态
+
+	            this.$emit('changeLampState', this.wishLampItem.brandId);
 	        }
 	    }
 	};
@@ -1292,16 +1388,7 @@
 	    attrs: {
 	      "src": _vm.wishLampIcon
 	    }
-	  }), _vm._m(0)]), _c('div', {
-	    staticClass: ["lampButtonBg"]
-	  }, [_c('image', {
-	    staticClass: ["lampButtonIcon"],
-	    attrs: {
-	      "src": _vm.withLampButtonIcon
-	    }
-	  }), _vm._m(1)])])])
-	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
+	  }), _c('div', {
 	    staticStyle: {
 	      position: "absolute",
 	      top: "0",
@@ -1316,10 +1403,18 @@
 	      backgroundColor: "rosybrown",
 	      width: "96px",
 	      height: "60px"
+	    },
+	    attrs: {
+	      "src": _vm.wishLampItem.brandIcon
 	    }
-	  })])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
+	  })])]), _c('div', {
+	    staticClass: ["lampButtonBg"]
+	  }, [_c('image', {
+	    staticClass: ["lampButtonIcon"],
+	    attrs: {
+	      "src": _vm.withLampButtonIcon
+	    }
+	  }), _c('div', {
 	    staticStyle: {
 	      position: "absolute",
 	      top: "0",
@@ -1330,8 +1425,8 @@
 	    }
 	  }, [_c('text', {
 	    staticClass: ["lanmpButtonText"]
-	  }, [_vm._v("点亮")])])
-	}]}
+	  }, [_vm._v(_vm._s(_vm.lampText))])])])])])
+	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
 /***/ }),
@@ -1372,29 +1467,53 @@
 	    staticStyle: {
 	      marginTop: "60px"
 	    }
-	  }, [_c('promotion-wish-lamp-item-view'), _c('promotion-wish-lamp-item-view', {
+	  }, [(_vm.wishLampObject.brandList[0]) ? _c('promotion-wish-lamp-item-view', {
+	    attrs: {
+	      "wishLampItem": _vm.wishLampObject.brandList[0]
+	    },
+	    on: {
+	      "changeLampState": _vm.changeLampStateEvent
+	    }
+	  }) : _vm._e(), (_vm.wishLampObject.brandList[3]) ? _c('promotion-wish-lamp-item-view', {
 	    staticStyle: {
 	      marginTop: "50px"
+	    },
+	    attrs: {
+	      "wishLampItem": _vm.wishLampObject.brandList[3]
 	    }
-	  })], 1), _c('div', {
+	  }) : _vm._e()], 1), _c('div', {
 	    staticStyle: {
 	      marginTop: "120px",
 	      marginLeft: "43px"
 	    }
-	  }, [_c('promotion-wish-lamp-item-view'), _c('promotion-wish-lamp-item-view', {
+	  }, [(_vm.wishLampObject.brandList[1]) ? _c('promotion-wish-lamp-item-view', {
+	    attrs: {
+	      "wishLampItem": _vm.wishLampObject.brandList[1]
+	    }
+	  }) : _vm._e(), (_vm.wishLampObject.brandList[4]) ? _c('promotion-wish-lamp-item-view', {
 	    staticStyle: {
 	      marginTop: "50px"
+	    },
+	    attrs: {
+	      "wishLampItem": _vm.wishLampObject.brandList[4]
 	    }
-	  })], 1), _c('div', {
+	  }) : _vm._e()], 1), _c('div', {
 	    staticStyle: {
 	      marginTop: "30px",
 	      marginLeft: "43px"
 	    }
-	  }, [_c('promotion-wish-lamp-item-view'), _c('promotion-wish-lamp-item-view', {
+	  }, [(_vm.wishLampObject.brandList[2]) ? _c('promotion-wish-lamp-item-view', {
+	    attrs: {
+	      "wishLampItem": _vm.wishLampObject.brandList[2]
+	    }
+	  }) : _vm._e(), (_vm.wishLampObject.brandList[5]) ? _c('promotion-wish-lamp-item-view', {
 	    staticStyle: {
 	      marginTop: "50px"
+	    },
+	    attrs: {
+	      "wishLampItem": _vm.wishLampObject.brandList[5]
 	    }
-	  })], 1)]), _c('div', {
+	  }) : _vm._e()], 1)]), _c('div', {
 	    staticClass: ["bottom"],
 	    staticStyle: {
 	      width: "610px"
