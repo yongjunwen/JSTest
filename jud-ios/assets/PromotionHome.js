@@ -56,7 +56,7 @@
 	__vue_exports__ = __webpack_require__(2)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(19)
+	var __vue_template__ = __webpack_require__(20)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -160,9 +160,13 @@
 
 	var _PromotionWishLampView2 = _interopRequireDefault(_PromotionWishLampView);
 
+	var _PromotionUtil = __webpack_require__(19);
+
+	var _PromotionUtil2 = _interopRequireDefault(_PromotionUtil);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var modal = jud.requireModule('modal'); //
+	//
 	//
 	//
 	//
@@ -213,6 +217,7 @@
 	//
 	//
 
+	var modal = jud.requireModule('modal');
 	exports.default = {
 	    components: {
 	        PromotionProductView: _PromotionProductView2.default,
@@ -226,7 +231,8 @@
 	        deviceHeight: 10,
 	        sliderHeight: 0,
 	        buttonBgColor: null,
-	        bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
+	        //            bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
+	        bgImage: 'slider_bg_image.png',
 	        productList: [
 	        //                {
 	        //                    itemStyle: "1",
@@ -1573,6 +1579,38 @@
 
 /***/ }),
 /* 19 */
+/***/ (function(module, exports) {
+
+	"use strict";
+
+	/**
+	 * Created by wenyongjun on 2017/6/8.
+	 */
+
+	/*
+	 todo:获取对应宽度 待完善
+	 */
+	function getWidth(width) {
+	    var platform = this.$getConfig().env.platform.toLowerCase();
+	    //            获取设备高度
+	    var deviceWidth = this.$getConfig().env.deviceWidth;
+
+	    var _width = width * deviceWidth / 750;
+	    return _width;
+	}
+
+	function getHeight(height) {
+	    var platform = this.$getConfig().env.platform.toLowerCase();
+	    //            获取设备高度
+	    var deviceHeight = this.$getConfig().env.deviceHeight;
+	    var deviceWidth = this.$getConfig().env.deviceWidth;
+
+	    var _height = height * deviceWidth / 750;
+	    return _height;
+	}
+
+/***/ }),
+/* 20 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

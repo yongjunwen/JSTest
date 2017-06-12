@@ -52,6 +52,7 @@
     import PromotionBottom from './PromotionBottom.vue'
     import PromotionProductView from './PromotionProductView.vue'
     import PromotionWishLampView from './PromotionWishLampView.vue'
+    import PromotionUtil from './PromotionUtil.js'
 
     const modal = jud.requireModule('modal')
     export default {
@@ -67,7 +68,8 @@
             deviceHeight: 10,
             sliderHeight: 0,
             buttonBgColor: null,
-            bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
+//            bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
+            bgImage: 'slider_bg_image.png',
             productList: [
 //                {
 //                    itemStyle: "1",
