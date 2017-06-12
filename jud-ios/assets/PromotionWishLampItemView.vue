@@ -9,14 +9,14 @@
                 <image class="lampIcon" :src="wishLampIcon"></image>
                 <div style="position: absolute;top: 0;justify-content: center;align-items: center;width: 132px;height: 144px">
                     <image class="brandLogo"
-                           style="background-color: rosybrown;width: 96px;height: 60px;"
+                           :style="{opacity:brandLogoImageOpacity}"
                            :src="wishLampItem.brandIcon"></image>
                 </div>
             </div>
             <div class="lampButtonBg">
                 <image class="lampButtonIcon" :src="withLampButtonIcon"></image>
                 <div style="position: absolute;top: 0;justify-content: center;align-items: center;width: 132px;height: 46px">
-                    <text class="lanmpButtonText">{{lampText}}</text>
+                    <text class="lanmpButtonText" :style="{color:lampTextColor}">{{lampText}}</text>
                 </div>
             </div>
         </div>
@@ -45,6 +45,13 @@
     .lampIcon {
         width: 132px;
         height: 144px;
+    }
+
+    .brandLogo {
+        background-color: rosybrown;
+        width: 96px;
+        height: 60px;
+
     }
 
     .lampButtonBg {
@@ -78,6 +85,8 @@
             return {
                 cardTitle: "心愿灯",
                 lampText: '点亮',
+                lampTextColor: '#ffffff',
+                brandLogoImageOpacity: 1,
                 wishLampIcon: "wish_lamp_icon.png",
                 withLampButtonIcon: "wish_lamp_button.png",
                 tipContent: '30天内努力为你备好，请持续关注'
@@ -94,9 +103,12 @@
                 handler: function (wishLampItem) {
                     console.log("watch=====wishLampItem");
                     if (this.wishLampItem.lampState === '2') {
-                        this.lampText = "已点亮"
+                        this.lampText = "已点亮";
+//                        this.lampTextColor = "#ffb5b7";
                     } else if (this.wishLampItem.lampState === '3') {
-                        this.lampText = "已变灰"
+//                        this.lampText = "已变灰";
+                        this.lampTextColor = "#999999";
+                        this.brandLogoImageOpacity = 0.5;
                     }
                 },
                 deep: true

@@ -1234,6 +1234,11 @@
 	    "width": 132,
 	    "height": 144
 	  },
+	  "brandLogo": {
+	    "backgroundColor": "#BC8F8F",
+	    "width": 96,
+	    "height": 60
+	  },
 	  "lampButtonBg": {
 	    "marginTop": 14,
 	    "width": 132,
@@ -1332,6 +1337,13 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	var modal = jud.requireModule('modal');
 	exports.default = {
@@ -1340,6 +1352,8 @@
 	        return {
 	            cardTitle: "心愿灯",
 	            lampText: '点亮',
+	            lampTextColor: '#ffffff',
+	            brandLogoImageOpacity: 1,
 	            wishLampIcon: "wish_lamp_icon.png",
 	            withLampButtonIcon: "wish_lamp_button.png",
 	            tipContent: '30天内努力为你备好，请持续关注'
@@ -1357,8 +1371,11 @@
 	                console.log("watch=====wishLampItem");
 	                if (this.wishLampItem.lampState === '2') {
 	                    this.lampText = "已点亮";
+	                    //                        this.lampTextColor = "#ffb5b7";
 	                } else if (this.wishLampItem.lampState === '3') {
-	                    this.lampText = "已变灰";
+	                    //                        this.lampText = "已变灰";
+	                    this.lampTextColor = "#999999";
+	                    this.brandLogoImageOpacity = 0.5;
 	                }
 	            },
 	            deep: true
@@ -1432,10 +1449,8 @@
 	    }
 	  }, [_c('image', {
 	    staticClass: ["brandLogo"],
-	    staticStyle: {
-	      backgroundColor: "rosybrown",
-	      width: "96px",
-	      height: "60px"
+	    style: {
+	      opacity: _vm.brandLogoImageOpacity
 	    },
 	    attrs: {
 	      "src": _vm.wishLampItem.brandIcon
@@ -1457,7 +1472,10 @@
 	      height: "46px"
 	    }
 	  }, [_c('text', {
-	    staticClass: ["lanmpButtonText"]
+	    staticClass: ["lanmpButtonText"],
+	    style: {
+	      color: _vm.lampTextColor
+	    }
 	  }, [_vm._v(_vm._s(_vm.lampText))])])])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
