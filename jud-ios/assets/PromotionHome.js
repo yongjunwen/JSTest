@@ -1193,11 +1193,7 @@
 /***/ (function(module, exports) {
 
 	module.exports = {
-	  "rootDiv": {
-	    "backgroundColor": "#BC8F8F"
-	  },
 	  "lampItem": {
-	    "backgroundColor": "#8B0000",
 	    "width": 132
 	  },
 	  "lampIconBg": {
@@ -1211,6 +1207,7 @@
 	    "height": 144
 	  },
 	  "lampButtonBg": {
+	    "marginTop": 14,
 	    "width": 132,
 	    "height": 46,
 	    "justifyContent": "center",
@@ -1230,7 +1227,7 @@
 /* 16 */
 /***/ (function(module, exports) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -1308,6 +1305,7 @@
 	//
 	//
 
+	var modal = jud.requireModule('modal');
 	exports.default = {
 	    //        vue子视图引用的话data要写成如下方法样式
 	    data: function data() {
@@ -1351,7 +1349,8 @@
 	            //                如果lampState是2 || 3直接return掉 因为 点亮后不再允许再点亮
 	            if (this.wishLampItem.lampState === '2' || this.wishLampItem.lampState === '3') {
 	                console.log('==已经不能再点击了');
-	                //                    todo:show alert 不允许再点亮许愿灯文案提示
+	                //                    todo:show alert 不允许再点亮许愿灯文案提示  具体待向产品确认
+	                modal.confirm({ message: "已经点亮，不允许再点亮许愿灯", okTitle: "确认", cancelTitle: '取消' });
 	                return;
 	            }
 	            console.log('=======clickLampEvent======');
@@ -1362,7 +1361,7 @@
 	        }
 	    }
 	};
-	module.exports = exports["default"];
+	module.exports = exports['default'];
 
 /***/ }),
 /* 17 */
@@ -1379,10 +1378,7 @@
 	      }
 	    }
 	  }, [_c('div', {
-	    staticClass: ["lampIconBg"],
-	    staticStyle: {
-	      backgroundColor: "aquamarine"
-	    }
+	    staticClass: ["lampIconBg"]
 	  }, [_c('image', {
 	    staticClass: ["lampIcon"],
 	    attrs: {

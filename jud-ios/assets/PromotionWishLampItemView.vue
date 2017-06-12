@@ -5,7 +5,7 @@
         <!---->
         <div class="lampItem" @click="clickLampEvent()">
 
-            <div class="lampIconBg" style="background-color: aquamarine">
+            <div class="lampIconBg">
                 <image class="lampIcon" :src="wishLampIcon"></image>
                 <div style="position: absolute;top: 0;justify-content: center;align-items: center;width: 132px;height: 144px">
                     <image class="brandLogo"
@@ -27,11 +27,11 @@
 
 
     .rootDiv {
-        background-color: rosybrown;
+        /*background-color: rosybrown;*/
     }
 
     .lampItem {
-        background-color: darkred;
+        /*background-color: darkred;*/
         width: 132px
     }
 
@@ -48,7 +48,7 @@
     }
 
     .lampButtonBg {
-        /*margin-top: 60px;*/
+        margin-top: 14px;
         /*margin-left: 25px;*/
         width: 132px;
         height: 46px;
@@ -71,6 +71,7 @@
 </style>
 
 <script>
+    const modal = jud.requireModule('modal')
     export default {
 //        vue子视图引用的话data要写成如下方法样式
         data: function () {
@@ -115,7 +116,8 @@
 //                如果lampState是2 || 3直接return掉 因为 点亮后不再允许再点亮
                 if (this.wishLampItem.lampState === '2' || this.wishLampItem.lampState === '3') {
                     console.log('==已经不能再点击了')
-//                    todo:show alert 不允许再点亮许愿灯文案提示
+//                    todo:show alert 不允许再点亮许愿灯文案提示  具体待向产品确认
+                    modal.confirm({message: "已经点亮，不允许再点亮许愿灯", okTitle: "确认", cancelTitle: '取消'});
                     return;
                 }
                 console.log('=======clickLampEvent======');
