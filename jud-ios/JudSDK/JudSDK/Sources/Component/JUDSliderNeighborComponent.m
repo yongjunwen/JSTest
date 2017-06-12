@@ -206,8 +206,8 @@
     _numberOfVisibleItems = [self valueForOption:JUDSliderNeighborOptionVisibleItems withDefault:_numberOfVisibleItems];
     _numberOfVisibleItems = MAX(0, MIN(_numberOfVisibleItems, _numberOfItems + _numberOfPlaceholdersToShow));
     
-    //todo:iOS上多于4个老是显示卡片错误  强制设置最小为10 暂是解决
-    _numberOfVisibleItems = 10;
+    //todo:iOS上多于4个老是显示卡片错误  强制设置最小为6 暂是解决
+    _numberOfVisibleItems = 6;
 }
 
 - (CGFloat)offsetForItemAtIndex:(NSInteger)index
