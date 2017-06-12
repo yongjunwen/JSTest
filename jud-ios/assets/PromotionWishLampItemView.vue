@@ -117,7 +117,7 @@
                 if (this.wishLampItem.lampState === '2' || this.wishLampItem.lampState === '3') {
                     console.log('==已经不能再点击了')
 //                    todo:show alert 不允许再点亮许愿灯文案提示  具体待向产品确认
-                    modal.confirm({message: "已经点亮，不允许再点亮许愿灯", okTitle: "确认", cancelTitle: '取消'});
+                    modal.alert({message: "已经点亮，不允许再点亮许愿灯", okTitle: "确认", cancelTitle: '取消'});
                     return;
                 }
                 console.log('=======clickLampEvent======');

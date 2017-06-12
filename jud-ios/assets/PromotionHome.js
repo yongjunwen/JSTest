@@ -212,7 +212,6 @@
 	//
 	//
 	//
-	//
 
 	exports.default = {
 	    components: {
@@ -230,7 +229,15 @@
 	        bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
 	        productList: [{
 	            itemStyle: "1",
-	            logoName: "华为",
+	            tabName: "魅族",
+	            tabImage: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1497236240&di=8ea6a518f36ef15963f7605141042cb3&src=http://cdn.waaaat.welovead.com/upload/rss_download/20151022/600_0/201510221902419993.jpg",
+	            name: "您许的愿望已为您备好，魅族",
+	            brandLogo: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1052774542,692148190&fm=26&gp=0.jpg",
+	            topPic: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1497236240&di=8ea6a518f36ef15963f7605141042cb3&src=http://cdn.waaaat.welovead.com/upload/rss_download/20151022/600_0/201510221902419993.jpg",
+	            pic: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1497236240&di=8ea6a518f36ef15963f7605141042cb3&src=http://cdn.waaaat.welovead.com/upload/rss_download/20151022/600_0/201510221902419993.jpg"
+	        }, {
+	            itemStyle: "1",
+	            tabName: "华为",
 	            tabImage: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1496912449&di=1d908831b09e08208c79e53dce78fc73&src=http://pic.qiantucdn.com/58pic/12/38/18/13758PIC4GV.jpg",
 	            name: "您许的愿望已为您备好，华为",
 	            brandLogo: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496753668189&di=a3af9cf6e8a0736098ff56e9ba464e7b&imgtype=0&src=http%3A%2F%2Fpic40.nipic.com%2F20140418%2F11353228_172109208105_2.jpg",
@@ -238,7 +245,7 @@
 	            pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t3226/304/5090006819/188905/a115943a/586078b9N92942b62.jpg!q70.jpg"
 	        }, {
 	            itemStyle: "1",
-	            logoName: "小米",
+	            tabName: "小米",
 	            tabImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497517343&di=baff522d5450339011176b5c1fea1302&imgtype=jpg&er=1&src=http%3A%2F%2Fm.qqzhi.com%2Fupload%2Fimg_0_96973789D2128229081_23.jpg",
 	            name: "您许的愿望已为您备好，小米",
 	            brandLogo: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1052774542,692148190&fm=26&gp=0.jpg",
@@ -246,18 +253,25 @@
 	            pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t2008/329/2598526651/294767/23b295e4/570f2dcdN2cc4a19c.jpg!q70.jpg"
 	        }, {
 	            itemStyle: "1",
-	            logoName: "格力",
+	            tabName: "魅族",
+	            tabImage: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1497236240&di=8ea6a518f36ef15963f7605141042cb3&src=http://cdn.waaaat.welovead.com/upload/rss_download/20151022/600_0/201510221902419993.jpg",
+	            name: "您许的愿望已为您备好，魅族",
+	            brandLogo: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1052774542,692148190&fm=26&gp=0.jpg",
+	            topPic: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1497236240&di=8ea6a518f36ef15963f7605141042cb3&src=http://cdn.waaaat.welovead.com/upload/rss_download/20151022/600_0/201510221902419993.jpg",
+	            pic: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1497236240&di=8ea6a518f36ef15963f7605141042cb3&src=http://cdn.waaaat.welovead.com/upload/rss_download/20151022/600_0/201510221902419993.jpg"
+	        }, {
+	            itemStyle: "1",
+	            tabName: "格力",
 	            tabImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922663211&di=fd30c4a8b7b1ba325925c91cb2a32586&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F12%2F57%2F08%2F92G58PICHbX.jpg",
 	            name: "您许的愿望已为您备好，格力",
 	            brandLogo: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=572491635,2679502336&fm=26&gp=0.jpg",
 	            topPic: "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1496644651&di=472e2fbb406dadcc758f19f6228be092&src=http://images.ali213.net/picfile/pic/2013-01-22/927_p56.jpg ",
 	            pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t2287/140/2518661178/69983/61cb59dc/570e1db2Nf5b0ebe3.jpg!q70.jpg"
 	        }, {
-	            logoName: "心愿灯",
+	            tabName: "心愿灯",
 	            itemStyle: "2",
 	            tabImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg",
 	            name: "要降价!京东和阿里打价格战:刘强东发飙",
-	            brandLogo: "",
 	            pic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t1870/20/2688983380/490055/66145088/5715bc6aN4933b67c.jpg!q70.jpg",
 	            brandList: [{
 	                lampState: '1',
@@ -494,7 +508,7 @@
 	        item: {
 	            type: Object,
 	            default: {
-	                logoName: null,
+	                tabName: null,
 	                itemStyle: null,
 	                name: null
 	            }
@@ -503,7 +517,7 @@
 	    methods: {
 	        buttonClick: function buttonClick(index) {
 	            this.selectIndex = index;
-	            this.item.logoName = "wwww";
+	            this.item.tabName = "wwww";
 	        }
 	    }
 	};
@@ -526,7 +540,7 @@
 	        _vm.buttonClick(_vm.index)
 	      }
 	    }
-	  }, [_vm._v(_vm._s(_vm.item.logoName) + "\n    ")])])
+	  }, [_vm._v(_vm._s(_vm.item.tabName) + "\n    ")])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
@@ -1350,7 +1364,7 @@
 	            if (this.wishLampItem.lampState === '2' || this.wishLampItem.lampState === '3') {
 	                console.log('==已经不能再点击了');
 	                //                    todo:show alert 不允许再点亮许愿灯文案提示  具体待向产品确认
-	                modal.confirm({ message: "已经点亮，不允许再点亮许愿灯", okTitle: "确认", cancelTitle: '取消' });
+	                modal.alert({ message: "已经点亮，不允许再点亮许愿灯", okTitle: "确认", cancelTitle: '取消' });
 	                return;
 	            }
 	            console.log('=======clickLampEvent======');
