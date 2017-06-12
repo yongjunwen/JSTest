@@ -124,7 +124,16 @@
 //                this.lampText = "已点亮";
 //                this.wishLampItem.lampState = '2'; //todo:同时通知其他变成3的状态
 
-                this.$emit('changeLampState', this.wishLampItem.brandId);
+                var _this = this;
+                var okString = "确认";
+                modal.confirm({message: "每天仅有1次许愿机会哦，确认这个选择么？", okTitle: okString, cancelTitle: '取消'}, function (ret) {
+//                        //
+
+                    console.log("confirm====" + ret)
+                    if (ret === okString) {
+                        _this.$emit('changeLampState', _this.wishLampItem.brandId);
+                    }
+                });
             }
         }
     };

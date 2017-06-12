@@ -196,6 +196,7 @@
 
             console.log("*==deviceHeight=" + deviceHeight + "==deviceWidth=" + deviceWidth);
 
+//            获取屏幕布局高度
             var height = 750 / deviceWidth * deviceHeight;
 
             var sliderHeight = 940;

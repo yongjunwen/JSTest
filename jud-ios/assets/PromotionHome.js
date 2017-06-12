@@ -1157,6 +1157,11 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
 
 	module.exports = exports["default"];
 
@@ -1373,7 +1378,16 @@
 	            //                this.lampText = "已点亮";
 	            //                this.wishLampItem.lampState = '2'; //todo:同时通知其他变成3的状态
 
-	            this.$emit('changeLampState', this.wishLampItem.brandId);
+	            var _this = this;
+	            var okString = "确认";
+	            modal.confirm({ message: "每天仅有1次许愿机会哦，确认这个选择么？", okTitle: okString, cancelTitle: '取消' }, function (ret) {
+	                //                        //
+
+	                console.log("confirm====" + ret);
+	                if (ret === okString) {
+	                    _this.$emit('changeLampState', _this.wishLampItem.brandId);
+	                }
+	            });
 	        }
 	    }
 	};
@@ -1492,6 +1506,9 @@
 	    },
 	    attrs: {
 	      "wishLampItem": _vm.wishLampObject.brandList[3]
+	    },
+	    on: {
+	      "changeLampState": _vm.changeLampStateEvent
 	    }
 	  }) : _vm._e()], 1), _c('div', {
 	    staticStyle: {
@@ -1501,6 +1518,9 @@
 	  }, [(_vm.wishLampObject.brandList[1]) ? _c('promotion-wish-lamp-item-view', {
 	    attrs: {
 	      "wishLampItem": _vm.wishLampObject.brandList[1]
+	    },
+	    on: {
+	      "changeLampState": _vm.changeLampStateEvent
 	    }
 	  }) : _vm._e(), (_vm.wishLampObject.brandList[4]) ? _c('promotion-wish-lamp-item-view', {
 	    staticStyle: {
@@ -1508,6 +1528,9 @@
 	    },
 	    attrs: {
 	      "wishLampItem": _vm.wishLampObject.brandList[4]
+	    },
+	    on: {
+	      "changeLampState": _vm.changeLampStateEvent
 	    }
 	  }) : _vm._e()], 1), _c('div', {
 	    staticStyle: {
@@ -1517,6 +1540,9 @@
 	  }, [(_vm.wishLampObject.brandList[2]) ? _c('promotion-wish-lamp-item-view', {
 	    attrs: {
 	      "wishLampItem": _vm.wishLampObject.brandList[2]
+	    },
+	    on: {
+	      "changeLampState": _vm.changeLampStateEvent
 	    }
 	  }) : _vm._e(), (_vm.wishLampObject.brandList[5]) ? _c('promotion-wish-lamp-item-view', {
 	    staticStyle: {
@@ -1524,6 +1550,9 @@
 	    },
 	    attrs: {
 	      "wishLampItem": _vm.wishLampObject.brandList[5]
+	    },
+	    on: {
+	      "changeLampState": _vm.changeLampStateEvent
 	    }
 	  }) : _vm._e()], 1)]), _c('div', {
 	    staticClass: ["bottom"],

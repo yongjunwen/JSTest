@@ -28,6 +28,7 @@
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[3]"
                                                    style="margin-top: 50px;"
                                                    :wishLampItem="wishLampObject.brandList[3]"
+                                                   v-on:changeLampState='changeLampStateEvent'
                     ></promotion-wish-lamp-item-view>
 
                 </div>
@@ -36,20 +37,24 @@
                 <div style="margin-top: 120px; margin-left: 43px;">
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[1]"
                                                    :wishLampItem="wishLampObject.brandList[1]"
+                                                   v-on:changeLampState='changeLampStateEvent'
                     ></promotion-wish-lamp-item-view>
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[4]"
                                                    style="margin-top: 50px;"
-                                                   :wishLampItem="wishLampObject.brandList[4]"></promotion-wish-lamp-item-view>
+                                                   :wishLampItem="wishLampObject.brandList[4]"
+                                                   v-on:changeLampState='changeLampStateEvent'></promotion-wish-lamp-item-view>
 
                 </div>
 
                 <!--第三组：上下排列方式-->
                 <div style=";margin-top: 30px; margin-left: 43px;">
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[2]"
-                                                   :wishLampItem="wishLampObject.brandList[2]"></promotion-wish-lamp-item-view>
+                                                   :wishLampItem="wishLampObject.brandList[2]"
+                                                   v-on:changeLampState='changeLampStateEvent'></promotion-wish-lamp-item-view>
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[5]"
                                                    style="margin-top: 50px;"
-                                                   :wishLampItem="wishLampObject.brandList[5]"></promotion-wish-lamp-item-view>
+                                                   :wishLampItem="wishLampObject.brandList[5]"
+                                                   v-on:changeLampState='changeLampStateEvent'></promotion-wish-lamp-item-view>
 
                 </div>
             </div>

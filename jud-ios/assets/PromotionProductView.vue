@@ -129,7 +129,7 @@
             return {
                 seeContent: '进去看看',
                 seeButtonImage: 'see_button.png',
-                topContentText:'[加入我们，创建未来]'
+                topContentText: '[加入我们，创建未来]'
             }
         },
         props: {
