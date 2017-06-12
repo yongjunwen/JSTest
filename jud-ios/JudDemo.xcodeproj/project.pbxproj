@@ -17,6 +17,7 @@
 		0482832D1EC304E200FE287B /* JUDImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 048283291EC304E200FE287B /* JUDImgLoaderDefaultImpl.m */; };
 		0482832E1EC304E200FE287B /* JUDEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0482832C1EC304E200FE287B /* JUDEventModule.m */; };
 		048283321EC3061100FE287B /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 048283311EC3061100FE287B /* index.js */; };
+		28232DAF1EEEAF2A00AF418E /* slider_bg_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 28232DAE1EEEAF2A00AF418E /* slider_bg_image.png */; };
 		2834384B1EE79E9100005393 /* PromotionHome.js in Resources */ = {isa = PBXBuildFile; fileRef = 2834384A1EE79E9100005393 /* PromotionHome.js */; };
 		2834384D1EE8E5E100005393 /* wish_lamp_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2834384C1EE8E5E000005393 /* wish_lamp_icon.png */; };
 		2834384F1EE8EACB00005393 /* wish_lamp_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2834384E1EE8EACB00005393 /* wish_lamp_button.png */; };
@@ -55,6 +56,7 @@
 		0482832C1EC304E200FE287B /* JUDEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUDEventModule.m; sourceTree = "<group>"; };
 		0482832F1EC3052200FE287B /* AppDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDefine.h; sourceTree = "<group>"; };
 		048283311EC3061100FE287B /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
+		28232DAE1EEEAF2A00AF418E /* slider_bg_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider_bg_image.png; sourceTree = "<group>"; };
 		2834384A1EE79E9100005393 /* PromotionHome.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = PromotionHome.js; sourceTree = "<group>"; };
 		2834384C1EE8E5E000005393 /* wish_lamp_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_lamp_icon.png; sourceTree = "<group>"; };
 		2834384E1EE8EACB00005393 /* wish_lamp_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_lamp_button.png; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		048283301EC3061100FE287B /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				28232DAE1EEEAF2A00AF418E /* slider_bg_image.png */,
 				283438521EE931AF00005393 /* see_button.png */,
 				283438501EE92E6E00005393 /* wish_lamp_bg_image.png */,
 				2834384E1EE8EACB00005393 /* wish_lamp_button.png */,
@@ -289,6 +292,7 @@
 				2834384F1EE8EACB00005393 /* wish_lamp_button.png in Resources */,
 				2834384D1EE8E5E100005393 /* wish_lamp_icon.png in Resources */,
 				0482830C1EC303E200FE287B /* Main.storyboard in Resources */,
+				28232DAF1EEEAF2A00AF418E /* slider_bg_image.png in Resources */,
 				048283321EC3061100FE287B /* index.js in Resources */,
 				283438511EE92E6E00005393 /* wish_lamp_bg_image.png in Resources */,
 			);
