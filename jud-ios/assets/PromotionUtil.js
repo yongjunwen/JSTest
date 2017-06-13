@@ -20,6 +20,6 @@ function getHeight(height) {
     var deviceHeight = this.$getConfig().env.deviceHeight;
     var deviceWidth = this.$getConfig().env.deviceWidth;
 
-    var _height = height * deviceWidth / 750;
-    return _height;
+    //            获取屏幕布局高度
+    return 750 / deviceWidth * deviceHeight;
 }
