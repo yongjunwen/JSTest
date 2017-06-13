@@ -99,10 +99,9 @@
 	    "width": 750
 	  },
 	  "contentView": {
-	    "top": 0,
+	    "top": 180,
 	    "position": "absolute",
-	    "width": 750,
-	    "justifyContent": "center"
+	    "width": 750
 	  },
 	  "slider-neighbor": {
 	    "top": 0,
@@ -348,12 +347,12 @@
 
 	        //            获取屏幕布局高度
 	        var height = _PromotionUtil2.default.getHeight(this); //750 / deviceWidth * deviceHeight;
-	        var testheight = _PromotionUtil2.default.getHeight(this);
-	        console.log('testheight=' + testheight);
+	        //            var testheight = Util.getHeight(this);
+	        //            console.log('testheight='+testheight);
 
-	        var sliderHeight = _PromotionUtil2.default.getSliderHeight(this);
+	        var sliderH = _PromotionUtil2.default.getSliderHeight(this);
 
-	        this.sliderHeight = sliderHeight;
+	        this.sliderHeight = sliderH;
 
 	        //            设备类型匹配
 	        if (platform === "ios") {
@@ -684,8 +683,13 @@
 	    data: function data() {
 	        return {
 	            seeContent: '进去看看',
+	            brandRootHeight: 0,
 	            brandItemHeight: 0,
 	            brandItemWidth: 0,
+	            topItemBgHeight: 0,
+	            brandLogoHeight: 0,
+	            brandLogoWidth: 0,
+	            brandItemBottomImageHeight: 0,
 	            seeButtonImage: 'see_button.png',
 	            topContentText: '[加入我们，创建未来]'
 	        };
@@ -702,10 +706,20 @@
 	        }
 	    },
 	    created: function created() {
+	        this.brandRootHeight = _PromotionUtil2.default.getSliderHeight(this);
 	        this.brandItemHeight = _PromotionUtil2.default.getBrandItemHeight(this);
 	        this.brandItemWidth = _PromotionUtil2.default.getBrandItemWidth(this);
+	        this.topItemBgHeight = _PromotionUtil2.default.getBrandItemTopBgHeight(this);
+
+	        this.brandLogoHeight = _PromotionUtil2.default.getBrandLogoHeight(this);
+	        this.brandLogoWidth = _PromotionUtil2.default.getBrandLogoWidth(this);
+
+	        this.brandItemBottomImageHeight = _PromotionUtil2.default.getBrandBottomImageHeight(this);
 	    }
 	}; //
+	//
+	//
+	//
 	//
 	//
 	//
@@ -880,7 +894,7 @@
 	    },
 
 	    /*
-	     设计BrandIte宽高为600 * 910
+	     设计BrandItem宽高为600 * 910
 	     */
 	    getBrandItemWidth: function getBrandItemWidth(_this) {
 	        var brandItemH = this.getBrandItemHeight(_this);
@@ -891,8 +905,39 @@
 	        var sliderHeight = this.getSliderHeight(_this);
 	        var brandItemHeight = sliderHeight - 30;
 	        return brandItemHeight;
-	    }
+	    },
 
+	    /*
+	     设计BrandItem 头部图片背景 600 * 260
+	     */
+	    getBrandItemTopBgHeight: function getBrandItemTopBgHeight(_this) {
+	        var itemWidth = this.getBrandItemWidth(_this);
+	        var topBgHeight = 260 / 600 * itemWidth;
+	        return topBgHeight;
+	    },
+
+	    /*
+	     设计BrandItem 头部图片背景上品牌logo  212 * 70
+	     */
+	    getBrandLogoWidth: function getBrandLogoWidth(_this) {
+	        var itemWidth = this.getBrandItemWidth(_this);
+	        var logoWidth = 212 * (itemWidth / 600);
+	        return logoWidth;
+	    },
+
+	    getBrandLogoHeight: function getBrandLogoHeight(_this) {
+	        var logoWidth = this.getBrandLogoWidth(_this);
+	        var logoH = 70 / 212 * logoWidth;
+	        return logoH;
+	    },
+	    /*
+	     设计BrandItem 底部背景图宽高 600 * 550
+	     */
+	    getBrandBottomImageHeight: function getBrandBottomImageHeight(_this) {
+	        var itemWidth = this.getBrandItemWidth(_this);
+	        var bottomImageH = 550 / 600 * itemWidth;
+	        return bottomImageH;
+	    }
 	};
 	module.exports = exports["default"];
 
@@ -904,7 +949,7 @@
 	  return _c('div', {
 	    staticClass: ["rootDiv"],
 	    style: {
-	      height: _vm.brandItemHeight,
+	      height: _vm.brandRootHeight,
 	      width: _vm.brandItemWidth
 	    }
 	  }, [_c('div', {
@@ -914,20 +959,35 @@
 	      width: _vm.brandItemWidth
 	    }
 	  }, [_c('div', {
-	    staticClass: ["topItemBg"]
+	    staticClass: ["topItemBg"],
+	    style: {
+	      height: _vm.topItemBgHeight,
+	      width: _vm.brandItemWidth
+	    }
 	  }, [_c('image', {
 	    staticClass: ["topItemBgImage"],
+	    style: {
+	      height: _vm.topItemBgHeight,
+	      width: _vm.brandItemWidth
+	    },
 	    attrs: {
 	      "src": _vm.itemProduct.topPic
 	    }
 	  }), _c('div', {
-	    staticClass: ["topItemContent"]
+	    staticClass: ["topItemContent"],
+	    style: {
+	      width: _vm.brandItemWidth
+	    }
 	  }, [_c('image', {
 	    staticStyle: {
 	      width: "212px",
 	      height: "70px",
 	      backgroundColor: "aquamarine",
 	      marginTop: "18px"
+	    },
+	    style: {
+	      height: _vm.brandLogoHeight,
+	      width: _vm.brandLogoWidth
 	    },
 	    attrs: {
 	      "src": _vm.itemProduct.brandLogo
@@ -938,6 +998,10 @@
 	    staticClass: ["topItemContentText"]
 	  }, [_vm._v(_vm._s(_vm.topContentText))])])]), _c('image', {
 	    staticClass: ["bottom-image"],
+	    style: {
+	      height: _vm.brandItemBottomImageHeight,
+	      width: _vm.brandItemWidth
+	    },
 	    attrs: {
 	      "src": _vm.itemProduct.pic
 	    }
@@ -946,6 +1010,9 @@
 	    staticStyle: {
 	      justifyContent: "center",
 	      alignItems: "center"
+	    },
+	    style: {
+	      width: _vm.brandItemWidth
 	    }
 	  }, [_c('text', {
 	    staticClass: ["wishText"]

@@ -36,7 +36,7 @@ export default {
     },
 
     /*
-     设计BrandIte宽高为600 * 910
+     设计BrandItem宽高为600 * 910
      */
     getBrandItemWidth: function (_this) {
         var brandItemH = this.getBrandItemHeight(_this);
@@ -49,4 +49,35 @@ export default {
         return brandItemHeight;
     },
 
+    /*
+     设计BrandItem 头部图片背景 600 * 260
+     */
+    getBrandItemTopBgHeight: function (_this) {
+        var itemWidth = this.getBrandItemWidth(_this);
+        var topBgHeight = (260 / 600) * itemWidth;
+        return topBgHeight;
+    },
+
+    /*
+     设计BrandItem 头部图片背景上品牌logo  212 * 70
+     */
+    getBrandLogoWidth:function (_this) {
+        var itemWidth = this.getBrandItemWidth(_this);
+        var logoWidth = 212 * (itemWidth / 600);
+        return logoWidth;
+    },
+
+    getBrandLogoHeight:function (_this) {
+        var logoWidth = this.getBrandLogoWidth(_this);
+        var logoH = (70 / 212) * logoWidth;
+        return logoH;
+    },
+    /*
+     设计BrandItem 底部背景图宽高 600 * 550
+     */
+    getBrandBottomImageHeight:function (_this) {
+        var itemWidth = this.getBrandItemWidth(_this);
+        var bottomImageH = (550 / 600) * itemWidth;
+        return bottomImageH;
+    }
 }

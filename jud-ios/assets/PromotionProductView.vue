@@ -1,23 +1,26 @@
 <!--专属优惠商品卡片视图-->
 <template>
 
-    <div class="rootDiv" :style="{height:brandItemHeight,width:brandItemWidth}">
+    <div class="rootDiv" :style="{height:brandRootHeight,width:brandItemWidth}">
 
         <div class="slider-item" :style="{height:brandItemHeight,width:brandItemWidth}">
-            <div class="topItemBg">
-                <image class="topItemBgImage" :src="itemProduct.topPic"></image>
-                <div class="topItemContent">
+            <div class="topItemBg" :style="{height:topItemBgHeight,width:brandItemWidth}">
+                <image class="topItemBgImage" :src="itemProduct.topPic" :style="{height:topItemBgHeight,width:brandItemWidth}"></image>
+                <div class="topItemContent" :style="{width:brandItemWidth}">
                     <image style="width:212px;height: 70px;background-color: aquamarine ; margin-top: 18px;"
+                           :style="{height:brandLogoHeight,width:brandLogoWidth}"
                            :src="itemProduct.brandLogo"></image>
                     <text class="lineItem">-·-</text>
                     <text class="topItemContentText">{{topContentText}}</text>
                 </div>
             </div>
 
-            <image class="bottom-image" :src="itemProduct.pic"></image>
+            <image class="bottom-image" :src="itemProduct.pic"
+                   :style="{height:brandItemBottomImageHeight,width:brandItemWidth}"></image>
 
         </div>
-        <div class="bottomDiv" style="justify-content: center; align-items: center;">
+        <div class="bottomDiv" style="justify-content: center; align-items: center;"
+             :style="{width:brandItemWidth}">
             <text class="wishText">{{itemProduct.name}}</text>
             <div class="seeDiv"
                  @click="toSeeClick()">
@@ -129,8 +132,13 @@
         data: function () {
             return {
                 seeContent: '进去看看',
+                brandRootHeight: 0,
                 brandItemHeight: 0,
                 brandItemWidth: 0,
+                topItemBgHeight: 0,
+                brandLogoHeight: 0,
+                brandLogoWidth: 0,
+                brandItemBottomImageHeight: 0,
                 seeButtonImage: 'see_button.png',
                 topContentText: '[加入我们，创建未来]'
             }
@@ -147,8 +155,15 @@
             }
         },
         created: function () {
+            this.brandRootHeight = Util.getSliderHeight(this);
             this.brandItemHeight = Util.getBrandItemHeight(this);
             this.brandItemWidth = Util.getBrandItemWidth(this);
+            this.topItemBgHeight = Util.getBrandItemTopBgHeight(this);
+
+            this.brandLogoHeight = Util.getBrandLogoHeight(this);
+            this.brandLogoWidth = Util.getBrandLogoWidth(this);
+
+            this.brandItemBottomImageHeight = Util.getBrandBottomImageHeight(this);
         }
     }
 </script>

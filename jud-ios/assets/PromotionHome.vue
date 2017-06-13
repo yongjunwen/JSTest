@@ -200,12 +200,12 @@
 
 //            获取屏幕布局高度
             var height = Util.getHeight(this);//750 / deviceWidth * deviceHeight;
-            var testheight = Util.getHeight(this);
-            console.log('testheight='+testheight);
+//            var testheight = Util.getHeight(this);
+//            console.log('testheight='+testheight);
 
-            var sliderHeight = Util.getSliderHeight(this);
+            var sliderH = Util.getSliderHeight(this);
 
-            this.sliderHeight = sliderHeight;
+            this.sliderHeight = sliderH;
 
 //            设备类型匹配
             if (platform === "ios") {
@@ -241,11 +241,11 @@
     }
 
     .contentView {
-        top: 0;
+        /*头部留够导航高度间距*/
+        top: 180px;
         position: absolute;
         width: 750px;
-        /*mark：目前高度在android上拿到的不准备 设置center就会偏下*/
-        justify-content: center;
+        /*justify-content: center;*/
     }
 
     .slider-neighbor {
