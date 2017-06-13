@@ -92,9 +92,6 @@
 /***/ (function(module, exports) {
 
 	module.exports = {
-	  "rootDiv": {
-	    "backgroundColor": "#FFFF00"
-	  },
 	  "bgView": {
 	    "width": 750
 	  },
@@ -155,11 +152,11 @@
 
 	var _PromotionProductView2 = _interopRequireDefault(_PromotionProductView);
 
-	var _PromotionWishLampView = __webpack_require__(11);
+	var _PromotionWishLampView = __webpack_require__(12);
 
 	var _PromotionWishLampView2 = _interopRequireDefault(_PromotionWishLampView);
 
-	var _PromotionUtil = __webpack_require__(19);
+	var _PromotionUtil = __webpack_require__(10);
 
 	var _PromotionUtil2 = _interopRequireDefault(_PromotionUtil);
 
@@ -350,12 +347,12 @@
 	        console.log("*==deviceHeight=" + deviceHeight + "==deviceWidth=" + deviceWidth);
 
 	        //            获取屏幕布局高度
-	        var height = 750 / deviceWidth * deviceHeight;
+	        var height = _PromotionUtil2.default.getHeight(this); //750 / deviceWidth * deviceHeight;
+	        var testheight = _PromotionUtil2.default.getHeight(this);
+	        console.log('testheight=' + testheight);
 
-	        var sliderHeight = 940;
-	        //            var sliderHeight = 940 * deviceWidth / 750;
+	        var sliderHeight = _PromotionUtil2.default.getSliderHeight(this);
 
-	        //            var sliderHeight =   750 * (750/940);
 	        this.sliderHeight = sliderHeight;
 
 	        //            设备类型匹配
@@ -567,7 +564,7 @@
 	__vue_exports__ = __webpack_require__(9)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(10)
+	var __vue_template__ = __webpack_require__(11)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -669,143 +666,26 @@
 
 /***/ }),
 /* 9 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
+
+	var _PromotionUtil = __webpack_require__(10);
+
+	var _PromotionUtil2 = _interopRequireDefault(_PromotionUtil);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
 	    data: function data() {
 	        return {
 	            seeContent: '进去看看',
+	            brandItemHeight: 0,
+	            brandItemWidth: 0,
 	            seeButtonImage: 'see_button.png',
 	            topContentText: '[加入我们，创建未来]'
 	        };
@@ -820,19 +700,219 @@
 	        toSeeClick: function toSeeClick() {
 	            console.log('--------toSeeClick----+++');
 	        }
+	    },
+	    created: function created() {
+	        this.brandItemHeight = _PromotionUtil2.default.getBrandItemHeight(this);
+	        this.brandItemWidth = _PromotionUtil2.default.getBrandItemWidth(this);
 	    }
-	};
+	}; //
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
 	module.exports = exports['default'];
 
 /***/ }),
 /* 10 */
 /***/ (function(module, exports) {
 
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	/**
+	 * Created by wenyongjun on 2017/6/8.
+	 */
+
+	/*
+	 todo:获取对应宽度 待完善
+	 */
+
+	exports.default = {
+
+	    getWidth: function getWidth(_this, width) {
+	        var platform = this.$getConfig().env.platform.toLowerCase();
+	        //            获取设备高度
+	        var deviceWidth = this.$getConfig().env.deviceWidth;
+
+	        var _width = width * deviceWidth / 750;
+	        return _width;
+	    },
+
+	    getHeight: function getHeight(_this) {
+	        var platform = _this.$getConfig().env.platform.toLowerCase();
+	        //            获取设备高度
+	        var deviceHeight = _this.$getConfig().env.deviceHeight;
+	        var deviceWidth = _this.$getConfig().env.deviceWidth;
+
+	        //            获取屏幕布局高度
+	        return 750 / deviceWidth * deviceHeight;
+	    },
+	    /*
+	     设计slider宽高为 750*940
+	     */
+	    getSliderHeight: function getSliderHeight(_this) {
+	        var screenHeight = this.getHeight(_this);
+	        var sliderH = screenHeight - 400; //400表示减去上下 navi 、tab 、 间距高度
+	        return sliderH;
+	    },
+
+	    /*
+	     设计BrandIte宽高为600 * 910
+	     */
+	    getBrandItemWidth: function getBrandItemWidth(_this) {
+	        var brandItemH = this.getBrandItemHeight(_this);
+	        var brandItemW = 600 / 910 * brandItemH;
+	        return brandItemW;
+	    },
+	    getBrandItemHeight: function getBrandItemHeight(_this) {
+	        var sliderHeight = this.getSliderHeight(_this);
+	        var brandItemHeight = sliderHeight - 30;
+	        return brandItemHeight;
+	    }
+
+	};
+	module.exports = exports["default"];
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["rootDiv"]
+	    staticClass: ["rootDiv"],
+	    style: {
+	      height: _vm.brandItemHeight,
+	      width: _vm.brandItemWidth
+	    }
 	  }, [_c('div', {
-	    staticClass: ["slider-item"]
+	    staticClass: ["slider-item"],
+	    style: {
+	      height: _vm.brandItemHeight,
+	      width: _vm.brandItemWidth
+	    }
 	  }, [_c('div', {
 	    staticClass: ["topItemBg"]
 	  }, [_c('image', {
@@ -889,21 +969,21 @@
 	module.exports.render._withStripped = true
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(12)
+	__vue_styles__.push(__webpack_require__(13)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(13)
+	__vue_exports__ = __webpack_require__(14)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(18)
+	var __vue_template__ = __webpack_require__(19)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -933,7 +1013,7 @@
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -977,7 +1057,7 @@
 	}
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -986,7 +1066,7 @@
 	    value: true
 	});
 
-	var _PromotionWishLampItemView = __webpack_require__(14);
+	var _PromotionWishLampItemView = __webpack_require__(15);
 
 	var _PromotionWishLampItemView2 = _interopRequireDefault(_PromotionWishLampItemView);
 
@@ -1172,21 +1252,21 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(15)
+	__vue_styles__.push(__webpack_require__(16)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(16)
+	__vue_exports__ = __webpack_require__(17)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(17)
+	var __vue_template__ = __webpack_require__(18)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1216,7 +1296,7 @@
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -1256,7 +1336,7 @@
 	}
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1417,7 +1497,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1480,7 +1560,7 @@
 	module.exports.render._withStripped = true
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1593,38 +1673,6 @@
 	  }, [_vm._v(_vm._s(_vm.bottomTipContent))])])])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports) {
-
-	"use strict";
-
-	/**
-	 * Created by wenyongjun on 2017/6/8.
-	 */
-
-	/*
-	 todo:获取对应宽度 待完善
-	 */
-	function getWidth(width) {
-	    var platform = this.$getConfig().env.platform.toLowerCase();
-	    //            获取设备高度
-	    var deviceWidth = this.$getConfig().env.deviceWidth;
-
-	    var _width = width * deviceWidth / 750;
-	    return _width;
-	}
-
-	function getHeight(height) {
-	    var platform = this.$getConfig().env.platform.toLowerCase();
-	    //            获取设备高度
-	    var deviceHeight = this.$getConfig().env.deviceHeight;
-	    var deviceWidth = this.$getConfig().env.deviceWidth;
-
-	    //            获取屏幕布局高度
-	    return 750 / deviceWidth * deviceHeight;
-	}
 
 /***/ }),
 /* 20 */

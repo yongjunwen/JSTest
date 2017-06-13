@@ -52,7 +52,7 @@
     import PromotionBottom from './PromotionBottom.vue'
     import PromotionProductView from './PromotionProductView.vue'
     import PromotionWishLampView from './PromotionWishLampView.vue'
-    import PromotionUtil from './PromotionUtil.js'
+    import Util from './PromotionUtil.js'
 
     const modal = jud.requireModule('modal')
     export default {
@@ -199,12 +199,12 @@
             console.log("*==deviceHeight=" + deviceHeight + "==deviceWidth=" + deviceWidth);
 
 //            获取屏幕布局高度
-            var height = 750 / deviceWidth * deviceHeight;
+            var height = Util.getHeight(this);//750 / deviceWidth * deviceHeight;
+            var testheight = Util.getHeight(this);
+            console.log('testheight='+testheight);
 
-            var sliderHeight = 940;
-//            var sliderHeight = 940 * deviceWidth / 750;
+            var sliderHeight = Util.getSliderHeight(this);
 
-//            var sliderHeight =   750 * (750/940);
             this.sliderHeight = sliderHeight;
 
 //            设备类型匹配
@@ -227,7 +227,7 @@
 <style scoped>
 
     .rootDiv {
-        background-color: yellow;
+        /*background-color: yellow;*/
     }
 
     .bgView {

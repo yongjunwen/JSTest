@@ -1,9 +1,9 @@
 <!--专属优惠商品卡片视图-->
 <template>
 
-    <div class="rootDiv">
+    <div class="rootDiv" :style="{height:brandItemHeight,width:brandItemWidth}">
 
-        <div class="slider-item">
+        <div class="slider-item" :style="{height:brandItemHeight,width:brandItemWidth}">
             <div class="topItemBg">
                 <image class="topItemBgImage" :src="itemProduct.topPic"></image>
                 <div class="topItemContent">
@@ -124,10 +124,13 @@
 </style>
 
 <script>
+    import Util from './PromotionUtil.js'
     export default {
         data: function () {
             return {
                 seeContent: '进去看看',
+                brandItemHeight: 0,
+                brandItemWidth: 0,
                 seeButtonImage: 'see_button.png',
                 topContentText: '[加入我们，创建未来]'
             }
@@ -142,6 +145,10 @@
             toSeeClick: function () {
                 console.log('--------toSeeClick----+++')
             }
+        },
+        created: function () {
+            this.brandItemHeight = Util.getBrandItemHeight(this);
+            this.brandItemWidth = Util.getBrandItemWidth(this);
         }
     }
 </script>
