@@ -7,7 +7,7 @@
         </div>
 
         <!-- :style="{height:deviceHeight}"-->
-        <div class="contentView" :style="{height:deviceHeight}">
+        <div class="contentView" :style="{height:deviceHeight,top:contentTop}">
             <slider-neighbor class="slider-neighbor" neighborAlpha="0.9"
                              neighborSpace="55" neighborScale="0.9" currentItemScale="1"
                              :index="selectIndex" @change="changeEvent" :style="{height:sliderHeight}">
@@ -63,6 +63,7 @@
         },
         data: {
             test: 'test222',
+            contentTop: 0,
             selectIndex: 0,
             buttonBgSelectColor: "#000000",
             deviceHeight: 10,
@@ -210,10 +211,12 @@
 //            设备类型匹配
             if (platform === "ios") {
                 height -= 20;
+                this.contentTop = 180;
                 console.log("=匹配到=iOS")
             } else if (platform === "android") {
                 height -= 200;
                 console.log("=匹配到=Android")
+                this.contentTop = 0;
             } else {
                 console.log("=没有匹配到=")
             }

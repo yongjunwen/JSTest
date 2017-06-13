@@ -221,6 +221,7 @@
 	    },
 	    data: {
 	        test: 'test222',
+	        contentTop: 0,
 	        selectIndex: 0,
 	        buttonBgSelectColor: "#000000",
 	        deviceHeight: 10,
@@ -357,10 +358,12 @@
 	        //            设备类型匹配
 	        if (platform === "ios") {
 	            height -= 20;
+	            this.contentTop = 180;
 	            console.log("=匹配到=iOS");
 	        } else if (platform === "android") {
 	            height -= 200;
 	            console.log("=匹配到=Android");
+	            this.contentTop = 0;
 	        } else {
 	            console.log("=没有匹配到=");
 	        }
@@ -1764,7 +1767,8 @@
 	  })]), _c('div', {
 	    staticClass: ["contentView"],
 	    style: {
-	      height: _vm.deviceHeight
+	      height: _vm.deviceHeight,
+	      top: _vm.contentTop
 	    }
 	  }, [_c('slider-neighbor', {
 	    staticClass: ["slider-neighbor"],
