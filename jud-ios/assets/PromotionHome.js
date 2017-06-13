@@ -868,14 +868,14 @@
 
 	exports.default = {
 
-	    getWidth: function getWidth(_this, width) {
-	        var platform = this.$getConfig().env.platform.toLowerCase();
-	        //            获取设备高度
-	        var deviceWidth = this.$getConfig().env.deviceWidth;
-
-	        var _width = width * deviceWidth / 750;
-	        return _width;
-	    },
+	    //     getWidth: function (_this, width) {
+	    //         var platform = this.$getConfig().env.platform.toLowerCase();
+	    // //            获取设备高度
+	    //         var deviceWidth = this.$getConfig().env.deviceWidth;
+	    //
+	    //         var _width = width * deviceWidth / 750;
+	    //         return _width;
+	    //     },
 
 	    getHeight: function getHeight(_this) {
 	        var platform = _this.$getConfig().env.platform.toLowerCase();
@@ -953,6 +953,56 @@
 	        var sliderHeight = this.getSliderHeight(_this);
 	        var wishItemHeight = sliderHeight;
 	        return wishItemHeight;
+	    },
+
+	    /*
+	     宽、高度适配比例
+	     */
+	    scale: function scale(_this) {
+	        // var deviceWidth = _this.$getConfig().env.deviceWidth;
+	        //
+	        // var _scale = deviceWidth / 750;
+
+	        var brandItemH = this.getBrandItemHeight(_this);
+	        var _scale = brandItemH / 910;
+	        return _scale;
+	    },
+
+	    /*
+	     =====================
+	     心愿灯元素相关frame
+	     =====================
+	     */
+	    //宽为132
+	    getLampItemWidth: function getLampItemWidth(_this) {
+	        // var wishItemW = this.getWishItemWidth(_this);
+	        // var lampItemW = (132 / 644) * wishItemW;
+	        // return lampItemW;
+	        return 132 * this.scale(_this);
+	    },
+	    //132 * 144
+	    getLampItemIconHeight: function getLampItemIconHeight(_this) {
+	        // var lampW = this.getLampItemWidth(_this);
+	        // var lampIconH = ( 144 / 132) * lampW;
+	        // return lampIconH;
+	        return 144 * this.scale(_this);
+	    },
+
+	    /*
+	     品牌logo为96 * 60
+	     */
+	    getLampBrandLogoWidth: function getLampBrandLogoWidth(_this) {
+	        return 96 * this.scale(_this);
+	    },
+	    getLampBrandLogoHeight: function getLampBrandLogoHeight(_this) {
+	        return 60 * this.scale(_this);
+	    },
+
+	    getLampButtonBgHeight: function getLampButtonBgHeight(_this) {
+	        return 46 * this.scale(_this);
+	    },
+	    getLampButtonBgIconHeight: function getLampButtonBgIconHeight(_this) {
+	        return 126 * this.scale(_this);
 	    }
 	};
 	module.exports = exports["default"];
@@ -1431,13 +1481,24 @@
 
 /***/ }),
 /* 17 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _PromotionUtil = __webpack_require__(10);
+
+	var _PromotionUtil2 = _interopRequireDefault(_PromotionUtil);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	//
+	//
+	//
+	//
 	//
 	//
 	//
@@ -1523,6 +1584,14 @@
 	    //        vue子视图引用的话data要写成如下方法样式
 	    data: function data() {
 	        return {
+	            lampItemWidth: 0,
+	            lampIconHeight: 0,
+	            brandLogoHeight: 0,
+	            brandLogoWidth: 0,
+
+	            lampButtonBgHeight: 0,
+	            lampButtonIconWidth: 0,
+
 	            cardTitle: "心愿灯",
 	            lampText: '点亮',
 	            lampTextColor: '#ffffff',
@@ -1561,6 +1630,16 @@
 	            this.lampText = "已变灰";
 	        }
 	    },
+	    created: function created() {
+	        this.lampItemWidth = _PromotionUtil2.default.getLampItemWidth(this);
+	        this.lampIconHeight = _PromotionUtil2.default.getLampItemIconHeight(this);
+
+	        this.brandLogoWidth = _PromotionUtil2.default.getLampBrandLogoWidth(this);
+	        this.brandLogoHeight = _PromotionUtil2.default.getLampBrandLogoHeight(this);
+
+	        this.lampButtonBgHeight = _PromotionUtil2.default.getLampButtonBgHeight(this);
+	        this.lampButtonIconWidth = _PromotionUtil2.default.getLampButtonBgIconHeight(this);
+	    },
 	    methods: {
 	        clickLampEvent: function clickLampEvent() {
 	            //                lampState 1是正常状态 2是已点亮 3是不可点亮变灰状态
@@ -1568,7 +1647,7 @@
 	            if (this.wishLampItem.lampState === '2' || this.wishLampItem.lampState === '3') {
 	                console.log('==已经不能再点击了');
 	                //                    todo:show alert 不允许再点亮许愿灯文案提示  具体待向产品确认
-	                modal.alert({ message: "已经点亮，不允许再点亮许愿灯", okTitle: "确认", cancelTitle: '取消' });
+	                //                    modal.alert({message: "已经点亮，不允许再点亮许愿灯", okTitle: "确认", cancelTitle: '取消'});
 	                return;
 	            }
 	            console.log('=======clickLampEvent======');
@@ -1599,15 +1678,26 @@
 	    staticClass: ["rootDiv"]
 	  }, [_c('div', {
 	    staticClass: ["lampItem"],
+	    style: {
+	      width: _vm.lampItemWidth
+	    },
 	    on: {
 	      "click": function($event) {
 	        _vm.clickLampEvent()
 	      }
 	    }
 	  }, [_c('div', {
-	    staticClass: ["lampIconBg"]
+	    staticClass: ["lampIconBg"],
+	    style: {
+	      height: _vm.lampIconHeight,
+	      width: _vm.lampItemWidth
+	    }
 	  }, [_c('image', {
 	    staticClass: ["lampIcon"],
+	    style: {
+	      height: _vm.lampIconHeight,
+	      width: _vm.lampItemWidth
+	    },
 	    attrs: {
 	      "src": _vm.wishLampIcon
 	    }
@@ -1616,22 +1706,34 @@
 	      position: "absolute",
 	      top: "0",
 	      justifyContent: "center",
-	      alignItems: "center",
-	      width: "132px",
-	      height: "144px"
+	      alignItems: "center"
+	    },
+	    style: {
+	      height: _vm.lampIconHeight,
+	      width: _vm.lampItemWidth
 	    }
 	  }, [_c('image', {
 	    staticClass: ["brandLogo"],
 	    style: {
-	      opacity: _vm.brandLogoImageOpacity
+	      opacity: _vm.brandLogoImageOpacity,
+	      height: _vm.brandLogoHeight,
+	      width: _vm.brandLogoWidth
 	    },
 	    attrs: {
 	      "src": _vm.wishLampItem.brandIcon
 	    }
 	  })])]), _c('div', {
-	    staticClass: ["lampButtonBg"]
+	    staticClass: ["lampButtonBg"],
+	    style: {
+	      height: _vm.lampButtonBgHeight,
+	      width: _vm.lampItemWidth
+	    }
 	  }, [_c('image', {
 	    staticClass: ["lampButtonIcon"],
+	    style: {
+	      height: _vm.lampButtonBgHeight,
+	      width: _vm.lampButtonIconWidth
+	    },
 	    attrs: {
 	      "src": _vm.withLampButtonIcon
 	    }
@@ -1643,6 +1745,10 @@
 	      alignItems: "center",
 	      width: "132px",
 	      height: "46px"
+	    },
+	    style: {
+	      height: _vm.lampButtonBgHeight,
+	      width: _vm.lampItemWidth
 	    }
 	  }, [_c('text', {
 	    staticClass: ["lanmpButtonText"],

@@ -8,14 +8,14 @@
 
 export default {
 
-    getWidth: function (_this, width) {
-        var platform = this.$getConfig().env.platform.toLowerCase();
-//            获取设备高度
-        var deviceWidth = this.$getConfig().env.deviceWidth;
-
-        var _width = width * deviceWidth / 750;
-        return _width;
-    },
+//     getWidth: function (_this, width) {
+//         var platform = this.$getConfig().env.platform.toLowerCase();
+// //            获取设备高度
+//         var deviceWidth = this.$getConfig().env.deviceWidth;
+//
+//         var _width = width * deviceWidth / 750;
+//         return _width;
+//     },
 
     getHeight: function (_this) {
         var platform = _this.$getConfig().env.platform.toLowerCase();
@@ -95,4 +95,54 @@ export default {
         var wishItemHeight = sliderHeight;
         return wishItemHeight;
     },
+
+    /*
+     宽、高度适配比例
+     */
+    scale: function (_this) {
+        // var deviceWidth = _this.$getConfig().env.deviceWidth;
+        //
+        // var _scale = deviceWidth / 750;
+
+        var brandItemH = this.getBrandItemHeight(_this);
+        var _scale = brandItemH / 910;
+        return _scale;
+    },
+
+    /*
+     =====================
+     心愿灯元素相关frame
+     =====================
+     */
+    //宽为132
+    getLampItemWidth: function (_this) {
+        // var wishItemW = this.getWishItemWidth(_this);
+        // var lampItemW = (132 / 644) * wishItemW;
+        // return lampItemW;
+        return 132 * this.scale(_this);
+    },
+    //132 * 144
+    getLampItemIconHeight: function (_this) {
+        // var lampW = this.getLampItemWidth(_this);
+        // var lampIconH = ( 144 / 132) * lampW;
+        // return lampIconH;
+        return 144 * this.scale(_this);
+    },
+
+    /*
+     品牌logo为96 * 60
+     */
+    getLampBrandLogoWidth: function (_this) {
+        return 96 * this.scale(_this);
+    },
+    getLampBrandLogoHeight: function (_this) {
+        return 60 * this.scale(_this);
+    },
+
+    getLampButtonBgHeight: function (_this) {
+        return 46 * this.scale(_this);
+    },
+    getLampButtonBgIconHeight: function (_this) {
+        return 126 * this.scale(_this);
+    }
 }

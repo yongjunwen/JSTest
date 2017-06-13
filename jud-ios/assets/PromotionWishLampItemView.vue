@@ -2,20 +2,24 @@
 <template>
     <!--lampState 1是正常状态 2是已点亮 3是不可点亮变灰状态-->
     <div class="rootDiv">
-        <!---->
-        <div class="lampItem" @click="clickLampEvent()">
+        <!--:style="{height:wishRootHeight,width:wishRootWidth}"-->
+        <div class="lampItem" :style="{width:lampItemWidth}" @click="clickLampEvent()">
 
-            <div class="lampIconBg">
-                <image class="lampIcon" :src="wishLampIcon"></image>
-                <div style="position: absolute;top: 0;justify-content: center;align-items: center;width: 132px;height: 144px">
+            <div class="lampIconBg" :style="{height:lampIconHeight,width:lampItemWidth}">
+                <image class="lampIcon" :src="wishLampIcon"
+                       :style="{height:lampIconHeight,width:lampItemWidth}"></image>
+                <div style="position: absolute;top: 0;justify-content: center;align-items: center;"
+                     :style="{height:lampIconHeight,width:lampItemWidth}">
                     <image class="brandLogo"
-                           :style="{opacity:brandLogoImageOpacity}"
+                           :style="{opacity:brandLogoImageOpacity,height:brandLogoHeight,width:brandLogoWidth}"
                            :src="wishLampItem.brandIcon"></image>
                 </div>
             </div>
-            <div class="lampButtonBg">
-                <image class="lampButtonIcon" :src="withLampButtonIcon"></image>
-                <div style="position: absolute;top: 0;justify-content: center;align-items: center;width: 132px;height: 46px">
+            <div class="lampButtonBg" :style="{height:lampButtonBgHeight,width:lampItemWidth}">
+                <image class="lampButtonIcon" :src="withLampButtonIcon"
+                       :style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"></image>
+                <div style="position: absolute;top: 0;justify-content: center;align-items: center;width: 132px;height: 46px"
+                     :style="{height:lampButtonBgHeight,width:lampItemWidth}">
                     <text class="lanmpButtonText" :style="{color:lampTextColor}">{{lampText}}</text>
                 </div>
             </div>
@@ -79,10 +83,19 @@
 
 <script>
     const modal = jud.requireModule('modal')
+    import Util from './PromotionUtil.js'
     export default {
 //        vue子视图引用的话data要写成如下方法样式
         data: function () {
             return {
+                lampItemWidth: 0,
+                lampIconHeight: 0,
+                brandLogoHeight: 0,
+                brandLogoWidth: 0,
+
+                lampButtonBgHeight: 0,
+                lampButtonIconWidth: 0,
+
                 cardTitle: "心愿灯",
                 lampText: '点亮',
                 lampTextColor: '#ffffff',
@@ -122,6 +135,16 @@
             }
 
         },
+        created: function () {
+            this.lampItemWidth = Util.getLampItemWidth(this);
+            this.lampIconHeight = Util.getLampItemIconHeight(this);
+
+            this.brandLogoWidth = Util.getLampBrandLogoWidth(this);
+            this.brandLogoHeight = Util.getLampBrandLogoHeight(this);
+
+            this.lampButtonBgHeight = Util.getLampButtonBgHeight(this);
+            this.lampButtonIconWidth = Util.getLampButtonBgIconHeight(this);
+        },
         methods: {
             clickLampEvent: function () {
 //                lampState 1是正常状态 2是已点亮 3是不可点亮变灰状态
@@ -129,7 +152,7 @@
                 if (this.wishLampItem.lampState === '2' || this.wishLampItem.lampState === '3') {
                     console.log('==已经不能再点击了')
 //                    todo:show alert 不允许再点亮许愿灯文案提示  具体待向产品确认
-                    modal.alert({message: "已经点亮，不允许再点亮许愿灯", okTitle: "确认", cancelTitle: '取消'});
+//                    modal.alert({message: "已经点亮，不允许再点亮许愿灯", okTitle: "确认", cancelTitle: '取消'});
                     return;
                 }
                 console.log('=======clickLampEvent======');
