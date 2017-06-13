@@ -245,7 +245,7 @@
 
     .contentView {
         /*头部留够导航高度间距*/
-        top: 180px;
+        /*top: 180px;*/
         position: absolute;
         width: 750px;
         /*justify-content: center;*/
@@ -268,7 +268,7 @@
     }
 
     .bottomTab {
-        margin-top: 10px;
+        margin-top: 40px;
         /*width: 750px;*/
         height: 90px;
         /*border-width: 1px;*/

@@ -99,7 +99,6 @@
 	    "width": 750
 	  },
 	  "contentView": {
-	    "top": 180,
 	    "position": "absolute",
 	    "width": 750
 	  },
@@ -109,7 +108,7 @@
 	    "alignItems": "center"
 	  },
 	  "bottomTab": {
-	    "marginTop": 10,
+	    "marginTop": 40,
 	    "height": 90,
 	    "justifyContent": "center",
 	    "alignItems": "center"
@@ -906,7 +905,7 @@
 	    },
 	    getBrandItemHeight: function getBrandItemHeight(_this) {
 	        var sliderHeight = this.getSliderHeight(_this);
-	        var brandItemHeight = sliderHeight - 30;
+	        var brandItemHeight = sliderHeight - 30; //30表示去看看按钮一半的高度
 	        return brandItemHeight;
 	    },
 
@@ -940,6 +939,20 @@
 	        var itemWidth = this.getBrandItemWidth(_this);
 	        var bottomImageH = 550 / 600 * itemWidth;
 	        return bottomImageH;
+	    },
+
+	    /*
+	     设计WishItem宽高为644 * 946
+	     */
+	    getWishItemWidth: function getWishItemWidth(_this) {
+	        var wishItemH = this.getWishItemHeight(_this);
+	        var wishItemW = 644 / 946 * wishItemH;
+	        return wishItemW;
+	    },
+	    getWishItemHeight: function getWishItemHeight(_this) {
+	        var sliderHeight = this.getSliderHeight(_this);
+	        var wishItemHeight = sliderHeight;
+	        return wishItemHeight;
 	    }
 	};
 	module.exports = exports["default"];
@@ -1130,7 +1143,7 @@
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -1140,7 +1153,146 @@
 
 	var _PromotionWishLampItemView2 = _interopRequireDefault(_PromotionWishLampItemView);
 
+	var _PromotionUtil = __webpack_require__(10);
+
+	var _PromotionUtil2 = _interopRequireDefault(_PromotionUtil);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
 	    components: {
@@ -1149,6 +1301,8 @@
 	    //        vue子视图引用的话data要写成如下方法样式
 	    data: function data() {
 	        return {
+	            wishRootHeight: 0,
+	            wishRootWidth: 0,
 	            cardTitle: "心愿灯",
 	            wishLampBg: "wish_lamp_bg_image.png",
 	            tipContent: '30天内努力为你备好，请持续关注',
@@ -1183,143 +1337,13 @@
 	            //
 	            //                }
 	        }
+	    },
+	    created: function created() {
+	        this.wishRootHeight = _PromotionUtil2.default.getWishItemHeight(this);
+	        this.wishRootWidth = _PromotionUtil2.default.getWishItemWidth(this);
 	    }
-	}; //
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-
-	module.exports = exports["default"];
+	};
+	module.exports = exports['default'];
 
 /***/ }),
 /* 15 */
@@ -1635,18 +1659,29 @@
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["rooDiv"]
+	    staticClass: ["rooDiv"],
+	    style: {
+	      height: _vm.wishRootHeight,
+	      width: _vm.wishRootWidth
+	    }
 	  }, [_c('div', {
 	    staticClass: ["bgImageDiv"]
 	  }, [_c('image', {
 	    staticClass: ["bgImage"],
+	    style: {
+	      height: _vm.wishRootHeight,
+	      width: _vm.wishRootWidth
+	    },
 	    attrs: {
 	      "src": _vm.wishLampBg
 	    }
 	  })]), _c('div', {
 	    staticClass: ["contentDiv"]
 	  }, [_c('div', {
-	    staticClass: ["topItemContent"]
+	    staticClass: ["topItemContent"],
+	    style: {
+	      width: _vm.wishRootWidth
+	    }
 	  }, [_c('div', {
 	    staticStyle: {
 	      alignItems: "center",

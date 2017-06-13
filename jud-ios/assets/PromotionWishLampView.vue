@@ -1,15 +1,15 @@
 <!--心愿灯卡片-->
 <template>
 
-    <div class="rooDiv">
+    <div class="rooDiv" :style="{height:wishRootHeight,width:wishRootWidth}">
         <!--todo:背景图片待添加-->
         <div class="bgImageDiv">
-            <image class="bgImage" :src="wishLampBg"></image>
+            <image class="bgImage" :src="wishLampBg" :style="{height:wishRootHeight,width:wishRootWidth}"></image>
         </div>
         <!--内容显示区域-->
         <div class="contentDiv">
             <!--头部区域元素-->
-            <div class="topItemContent">
+            <div class="topItemContent" :style="{width:wishRootWidth}">
                 <div style="align-items: center;justify-content: center;">
                     <text class="topItemContentText">{{cardTitle}}</text>
                     <text class="lineItem">-·-</text>
@@ -134,6 +134,7 @@
 
 <script>
     import PromotionWishLampItemView from './PromotionWishLampItemView.vue'
+    import Util from './PromotionUtil.js'
     export default {
         components: {
             PromotionWishLampItemView
@@ -141,6 +142,8 @@
 //        vue子视图引用的话data要写成如下方法样式
         data: function () {
             return {
+                wishRootHeight: 0,
+                wishRootWidth: 0,
                 cardTitle: "心愿灯",
                 wishLampBg: "wish_lamp_bg_image.png",
                 tipContent: '30天内努力为你备好，请持续关注',
@@ -175,6 +178,10 @@
 //
 //                }
             }
+        },
+        created: function () {
+            this.wishRootHeight = Util.getWishItemHeight(this);
+            this.wishRootWidth = Util.getWishItemWidth(this);
         }
     };
 </script>

@@ -45,7 +45,7 @@ export default {
     },
     getBrandItemHeight: function (_this) {
         var sliderHeight = this.getSliderHeight(_this);
-        var brandItemHeight = sliderHeight - 30;
+        var brandItemHeight = sliderHeight - 30; //30表示去看看按钮一半的高度
         return brandItemHeight;
     },
 
@@ -61,13 +61,13 @@ export default {
     /*
      设计BrandItem 头部图片背景上品牌logo  212 * 70
      */
-    getBrandLogoWidth:function (_this) {
+    getBrandLogoWidth: function (_this) {
         var itemWidth = this.getBrandItemWidth(_this);
         var logoWidth = 212 * (itemWidth / 600);
         return logoWidth;
     },
 
-    getBrandLogoHeight:function (_this) {
+    getBrandLogoHeight: function (_this) {
         var logoWidth = this.getBrandLogoWidth(_this);
         var logoH = (70 / 212) * logoWidth;
         return logoH;
@@ -75,9 +75,24 @@ export default {
     /*
      设计BrandItem 底部背景图宽高 600 * 550
      */
-    getBrandBottomImageHeight:function (_this) {
+    getBrandBottomImageHeight: function (_this) {
         var itemWidth = this.getBrandItemWidth(_this);
         var bottomImageH = (550 / 600) * itemWidth;
         return bottomImageH;
-    }
+    },
+
+
+    /*
+     设计WishItem宽高为644 * 946
+     */
+    getWishItemWidth: function (_this) {
+        var wishItemH = this.getWishItemHeight(_this);
+        var wishItemW = (644 / 946) * wishItemH;
+        return wishItemW;
+    },
+    getWishItemHeight: function (_this) {
+        var sliderHeight = this.getSliderHeight(_this);
+        var wishItemHeight = sliderHeight;
+        return wishItemHeight;
+    },
 }
