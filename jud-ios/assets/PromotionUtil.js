@@ -129,6 +129,15 @@ export default {
         return 144 * this.scale(_this);
     },
 
+    //206 * 190
+    getLampSelectIconWidth: function (_this) {
+
+        return 206 * this.scale(_this);
+    },
+    getLampSelectIconHeight: function (_this) {
+
+        return 190 * this.scale(_this);
+    },
     /*
      品牌logo为96 * 60
      */

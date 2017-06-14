@@ -988,6 +988,15 @@
 	        return 144 * this.scale(_this);
 	    },
 
+	    //206 * 190
+	    getLampSelectIconWidth: function getLampSelectIconWidth(_this) {
+
+	        return 206 * this.scale(_this);
+	    },
+	    getLampSelectIconHeight: function getLampSelectIconHeight(_this) {
+
+	        return 190 * this.scale(_this);
+	    },
 	    /*
 	     品牌logo为96 * 60
 	     */
@@ -1578,6 +1587,22 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	var modal = jud.requireModule('modal');
 	exports.default = {
@@ -1586,6 +1611,10 @@
 	        return {
 	            lampItemWidth: 0,
 	            lampIconHeight: 0,
+
+	            lampIconSelectWidth: 0,
+	            lampIconSelectHeight: 0,
+
 	            brandLogoHeight: 0,
 	            brandLogoWidth: 0,
 
@@ -1596,8 +1625,16 @@
 	            lampText: '点亮',
 	            lampTextColor: '#ffffff',
 	            brandLogoImageOpacity: 1,
-	            wishLampIcon: "wish_lamp_icon.png",
-	            withLampButtonIcon: "wish_lamp_button.png",
+
+	            //                灯笼背景图片
+	            wishLampNomalIcon: "wish_lamp_normal_icon.png",
+	            wishLampSelectIcon: "wish_lamp_select_icon.png",
+	            wishLampDisableIcon: "wish_lamp_disable_icon.png",
+
+	            wishLampNomalBtn: "wish_lamp_normal_btn.png",
+	            wishLampSelectBtn: "wish_lamp_select_btn.png",
+	            wishLampDisableBtn: "wish_lamp_disable_btn.png",
+
 	            tipContent: '30天内努力为你备好，请持续关注'
 	        };
 	    },
@@ -1633,6 +1670,9 @@
 	    created: function created() {
 	        this.lampItemWidth = _PromotionUtil2.default.getLampItemWidth(this);
 	        this.lampIconHeight = _PromotionUtil2.default.getLampItemIconHeight(this);
+
+	        this.lampIconSelectWidth = _PromotionUtil2.default.getLampSelectIconWidth(this);
+	        this.lampIconSelectHeight = _PromotionUtil2.default.getLampSelectIconHeight(this);
 
 	        this.brandLogoWidth = _PromotionUtil2.default.getLampBrandLogoWidth(this);
 	        this.brandLogoHeight = _PromotionUtil2.default.getLampBrandLogoHeight(this);
@@ -1692,16 +1732,34 @@
 	      height: _vm.lampIconHeight,
 	      width: _vm.lampItemWidth
 	    }
-	  }, [_c('image', {
+	  }, [(_vm.wishLampItem.lampState == 1) ? _c('image', {
 	    staticClass: ["lampIcon"],
 	    style: {
 	      height: _vm.lampIconHeight,
 	      width: _vm.lampItemWidth
 	    },
 	    attrs: {
-	      "src": _vm.wishLampIcon
+	      "src": _vm.wishLampNomalIcon
 	    }
-	  }), _c('div', {
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 2) ? _c('image', {
+	    staticClass: ["lampIcon"],
+	    style: {
+	      height: _vm.lampIconSelectHeight,
+	      width: _vm.lampIconSelectWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampSelectIcon
+	    }
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 3) ? _c('image', {
+	    staticClass: ["lampIcon"],
+	    style: {
+	      height: _vm.lampIconHeight,
+	      width: _vm.lampItemWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampDisableIcon
+	    }
+	  }) : _vm._e(), _c('div', {
 	    staticStyle: {
 	      position: "absolute",
 	      top: "0",
@@ -1728,16 +1786,34 @@
 	      height: _vm.lampButtonBgHeight,
 	      width: _vm.lampItemWidth
 	    }
-	  }, [_c('image', {
+	  }, [(_vm.wishLampItem.lampState == 1) ? _c('image', {
 	    staticClass: ["lampButtonIcon"],
 	    style: {
 	      height: _vm.lampButtonBgHeight,
 	      width: _vm.lampButtonIconWidth
 	    },
 	    attrs: {
-	      "src": _vm.withLampButtonIcon
+	      "src": _vm.wishLampNomalBtn
 	    }
-	  }), _c('div', {
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 2) ? _c('image', {
+	    staticClass: ["lampButtonIcon"],
+	    style: {
+	      height: _vm.lampButtonBgHeight,
+	      width: _vm.lampButtonIconWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampSelectBtn
+	    }
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 3) ? _c('image', {
+	    staticClass: ["lampButtonIcon"],
+	    style: {
+	      height: _vm.lampButtonBgHeight,
+	      width: _vm.lampButtonIconWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampDisableBtn
+	    }
+	  }) : _vm._e(), _c('div', {
 	    staticStyle: {
 	      position: "absolute",
 	      top: "0",

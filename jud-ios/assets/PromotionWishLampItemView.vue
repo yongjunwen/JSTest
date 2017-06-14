@@ -6,8 +6,16 @@
         <div class="lampItem" :style="{width:lampItemWidth}" @click="clickLampEvent()">
 
             <div class="lampIconBg" :style="{height:lampIconHeight,width:lampItemWidth}">
-                <image class="lampIcon" :src="wishLampIcon"
-                       :style="{height:lampIconHeight,width:lampItemWidth}"></image>
+                <!--正常状态-->
+                <image class="lampIcon" :src="wishLampNomalIcon"
+                       :style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==1"></image>
+                <!--点亮状态-->
+                <image class="lampIcon" :src="wishLampSelectIcon"
+                       :style="{height:lampIconSelectHeight,width:lampIconSelectWidth}" v-if="wishLampItem.lampState==2"></image>
+                <!--变暗状态-->
+                <image class="lampIcon" :src="wishLampDisableIcon"
+                       :style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==3"></image>
+
                 <div style="position: absolute;top: 0;justify-content: center;align-items: center;"
                      :style="{height:lampIconHeight,width:lampItemWidth}">
                     <image class="brandLogo"
@@ -16,8 +24,16 @@
                 </div>
             </div>
             <div class="lampButtonBg" :style="{height:lampButtonBgHeight,width:lampItemWidth}">
-                <image class="lampButtonIcon" :src="withLampButtonIcon"
-                       :style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"></image>
+                <image class="lampButtonIcon" :src="wishLampNomalBtn"
+                       :style="{height:lampButtonBgHeight,width:lampButtonIconWidth}" v-if="wishLampItem.lampState==1"></image>
+
+                <image class="lampButtonIcon" :src="wishLampSelectBtn"
+                       :style="{height:lampButtonBgHeight,width:lampButtonIconWidth}" v-if="wishLampItem.lampState==2"></image>
+
+                <image class="lampButtonIcon" :src="wishLampDisableBtn"
+                       :style="{height:lampButtonBgHeight,width:lampButtonIconWidth}" v-if="wishLampItem.lampState==3"></image>
+
+
                 <div style="position: absolute;top: 0;justify-content: center;align-items: center;width: 132px;height: 46px"
                      :style="{height:lampButtonBgHeight,width:lampItemWidth}">
                     <text class="lanmpButtonText" :style="{color:lampTextColor}">{{lampText}}</text>
@@ -90,6 +106,10 @@
             return {
                 lampItemWidth: 0,
                 lampIconHeight: 0,
+
+                lampIconSelectWidth: 0,
+                lampIconSelectHeight: 0,
+
                 brandLogoHeight: 0,
                 brandLogoWidth: 0,
 
@@ -100,8 +120,16 @@
                 lampText: '点亮',
                 lampTextColor: '#ffffff',
                 brandLogoImageOpacity: 1,
-                wishLampIcon: "wish_lamp_icon.png",
-                withLampButtonIcon: "wish_lamp_button.png",
+
+//                灯笼背景图片
+                wishLampNomalIcon: "wish_lamp_normal_icon.png",
+                wishLampSelectIcon: "wish_lamp_select_icon.png",
+                wishLampDisableIcon: "wish_lamp_disable_icon.png",
+
+                wishLampNomalBtn: "wish_lamp_normal_btn.png",
+                wishLampSelectBtn: "wish_lamp_select_btn.png",
+                wishLampDisableBtn: "wish_lamp_disable_btn.png",
+
                 tipContent: '30天内努力为你备好，请持续关注'
             }
         },
@@ -138,6 +166,9 @@
         created: function () {
             this.lampItemWidth = Util.getLampItemWidth(this);
             this.lampIconHeight = Util.getLampItemIconHeight(this);
+
+            this.lampIconSelectWidth = Util.getLampSelectIconWidth(this);
+            this.lampIconSelectHeight = Util.getLampSelectIconHeight(this);
 
             this.brandLogoWidth = Util.getLampBrandLogoWidth(this);
             this.brandLogoHeight = Util.getLampBrandLogoHeight(this);
