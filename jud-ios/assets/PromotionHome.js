@@ -1504,10 +1504,6 @@
 	    "justifyContent": "center",
 	    "alignItems": "center"
 	  },
-	  "lampIcon": {
-	    "width": 132,
-	    "height": 144
-	  },
 	  "brandLogo": {
 	    "backgroundColor": "#BC8F8F",
 	    "width": 96,

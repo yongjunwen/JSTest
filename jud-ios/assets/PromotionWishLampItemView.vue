@@ -66,8 +66,8 @@
 
     }
     .lampIcon {
-        width: 132px;
-        height: 144px;
+        /*width: 132px;*/
+        /*height: 144px;*/
     }
 
     .brandLogo {
