@@ -1495,12 +1495,7 @@
 /***/ (function(module, exports) {
 
 	module.exports = {
-	  "lampItem": {
-	    "width": 132
-	  },
 	  "lampIconBg": {
-	    "width": 132,
-	    "height": 144,
 	    "justifyContent": "center",
 	    "alignItems": "center"
 	  },

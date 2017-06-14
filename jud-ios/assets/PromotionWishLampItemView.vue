@@ -52,12 +52,12 @@
 
     .lampItem {
         /*background-color: darkred;*/
-        width: 132px
+        /*width: 132px*/
     }
 
     .lampIconBg {
-        width: 132px;
-        height: 144px;
+        /*width: 132px;*/
+        /*height: 144px;*/
         justify-content: center;
         align-items: center;
     }
