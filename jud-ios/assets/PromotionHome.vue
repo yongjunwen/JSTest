@@ -23,18 +23,19 @@
 
             </slider-neighbor>
             <!-- 底部按钮背景视图 -->
-            <div class="bottomTab">
+            <div class="bottomTab" :style="{height:bottomTabHeight}">
                 <!--<div v-for="(item,index) in productList" >-->
                 <!--<promotion-bottom :item="item" :index="index" v-if="item"></promotion-bottom>-->
                 <!--</div>-->
                 <div class="bottomTabContentBg">
 
                     <div class="bottomTextBgDiv" v-for="(itemProduct,index) in productList"
-                         v-bind:style="{'backgroundColor':(index==selectIndex?buttonBgSelectColor:buttonBgColor)}"
+                         :style="{'backgroundColor':(index==selectIndex?buttonBgSelectColor:buttonBgColor), height:bottomTabHeight,width:bottomTextWidht}"
+
                          @click="buttonClick(index)">
                         <!--<text class="bottomText">{{itemProduct.tabName}}</text>-->
                         <image class="bottomTabImage" :src="itemProduct.tabImage"
-                               style="width: 100px;height: 70px "></image>
+                               style="width: 100px;height: 70px " :style="{height:bottomTabImageHeight,width:bottomTabImageWidth}"></image>
                     </div>
                 </div>
             </div>
@@ -68,6 +69,12 @@
             buttonBgSelectColor: "#000000",
             deviceHeight: 10,
             sliderHeight: 0,
+
+            bottomTabHeight: 0,
+            bottomTextWidht: 0,
+
+            bottomTabImageHeight: 0,
+            bottomTabImageWidth: 0,
             buttonBgColor: null,
 //            bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
             bgImage: 'slider_bg_image.png',
@@ -223,6 +230,11 @@
             this.deviceHeight = height;
 
             console.log("*==处理后" + this.deviceHeight + "height=" + height + "platform=" + platform)
+
+            this.bottomTabHeight = Util.scale(this) * 90;
+            this.bottomTextWidht = Util.scale(this) * 130;
+            this.bottomTabImageHeight = Util.scale(this) * 70;
+            this.bottomTabImageWidth = Util.scale(this) * 100;
         }
     }
 </script>
@@ -278,14 +290,16 @@
         /*flex-direction: row;*/
         justify-content: center;
         align-items: center;
+
     }
 
     .bottomTabContentBg {
         background-color: rgba(0, 0, 0, 0.7);
         flex-direction: row;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
         border-radius: 40px;
+        overflow: hidden;
     }
 
     .bottomTextBgDiv {

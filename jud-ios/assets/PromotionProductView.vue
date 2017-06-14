@@ -11,7 +11,8 @@
                     <image style="width:212px;height: 70px;background-color: aquamarine ; margin-top: 18px;"
                            :style="{height:brandLogoHeight,width:brandLogoWidth}"
                            :src="itemProduct.brandLogo"></image>
-                    <text class="lineItem">-·-</text>
+                    <!--<text class="lineItem">-·-</text>-->
+                    <image class="seperateicon" :src="seperateicon"></image>
                     <text class="topItemContentText">{{topContentText}}</text>
                 </div>
 
@@ -83,6 +84,11 @@
         justify-content: center;
         position: absolute;
     }
+    .seperateicon {
+        margin-top: 20px;
+        height: 8px;
+        width: 60px;
+    }
     .curveImageBg {
         bottom:0;
         align-items: center;
@@ -146,6 +152,7 @@
             return {
                 seeContent: '进去看看',
                 curveImage: 'promotion_rectagle_icon.png',
+                seperateicon: 'zs_d_icon_05.png',
                 brandRootHeight: 0,
                 brandItemHeight: 0,
                 brandItemWidth: 0,

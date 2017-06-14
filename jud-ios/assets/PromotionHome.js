@@ -116,9 +116,10 @@
 	  "bottomTabContentBg": {
 	    "backgroundColor": "rgba(0,0,0,0.7)",
 	    "flexDirection": "row",
-	    "paddingLeft": 40,
-	    "paddingRight": 40,
-	    "borderRadius": 40
+	    "paddingLeft": 15,
+	    "paddingRight": 15,
+	    "borderRadius": 40,
+	    "overflow": "hidden"
 	  },
 	  "bottomTextBgDiv": {
 	    "width": 130,
@@ -210,6 +211,7 @@
 	//
 	//
 	//
+	//
 
 	var modal = jud.requireModule('modal');
 	exports.default = {
@@ -225,6 +227,12 @@
 	        buttonBgSelectColor: "#000000",
 	        deviceHeight: 10,
 	        sliderHeight: 0,
+
+	        bottomTabHeight: 0,
+	        bottomTextWidht: 0,
+
+	        bottomTabImageHeight: 0,
+	        bottomTabImageWidth: 0,
 	        buttonBgColor: null,
 	        //            bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
 	        bgImage: 'slider_bg_image.png',
@@ -369,6 +377,11 @@
 	        this.deviceHeight = height;
 
 	        console.log("*==处理后" + this.deviceHeight + "height=" + height + "platform=" + platform);
+
+	        this.bottomTabHeight = _PromotionUtil2.default.scale(this) * 90;
+	        this.bottomTextWidht = _PromotionUtil2.default.scale(this) * 130;
+	        this.bottomTabImageHeight = _PromotionUtil2.default.scale(this) * 70;
+	        this.bottomTabImageWidth = _PromotionUtil2.default.scale(this) * 100;
 	    }
 	};
 	module.exports = exports['default'];
@@ -631,6 +644,11 @@
 	    "justifyContent": "center",
 	    "position": "absolute"
 	  },
+	  "seperateicon": {
+	    "marginTop": 20,
+	    "height": 8,
+	    "width": 60
+	  },
 	  "curveImageBg": {
 	    "bottom": 0,
 	    "alignItems": "center",
@@ -692,6 +710,7 @@
 	        return {
 	            seeContent: '进去看看',
 	            curveImage: 'promotion_rectagle_icon.png',
+	            seperateicon: 'zs_d_icon_05.png',
 	            brandRootHeight: 0,
 	            brandItemHeight: 0,
 	            brandItemWidth: 0,
@@ -730,6 +749,12 @@
 	        this.brandItemBottomImageHeight = _PromotionUtil2.default.getBrandBottomImageHeight(this);
 	    }
 	}; //
+	//
+	//
+	//
+	//
+	//
+	//
 	//
 	//
 	//
@@ -1094,9 +1119,12 @@
 	    attrs: {
 	      "src": _vm.itemProduct.brandLogo
 	    }
+	  }), _c('image', {
+	    staticClass: ["seperateicon"],
+	    attrs: {
+	      "src": _vm.seperateicon
+	    }
 	  }), _c('text', {
-	    staticClass: ["lineItem"]
-	  }, [_vm._v("-·-")]), _c('text', {
 	    staticClass: ["topItemContentText"]
 	  }, [_vm._v(_vm._s(_vm.topContentText))])]), _c('div', {
 	    staticClass: ["curveImageBg"],
@@ -1215,18 +1243,23 @@
 	    "width": 600
 	  },
 	  "topItemContentText": {
-	    "marginTop": 56,
+	    "marginTop": 45,
 	    "fontSize": 40,
-	    "color": "#FFFFFF"
+	    "color": "#ffffff"
 	  },
 	  "lineItem": {
 	    "marginTop": 22,
 	    "fontSize": 26,
 	    "color": "#FFFFFF"
 	  },
+	  "seperateicon": {
+	    "marginTop": 22,
+	    "height": 8,
+	    "width": 60
+	  },
 	  "tipContent": {
 	    "marginTop": 34,
-	    "color": "#FFFFFF",
+	    "color": "#ffffff",
 	    "fontSize": 26
 	  },
 	  "contentDiv": {
@@ -1236,7 +1269,7 @@
 	  "bottomTipContent": {
 	    "marginTop": 40,
 	    "color": "#FFFFFF",
-	    "fontSize": 26
+	    "fontSize": 22
 	  }
 	}
 
@@ -1394,6 +1427,11 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
 	    components: {
@@ -1404,7 +1442,19 @@
 	        return {
 	            wishRootHeight: 0,
 	            wishRootWidth: 0,
+
+	            titleFontSize: 0,
+	            titleTop: 0,
+
+	            contentFontSize: 0,
+	            contentTop: 0,
+
+	            marginTop1: 0,
+	            marginTop2: 0,
+	            marginTop3: 0,
+
 	            cardTitle: "心愿灯",
+	            seperateicon: 'zs_d_icon_05.png',
 	            wishLampBg: "wish_lamp_bg_image.png",
 	            tipContent: '30天内努力为你备好，请持续关注',
 	            bottomTipContent: '每天仅有有1次许愿机会'
@@ -1442,6 +1492,16 @@
 	    created: function created() {
 	        this.wishRootHeight = _PromotionUtil2.default.getWishItemHeight(this);
 	        this.wishRootWidth = _PromotionUtil2.default.getWishItemWidth(this);
+
+	        this.titleFontSize = 40 * _PromotionUtil2.default.scale(this);
+	        this.titleTop = 65 * _PromotionUtil2.default.scale(this);
+
+	        this.contentFontSize = 26 * _PromotionUtil2.default.scale(this);
+	        this.contentTop = 34 * _PromotionUtil2.default.scale(this);
+
+	        this.marginTop1 = 50 * _PromotionUtil2.default.scale(this);
+	        this.marginTop2 = 100 * _PromotionUtil2.default.scale(this);
+	        this.marginTop3 = 10 * _PromotionUtil2.default.scale(this);
 	    }
 	};
 	module.exports = exports['default'];
@@ -1905,19 +1965,32 @@
 	      justifyContent: "center"
 	    }
 	  }, [_c('text', {
-	    staticClass: ["topItemContentText"]
-	  }, [_vm._v(_vm._s(_vm.cardTitle))]), _c('text', {
-	    staticClass: ["lineItem"]
-	  }, [_vm._v("-·-")]), _c('text', {
-	    staticClass: ["tipContent"]
+	    staticClass: ["topItemContentText"],
+	    style: {
+	      fontSize: _vm.titleFontSize,
+	      marginTop: _vm.titleTop
+	    }
+	  }, [_vm._v(_vm._s(_vm.cardTitle))]), _c('image', {
+	    staticClass: ["seperateicon"],
+	    attrs: {
+	      "src": _vm.seperateicon
+	    }
+	  }), _c('text', {
+	    staticClass: ["tipContent"],
+	    style: {
+	      fontSize: _vm.contentFontSize,
+	      marginTop: _vm.contentTop
+	    }
 	  }, [_vm._v(_vm._s(_vm.tipContent))])])]), _c('div', {
 	    staticStyle: {
 	      flexDirection: "row"
 	    }
 	  }, [_c('div', {
 	    staticStyle: {
-	      marginTop: "60px",
 	      marginLeft: "25px"
+	    },
+	    style: {
+	      marginTop: _vm.marginTop1
 	    }
 	  }, [(_vm.wishLampObject.brandList[0]) ? _c('promotion-wish-lamp-item-view', {
 	    attrs: {
@@ -1940,6 +2013,9 @@
 	    staticStyle: {
 	      marginTop: "120px",
 	      marginLeft: "-20px"
+	    },
+	    style: {
+	      marginTop: _vm.marginTop2
 	    }
 	  }, [(_vm.wishLampObject.brandList[1]) ? _c('promotion-wish-lamp-item-view', {
 	    attrs: {
@@ -1962,6 +2038,9 @@
 	    staticStyle: {
 	      marginTop: "30px",
 	      marginLeft: "-20px"
+	    },
+	    style: {
+	      marginTop: _vm.marginTop3
 	    }
 	  }, [(_vm.wishLampObject.brandList[2]) ? _c('promotion-wish-lamp-item-view', {
 	    attrs: {
@@ -1984,6 +2063,9 @@
 	    staticClass: ["bottom"],
 	    staticStyle: {
 	      width: "610px"
+	    },
+	    style: {
+	      width: _vm.wishRootWidth
 	    }
 	  }, [_c('div', {
 	    staticStyle: {
@@ -2052,14 +2134,19 @@
 	      }
 	    }) : _vm._e()], 1)
 	  })), _c('div', {
-	    staticClass: ["bottomTab"]
+	    staticClass: ["bottomTab"],
+	    style: {
+	      height: _vm.bottomTabHeight
+	    }
 	  }, [_c('div', {
 	    staticClass: ["bottomTabContentBg"]
 	  }, _vm._l((_vm.productList), function(itemProduct, index) {
 	    return _c('div', {
 	      staticClass: ["bottomTextBgDiv"],
 	      style: {
-	        'backgroundColor': (index == _vm.selectIndex ? _vm.buttonBgSelectColor : _vm.buttonBgColor)
+	        'backgroundColor': (index == _vm.selectIndex ? _vm.buttonBgSelectColor : _vm.buttonBgColor),
+	        height: _vm.bottomTabHeight,
+	        width: _vm.bottomTextWidht
 	      },
 	      on: {
 	        "click": function($event) {
@@ -2071,6 +2158,10 @@
 	      staticStyle: {
 	        width: "100px",
 	        height: "70px"
+	      },
+	      style: {
+	        height: _vm.bottomTabImageHeight,
+	        width: _vm.bottomTabImageWidth
 	      },
 	      attrs: {
 	        "src": itemProduct.tabImage

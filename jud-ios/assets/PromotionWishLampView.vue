@@ -11,16 +11,17 @@
             <!--头部区域元素-->
             <div class="topItemContent" :style="{width:wishRootWidth}">
                 <div style="align-items: center;justify-content: center;">
-                    <text class="topItemContentText">{{cardTitle}}</text>
-                    <text class="lineItem">-·-</text>
-                    <text class="tipContent">{{tipContent}}</text>
+                    <text class="topItemContentText" :style="{fontSize:titleFontSize,marginTop:titleTop}">{{cardTitle}}</text>
+                    <!--<text class="lineItem">-·-</text>-->
+                    <image class="seperateicon" :src="seperateicon"></image>
+                    <text class="tipContent" :style="{fontSize:contentFontSize,marginTop:contentTop}">{{tipContent}}</text>
                 </div>
             </div>
             <!--灯笼显示区域 按行排列-->
             <div style="flex-direction: row;">
                 <!--v-for="lampItem in wishLampObject.brandList"-->
                 <!--第一组：上下排列方式-->
-                <div style="margin-top: 60px; margin-left: 25px;">
+                <div style="margin-left: 25px;" :style="{marginTop:marginTop1}">
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[0]"
                                                    :wishLampItem="wishLampObject.brandList[0]"
                                                    v-on:changeLampState='changeLampStateEvent'
@@ -34,7 +35,7 @@
                 </div>
 
                 <!--第二组：上下排列方式-->
-                <div style="margin-top: 120px; margin-left: -20px;">
+                <div style="margin-top: 120px; margin-left: -20px;" :style="{marginTop:marginTop2}">
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[1]"
                                                    :wishLampItem="wishLampObject.brandList[1]"
                                                    v-on:changeLampState='changeLampStateEvent'
@@ -47,7 +48,7 @@
                 </div>
 
                 <!--第三组：上下排列方式-->
-                <div style=";margin-top: 30px; margin-left: -20px;">
+                <div style=";margin-top: 30px; margin-left: -20px;" :style="{marginTop:marginTop3}">
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[2]"
                                                    :wishLampItem="wishLampObject.brandList[2]"
                                                    v-on:changeLampState='changeLampStateEvent'></promotion-wish-lamp-item-view>
@@ -60,7 +61,7 @@
             </div>
 
             <!--底部文案区域-->
-            <div class="bottom" style="width: 610px">
+            <div class="bottom" style="width: 610px" :style="{width:wishRootWidth}">
                 <div style="align-items: center;justify-content: center;">
                     <text class="bottomTipContent">{{bottomTipContent}}</text>
                 </div>
@@ -95,12 +96,12 @@
     }
 
     .topItemContentText {
-        margin-top: 56px;
+        margin-top: 45px;
         /*margin-left: 10px;*/
         /*margin-right: 10px;*/
         font-size: 40px;
         /*height: 40px;*/
-        color: white;
+        color: #ffffff;
     }
 
     .lineItem {
@@ -111,10 +112,14 @@
         /*height: 40px;*/
         color: white;
     }
-
+    .seperateicon {
+        margin-top: 22px;
+        height: 8px;
+        width: 60px;
+    }
     .tipContent {
         margin-top: 34px;
-        color: white;
+        color: #ffffff;
         font-size: 26px;
     }
 
@@ -127,7 +132,7 @@
     .bottomTipContent {
         margin-top: 40px;
         color: white;
-        font-size: 26px;
+        font-size: 22px;
     }
 
 </style>
@@ -144,7 +149,19 @@
             return {
                 wishRootHeight: 0,
                 wishRootWidth: 0,
+
+                titleFontSize: 0,
+                titleTop: 0,
+
+                contentFontSize: 0,
+                contentTop: 0,
+
+                marginTop1: 0,
+                marginTop2: 0,
+                marginTop3: 0,
+
                 cardTitle: "心愿灯",
+                seperateicon: 'zs_d_icon_05.png',
                 wishLampBg: "wish_lamp_bg_image.png",
                 tipContent: '30天内努力为你备好，请持续关注',
                 bottomTipContent: '每天仅有有1次许愿机会'
@@ -182,6 +199,16 @@
         created: function () {
             this.wishRootHeight = Util.getWishItemHeight(this);
             this.wishRootWidth = Util.getWishItemWidth(this);
+
+            this.titleFontSize = 40 * Util.scale(this);
+            this.titleTop = 65 * Util.scale(this);
+
+            this.contentFontSize = 26 * Util.scale(this);
+            this.contentTop = 34 * Util.scale(this);
+
+            this.marginTop1 = 50 * Util.scale(this);
+            this.marginTop2 = 100 * Util.scale(this);
+            this.marginTop3 = 10 * Util.scale(this);
         }
     };
 </script>
