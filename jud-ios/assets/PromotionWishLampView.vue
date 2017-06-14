@@ -34,7 +34,7 @@
                 </div>
 
                 <!--第二组：上下排列方式-->
-                <div style="margin-top: 120px; margin-left: 43px;">
+                <div style="margin-top: 120px; margin-left: -43px;">
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[1]"
                                                    :wishLampItem="wishLampObject.brandList[1]"
                                                    v-on:changeLampState='changeLampStateEvent'

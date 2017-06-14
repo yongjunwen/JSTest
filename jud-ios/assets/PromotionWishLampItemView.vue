@@ -10,7 +10,7 @@
                 <image class="lampIcon" :src="wishLampNomalIcon"
                        :style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==1"></image>
                 <!--点亮状态-->
-                <image class="lampIcon" :src="wishLampSelectIcon"
+                <image class="lampSelectIcon" :src="wishLampSelectIcon"
                        :style="{height:lampIconSelectHeight,width:lampIconSelectWidth}" v-if="wishLampItem.lampState==2"></image>
                 <!--变暗状态-->
                 <image class="lampIcon" :src="wishLampDisableIcon"
@@ -62,6 +62,9 @@
         align-items: center;
     }
 
+    .lampSelectIcon {
+
+    }
     .lampIcon {
         width: 132px;
         height: 144px;

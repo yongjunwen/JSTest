@@ -1603,6 +1603,9 @@
 	//
 	//
 	//
+	//
+	//
+	//
 
 	var modal = jud.requireModule('modal');
 	exports.default = {
@@ -1742,7 +1745,7 @@
 	      "src": _vm.wishLampNomalIcon
 	    }
 	  }) : _vm._e(), (_vm.wishLampItem.lampState == 2) ? _c('image', {
-	    staticClass: ["lampIcon"],
+	    staticClass: ["lampSelectIcon"],
 	    style: {
 	      height: _vm.lampIconSelectHeight,
 	      width: _vm.lampIconSelectWidth
@@ -1904,7 +1907,7 @@
 	  }) : _vm._e()], 1), _c('div', {
 	    staticStyle: {
 	      marginTop: "120px",
-	      marginLeft: "43px"
+	      marginLeft: "-43px"
 	    }
 	  }, [(_vm.wishLampObject.brandList[1]) ? _c('promotion-wish-lamp-item-view', {
 	    attrs: {
