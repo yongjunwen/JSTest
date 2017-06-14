@@ -39,9 +39,14 @@ export default {
      设计BrandItem宽高为600 * 910
      */
     getBrandItemWidth: function (_this) {
-        var brandItemH = this.getBrandItemHeight(_this);
-        var brandItemW = (600 / 910) * brandItemH;
-        return brandItemW;
+        // var brandItemH = this.getBrandItemHeight(_this);
+        // var brandItemW = (600 / 910) * brandItemH;
+        return 606 * this.scale(_this);
+    },
+    //弧度高度
+    getBrandItemCurveHeigh: function (_this) {
+
+        return 20 * this.scale(_this);
     },
     getBrandItemHeight: function (_this) {
         var sliderHeight = this.getSliderHeight(_this);
@@ -50,12 +55,10 @@ export default {
     },
 
     /*
-     设计BrandItem 头部图片背景 600 * 260
+     设计BrandItem 头部图片背景 600 * 266
      */
     getBrandItemTopBgHeight: function (_this) {
-        var itemWidth = this.getBrandItemWidth(_this);
-        var topBgHeight = (260 / 600) * itemWidth;
-        return topBgHeight;
+        return 266 * this.scale(_this);
     },
 
     /*
@@ -119,14 +122,14 @@ export default {
         // var wishItemW = this.getWishItemWidth(_this);
         // var lampItemW = (132 / 644) * wishItemW;
         // return lampItemW;
-        return 132 * this.scale(_this);
+        return 206 * this.scale(_this);
     },
     //132 * 144
     getLampItemIconHeight: function (_this) {
         // var lampW = this.getLampItemWidth(_this);
         // var lampIconH = ( 144 / 132) * lampW;
         // return lampIconH;
-        return 144 * this.scale(_this);
+        return 190 * this.scale(_this);
     },
 
     //206 * 190

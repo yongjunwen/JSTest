@@ -5,13 +5,20 @@
 
         <div class="slider-item" :style="{height:brandItemHeight,width:brandItemWidth}">
             <div class="topItemBg" :style="{height:topItemBgHeight,width:brandItemWidth}">
-                <image class="topItemBgImage" :src="itemProduct.topPic" :style="{height:topItemBgHeight,width:brandItemWidth}"></image>
+                <image class="topItemBgImage" :src="itemProduct.topPic"
+                       :style="{height:topItemBgHeight,width:brandItemWidth}"></image>
                 <div class="topItemContent" :style="{width:brandItemWidth}">
                     <image style="width:212px;height: 70px;background-color: aquamarine ; margin-top: 18px;"
                            :style="{height:brandLogoHeight,width:brandLogoWidth}"
                            :src="itemProduct.brandLogo"></image>
                     <text class="lineItem">-·-</text>
                     <text class="topItemContentText">{{topContentText}}</text>
+                </div>
+
+                <!--弧度样式视图图层-->
+                <div class="curveImageBg" :style="{height:brandItemCurveHeight,width:brandItemWidth}">
+                    <image class="curveImage" :src="curveImage"
+                           :style="{height:brandItemCurveHeight,width:brandItemWidth}"></image>
                 </div>
             </div>
 
@@ -76,6 +83,12 @@
         justify-content: center;
         position: absolute;
     }
+    .curveImageBg {
+        bottom:0;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
 
     .lineItem {
         margin-top: 18px;
@@ -132,6 +145,7 @@
         data: function () {
             return {
                 seeContent: '进去看看',
+                curveImage: 'promotion_rectagle_icon.png',
                 brandRootHeight: 0,
                 brandItemHeight: 0,
                 brandItemWidth: 0,
@@ -139,6 +153,8 @@
                 brandLogoHeight: 0,
                 brandLogoWidth: 0,
                 brandItemBottomImageHeight: 0,
+
+                brandItemCurveHeight: 0,
                 seeButtonImage: 'see_button.png',
                 topContentText: '[加入我们，创建未来]'
             }
@@ -159,6 +175,8 @@
             this.brandItemHeight = Util.getBrandItemHeight(this);
             this.brandItemWidth = Util.getBrandItemWidth(this);
             this.topItemBgHeight = Util.getBrandItemTopBgHeight(this);
+
+            this.brandItemCurveHeight = Util.getBrandItemCurveHeigh(this);
 
             this.brandLogoHeight = Util.getBrandLogoHeight(this);
             this.brandLogoWidth = Util.getBrandLogoWidth(this);

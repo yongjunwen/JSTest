@@ -631,6 +631,12 @@
 	    "justifyContent": "center",
 	    "position": "absolute"
 	  },
+	  "curveImageBg": {
+	    "bottom": 0,
+	    "alignItems": "center",
+	    "justifyContent": "center",
+	    "position": "absolute"
+	  },
 	  "lineItem": {
 	    "marginTop": 18,
 	    "fontSize": 26,
@@ -685,6 +691,7 @@
 	    data: function data() {
 	        return {
 	            seeContent: '进去看看',
+	            curveImage: 'promotion_rectagle_icon.png',
 	            brandRootHeight: 0,
 	            brandItemHeight: 0,
 	            brandItemWidth: 0,
@@ -692,6 +699,8 @@
 	            brandLogoHeight: 0,
 	            brandLogoWidth: 0,
 	            brandItemBottomImageHeight: 0,
+
+	            brandItemCurveHeight: 0,
 	            seeButtonImage: 'see_button.png',
 	            topContentText: '[加入我们，创建未来]'
 	        };
@@ -713,12 +722,27 @@
 	        this.brandItemWidth = _PromotionUtil2.default.getBrandItemWidth(this);
 	        this.topItemBgHeight = _PromotionUtil2.default.getBrandItemTopBgHeight(this);
 
+	        this.brandItemCurveHeight = _PromotionUtil2.default.getBrandItemCurveHeigh(this);
+
 	        this.brandLogoHeight = _PromotionUtil2.default.getBrandLogoHeight(this);
 	        this.brandLogoWidth = _PromotionUtil2.default.getBrandLogoWidth(this);
 
 	        this.brandItemBottomImageHeight = _PromotionUtil2.default.getBrandBottomImageHeight(this);
 	    }
 	}; //
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	//
 	//
 	//
@@ -899,9 +923,14 @@
 	     设计BrandItem宽高为600 * 910
 	     */
 	    getBrandItemWidth: function getBrandItemWidth(_this) {
-	        var brandItemH = this.getBrandItemHeight(_this);
-	        var brandItemW = 600 / 910 * brandItemH;
-	        return brandItemW;
+	        // var brandItemH = this.getBrandItemHeight(_this);
+	        // var brandItemW = (600 / 910) * brandItemH;
+	        return 606 * this.scale(_this);
+	    },
+	    //弧度高度
+	    getBrandItemCurveHeigh: function getBrandItemCurveHeigh(_this) {
+
+	        return 20 * this.scale(_this);
 	    },
 	    getBrandItemHeight: function getBrandItemHeight(_this) {
 	        var sliderHeight = this.getSliderHeight(_this);
@@ -910,12 +939,10 @@
 	    },
 
 	    /*
-	     设计BrandItem 头部图片背景 600 * 260
+	     设计BrandItem 头部图片背景 600 * 266
 	     */
 	    getBrandItemTopBgHeight: function getBrandItemTopBgHeight(_this) {
-	        var itemWidth = this.getBrandItemWidth(_this);
-	        var topBgHeight = 260 / 600 * itemWidth;
-	        return topBgHeight;
+	        return 266 * this.scale(_this);
 	    },
 
 	    /*
@@ -978,14 +1005,14 @@
 	        // var wishItemW = this.getWishItemWidth(_this);
 	        // var lampItemW = (132 / 644) * wishItemW;
 	        // return lampItemW;
-	        return 132 * this.scale(_this);
+	        return 206 * this.scale(_this);
 	    },
 	    //132 * 144
 	    getLampItemIconHeight: function getLampItemIconHeight(_this) {
 	        // var lampW = this.getLampItemWidth(_this);
 	        // var lampIconH = ( 144 / 132) * lampW;
 	        // return lampIconH;
-	        return 144 * this.scale(_this);
+	        return 190 * this.scale(_this);
 	    },
 
 	    //206 * 190
@@ -1071,7 +1098,22 @@
 	    staticClass: ["lineItem"]
 	  }, [_vm._v("-·-")]), _c('text', {
 	    staticClass: ["topItemContentText"]
-	  }, [_vm._v(_vm._s(_vm.topContentText))])])]), _c('image', {
+	  }, [_vm._v(_vm._s(_vm.topContentText))])]), _c('div', {
+	    staticClass: ["curveImageBg"],
+	    style: {
+	      height: _vm.brandItemCurveHeight,
+	      width: _vm.brandItemWidth
+	    }
+	  }, [_c('image', {
+	    staticClass: ["curveImage"],
+	    style: {
+	      height: _vm.brandItemCurveHeight,
+	      width: _vm.brandItemWidth
+	    },
+	    attrs: {
+	      "src": _vm.curveImage
+	    }
+	  })])]), _c('image', {
 	    staticClass: ["bottom-image"],
 	    style: {
 	      height: _vm.brandItemBottomImageHeight,
@@ -1472,7 +1514,6 @@
 	    "height": 60
 	  },
 	  "lampButtonBg": {
-	    "marginTop": 14,
 	    "width": 132,
 	    "height": 46,
 	    "justifyContent": "center",
@@ -1615,8 +1656,8 @@
 	            lampItemWidth: 0,
 	            lampIconHeight: 0,
 
-	            lampIconSelectWidth: 0,
-	            lampIconSelectHeight: 0,
+	            //                lampIconSelectWidth: 0,
+	            //                lampIconSelectHeight: 0,
 
 	            brandLogoHeight: 0,
 	            brandLogoWidth: 0,
@@ -1674,8 +1715,8 @@
 	        this.lampItemWidth = _PromotionUtil2.default.getLampItemWidth(this);
 	        this.lampIconHeight = _PromotionUtil2.default.getLampItemIconHeight(this);
 
-	        this.lampIconSelectWidth = _PromotionUtil2.default.getLampSelectIconWidth(this);
-	        this.lampIconSelectHeight = _PromotionUtil2.default.getLampSelectIconHeight(this);
+	        //            this.lampIconSelectWidth = Util.getLampSelectIconWidth(this);
+	        //            this.lampIconSelectHeight = Util.getLampSelectIconHeight(this);
 
 	        this.brandLogoWidth = _PromotionUtil2.default.getLampBrandLogoWidth(this);
 	        this.brandLogoHeight = _PromotionUtil2.default.getLampBrandLogoHeight(this);
@@ -1747,8 +1788,8 @@
 	  }) : _vm._e(), (_vm.wishLampItem.lampState == 2) ? _c('image', {
 	    staticClass: ["lampSelectIcon"],
 	    style: {
-	      height: _vm.lampIconSelectHeight,
-	      width: _vm.lampIconSelectWidth
+	      height: _vm.lampIconHeight,
+	      width: _vm.lampItemWidth
 	    },
 	    attrs: {
 	      "src": _vm.wishLampSelectIcon
@@ -1880,12 +1921,12 @@
 	    staticClass: ["tipContent"]
 	  }, [_vm._v(_vm._s(_vm.tipContent))])])]), _c('div', {
 	    staticStyle: {
-	      flexDirection: "row",
-	      marginLeft: "62px"
+	      flexDirection: "row"
 	    }
 	  }, [_c('div', {
 	    staticStyle: {
-	      marginTop: "60px"
+	      marginTop: "60px",
+	      marginLeft: "25px"
 	    }
 	  }, [(_vm.wishLampObject.brandList[0]) ? _c('promotion-wish-lamp-item-view', {
 	    attrs: {
@@ -1896,7 +1937,7 @@
 	    }
 	  }) : _vm._e(), (_vm.wishLampObject.brandList[3]) ? _c('promotion-wish-lamp-item-view', {
 	    staticStyle: {
-	      marginTop: "50px"
+	      marginTop: "26px"
 	    },
 	    attrs: {
 	      "wishLampItem": _vm.wishLampObject.brandList[3]
@@ -1907,7 +1948,7 @@
 	  }) : _vm._e()], 1), _c('div', {
 	    staticStyle: {
 	      marginTop: "120px",
-	      marginLeft: "-43px"
+	      marginLeft: "-20px"
 	    }
 	  }, [(_vm.wishLampObject.brandList[1]) ? _c('promotion-wish-lamp-item-view', {
 	    attrs: {
@@ -1918,7 +1959,7 @@
 	    }
 	  }) : _vm._e(), (_vm.wishLampObject.brandList[4]) ? _c('promotion-wish-lamp-item-view', {
 	    staticStyle: {
-	      marginTop: "50px"
+	      marginTop: "26px"
 	    },
 	    attrs: {
 	      "wishLampItem": _vm.wishLampObject.brandList[4]
@@ -1929,7 +1970,7 @@
 	  }) : _vm._e()], 1), _c('div', {
 	    staticStyle: {
 	      marginTop: "30px",
-	      marginLeft: "43px"
+	      marginLeft: "-20px"
 	    }
 	  }, [(_vm.wishLampObject.brandList[2]) ? _c('promotion-wish-lamp-item-view', {
 	    attrs: {
@@ -1940,7 +1981,7 @@
 	    }
 	  }) : _vm._e(), (_vm.wishLampObject.brandList[5]) ? _c('promotion-wish-lamp-item-view', {
 	    staticStyle: {
-	      marginTop: "50px"
+	      marginTop: "26px"
 	    },
 	    attrs: {
 	      "wishLampItem": _vm.wishLampObject.brandList[5]

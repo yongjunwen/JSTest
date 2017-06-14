@@ -11,7 +11,7 @@
                        :style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==1"></image>
                 <!--点亮状态-->
                 <image class="lampSelectIcon" :src="wishLampSelectIcon"
-                       :style="{height:lampIconSelectHeight,width:lampIconSelectWidth}" v-if="wishLampItem.lampState==2"></image>
+                       :style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==2"></image>
                 <!--变暗状态-->
                 <image class="lampIcon" :src="wishLampDisableIcon"
                        :style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==3"></image>
@@ -78,7 +78,7 @@
     }
 
     .lampButtonBg {
-        margin-top: 14px;
+        /*margin-top: 14px;*/
         /*margin-left: 25px;*/
         width: 132px;
         height: 46px;
@@ -110,8 +110,8 @@
                 lampItemWidth: 0,
                 lampIconHeight: 0,
 
-                lampIconSelectWidth: 0,
-                lampIconSelectHeight: 0,
+//                lampIconSelectWidth: 0,
+//                lampIconSelectHeight: 0,
 
                 brandLogoHeight: 0,
                 brandLogoWidth: 0,
@@ -170,8 +170,8 @@
             this.lampItemWidth = Util.getLampItemWidth(this);
             this.lampIconHeight = Util.getLampItemIconHeight(this);
 
-            this.lampIconSelectWidth = Util.getLampSelectIconWidth(this);
-            this.lampIconSelectHeight = Util.getLampSelectIconHeight(this);
+//            this.lampIconSelectWidth = Util.getLampSelectIconWidth(this);
+//            this.lampIconSelectHeight = Util.getLampSelectIconHeight(this);
 
             this.brandLogoWidth = Util.getLampBrandLogoWidth(this);
             this.brandLogoHeight = Util.getLampBrandLogoHeight(this);

@@ -17,16 +17,16 @@
                 </div>
             </div>
             <!--灯笼显示区域 按行排列-->
-            <div style="flex-direction: row; margin-left: 62px">
+            <div style="flex-direction: row;">
                 <!--v-for="lampItem in wishLampObject.brandList"-->
                 <!--第一组：上下排列方式-->
-                <div style="margin-top: 60px;">
+                <div style="margin-top: 60px; margin-left: 25px;">
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[0]"
                                                    :wishLampItem="wishLampObject.brandList[0]"
                                                    v-on:changeLampState='changeLampStateEvent'
                     ></promotion-wish-lamp-item-view>
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[3]"
-                                                   style="margin-top: 50px;"
+                                                   style="margin-top: 26px;"
                                                    :wishLampItem="wishLampObject.brandList[3]"
                                                    v-on:changeLampState='changeLampStateEvent'
                     ></promotion-wish-lamp-item-view>
@@ -34,25 +34,25 @@
                 </div>
 
                 <!--第二组：上下排列方式-->
-                <div style="margin-top: 120px; margin-left: -43px;">
+                <div style="margin-top: 120px; margin-left: -20px;">
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[1]"
                                                    :wishLampItem="wishLampObject.brandList[1]"
                                                    v-on:changeLampState='changeLampStateEvent'
                     ></promotion-wish-lamp-item-view>
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[4]"
-                                                   style="margin-top: 50px;"
+                                                   style="margin-top: 26px;"
                                                    :wishLampItem="wishLampObject.brandList[4]"
                                                    v-on:changeLampState='changeLampStateEvent'></promotion-wish-lamp-item-view>
 
                 </div>
 
                 <!--第三组：上下排列方式-->
-                <div style=";margin-top: 30px; margin-left: 43px;">
+                <div style=";margin-top: 30px; margin-left: -20px;">
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[2]"
                                                    :wishLampItem="wishLampObject.brandList[2]"
                                                    v-on:changeLampState='changeLampStateEvent'></promotion-wish-lamp-item-view>
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[5]"
-                                                   style="margin-top: 50px;"
+                                                   style="margin-top: 26px;"
                                                    :wishLampItem="wishLampObject.brandList[5]"
                                                    v-on:changeLampState='changeLampStateEvent'></promotion-wish-lamp-item-view>
 

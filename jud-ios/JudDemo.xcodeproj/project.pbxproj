@@ -18,15 +18,14 @@
 		0482832E1EC304E200FE287B /* JUDEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0482832C1EC304E200FE287B /* JUDEventModule.m */; };
 		048283321EC3061100FE287B /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 048283311EC3061100FE287B /* index.js */; };
 		28232DAF1EEEAF2A00AF418E /* slider_bg_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 28232DAE1EEEAF2A00AF418E /* slider_bg_image.png */; };
-		28232DBF1EF0E01000AF418E /* wish_lamp_disable_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 28232DBC1EF0E01000AF418E /* wish_lamp_disable_icon.png */; };
-		28232DC01EF0E01000AF418E /* wish_lamp_normal_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 28232DBD1EF0E01000AF418E /* wish_lamp_normal_icon.png */; };
-		28232DC11EF0E01000AF418E /* wish_lamp_select_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 28232DBE1EF0E01000AF418E /* wish_lamp_select_icon.png */; };
 		28232DC51EF0E2C800AF418E /* wish_lamp_disable_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 28232DC21EF0E2C800AF418E /* wish_lamp_disable_btn.png */; };
 		28232DC61EF0E2C800AF418E /* wish_lamp_normal_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 28232DC31EF0E2C800AF418E /* wish_lamp_normal_btn.png */; };
 		28232DC71EF0E2C800AF418E /* wish_lamp_select_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 28232DC41EF0E2C800AF418E /* wish_lamp_select_btn.png */; };
+		28232DCB1EF1084700AF418E /* wish_lamp_disable_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 28232DC81EF1084700AF418E /* wish_lamp_disable_icon.png */; };
+		28232DCC1EF1084700AF418E /* wish_lamp_normal_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 28232DC91EF1084700AF418E /* wish_lamp_normal_icon.png */; };
+		28232DCD1EF1084700AF418E /* wish_lamp_select_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 28232DCA1EF1084700AF418E /* wish_lamp_select_icon.png */; };
+		28232DCF1EF10E3C00AF418E /* promotion_rectagle_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 28232DCE1EF10E3C00AF418E /* promotion_rectagle_icon.png */; };
 		2834384B1EE79E9100005393 /* PromotionHome.js in Resources */ = {isa = PBXBuildFile; fileRef = 2834384A1EE79E9100005393 /* PromotionHome.js */; };
-		2834384D1EE8E5E100005393 /* wish_lamp_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2834384C1EE8E5E000005393 /* wish_lamp_icon.png */; };
-		2834384F1EE8EACB00005393 /* wish_lamp_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2834384E1EE8EACB00005393 /* wish_lamp_button.png */; };
 		283438511EE92E6E00005393 /* wish_lamp_bg_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 283438501EE92E6E00005393 /* wish_lamp_bg_image.png */; };
 		283438531EE931AF00005393 /* see_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 283438521EE931AF00005393 /* see_button.png */; };
 		8D296377F1A91CA80E2C488C /* libPods-JudDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0528BAD7247ED8D6254A89 /* libPods-JudDemo.a */; };
@@ -63,15 +62,14 @@
 		0482832F1EC3052200FE287B /* AppDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDefine.h; sourceTree = "<group>"; };
 		048283311EC3061100FE287B /* index.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = index.js; sourceTree = "<group>"; };
 		28232DAE1EEEAF2A00AF418E /* slider_bg_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider_bg_image.png; sourceTree = "<group>"; };
-		28232DBC1EF0E01000AF418E /* wish_lamp_disable_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_lamp_disable_icon.png; sourceTree = "<group>"; };
-		28232DBD1EF0E01000AF418E /* wish_lamp_normal_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_lamp_normal_icon.png; sourceTree = "<group>"; };
-		28232DBE1EF0E01000AF418E /* wish_lamp_select_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_lamp_select_icon.png; sourceTree = "<group>"; };
 		28232DC21EF0E2C800AF418E /* wish_lamp_disable_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_lamp_disable_btn.png; sourceTree = "<group>"; };
 		28232DC31EF0E2C800AF418E /* wish_lamp_normal_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_lamp_normal_btn.png; sourceTree = "<group>"; };
 		28232DC41EF0E2C800AF418E /* wish_lamp_select_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_lamp_select_btn.png; sourceTree = "<group>"; };
+		28232DC81EF1084700AF418E /* wish_lamp_disable_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_lamp_disable_icon.png; sourceTree = "<group>"; };
+		28232DC91EF1084700AF418E /* wish_lamp_normal_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_lamp_normal_icon.png; sourceTree = "<group>"; };
+		28232DCA1EF1084700AF418E /* wish_lamp_select_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_lamp_select_icon.png; sourceTree = "<group>"; };
+		28232DCE1EF10E3C00AF418E /* promotion_rectagle_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = promotion_rectagle_icon.png; sourceTree = "<group>"; };
 		2834384A1EE79E9100005393 /* PromotionHome.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = PromotionHome.js; sourceTree = "<group>"; };
-		2834384C1EE8E5E000005393 /* wish_lamp_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_lamp_icon.png; sourceTree = "<group>"; };
-		2834384E1EE8EACB00005393 /* wish_lamp_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_lamp_button.png; sourceTree = "<group>"; };
 		283438501EE92E6E00005393 /* wish_lamp_bg_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wish_lamp_bg_image.png; sourceTree = "<group>"; };
 		283438521EE931AF00005393 /* see_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = see_button.png; sourceTree = "<group>"; };
 		3D0528BAD7247ED8D6254A89 /* libPods-JudDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JudDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,17 +182,16 @@
 		048283301EC3061100FE287B /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				28232DCE1EF10E3C00AF418E /* promotion_rectagle_icon.png */,
+				28232DC81EF1084700AF418E /* wish_lamp_disable_icon.png */,
+				28232DC91EF1084700AF418E /* wish_lamp_normal_icon.png */,
+				28232DCA1EF1084700AF418E /* wish_lamp_select_icon.png */,
 				28232DC21EF0E2C800AF418E /* wish_lamp_disable_btn.png */,
 				28232DC31EF0E2C800AF418E /* wish_lamp_normal_btn.png */,
 				28232DC41EF0E2C800AF418E /* wish_lamp_select_btn.png */,
-				28232DBC1EF0E01000AF418E /* wish_lamp_disable_icon.png */,
-				28232DBD1EF0E01000AF418E /* wish_lamp_normal_icon.png */,
-				28232DBE1EF0E01000AF418E /* wish_lamp_select_icon.png */,
 				28232DAE1EEEAF2A00AF418E /* slider_bg_image.png */,
 				283438521EE931AF00005393 /* see_button.png */,
 				283438501EE92E6E00005393 /* wish_lamp_bg_image.png */,
-				2834384E1EE8EACB00005393 /* wish_lamp_button.png */,
-				2834384C1EE8E5E000005393 /* wish_lamp_icon.png */,
 				2834384A1EE79E9100005393 /* PromotionHome.js */,
 				048283311EC3061100FE287B /* index.js */,
 			);
@@ -303,21 +300,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28232DCF1EF10E3C00AF418E /* promotion_rectagle_icon.png in Resources */,
 				048283111EC303E200FE287B /* LaunchScreen.storyboard in Resources */,
 				28232DC71EF0E2C800AF418E /* wish_lamp_select_btn.png in Resources */,
 				2834384B1EE79E9100005393 /* PromotionHome.js in Resources */,
 				28232DC51EF0E2C800AF418E /* wish_lamp_disable_btn.png in Resources */,
 				283438531EE931AF00005393 /* see_button.png in Resources */,
 				0482830E1EC303E200FE287B /* Assets.xcassets in Resources */,
-				28232DC01EF0E01000AF418E /* wish_lamp_normal_icon.png in Resources */,
-				2834384F1EE8EACB00005393 /* wish_lamp_button.png in Resources */,
+				28232DCD1EF1084700AF418E /* wish_lamp_select_icon.png in Resources */,
+				28232DCC1EF1084700AF418E /* wish_lamp_normal_icon.png in Resources */,
 				28232DC61EF0E2C800AF418E /* wish_lamp_normal_btn.png in Resources */,
-				28232DBF1EF0E01000AF418E /* wish_lamp_disable_icon.png in Resources */,
-				2834384D1EE8E5E100005393 /* wish_lamp_icon.png in Resources */,
 				0482830C1EC303E200FE287B /* Main.storyboard in Resources */,
 				28232DAF1EEEAF2A00AF418E /* slider_bg_image.png in Resources */,
-				28232DC11EF0E01000AF418E /* wish_lamp_select_icon.png in Resources */,
 				048283321EC3061100FE287B /* index.js in Resources */,
+				28232DCB1EF1084700AF418E /* wish_lamp_disable_icon.png in Resources */,
 				283438511EE92E6E00005393 /* wish_lamp_bg_image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
