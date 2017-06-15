@@ -104,12 +104,10 @@
 	  },
 	  "slider-neighbor": {
 	    "top": 0,
-	    "width": 750,
 	    "alignItems": "center"
 	  },
 	  "bottomTab": {
 	    "marginTop": 40,
-	    "height": 90,
 	    "justifyContent": "center",
 	    "alignItems": "center"
 	  },
@@ -122,8 +120,6 @@
 	    "overflow": "hidden"
 	  },
 	  "bottomTextBgDiv": {
-	    "width": 130,
-	    "height": 90,
 	    "alignItems": "center",
 	    "justifyContent": "center"
 	  },
@@ -230,7 +226,7 @@
 	        sliderHeight: 0,
 
 	        bottomTabHeight: 0,
-	        bottomTextWidht: 0,
+	        bottomTextWidth: 0,
 
 	        bottomTabImageHeight: 0,
 	        bottomTabImageWidth: 0,
@@ -380,7 +376,7 @@
 	        console.log("*==处理后" + this.deviceHeight + "height=" + height + "platform=" + platform);
 
 	        this.bottomTabHeight = _PromotionUtil2.default.scale(this) * 90;
-	        this.bottomTextWidht = _PromotionUtil2.default.scale(this) * 130;
+	        this.bottomTextWidth = _PromotionUtil2.default.scale(this) * 130;
 	        this.bottomTabImageHeight = _PromotionUtil2.default.scale(this) * 70;
 	        this.bottomTabImageWidth = _PromotionUtil2.default.scale(this) * 100;
 
@@ -942,7 +938,7 @@
 	        var deviceWidth = _this.$getConfig().env.deviceWidth;
 
 	        //            获取屏幕布局高度
-	        return 750 / deviceWidth * (deviceHeight - 40);
+	        return 750 / deviceWidth * (deviceHeight - 40); //40为减去状态栏的高度 默认使用40
 	    },
 	    /*
 	     设计slider宽高为 750*940
@@ -2160,7 +2156,7 @@
 	      style: {
 	        'backgroundColor': (index == _vm.selectIndex ? _vm.buttonBgSelectColor : _vm.buttonBgColor),
 	        height: _vm.bottomTabHeight,
-	        width: _vm.bottomTextWidht
+	        width: _vm.bottomTextWidth
 	      },
 	      on: {
 	        "click": function($event) {
@@ -2169,10 +2165,6 @@
 	      }
 	    }, [_c('image', {
 	      staticClass: ["bottomTabImage"],
-	      staticStyle: {
-	        width: "100px",
-	        height: "70px"
-	      },
 	      style: {
 	        height: _vm.bottomTabImageHeight,
 	        width: _vm.bottomTabImageWidth

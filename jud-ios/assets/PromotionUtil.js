@@ -24,7 +24,7 @@ export default {
         var deviceWidth = _this.$getConfig().env.deviceWidth;
 
         //            获取屏幕布局高度
-        return 750 / deviceWidth * (deviceHeight - 40);
+        return 750 / deviceWidth * (deviceHeight - 40); //40为减去状态栏的高度 默认使用40
     },
     /*
      设计slider宽高为 750*940

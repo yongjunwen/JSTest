@@ -30,12 +30,12 @@
                 <div class="bottomTabContentBg">
 
                     <div class="bottomTextBgDiv" v-for="(itemProduct,index) in productList"
-                         :style="{'backgroundColor':(index==selectIndex?buttonBgSelectColor:buttonBgColor), height:bottomTabHeight,width:bottomTextWidht}"
+                         :style="{'backgroundColor':(index==selectIndex?buttonBgSelectColor:buttonBgColor), height:bottomTabHeight,width:bottomTextWidth}"
 
                          @click="buttonClick(index)">
                         <!--<text class="bottomText">{{itemProduct.tabName}}</text>-->
                         <image class="bottomTabImage" :src="itemProduct.tabImage"
-                               style="width: 100px;height: 70px " :style="{height:bottomTabImageHeight,width:bottomTabImageWidth}"></image>
+                                :style="{height:bottomTabImageHeight,width:bottomTabImageWidth}"></image>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
             sliderHeight: 0,
 
             bottomTabHeight: 0,
-            bottomTextWidht: 0,
+            bottomTextWidth: 0,
 
             bottomTabImageHeight: 0,
             bottomTabImageWidth: 0,
@@ -233,7 +233,7 @@
             console.log("*==处理后" + this.deviceHeight + "height=" + height + "platform=" + platform)
 
             this.bottomTabHeight = Util.scale(this) * 90;
-            this.bottomTextWidht = Util.scale(this) * 130;
+            this.bottomTextWidth = Util.scale(this) * 130;
             this.bottomTabImageHeight = Util.scale(this) * 70;
             this.bottomTabImageWidth = Util.scale(this) * 100;
 
@@ -273,7 +273,7 @@
     .slider-neighbor {
         top: 0;
         /*margin-top: 10px;*/
-        width: 750px;
+        /*width: 750px;*/
         /*mark：高度一定要设置数字否在 android上显示不出来*/
         /*height: 940px;*/
         /*width: 320px;*/
@@ -289,7 +289,7 @@
     .bottomTab {
         margin-top: 40px;
         /*width: 750px;*/
-        height: 90px;
+        /*height: 90px;*/
         /*border-width: 1px;*/
         /*border-style: solid;*/
         /*border-color: green;*/
@@ -310,8 +310,8 @@
     }
 
     .bottomTextBgDiv {
-        width: 130px;
-        height: 90px;
+        /*width: 130px;*/
+        /*height: 90px;*/
         align-items: center;
         justify-content: center;
         /*background-color: red;*/
