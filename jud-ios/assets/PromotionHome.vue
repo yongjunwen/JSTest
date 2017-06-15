@@ -222,7 +222,7 @@
                 this.contentTop = 180;
                 console.log("=匹配到=iOS")
             } else if (platform === "android") {
-//                height -= 20;
+                height -= 5;
                 console.log("=匹配到=Android")
                 this.contentTop = 180;
             } else {

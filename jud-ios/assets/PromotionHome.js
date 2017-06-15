@@ -365,11 +365,11 @@
 
 	        //            设备类型匹配
 	        if (platform === "ios") {
-	            height -= 5;
+	            //                height -= 5;
 	            this.contentTop = 180;
 	            console.log("=匹配到=iOS");
 	        } else if (platform === "android") {
-	            height -= 20;
+	            height -= 5;
 	            console.log("=匹配到=Android");
 	            this.contentTop = 180;
 	        } else {
