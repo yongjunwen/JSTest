@@ -3,7 +3,7 @@
 
     <div class="rootDiv" :style="{height:brandRootHeight,width:brandItemWidth}">
 
-        <div class="slider-item" :style="{height:brandItemHeight,width:brandItemWidth}">
+        <div class="slider-item" :style="{height:brandItemHeight,width:brandItemWidth}" @click="toSeeClick()">
             <div class="topItemBg" :style="{height:topItemBgHeight,width:brandItemWidth}">
                 <image class="topItemBgImage" :src="itemProduct.topPic"
                        :style="{height:topItemBgHeight,width:brandItemWidth}"></image>
@@ -84,13 +84,15 @@
         justify-content: center;
         position: absolute;
     }
+
     .seperateicon {
         margin-top: 20px;
         height: 8px;
         width: 60px;
     }
+
     .curveImageBg {
-        bottom:0;
+        bottom: 0;
         align-items: center;
         justify-content: center;
         position: absolute;

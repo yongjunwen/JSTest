@@ -9,7 +9,7 @@
         <!-- :style="{height:deviceHeight}"-->
         <div class="contentView" :style="{height:deviceHeight,top:contentTop}">
             <slider-neighbor class="slider-neighbor" neighborAlpha="0.9"
-                             neighborSpace="55" neighborScale="0.9" currentItemScale="1"
+                             :neighborSpace="neighborSpace" neighborScale="0.9" currentItemScale="1"
                              :index="selectIndex" @change="changeEvent" :style="{height:sliderHeight}">
 
                 <div @click="clickEvent" v-for="itemProduct in productList">
@@ -66,6 +66,7 @@
             test: 'test222',
             contentTop: 0,
             selectIndex: 0,
+            neighborSpace: 0,
             buttonBgSelectColor: "#000000",
             deviceHeight: 10,
             sliderHeight: 0,
@@ -235,6 +236,12 @@
             this.bottomTextWidht = Util.scale(this) * 130;
             this.bottomTabImageHeight = Util.scale(this) * 70;
             this.bottomTabImageWidth = Util.scale(this) * 100;
+
+            var _nSpace = 55;
+            if(platform === "android") {
+                _nSpace = 30;
+            }
+            this.neighborSpace = Util.scale(this) * _nSpace;
         }
     }
 </script>

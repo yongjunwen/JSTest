@@ -224,6 +224,7 @@
 	        test: 'test222',
 	        contentTop: 0,
 	        selectIndex: 0,
+	        neighborSpace: 0,
 	        buttonBgSelectColor: "#000000",
 	        deviceHeight: 10,
 	        sliderHeight: 0,
@@ -382,6 +383,12 @@
 	        this.bottomTextWidht = _PromotionUtil2.default.scale(this) * 130;
 	        this.bottomTabImageHeight = _PromotionUtil2.default.scale(this) * 70;
 	        this.bottomTabImageWidth = _PromotionUtil2.default.scale(this) * 100;
+
+	        var _nSpace = 55;
+	        if (platform === "android") {
+	            _nSpace = 30;
+	        }
+	        this.neighborSpace = _PromotionUtil2.default.scale(this) * _nSpace;
 	    }
 	};
 	module.exports = exports['default'];
@@ -895,6 +902,8 @@
 	//
 	//
 	//
+	//
+	//
 
 	module.exports = exports['default'];
 
@@ -1084,6 +1093,11 @@
 	    style: {
 	      height: _vm.brandItemHeight,
 	      width: _vm.brandItemWidth
+	    },
+	    on: {
+	      "click": function($event) {
+	        _vm.toSeeClick()
+	      }
 	    }
 	  }, [_c('div', {
 	    staticClass: ["topItemBg"],
@@ -2111,7 +2125,7 @@
 	    },
 	    attrs: {
 	      "neighborAlpha": "0.9",
-	      "neighborSpace": "55",
+	      "neighborSpace": _vm.neighborSpace,
 	      "neighborScale": "0.9",
 	      "currentItemScale": "1",
 	      "index": _vm.selectIndex
