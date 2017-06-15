@@ -301,7 +301,7 @@
     }
 
     .bottomTabContentBg {
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.3);
         flex-direction: row;
         padding-left: 15px;
         padding-right: 15px;

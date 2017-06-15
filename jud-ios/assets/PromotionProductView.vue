@@ -43,13 +43,13 @@
 
 <style>
     .rootDiv {
-        width: 600px;
-        height: 940px;
+        /*width: 600px;*/
+        /*height: 940px;*/
     }
 
     .slider-item {
-        width: 600px;
-        height: 910px;
+        /*width: 600px;*/
+        /*height: 910px;*/
         background-color: white;
         border-radius: 10px;
         overflow: hidden;

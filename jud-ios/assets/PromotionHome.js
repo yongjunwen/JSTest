@@ -112,7 +112,7 @@
 	    "alignItems": "center"
 	  },
 	  "bottomTabContentBg": {
-	    "backgroundColor": "rgba(0,0,0,0.7)",
+	    "backgroundColor": "rgba(0,0,0,0.3)",
 	    "flexDirection": "row",
 	    "paddingLeft": 15,
 	    "paddingRight": 15,
@@ -615,13 +615,7 @@
 /***/ (function(module, exports) {
 
 	module.exports = {
-	  "rootDiv": {
-	    "width": 600,
-	    "height": 940
-	  },
 	  "slider-item": {
-	    "width": 600,
-	    "height": 910,
 	    "backgroundColor": "#FFFFFF",
 	    "borderRadius": 10,
 	    "overflow": "hidden"
