@@ -210,7 +210,7 @@
 //            获取屏幕布局高度
             var height = Util.getHeight(this);//750 / deviceWidth * deviceHeight;
 //            var testheight = Util.getHeight(this);
-//            console.log('testheight='+testheight);
+            console.log('deviceHeight='+deviceHeight,'viewH='+height);
 
             var sliderH = Util.getSliderHeight(this);
 
@@ -218,11 +218,11 @@
 
 //            设备类型匹配
             if (platform === "ios") {
-                height -= 20;
+//                height -= 5;
                 this.contentTop = 180;
                 console.log("=匹配到=iOS")
             } else if (platform === "android") {
-                height -= 20;
+//                height -= 20;
                 console.log("=匹配到=Android")
                 this.contentTop = 180;
             } else {
