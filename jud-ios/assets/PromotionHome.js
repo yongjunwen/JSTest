@@ -369,9 +369,9 @@
 	            this.contentTop = 180;
 	            console.log("=匹配到=iOS");
 	        } else if (platform === "android") {
-	            height -= 200;
+	            height -= 20;
 	            console.log("=匹配到=Android");
-	            this.contentTop = 0;
+	            this.contentTop = 180;
 	        } else {
 	            console.log("=没有匹配到=");
 	        }
