@@ -91,7 +91,7 @@ export default {
     getWishItemWidth: function (_this) {
         var wishItemH = this.getWishItemHeight(_this);
         var wishItemW = (644 / 946) * wishItemH;
-        return wishItemW;
+        return 606 * this.scale(_this);;
     },
     getWishItemHeight: function (_this) {
         var sliderHeight = this.getSliderHeight(_this);

@@ -998,7 +998,7 @@
 	    getWishItemWidth: function getWishItemWidth(_this) {
 	        var wishItemH = this.getWishItemHeight(_this);
 	        var wishItemW = 644 / 946 * wishItemH;
-	        return wishItemW;
+	        return 606 * this.scale(_this);;
 	    },
 	    getWishItemHeight: function getWishItemHeight(_this) {
 	        var sliderHeight = this.getSliderHeight(_this);
