@@ -147,6 +147,8 @@ export default {
     getLampBrandLogoWidth: function (_this) {
         return 96 * this.scale(_this);
     },
+
+
     getLampBrandLogoHeight: function (_this) {
         return 60 * this.scale(_this);
     },

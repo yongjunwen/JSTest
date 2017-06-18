@@ -209,6 +209,8 @@
 	//
 	//
 
+	var communicate = jud.requireModule('communicate');
+
 	var modal = jud.requireModule('modal');
 	exports.default = {
 	    components: {
@@ -339,6 +341,35 @@
 	            //                    function (ret) {
 	            //                        // ret就是我们传入的{"Hello": "World"}
 	            //                    });
+	        },
+
+	        //            获取品牌列表和心愿灯列表的网络请求
+	        fetchList: function fetchList() {
+	            communicate.send("Get_Brand_List", {
+	                "domain": "request",
+	                "info": "init",
+	                "params": {
+	                    "functionId": "qryUserWishLamps",
+	                    "body": self.ibrand
+	                }
+	            }, function (result) {
+
+	                if (String(result.code) === '1') {
+	                    communicate.send("Get_Brand_List", {
+	                        "domain": "error",
+	                        "info": "",
+	                        "params": result
+	                    }, function (result) {});
+
+	                    return;
+	                }
+
+	                //                    todo:开始填充信息逻辑添加 根据result
+	                //todo:sample
+	                self.brandinfo.icon = result.logo;
+	                self.brandinfo.bgimageurl = result.titleAtmoPic;
+	                self.brandinfo.introduce = result.name;
+	            });
 	        }
 	    },
 	    created: function created() {
@@ -385,6 +416,9 @@
 	            _nSpace = 30;
 	        }
 	        this.neighborSpace = _PromotionUtil2.default.scale(this) * _nSpace;
+
+	        //           todo: 添加网络请求逻辑
+	        //            this.fetchList();
 	    }
 	};
 	module.exports = exports['default'];
@@ -1054,6 +1088,7 @@
 	    getLampBrandLogoWidth: function getLampBrandLogoWidth(_this) {
 	        return 96 * this.scale(_this);
 	    },
+
 	    getLampBrandLogoHeight: function getLampBrandLogoHeight(_this) {
 	        return 60 * this.scale(_this);
 	    },
@@ -1436,6 +1471,8 @@
 	//
 	//
 	//
+	//
+	//
 
 	exports.default = {
 	    components: {
@@ -1474,9 +1511,38 @@
 	        itemClick: function itemClick(index) {
 	            console.log('itemClick=====');
 	        },
+
+	        //todo: 点亮心愿灯网络请求
+	        lightenBrandWishLampEvent: function lightenBrandWishLampEvent() {
+	            communicate.send("lighten_Brand_Wish_Lamp", {
+	                "domain": "request",
+	                "info": "init",
+	                "params": {
+	                    "functionId": "lightenBrandWishLamp",
+	                    "body": self.ibrand
+	                }
+	            }, function (result) {
+
+	                if (String(result.code) === '1') {
+	                    communicate.send("lighten_Brand_Wish_Lamp", {
+	                        "domain": "error",
+	                        "info": "",
+	                        "params": result
+	                    }, function (result) {});
+
+	                    return;
+	                }
+
+	                //                    todo 点亮成功逻辑
+	                //todo:sample
+	            });
+	        },
 	        changeLampStateEvent: function changeLampStateEvent(lampItem) {
 	            console.log('changeLampStateEvent=====' + lampItem + '获取到');
 	            console.log('array=' + this.wishLampObject.brandList);
+
+	            //                todo:添加点亮心愿灯网络请求逻辑
+	            //                this.lightenBrandWishLampEvent();
 
 	            this.wishLampObject.brandList.forEach(function (item, index) {
 	                console.log('brandId=' + item['brandId']);
@@ -1488,9 +1554,6 @@
 	                    item['lampState'] = '3';
 	                }
 	            });
-	            //                for (var item in this.wishLampObject.brandList) {
-	            //
-	            //                }
 	        }
 	    },
 	    created: function created() {
@@ -1991,7 +2054,7 @@
 	    }
 	  }, [_c('div', {
 	    staticStyle: {
-	      marginLeft: "25px"
+	      marginLeft: "15px"
 	    },
 	    style: {
 	      marginTop: _vm.marginTop1

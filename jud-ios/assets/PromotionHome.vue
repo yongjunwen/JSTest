@@ -35,7 +35,7 @@
                          @click="buttonClick(index)">
                         <!--<text class="bottomText">{{itemProduct.tabName}}</text>-->
                         <image class="bottomTabImage" :src="itemProduct.tabImage"
-                                :style="{height:bottomTabImageHeight,width:bottomTabImageWidth}"></image>
+                               :style="{height:bottomTabImageHeight,width:bottomTabImageWidth}"></image>
                     </div>
                 </div>
             </div>
@@ -54,6 +54,7 @@
     import PromotionProductView from './PromotionProductView.vue'
     import PromotionWishLampView from './PromotionWishLampView.vue'
     import Util from './PromotionUtil.js'
+    var communicate = jud.requireModule('communicate');
 
     const modal = jud.requireModule('modal')
     export default {
@@ -196,6 +197,41 @@
 //                    function (ret) {
 //                        // ret就是我们传入的{"Hello": "World"}
 //                    });
+            },
+
+//            获取品牌列表和心愿灯列表的网络请求
+            fetchList: function () {
+                communicate.send("Get_Brand_List",
+                    {
+                        "domain": "request",
+                        "info": "init",
+                        "params": {
+                            "functionId": "qryUserWishLamps",
+                            "body": self.ibrand
+                        }
+                    },
+                    function (result) {
+
+                        if (String(result.code) === '1') {
+                            communicate.send("Get_Brand_List",
+                                {
+                                    "domain": "error",
+                                    "info": "",
+                                    "params": result
+                                },
+                                function (result) {
+                                });
+
+                            return;
+                        }
+
+//                    todo:开始填充信息逻辑添加 根据result
+                        //todo:sample
+                        self.brandinfo.icon = result.logo;
+                        self.brandinfo.bgimageurl = result.titleAtmoPic;
+                        self.brandinfo.introduce = result.name;
+
+                    });
             }
         },
         created: function () {
@@ -210,7 +246,7 @@
 //            获取屏幕布局高度
             var height = Util.getHeight(this);//750 / deviceWidth * deviceHeight;
 //            var testheight = Util.getHeight(this);
-            console.log('deviceHeight='+deviceHeight,'viewH='+height);
+            console.log('deviceHeight=' + deviceHeight, 'viewH=' + height);
 
             var sliderH = Util.getSliderHeight(this);
 
@@ -238,10 +274,14 @@
             this.bottomTabImageWidth = Util.scale(this) * 100;
 
             var _nSpace = 55;
-            if(platform === "android") {
+            if (platform === "android") {
                 _nSpace = 30;
             }
             this.neighborSpace = Util.scale(this) * _nSpace;
+
+
+//           todo: 添加网络请求逻辑
+//            this.fetchList();
         }
     }
 </script>

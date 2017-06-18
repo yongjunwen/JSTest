@@ -21,7 +21,7 @@
             <div style="flex-direction: row;">
                 <!--v-for="lampItem in wishLampObject.brandList"-->
                 <!--第一组：上下排列方式-->
-                <div style="margin-left: 25px;" :style="{marginTop:marginTop1}">
+                <div style="margin-left: 15px;" :style="{marginTop:marginTop1}">
                     <promotion-wish-lamp-item-view v-if="wishLampObject.brandList[0]"
                                                    :wishLampItem="wishLampObject.brandList[0]"
                                                    v-on:changeLampState='changeLampStateEvent'
@@ -112,11 +112,13 @@
         /*height: 40px;*/
         color: white;
     }
+
     .seperateicon {
         margin-top: 22px;
         height: 8px;
         width: 60px;
     }
+
     .tipContent {
         margin-top: 34px;
         color: #ffffff;
@@ -177,9 +179,44 @@
             itemClick: function (index) {
                 console.log('itemClick=====');
             },
+
+//todo: 点亮心愿灯网络请求
+            lightenBrandWishLampEvent: function () {
+                communicate.send("lighten_Brand_Wish_Lamp",
+                    {
+                        "domain": "request",
+                        "info": "init",
+                        "params": {
+                            "functionId": "lightenBrandWishLamp",
+                            "body": self.ibrand
+                        }
+                    },
+                    function (result) {
+
+                        if (String(result.code) === '1') {
+                            communicate.send("lighten_Brand_Wish_Lamp",
+                                {
+                                    "domain": "error",
+                                    "info": "",
+                                    "params": result
+                                },
+                                function (result) {
+                                });
+
+                            return;
+                        }
+
+//                    todo 点亮成功逻辑
+                        //todo:sample
+
+                    });
+            },
             changeLampStateEvent: function (lampItem) {
                 console.log('changeLampStateEvent=====' + lampItem + '获取到');
                 console.log('array=' + this.wishLampObject.brandList)
+
+//                todo:添加点亮心愿灯网络请求逻辑
+//                this.lightenBrandWishLampEvent();
 
                 this.wishLampObject.brandList.forEach(function (item, index) {
                     console.log('brandId=' + item['brandId'])
@@ -191,9 +228,6 @@
                         item['lampState'] = '3';
                     }
                 });
-//                for (var item in this.wishLampObject.brandList) {
-//
-//                }
             }
         },
         created: function () {
