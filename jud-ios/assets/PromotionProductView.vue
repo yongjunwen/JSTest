@@ -179,9 +179,9 @@
                 console.log('--------toSeeClick----+++')
                 var communicate = jud.requireModule('communicate');
 
-                communicate.send("kJumpBrandDetailKey",
+                communicate.send("kBrandPromotionHomeCallBack",
                     {
-                        "domain": "jump",
+                        "domain": "ToBandDetail",
                         "info": "init",
                         "params": {
                             "body": self.ibrand

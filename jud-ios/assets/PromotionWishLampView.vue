@@ -182,10 +182,10 @@
 
 //todo: 点亮心愿灯网络请求
             lightenBrandWishLampEvent: function () {
-                communicate.send("lighten_Brand_Wish_Lamp",
+                communicate.send("kBrandPromotionHomeCallBack",
                     {
                         "domain": "request",
-                        "info": "init",
+                        "info": "lightenBrandWishLamp",
                         "params": {
                             "functionId": "lightenBrandWishLamp",
                             "body": self.ibrand
