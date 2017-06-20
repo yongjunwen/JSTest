@@ -10,7 +10,7 @@
                 <div class="topItemContent" :style="{width:brandItemWidth}">
                     <image style="width:212px;height: 70px;background-color: aquamarine ; margin-top: 18px;"
                            :style="{height:brandLogoHeight,width:brandLogoWidth}"
-                           :src="itemProduct.brandLogo"></image>
+                           :src="itemProduct.logo"></image>
                     <!--<text class="lineItem">-·-</text>-->
                     <image class="seperateicon" :src="seperateicon"></image>
                     <text class="topItemContentText">{{topContentText}}</text>
@@ -23,13 +23,13 @@
                 </div>
             </div>
 
-            <image class="bottom-image" :src="itemProduct.pic"
+            <image class="bottom-image" :src="itemProduct.middlePic"
                    :style="{height:brandItemBottomImageHeight,width:brandItemWidth}"></image>
 
         </div>
         <div class="bottomDiv" style="justify-content: center; align-items: center;"
              :style="{width:brandItemWidth}">
-            <text class="wishText">{{itemProduct.name}}</text>
+            <text class="wishText">{{itemProduct.hitCopy}}</text>
             <div class="seeDiv"
                  @click="toSeeClick()">
                 <!--<text class="seeText">{{seeContent}}</text>-->
@@ -177,14 +177,18 @@
         methods: {
             toSeeClick: function () {
                 console.log('--------toSeeClick----+++')
-                var nativeEventHandle = require('@jud-module/nativeEventHandle');
+                var communicate = jud.requireModule('communicate');
 
-                var self = this;
-                nativeEventHandle.handleEvent(
-                    "kToSeeBrandKey", //通信key
-                    {"index": 'https://www.jd.com'},
-                    function (ret) {
-                        // ret就是我们传入的{"Hello": "World"}
+                communicate.send("kJumpBrandDetailKey",
+                    {
+                        "domain": "jump",
+                        "info": "init",
+                        "params": {
+                            "body": self.ibrand
+                        }
+                    },
+                    function (result) {
+
                     });
             }
         },

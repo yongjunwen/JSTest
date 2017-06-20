@@ -20,7 +20,7 @@
                      :style="{height:lampIconHeight,width:lampItemWidth}">
                     <image class="brandLogo"
                            :style="{opacity:brandLogoImageOpacity,height:brandLogoHeight,width:brandLogoWidth}"
-                           :src="wishLampItem.brandIcon"></image>
+                           :src="wishLampItem.img"></image>
                 </div>
             </div>
             <div class="lampButtonBg" :style="{height:lampButtonBgHeight,width:lampItemWidth}">

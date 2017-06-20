@@ -59,7 +59,7 @@
                 default: {
                     logoName: null,
                     itemStyle: null,
-                    name: null
+                    hitCopy: null
                 }
             },
         },
