@@ -343,19 +343,23 @@
 	            //                    });
 	        },
 
-	        //            获取品牌列表和心愿灯列表的网络请求
+	        /*
+	         获取品牌列表和心愿灯列表的网络请求
+	         预发：http:// beta-api.m.jd.com/client.action
+	         todo: activityId 怎么传？
+	         */
 	        fetchList: function fetchList() {
-	            communicate.send("Get_Brand_List", {
+	            communicate.send("kBrandPromotionHomeCallBack", {
 	                "domain": "request",
-	                "info": "init",
+	                "info": "qryExclusiveDiscount",
 	                "params": {
-	                    "functionId": "qryUserWishLamps",
-	                    "body": self.ibrand
+	                    "functionId": "qryExclusiveDiscount",
+	                    "body": null
 	                }
 	            }, function (result) {
 
 	                if (String(result.code) === '1') {
-	                    communicate.send("Get_Brand_List", {
+	                    communicate.send("kBrandPromotionHomeCallBack", {
 	                        "domain": "error",
 	                        "info": "",
 	                        "params": result
@@ -766,9 +770,9 @@
 	            console.log('--------toSeeClick----+++');
 	            var communicate = jud.requireModule('communicate');
 
-	            communicate.send("kToSeeBrandKey", {
+	            communicate.send("kBrandPromotionHomeCallBack", {
 	                "domain": "jump",
-	                "info": "init",
+	                "info": "ToBandDetail",
 	                "params": {
 	                    "body": self.ibrand
 	                }
@@ -1523,9 +1527,9 @@
 
 	        //todo: 点亮心愿灯网络请求
 	        lightenBrandWishLampEvent: function lightenBrandWishLampEvent() {
-	            communicate.send("lighten_Brand_Wish_Lamp", {
+	            communicate.send("kBrandPromotionHomeCallBack", {
 	                "domain": "request",
-	                "info": "init",
+	                "info": "lightenBrandWishLamp",
 	                "params": {
 	                    "functionId": "lightenBrandWishLamp",
 	                    "body": self.ibrand

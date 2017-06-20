@@ -181,8 +181,8 @@
 
                 communicate.send("kBrandPromotionHomeCallBack",
                     {
-                        "domain": "ToBandDetail",
-                        "info": "init",
+                        "domain": "jump",
+                        "info": "ToBandDetail",
                         "params": {
                             "body": self.ibrand
                         }
