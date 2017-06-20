@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "JUDImgLoaderDefaultImpl.h"
 #import "AppDefine.h"
+#import "JUDJSCallNativeEventHandle.h"
 
 @interface AppDelegate ()
 
@@ -33,6 +34,7 @@
     [JUDLog setLogLevel:JUDLogLevelLog];
     
     [JUDSDKEngine registerModule:@"event" withClass:NSClassFromString(@"JUDEventModule")];
+      [JUDSDKEngine registerModule:@"nativeEventHandle" withClass:[JUDJSCallNativeEventHandle class]];
     [JUDSDKEngine registerHandler:[JUDImgLoaderDefaultImpl new] withProtocol:@protocol(JUDImgLoaderProtocol)];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

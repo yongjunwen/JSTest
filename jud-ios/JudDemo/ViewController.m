@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import <JudSDK/JudSDK.h>
+#import "JUDCallNative.h"
 
 @interface ViewController ()
 
@@ -67,10 +68,10 @@
     
     __weak typeof(self) weakSelf = self;
     _instance.onCreate = ^(UIView *view) {
-        [weakSelf.weexView removeFromSuperview];
-        weakSelf.weexView = view;
-        [weakSelf.view addSubview:weakSelf.weexView];
-        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, weakSelf.weexView);
+//        [weakSelf.weexView removeFromSuperview];
+//        weakSelf.weexView = view;
+//        [weakSelf.view addSubview:weakSelf.weexView];
+//        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, weakSelf.weexView);
     };
     _instance.onFailed = ^(NSError *error) {
         NSLog(@"failed %@",error);
@@ -78,6 +79,10 @@
     
     _instance.renderFinish = ^(UIView *view) {
         NSLog(@"render finish");
+        [weakSelf.weexView removeFromSuperview];
+        weakSelf.weexView = view;
+        [weakSelf.view addSubview:weakSelf.weexView];
+        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, weakSelf.weexView);
     };
     
     _instance.updateFinish = ^(UIView *view) {
@@ -86,6 +91,13 @@
     NSString *url = [NSString stringWithFormat:@"file://%@/PromotionHome.js",[NSBundle mainBundle].bundlePath];
     
     [_instance renderWithURL:[NSURL URLWithString:url] options:@{@"bundleUrl":url} data:nil];
+    
+    [JUDCallNative registEvent:@"kToSeeBrandKey"
+                      callBack:^(NSDictionary *info, JUDModuleCallback callJS) {
+                          //
+                          NSLog(@"kToSeeBrandKey====");
+//                          [JDNativeJumpManager jump:[JDNativeJumpWebModel modelWithAddress:info[@"index"]]];
+                      }];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{

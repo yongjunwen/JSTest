@@ -764,6 +764,13 @@
 	    methods: {
 	        toSeeClick: function toSeeClick() {
 	            console.log('--------toSeeClick----+++');
+	            var nativeEventHandle = __jud_require_module__('nativeEventHandle');
+
+	            var self = this;
+	            nativeEventHandle.handleEvent("kToSeeBrandKey", //通信key
+	            { "index": 'https://www.jd.com' }, function (ret) {
+	                // ret就是我们传入的{"Hello": "World"}
+	            });
 	        }
 	    },
 	    created: function created() {
