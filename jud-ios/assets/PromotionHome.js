@@ -397,7 +397,7 @@
 	        //            设备类型匹配
 	        if (platform === "ios") {
 	            //                height -= 5;
-	            this.contentTop = 180;
+	            this.contentTop = 210;
 	            console.log("=匹配到=iOS");
 	        } else if (platform === "android") {
 	            height -= 5;
@@ -982,11 +982,12 @@
 	        if (platform === "ios") {
 	            statusBarH = 0;
 	        } else if (platform === "android") {
+	            //40为减去状态栏的高度 默认使用40
 	            statusBarH = 40;
 	        }
 
 	        //            获取屏幕布局高度
-	        return 750 / deviceWidth * (deviceHeight - statusBarH); //40为减去状态栏的高度 默认使用40
+	        return 750 / deviceWidth * (deviceHeight - statusBarH);
 	    },
 	    /*
 	     设计slider宽高为 750*940

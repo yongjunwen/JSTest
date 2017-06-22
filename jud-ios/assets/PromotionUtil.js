@@ -27,11 +27,12 @@ export default {
         if (platform === "ios") {
             statusBarH = 0;
         } else if (platform === "android") {
+            //40为减去状态栏的高度 默认使用40
             statusBarH = 40;
         }
 
         //            获取屏幕布局高度
-        return 750 / deviceWidth * (deviceHeight - statusBarH); //40为减去状态栏的高度 默认使用40
+        return 750 / deviceWidth * (deviceHeight - statusBarH);
     },
     /*
      设计slider宽高为 750*940

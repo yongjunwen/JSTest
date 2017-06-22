@@ -259,7 +259,7 @@
 //            设备类型匹配
             if (platform === "ios") {
 //                height -= 5;
-                this.contentTop = 180;
+                this.contentTop = 210;
                 console.log("=匹配到=iOS")
             } else if (platform === "android") {
                 height -= 5;
