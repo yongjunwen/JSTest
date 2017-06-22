@@ -184,7 +184,7 @@
                         "domain": "jump",
                         "info": "ToBandDetail",
                         "params": {
-                            "body": self.ibrand
+                            "body": null
                         }
                     },
                     function (result) {
