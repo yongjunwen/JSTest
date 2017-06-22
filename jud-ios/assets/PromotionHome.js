@@ -978,8 +978,15 @@
 	        var deviceHeight = _this.$getConfig().env.deviceHeight;
 	        var deviceWidth = _this.$getConfig().env.deviceWidth;
 
+	        var statusBarH = 0;
+	        if (platform === "ios") {
+	            statusBarH = 0;
+	        } else if (platform === "android") {
+	            statusBarH = 40;
+	        }
+
 	        //            获取屏幕布局高度
-	        return 750 / deviceWidth * (deviceHeight - 40); //40为减去状态栏的高度 默认使用40
+	        return 750 / deviceWidth * (deviceHeight - statusBarH); //40为减去状态栏的高度 默认使用40
 	    },
 	    /*
 	     设计slider宽高为 750*940
@@ -1045,7 +1052,8 @@
 	    getWishItemWidth: function getWishItemWidth(_this) {
 	        var wishItemH = this.getWishItemHeight(_this);
 	        var wishItemW = 644 / 946 * wishItemH;
-	        return 606 * this.scale(_this);;
+	        return 606 * this.scale(_this);
+	        ;
 	    },
 	    getWishItemHeight: function getWishItemHeight(_this) {
 	        var sliderHeight = this.getSliderHeight(_this);
