@@ -149,6 +149,7 @@
 
 <script>
     import Util from './PromotionUtil.js'
+    var communicate = jud.requireModule('communicate');
     export default {
         data: function () {
             return {
@@ -177,7 +178,6 @@
         methods: {
             toSeeClick: function () {
                 console.log('--------toSeeClick----+++')
-                var communicate = jud.requireModule('communicate');
 
                 communicate.send("kBrandPromotionHomeCallBack",
                     {
