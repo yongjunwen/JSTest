@@ -4,7 +4,8 @@
     <div class="rooDiv" :style="{height:wishRootHeight,width:wishRootWidth}">
         <!--todo:背景图片待添加-->
         <div class="bgImageDiv">
-            <image class="bgImage" :src="wishLampBg" :style="{height:wishRootHeight,width:wishRootWidth}"></image>
+            <image class="bgImage" :src="wishLampBg" :style="{height:wishRootHeight,width:wishRootWidth}"
+                   placeholder="native://wish_lamp_bg_placeholder"></image>
         </div>
         <!--内容显示区域-->
         <div class="contentDiv">
@@ -14,7 +15,8 @@
                     <text class="topItemContentText" :style="{fontSize:titleFontSize,marginTop:titleTop}">{{cardTitle}}</text>
                     <!--<text class="lineItem">-·-</text>-->
                     <image class="seperateicon" :src="seperateicon"></image>
-                    <text class="tipContent" :style="{fontSize:contentFontSize,marginTop:contentTop}">{{tipContent}}</text>
+                    <text class="tipContent" :style="{fontSize:contentFontSize,marginTop:contentTop}">{{tipContent}}
+                    </text>
                 </div>
             </div>
             <!--灯笼显示区域 按行排列-->

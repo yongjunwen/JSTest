@@ -4,7 +4,7 @@
     <div class="rootDiv">
         <div class="bgView" :style="{height:deviceHeight}">
             <image class="bgImage" :src="bgImage" :style="{height:deviceHeight}"
-                   placeholder='http://ww2.sinaimg.cn/large/006tKfTcgy1fez04i56w5j31hc0kuwhz.jpg'></image>
+                   placeholder='native://pd_main_bg@1x'></image>
         </div>
 
         <!-- :style="{height:deviceHeight}"-->
