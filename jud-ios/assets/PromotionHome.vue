@@ -3,7 +3,7 @@
     <!--  -->
     <div class="rootDiv">
         <div class="bgView" :style="{height:deviceHeight}">
-            <image class="bgImage" :src="bgImage" :style="{height:deviceHeight}"></image>
+            <image class="bgImage" :src="bgImage" :style="{height:deviceHeight}" placeholder='http://ww2.sinaimg.cn/large/006tKfTcgy1fez04i56w5j31hc0kuwhz.jpg'></image>
         </div>
 
         <!-- :style="{height:deviceHeight}"-->
@@ -221,7 +221,7 @@
                                 {
                                     "domain": "error",
                                     "info": "",
-                                    "params": result
+                                    "params": null
                                 },
                                 function (result) {
                                 });
@@ -285,7 +285,7 @@
 
 
 //           todo: 添加网络请求逻辑
-//            this.fetchList();
+            this.fetchList();
         }
     }
 </script>

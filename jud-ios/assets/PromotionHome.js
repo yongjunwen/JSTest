@@ -362,7 +362,7 @@
 	                    communicate.send("kBrandPromotionHomeCallBack", {
 	                        "domain": "error",
 	                        "info": "",
-	                        "params": result
+	                        "params": null
 	                    }, function (result) {});
 
 	                    return;
@@ -422,7 +422,7 @@
 	        this.neighborSpace = _PromotionUtil2.default.scale(this) * _nSpace;
 
 	        //           todo: 添加网络请求逻辑
-	        //            this.fetchList();
+	        this.fetchList();
 	    }
 	};
 	module.exports = exports['default'];
@@ -2185,7 +2185,8 @@
 	      height: _vm.deviceHeight
 	    },
 	    attrs: {
-	      "src": _vm.bgImage
+	      "src": _vm.bgImage,
+	      "placeholder": "http://ww2.sinaimg.cn/large/006tKfTcgy1fez04i56w5j31hc0kuwhz.jpg"
 	    }
 	  })]), _c('div', {
 	    staticClass: ["contentView"],
