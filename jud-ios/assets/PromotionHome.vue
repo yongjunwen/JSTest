@@ -1,11 +1,10 @@
-<!--suppress ALL -->
 <template>
     <!-- 滑动组件的大背景视图 -->
     <!--  -->
     <div class="rootDiv" v-if="productList.length != 0">
         <div class="bgView" :style="{height:deviceHeight}">
             <image class="bgImage" :src="bgImage" :style="{height:deviceHeight}"
-                   placeholder='native://pd_main_bg@1x'></image>
+                   placeholder='native://slider_bg_image'></image>
         </div>
 
         <!-- :style="{height:deviceHeight}"-->
@@ -14,10 +13,15 @@
                              :neighborSpace="neighborSpace" neighborScale="0.9" currentItemScale="1"
                              :index="selectIndex" @change="changeEvent" :style="{height:sliderHeight}">
 
-                <div @click="clickEvent" v-for="itemProduct in productList">
+                <div v-for="(itemProduct,index) in productList">
 
-                    <promotion-product-view :itemProduct="itemProduct"
-                                            v-if="itemProduct.itemStyle==1"></promotion-product-view>
+                    <promotion-product-view
+                            :itemProduct="itemProduct"
+                            :parentList="productList"
+                            :activityId="activityId"
+                            :selectIndex="index"
+                            v-if="itemProduct.itemStyle==1"
+                     ></promotion-product-view>
 
                     <promotion-wish-lamp-view :wishLampObject="itemProduct"
                                               v-if="itemProduct.itemStyle==2"></promotion-wish-lamp-view>
@@ -56,6 +60,7 @@
     import PromotionProductView from './PromotionProductView.vue'
     import PromotionWishLampView from './PromotionWishLampView.vue'
     import Util from './PromotionUtil.js'
+    import bus from './PDBus.vue'
     var communicate = jud.requireModule('communicate');
 
     const modal = jud.requireModule('modal');
@@ -67,6 +72,7 @@
         },
         data: {
             test: 'test222',
+            activityId: null,
             isHaveLightened: false,
             contentTop: 0,
             selectIndex: 0,
@@ -224,6 +230,7 @@
                         console.log('qryExclusiveDiscount-backData-code:' + result.code);
                         if (String(result.code) === '0') {
 
+                            _this.activityId = result.activityId;
                             //todo:sample
                             var _proList = result.brands;
                             if (_proList.length) {
@@ -305,6 +312,37 @@
                     });
             }
         },
+        clickBrandEvent: function (index) {
+            console.log('clickBrandEvent=====0');
+            //需要传给详情页面的入参
+            var materialIds = [];
+            for (var i = 0; i < this.productList.length; i++) {
+                var item = this.productList[i];
+                if (item.itemStyle == '1') {
+                    materialIds.push(item.materialId);
+
+                }
+            }
+
+            console.log('clickBrandEvent=====');
+            var dictionary = new Dictionary();
+            dictionary.set('selectIndex', index);
+            dictionary.set('materialIds', materialIds);
+            dictionary.set('activityId', this.activityId);
+
+            communicate.send("kBrandPromotionHomeCallBack",
+                {
+                    "domain": "jump",
+                    "info": "toBandDetail",
+                    "params": {
+                        "body": dictionary
+                    }
+                },
+                function (result) {
+
+                });
+
+        },
         sendErrorToNative: function () {
             communicate.send("kBrandPromotionHomeCallBack",
                 {
@@ -314,8 +352,6 @@
                 },
                 function (result) {
                 });
-
-            return;
         },
         created: function () {
             //
@@ -365,6 +401,12 @@
 
 //  添加网络请求逻辑
             this.fetchList();
+
+//            // 在组件 B 创建的钩子中监听事件
+//            bus.$on('id-selected', function (id) {
+//                // ...
+//                console.log('selected=======bus');
+//            });
         }
     }
 </script>

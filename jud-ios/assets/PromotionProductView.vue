@@ -34,7 +34,7 @@
                  @click="toSeeClick()">
                 <!--<text class="seeText">{{seeContent}}</text>-->
                 <image style="width:216px;height: 76px ;"
-                       :src="seeButtonImage"></image>
+                       :src="seeButtonImage" placeholder='native://see_button'></image>
             </div>
 
         </div>
@@ -150,6 +150,7 @@
 <script>
     import Util from './PromotionUtil.js'
     var communicate = jud.requireModule('communicate');
+    import bus from './PDBus.vue'
     export default {
         data: function () {
             return {
@@ -174,22 +175,64 @@
                 type: Object,
                 default: {}
             },
+
+            parentList: {
+                type: Object,
+                default: {}
+            },
+
+            activityId: {
+                type: Object,
+                default: {}
+            },
+
+            selectIndex: {
+                type: Object,
+                default: {}
+            },
+            clickBrandEvent: {
+                type: Function,
+            }
         },
         methods: {
-            toSeeClick: function () {
-                console.log('--------toSeeClick----+++')
+            clickBrandEvent: function () {
+                console.log('clickBrandEvent=====0');
+                //需要传给详情页面的入参
+                var materialIds = [];
+                for (var i = 0; i < this.parentList.length; i++) {
+                    var item = this.parentList[i];
+                    if (item.itemStyle == '1') {
+                        materialIds.push(item.materialId);
+
+                    }
+                }
+
+                console.log('clickBrandEvent====='+ materialIds);
+//                var dictionary = new Dictionary();
+//                dictionary.set('selectIndex', index);
+//                dictionary.set('materialIds', materialIds);
+//                dictionary.set('activityId', this.activityId);
 
                 communicate.send("kBrandPromotionHomeCallBack",
                     {
                         "domain": "jump",
-                        "info": "ToBandDetail",
+                        "info": "toBrandDetail",
                         "params": {
-                            "body": null
+                            "body": {'selectIndex':this.selectIndex,'materialIds':materialIds,'activityId':this.activityId}
                         }
                     },
                     function (result) {
 
                     });
+
+            },
+            toSeeClick: function () {
+                console.log('--------toSeeClick----+++');
+                this.clickBrandEvent();
+//                console.log(this.clickBrandEvent());
+//                this.$emit('kClickBrand');
+//                 触发组件 A 中的事件
+//                bus.$emit('id-selected', 1)
             }
         },
         created: function () {
