@@ -15,8 +15,7 @@
                     <text class="topItemContentText" :style="{fontSize:titleFontSize,marginTop:titleTop}">{{cardTitle}}</text>
                     <!--<text class="lineItem">-·-</text>-->
                     <image class="seperateicon" :src="seperateicon"></image>
-                    <text class="tipContent" :style="{fontSize:contentFontSize,marginTop:contentTop}">{{wishLampObject.wishLampCopy}}
-                    </text>
+                    <text class="tipContent" :style="{fontSize:contentFontSize,marginTop:contentTop}">{{wishLampObject.wishLampCopy}}</text>
                 </div>
             </div>
             <!--灯笼显示区域 按行排列-->
@@ -144,6 +143,7 @@
 <script>
     import PromotionWishLampItemView from './PromotionWishLampItemView.vue'
     import Util from './PromotionUtil.js'
+    var communicate = jud.requireModule('communicate');
     export default {
         components: {
             PromotionWishLampItemView
@@ -183,29 +183,28 @@
             },
 
 //todo: 点亮心愿灯网络请求
-            lightenBrandWishLampEvent: function () {
+            lightenBrandWishLampEvent: function (brandId) {
+                console.log('lightenBrandWishLampEvent==brandId' + brandId);
                 communicate.send("kBrandPromotionHomeCallBack",
                     {
                         "domain": "request",
                         "info": "lightenBrandWishLamp",
                         "params": {
                             "functionId": "lightenBrandWishLamp",
-                            "body": self.ibrand
+                            "body": {'brandId': brandId}
                         }
                     },
                     function (result) {
 
                         if (String(result.code) === '1') {
-                            communicate.send("lighten_Brand_Wish_Lamp",
+                            communicate.send("kBrandPromotionHomeCallBack",
                                 {
                                     "domain": "error",
-                                    "info": "",
+                                    "info": "lightenBrandWishLamp",
                                     "params": result
                                 },
                                 function (result) {
                                 });
-
-                            return;
                         }
 
 //                    todo 点亮成功逻辑
@@ -213,16 +212,16 @@
 
                     });
             },
-            changeLampStateEvent: function (lampItem) {
-                console.log('changeLampStateEvent=====' + lampItem + '获取到');
+            changeLampStateEvent: function (lampItemID) {
+                console.log('changeLampStateEvent=====' + lampItemID + '获取到');
                 console.log('array=' + this.wishLampObject.brandList)
 
 //                todo:添加点亮心愿灯网络请求逻辑
-//                this.lightenBrandWishLampEvent();
+//                this.lightenBrandWishLampEvent(lampItemID);
 
                 this.wishLampObject.brandList.forEach(function (item, index) {
                     console.log('brandId=' + item['brandId'])
-                    if (item['brandId'] === lampItem) {
+                    if (item['brandId'] === lampItemID) {
                         item['lampState'] = '2';
                         console.log('changeLampStateEvent====lampState=2');
                     } else {
