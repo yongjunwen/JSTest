@@ -196,7 +196,11 @@
                     },
                     function (result) {
 
-                        if (String(result.code) === '1') {
+                        if (String(result.code) === '0') {
+                            //表示请求成功
+                            this.updateLampData();
+
+                        } else {
                             communicate.send("kBrandPromotionHomeCallBack",
                                 {
                                     "domain": "error",
@@ -206,19 +210,9 @@
                                 function (result) {
                                 });
                         }
-
-//                    todo 点亮成功逻辑
-                        //todo:sample
-
                     });
             },
-            changeLampStateEvent: function (lampItemID) {
-                console.log('changeLampStateEvent=====' + lampItemID + '获取到');
-                console.log('array=' + this.wishLampObject.brandList)
-
-//                todo:添加点亮心愿灯网络请求逻辑
-//                this.lightenBrandWishLampEvent(lampItemID);
-
+            updateLampData: function () {
                 this.wishLampObject.brandList.forEach(function (item, index) {
                     console.log('brandId=' + item['brandId'])
                     if (item['brandId'] === lampItemID) {
@@ -229,6 +223,13 @@
                         item['lampState'] = '3';
                     }
                 });
+            },
+            changeLampStateEvent: function (lampItemID) {
+                console.log('changeLampStateEvent=====' + lampItemID + '获取到');
+                console.log('array=' + this.wishLampObject.brandList)
+
+//                todo:添加点亮心愿灯网络请求逻辑
+                this.lightenBrandWishLampEvent(lampItemID);
             }
         },
         created: function () {
