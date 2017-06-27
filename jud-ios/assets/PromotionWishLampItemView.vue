@@ -7,14 +7,17 @@
 
             <div class="lampIconBg" :style="{height:lampIconHeight,width:lampItemWidth}">
                 <!--正常状态-->
-                <image class="lampIcon" :src="wishLampNomalIcon" placeholder="native://wish_lamp_normal_icon"
-                       :style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==1"></image>
-                <!--点亮状态-->
-                <image class="lampSelectIcon" :src="wishLampSelectIcon" placeholder="native://wish_lamp_select_icon"
-                       :style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==2"></image>
-                <!--变暗状态-->
-                <image class="lampIcon" :src="wishLampDisableIcon" placeholder="native://wish_lamp_disable_icon"
-                       :style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==3"></image>
+                <image class="lampIcon" :src="lampPlaceHolderIcon"
+                       :style="{height:lampIconHeight,width:lampItemWidth}"></image>
+                <!--&lt;!&ndash;正常状态&ndash;&gt;-->
+                <!--<image class="lampIcon" :src="wishLampNomalIcon" placeholder="native://wish_lamp_normal_icon"-->
+                <!--:style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==1"></image>-->
+                <!--&lt;!&ndash;点亮状态&ndash;&gt;-->
+                <!--<image class="lampSelectIcon" :src="wishLampSelectIcon" placeholder="native://wish_lamp_select_icon"-->
+                <!--:style="{height:lampIconHeight,width:lampItemWidth}" v-if="isShowSelect==true"></image>-->
+                <!--&lt;!&ndash;变暗状态&ndash;&gt;-->
+                <!--<image class="lampIcon" :src="wishLampDisableIcon" placeholder="native://wish_lamp_disable_icon"-->
+                <!--:style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==3"></image>-->
 
                 <div style="position: absolute;top: 0;justify-content: center;align-items: center;"
                      :style="{height:lampIconHeight,width:lampItemWidth}">
@@ -24,14 +27,19 @@
                 </div>
             </div>
             <div class="lampButtonBg" :style="{height:lampButtonBgHeight,width:lampItemWidth}">
-                <image class="lampButtonIcon" :src="wishLampNomalBtn" placeholder="native://wish_lamp_normal_btn"
-                       :style="{height:lampButtonBgHeight,width:lampButtonIconWidth}" v-if="wishLampItem.lampState==1"></image>
+                <image class="lampButtonIcon" :src="wishLampBtnIcon"
+                       :style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"></image>
+                <!--<image class="lampButtonIcon" :src="wishLampNomalBtn" placeholder="native://wish_lamp_normal_btn"-->
+                       <!--:style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"-->
+                       <!--v-if="wishLampItem.lampState==1"></image>-->
 
-                <image class="lampButtonIcon" :src="wishLampSelectBtn" placeholder="native://wish_lamp_select_btn"
-                       :style="{height:lampButtonBgHeight,width:lampButtonIconWidth}" v-if="wishLampItem.lampState==2"></image>
+                <!--<image class="lampButtonIcon" :src="wishLampSelectBtn" placeholder="native://wish_lamp_select_btn"-->
+                       <!--:style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"-->
+                       <!--v-if="wishLampItem.lampState==2"></image>-->
 
-                <image class="lampButtonIcon" :src="wishLampDisableBtn" placeholder="native://wish_lamp_disable_btn"
-                       :style="{height:lampButtonBgHeight,width:lampButtonIconWidth}" v-if="wishLampItem.lampState==3"></image>
+                <!--<image class="lampButtonIcon" :src="wishLampDisableBtn" placeholder="native://wish_lamp_disable_btn"-->
+                       <!--:style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"-->
+                       <!--v-if="wishLampItem.lampState==3"></image>-->
 
 
                 <div style="position: absolute;top: 0;justify-content: center;align-items: center;width: 132px;height: 46px"
@@ -65,6 +73,7 @@
     .lampSelectIcon {
 
     }
+
     .lampIcon {
         /*width: 132px;*/
         /*height: 144px;*/
@@ -133,7 +142,10 @@
                 wishLampSelectBtn: "wish_lamp_select_btn.png",
                 wishLampDisableBtn: "wish_lamp_disable_btn.png",
 
-                tipContent: '30天内努力为你备好，请持续关注'
+                tipContent: '30天内努力为你备好，请持续关注',
+                isShowSelect: false,
+                lampPlaceHolderIcon: null,
+                wishLampBtnIcon: null,
             }
         },
         props: {
@@ -146,25 +158,15 @@
             wishLampItem: {
                 handler: function (wishLampItem) {
                     console.log("watch=====wishLampItem");
-                    if (this.wishLampItem.lampState === '2') {
-                        this.lampText = "已点亮";
-//                        this.lampTextColor = "#ffb5b7";
-                    } else if (this.wishLampItem.lampState === '3') {
-//                        this.lampText = "已变灰";
-                        this.lampTextColor = "#999999";
-                        this.brandLogoImageOpacity = 0.5;
-                    }
+                    this.updateLampState();
                 },
                 deep: true
             }
         },
         mounted: function () {
-            if (this.wishLampItem.lampState === '2') {
-                this.lampText = "已点亮"
-            } else if (this.wishLampItem.lampState === '3') {
-                this.lampText = "已变灰"
-            }
+            console.log("mounted=====wishLampItem");
 
+            this.updateLampState();
         },
         created: function () {
             this.lampItemWidth = Util.getLampItemWidth(this);
@@ -180,6 +182,24 @@
             this.lampButtonIconWidth = Util.getLampButtonBgIconHeight(this);
         },
         methods: {
+            updateLampState: function () {
+                if (this.wishLampItem.lampState === '2') {
+                    this.lampText = "已点亮";
+//                        this.lampTextColor = "#ffb5b7";
+                    this.isShowSelect = true;
+                    this.lampPlaceHolderIcon = 'native://wish_lamp_select_icon.png';
+                    this.wishLampBtnIcon = 'native://wish_lamp_select_btn.png';
+                } else if (this.wishLampItem.lampState === '3') {
+//                        this.lampText = "已变灰";
+                    this.lampTextColor = "#999999";
+                    this.brandLogoImageOpacity = 0.5;
+                    this.lampPlaceHolderIcon = 'native://wish_lamp_disable_icon.png';
+                    this.wishLampBtnIcon = 'native://wish_lamp_disable_btn.png';
+                } else {
+                    this.lampPlaceHolderIcon = 'native://wish_lamp_normal_icon.png';
+                    this.wishLampBtnIcon = 'native://wish_lamp_normal_btn.png';
+                }
+            },
             clickLampEvent: function () {
 //                lampState 1是正常状态 2是已点亮 3是不可点亮变灰状态
 //                如果lampState是2 || 3直接return掉 因为 点亮后不再允许再点亮

@@ -18,7 +18,7 @@
 
                 <!--弧度样式视图图层-->
                 <div class="curveImageBg" :style="{height:brandItemCurveHeight,width:brandItemWidth}">
-                    <image class="curveImage" :src="curveImage"
+                    <image class="curveImage" :src="curveImage"  placeholder="native://promotion_rectagle_icon"
                            :style="{height:brandItemCurveHeight,width:brandItemWidth}"></image>
                 </div>
             </div>
