@@ -15,7 +15,7 @@
                     <text class="topItemContentText" :style="{fontSize:titleFontSize,marginTop:titleTop}">{{cardTitle}}</text>
                     <!--<text class="lineItem">-·-</text>-->
                     <image class="seperateicon" :src="seperateicon"></image>
-                    <text class="tipContent" :style="{fontSize:contentFontSize,marginTop:contentTop}">{{tipContent}}
+                    <text class="tipContent" :style="{fontSize:contentFontSize,marginTop:contentTop}">{{wishLampObject.wishLampCopy}}
                     </text>
                 </div>
             </div>

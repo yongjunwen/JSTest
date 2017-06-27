@@ -20,8 +20,9 @@
                             :parentList="productList"
                             :activityId="activityId"
                             :selectIndex="index"
+                            v-on:kClickBrand="clickBrandEvent(index)"
                             v-if="itemProduct.itemStyle==1"
-                     ></promotion-product-view>
+                    ></promotion-product-view>
 
                     <promotion-wish-lamp-view :wishLampObject="itemProduct"
                                               v-if="itemProduct.itemStyle==2"></promotion-wish-lamp-view>
@@ -65,11 +66,13 @@
 
     const modal = jud.requireModule('modal');
     export default {
+//        组件注册
         components: {
             PromotionProductView,
             PromotionWishLampView,
             PromotionBottom
         },
+//        数据
         data: {
             test: 'test222',
             activityId: null,
@@ -87,6 +90,8 @@
             bottomTabImageHeight: 0,
             bottomTabImageWidth: 0,
             buttonBgColor: null,
+
+            wishLampCopy:null,
 //            bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
             bgImage: 'slider_bg_image.png',
             productList: [],
@@ -176,12 +181,15 @@
 //                }
 //            ]
         },
+//        方法
         methods: {
 
+            //底部tab按钮点击事件
             buttonClick: function (index) {
                 this.selectIndex = index;
             },
 
+            // 滑动组件change事件
             changeEvent: function (e) {
                 var selectIndexStr = e["index"];
 
@@ -212,10 +220,11 @@
             /*
              获取品牌列表和心愿灯列表的网络请求
              预发：http:// beta-api.m.jd.com/client.action
-             todo: activityId 怎么传？
              */
             fetchList: function () {
                 var _this = this;
+//                var reqBody = new Dictionary();
+//                dictionary.set('activityId', "47fWAZihZPCoKesZmyPrDD8QokKG");
                 communicate.send("kBrandPromotionHomeCallBack",
                     {
                         "domain": "request",
@@ -231,6 +240,10 @@
                         if (String(result.code) === '0') {
 
                             _this.activityId = result.activityId;
+//                            页面大背景图
+                            _this.bgImage = result.head.bgPic;
+//                            心愿灯上部文案是wishLampCopy
+                            _this.wishLampCopy = result.head.wishLampCopy;
                             //todo:sample
                             var _proList = result.brands;
                             if (_proList.length) {
@@ -291,6 +304,7 @@
                                         'itemStyle': '2',
                                         'btmLogo': "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg",
                                         'tabName': "心愿灯",
+                                        'wishLampCopy': _this.wishLampCopy,
                                         'brandList': _wishLamps
                                     };
 
@@ -310,49 +324,53 @@
 
 
                     });
-            }
-        },
-        clickBrandEvent: function (index) {
-            console.log('clickBrandEvent=====0');
-            //需要传给详情页面的入参
-            var materialIds = [];
-            for (var i = 0; i < this.productList.length; i++) {
-                var item = this.productList[i];
-                if (item.itemStyle == '1') {
-                    materialIds.push(item.materialId);
+            },
 
-                }
-            }
+            //点击品牌跳转到详情页面事件
+            clickBrandEvent: function (index) {
+                console.log('clickBrandEvent=====0hahahahahahah');
+                //需要传给详情页面的入参
+                var materialIds = [];
+                for (var i = 0; i < this.productList.length; i++) {
+                    var item = this.productList[i];
+                    if (item.itemStyle == '1') {
+                        materialIds.push(item.materialId);
 
-            console.log('clickBrandEvent=====');
-            var dictionary = new Dictionary();
-            dictionary.set('selectIndex', index);
-            dictionary.set('materialIds', materialIds);
-            dictionary.set('activityId', this.activityId);
-
-            communicate.send("kBrandPromotionHomeCallBack",
-                {
-                    "domain": "jump",
-                    "info": "toBandDetail",
-                    "params": {
-                        "body": dictionary
                     }
-                },
-                function (result) {
+                }
 
-                });
+                console.log('clickBrandEvent=====');
+//                var dictionary = new Dictionary();
+//                dictionary.set('selectIndex', index);
+//                dictionary.set('materialIds', materialIds);
+//                dictionary.set('activityId', this.activityId);
 
+                communicate.send("kBrandPromotionHomeCallBack",
+                    {
+                        "domain": "jump",
+                        "info": "toBrandDetail",
+                        "params": {
+                            "body": {'selectIndex':index,'materialIds':materialIds,'activityId':this.activityId}
+                        }
+                    },
+                    function (result) {
+
+                    });
+
+            },
+//            发送错误信息到native
+            sendErrorToNative: function () {
+                communicate.send("kBrandPromotionHomeCallBack",
+                    {
+                        "domain": "error",
+                        "info": "qryExclusiveDiscount",
+                        "params": null
+                    },
+                    function (result) {
+                    });
+            },
         },
-        sendErrorToNative: function () {
-            communicate.send("kBrandPromotionHomeCallBack",
-                {
-                    "domain": "error",
-                    "info": "qryExclusiveDiscount",
-                    "params": null
-                },
-                function (result) {
-                });
-        },
+//        生命周期created函数 不要写在metods体内
         created: function () {
             //
             var platform = this.$getConfig().env.platform.toLowerCase();
@@ -399,14 +417,8 @@
             this.neighborSpace = Util.scale(this) * _nSpace;
 
 
-//  添加网络请求逻辑
+            // 添加网络请求逻辑
             this.fetchList();
-
-//            // 在组件 B 创建的钩子中监听事件
-//            bus.$on('id-selected', function (id) {
-//                // ...
-//                console.log('selected=======bus');
-//            });
         }
     }
 </script>

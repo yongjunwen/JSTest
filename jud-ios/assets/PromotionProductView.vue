@@ -5,7 +5,7 @@
 
         <div class="slider-item" :style="{height:brandItemHeight,width:brandItemWidth}" @click="toSeeClick()">
             <div class="topItemBg" :style="{height:topItemBgHeight,width:brandItemWidth}">
-                <image class="topItemBgImage" :src="itemProduct.topPic"
+                <image class="topItemBgImage" :src="itemProduct.titleAtmoPic"
                        :style="{height:topItemBgHeight,width:brandItemWidth}"></image>
                 <div class="topItemContent" :style="{width:brandItemWidth}">
                     <image style="width:212px;height: 70px;background-color: aquamarine ; margin-top: 18px;"
@@ -228,9 +228,9 @@
             },
             toSeeClick: function () {
                 console.log('--------toSeeClick----+++');
-                this.clickBrandEvent();
+//                this.clickBrandEvent();
 //                console.log(this.clickBrandEvent());
-//                this.$emit('kClickBrand');
+                this.$emit('kClickBrand');
 //                 触发组件 A 中的事件
 //                bus.$emit('id-selected', 1)
             }
