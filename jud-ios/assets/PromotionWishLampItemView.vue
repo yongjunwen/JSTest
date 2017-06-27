@@ -144,8 +144,8 @@
 
                 tipContent: '30天内努力为你备好，请持续关注',
                 isShowSelect: false,
-                lampPlaceHolderIcon: null,
-                wishLampBtnIcon: null,
+                lampPlaceHolderIcon: 'native://wish_lamp_normal_icon.png',
+                wishLampBtnIcon: 'native://wish_lamp_normal_btn.png',
             }
         },
         props: {

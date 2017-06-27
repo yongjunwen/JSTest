@@ -184,6 +184,7 @@
 
 //todo: 点亮心愿灯网络请求
             lightenBrandWishLampEvent: function (brandId) {
+                var _this = this;
                 console.log('lightenBrandWishLampEvent==brandId' + brandId);
                 communicate.send("kBrandPromotionHomeCallBack",
                     {
@@ -197,8 +198,19 @@
                     function (result) {
 
                         if (String(result.code) === '0') {
+                            console.log("lightenBrandWishLampEvent------===请求成功");
                             //表示请求成功
-                            this.updateLampData();
+//                            _this.updateLampData();
+                            _this.wishLampObject.brandList.forEach(function (item, index) {
+                                console.log('brandId=' + item['brandId'])
+                                if (item['brandId'] === brandId) {
+                                    item['lampState'] = '2';
+                                    console.log('changeLampStateEvent====lampState=2');
+                                } else {
+                                    console.log('changeLampStateEvent====lampState=3');
+                                    item['lampState'] = '3';
+                                }
+                            });
 
                         } else {
                             communicate.send("kBrandPromotionHomeCallBack",
@@ -213,6 +225,7 @@
                     });
             },
             updateLampData: function () {
+                console.log("updateLampData------===");
                 this.wishLampObject.brandList.forEach(function (item, index) {
                     console.log('brandId=' + item['brandId'])
                     if (item['brandId'] === lampItemID) {
@@ -226,7 +239,7 @@
             },
             changeLampStateEvent: function (lampItemID) {
                 console.log('changeLampStateEvent=====' + lampItemID + '获取到');
-                console.log('array=' + this.wishLampObject.brandList)
+                console.log('array=' + this.wishLampObject.brandList);
 
 //                todo:添加点亮心愿灯网络请求逻辑
                 this.lightenBrandWishLampEvent(lampItemID);

@@ -14,12 +14,11 @@
                              :index="selectIndex" @change="changeEvent" :style="{height:sliderHeight}">
 
                 <div v-for="(itemProduct,index) in productList">
-
+<!--   :parentList="productList"
+     :activityId="activityId"
+     :selectIndex="index"-->
                     <promotion-product-view
                             :itemProduct="itemProduct"
-                            :parentList="productList"
-                            :activityId="activityId"
-                            :selectIndex="index"
                             v-on:kClickBrand="clickBrandEvent(index)"
                             v-if="itemProduct.itemStyle==1"
                     ></promotion-product-view>
@@ -48,11 +47,6 @@
             </div>
 
         </div>
-        <!--测试代码-->
-        <!--<div class="test" style="align-items: center;-->
-        <!--justify-content: center; background-color: aquamarine; width: 90px; height: 50px">-->
-        <!--<text class="bottomText">测试</text>-->
-        <!--</div>-->
     </div>
 </template>
 
