@@ -88,8 +88,9 @@
     _instance.updateFinish = ^(UIView *view) {
         NSLog(@"update Finish");
     };
-    NSString *url = [NSString stringWithFormat:@"file://%@/PromotionHome.js",[NSBundle mainBundle].bundlePath];
+//    NSString *url = [NSString stringWithFormat:@"file://%@/PromotionHome.js",[NSBundle mainBundle].bundlePath];
     
+    NSString *url = @"https://raw.githubusercontent.com/yongjunwen/JSTest/master/jud-ios/assets/PromotionHome.js";
     [_instance renderWithURL:[NSURL URLWithString:url] options:@{@"bundleUrl":url} data:nil];
     
     [JUDCallNative registEvent:@"kToSeeBrandKey"
