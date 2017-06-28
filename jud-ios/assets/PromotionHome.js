@@ -2125,6 +2125,12 @@
 	    }
 	  }, _vm._l((_vm.productList), function(itemProduct) {
 	    return _c('div', {
+	      staticStyle: {
+	        width: "450px"
+	      },
+	      style: {
+	        height: _vm.sliderHeight
+	      },
 	      on: {
 	        "click": _vm.clickEvent
 	      }

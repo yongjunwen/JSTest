@@ -12,7 +12,7 @@
                              :neighborSpace="neighborSpace" neighborScale="0.9" currentItemScale="1"
                              :index="selectIndex" @change="changeEvent" :style="{height:sliderHeight}">
 
-                <div @click="clickEvent" v-for="itemProduct in productList">
+                <div @click="clickEvent" v-for="itemProduct in productList" :style="{height:sliderHeight}" style="width: 450px">
 
                     <promotion-product-view :itemProduct="itemProduct"
                                             v-if="itemProduct.itemStyle==1"></promotion-product-view>
