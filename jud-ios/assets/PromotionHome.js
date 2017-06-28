@@ -104,6 +104,7 @@
 	  },
 	  "slider-neighbor": {
 	    "top": 0,
+	    "justifyContent": "center",
 	    "alignItems": "center"
 	  },
 	  "bottomTab": {
@@ -208,6 +209,8 @@
 	//
 	//
 	//
+	//
+	//
 
 	var modal = jud.requireModule('modal');
 	exports.default = {
@@ -221,6 +224,7 @@
 	        contentTop: 0,
 	        selectIndex: 0,
 	        neighborSpace: 0,
+	        brandItemBgWidth: 0,
 	        buttonBgSelectColor: "#000000",
 	        deviceHeight: 10,
 	        sliderHeight: 0,
@@ -385,6 +389,9 @@
 	            _nSpace = 30;
 	        }
 	        this.neighborSpace = _PromotionUtil2.default.scale(this) * _nSpace;
+
+	        this.brandItemBgWidth = _PromotionUtil2.default.scale(this) * 606;
+	        ;
 	    }
 	};
 	module.exports = exports['default'];
@@ -2087,7 +2094,7 @@
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
+	  return (_vm.productList.length != 0) ? _c('div', {
 	    staticClass: ["rootDiv"]
 	  }, [_c('div', {
 	    staticClass: ["bgView"],
@@ -2131,7 +2138,7 @@
 	      },
 	      style: {
 	        height: _vm.sliderHeight,
-	        width: '750',
+	        width: _vm.brandItemBgWidth,
 	        backgroundColor: '#EE7A22'
 	      },
 	      on: {
@@ -2176,7 +2183,7 @@
 	        "src": itemProduct.tabImage
 	      }
 	    })])
-	  }))])], 1)])
+	  }))])], 1)]) : _vm._e()
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 

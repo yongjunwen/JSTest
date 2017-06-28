@@ -1,7 +1,7 @@
 <template>
     <!-- 滑动组件的大背景视图 -->
     <!--  -->
-    <div class="rootDiv">
+    <div class="rootDiv" v-if="productList.length !=0">
         <div class="bgView" :style="{height:deviceHeight}">
             <image class="bgImage" :src="bgImage" :style="{height:deviceHeight}"></image>
         </div>
@@ -12,7 +12,9 @@
                              :neighborSpace="neighborSpace" neighborScale="0.9" currentItemScale="1"
                              :index="selectIndex" @change="changeEvent" :style="{height:sliderHeight}">
 
-                <div @click="clickEvent" v-for="itemProduct in productList" :style="{height:sliderHeight,width:'750',backgroundColor:'#EE7A22'}" style="align-items: center;justify-content: center;">
+                <div @click="clickEvent" v-for="itemProduct in productList"
+                     :style="{height:sliderHeight,width:brandItemBgWidth,backgroundColor:'#EE7A22'}"
+                     style="align-items: center;justify-content: center;">
 
                     <promotion-product-view :itemProduct="itemProduct"
                                             v-if="itemProduct.itemStyle==1"></promotion-product-view>
@@ -35,7 +37,7 @@
                          @click="buttonClick(index)">
                         <!--<text class="bottomText">{{itemProduct.tabName}}</text>-->
                         <image class="bottomTabImage" :src="itemProduct.tabImage"
-                                :style="{height:bottomTabImageHeight,width:bottomTabImageWidth}"></image>
+                               :style="{height:bottomTabImageHeight,width:bottomTabImageWidth}"></image>
                     </div>
                 </div>
             </div>
@@ -67,6 +69,7 @@
             contentTop: 0,
             selectIndex: 0,
             neighborSpace: 0,
+            brandItemBgWidth: 0,
             buttonBgSelectColor: "#000000",
             deviceHeight: 10,
             sliderHeight: 0,
@@ -210,7 +213,7 @@
 //            获取屏幕布局高度
             var height = Util.getHeight(this);//750 / deviceWidth * deviceHeight;
 //            var testheight = Util.getHeight(this);
-            console.log('deviceHeight='+deviceHeight,'viewH='+height);
+            console.log('deviceHeight=' + deviceHeight, 'viewH=' + height);
 
             var sliderH = Util.getSliderHeight(this);
 
@@ -238,10 +241,13 @@
             this.bottomTabImageWidth = Util.scale(this) * 100;
 
             var _nSpace = 55;
-            if(platform === "android") {
+            if (platform === "android") {
                 _nSpace = 30;
             }
             this.neighborSpace = Util.scale(this) * _nSpace;
+
+            this.brandItemBgWidth = Util.scale(this) * 606;
+            ;
         }
     }
 </script>
@@ -281,7 +287,7 @@
         /*border-width: 1px;*/
         /*border-style: solid;*/
         /*border-color: #41B883;*/
-        /*justify-content: center;*/
+        justify-content: center;
         align-items: center;
         /*background-color: #41B883;*/
     }
