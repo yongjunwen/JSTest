@@ -13,10 +13,9 @@
                              :neighborSpace="neighborSpace" neighborScale="0.9" currentItemScale="1"
                              :index="selectIndex" @change="changeEvent" :style="{height:sliderHeight}">
 
+                <!--:style="{backgroundColor:'#EE7A22'}"-->
                 <div v-for="(itemProduct,index) in productList">
-<!--   :parentList="productList"
-     :activityId="activityId"
-     :selectIndex="index"-->
+
                     <promotion-product-view
                             :itemProduct="itemProduct"
                             v-on:kClickBrand="clickBrandEvent(index)"
@@ -24,7 +23,8 @@
                     ></promotion-product-view>
 
                     <promotion-wish-lamp-view :wishLampObject="itemProduct"
-                                              v-if="itemProduct.itemStyle==2"></promotion-wish-lamp-view>
+                                              v-if="itemProduct.itemStyle==2"
+                    ></promotion-wish-lamp-view>
                 </div>
 
             </slider-neighbor>
@@ -69,7 +69,7 @@
 //        数据
         data: {
             test: 'test222',
-            activityId: null,
+            encodedActivityId: null,
             isHaveLightened: false,
             contentTop: 0,
             selectIndex: 0,
@@ -218,7 +218,7 @@
             fetchList: function () {
                 var _this = this;
 //                var reqBody = new Dictionary();
-//                dictionary.set('activityId', "47fWAZihZPCoKesZmyPrDD8QokKG");
+//                dictionary.set('encodedActivityId', "47fWAZihZPCoKesZmyPrDD8QokKG");
                 communicate.send("kBrandPromotionHomeCallBack",
                     {
                         "domain": "request",
@@ -233,7 +233,7 @@
                         console.log('qryExclusiveDiscount-backData-code:' + result.code);
                         if (String(result.code) === '0') {
 
-                            _this.activityId = result.activityId;
+                            _this.encodedActivityId = result.encodedActivityId;
 //                            页面大背景图
                             _this.bgImage = result.head.bgPic;
 //                            心愿灯上部文案是wishLampCopy
@@ -344,7 +344,7 @@
                         "domain": "jump",
                         "info": "toBrandDetail",
                         "params": {
-                            "body": {'selectIndex':index,'materialIds':materialIds,'activityId':this.activityId}
+                            "body": {'selectIndex':index,'materialIds':materialIds,'encodedActivityId':this.encodedActivityId}
                         }
                     },
                     function (result) {

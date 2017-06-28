@@ -5,12 +5,13 @@
 
         <div class="slider-item" :style="{height:brandItemHeight,width:brandItemWidth}" @click="toSeeClick()">
             <div class="topItemBg" :style="{height:topItemBgHeight,width:brandItemWidth}">
-                <image class="topItemBgImage" :src="itemProduct.titleAtmoPic"
+                <image class="topItemBgImage" :src="itemProduct.titleAtmoPic" placeholder="native://zs_detail_brand_placeholder"
                        :style="{height:topItemBgHeight,width:brandItemWidth}"></image>
                 <div class="topItemContent" :style="{width:brandItemWidth}">
-                    <image style="width:212px;height: 70px;background-color: aquamarine ; margin-top: 18px;"
+                    <!--:src="itemProduct.logo"-->
+                    <image style="width:212px;height: 70px; margin-top: 18px;"
                            :style="{height:brandLogoHeight,width:brandLogoWidth}"
-                           :src="itemProduct.logo"></image>
+                            placeholder="native://zs_detail_brand_placeholder"></image>
                     <!--<text class="lineItem">-·-</text>-->
                     <image class="seperateicon" :src="seperateicon"></image>
                     <text class="topItemContentText">{{topContentText}}</text>
@@ -23,7 +24,7 @@
                 </div>
             </div>
 
-            <image class="bottom-image" :src="itemProduct.middlePic"
+            <image class="bottom-image" :src="itemProduct.middlePic" placeholder="native://zs_detail_brand_placeholder"
                    :style="{height:brandItemBottomImageHeight,width:brandItemWidth}"></image>
 
         </div>
