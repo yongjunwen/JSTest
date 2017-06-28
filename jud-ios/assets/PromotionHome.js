@@ -2125,11 +2125,10 @@
 	    }
 	  }, _vm._l((_vm.productList), function(itemProduct) {
 	    return _c('div', {
-	      staticStyle: {
-	        width: "450px"
-	      },
 	      style: {
-	        height: _vm.sliderHeight
+	        height: _vm.sliderHeight,
+	        width: '750',
+	        backgroundColor: '#EE7A22'
 	      },
 	      on: {
 	        "click": _vm.clickEvent
