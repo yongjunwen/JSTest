@@ -56,7 +56,7 @@
 	__vue_exports__ = __webpack_require__(2)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(20)
+	var __vue_template__ = __webpack_require__(21)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -104,6 +104,7 @@
 	  },
 	  "slider-neighbor": {
 	    "top": 0,
+	    "justifyContent": "center",
 	    "alignItems": "center"
 	  },
 	  "bottomTab": {
@@ -147,7 +148,7 @@
 
 	var _PromotionProductView2 = _interopRequireDefault(_PromotionProductView);
 
-	var _PromotionWishLampView = __webpack_require__(12);
+	var _PromotionWishLampView = __webpack_require__(13);
 
 	var _PromotionWishLampView2 = _interopRequireDefault(_PromotionWishLampView);
 
@@ -155,8 +156,13 @@
 
 	var _PromotionUtil2 = _interopRequireDefault(_PromotionUtil);
 
+	var _PDBus = __webpack_require__(11);
+
+	var _PDBus2 = _interopRequireDefault(_PDBus);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var communicate = jud.requireModule('communicate'); //
 	//
 	//
 	//
@@ -209,21 +215,24 @@
 	//
 	//
 	//
-
-	var communicate = jud.requireModule('communicate');
 
 	var modal = jud.requireModule('modal');
 	exports.default = {
+	    //        组件注册
 	    components: {
 	        PromotionProductView: _PromotionProductView2.default,
 	        PromotionWishLampView: _PromotionWishLampView2.default,
 	        PromotionBottom: _PromotionBottom2.default
 	    },
+	    //        数据
 	    data: {
 	        test: 'test222',
+	        encodedActivityId: null,
+	        isHaveLightened: false,
 	        contentTop: 0,
 	        selectIndex: 0,
 	        neighborSpace: 0,
+	        brandItemBgWidth: 0,
 	        buttonBgSelectColor: "#000000",
 	        deviceHeight: 10,
 	        sliderHeight: 0,
@@ -234,90 +243,21 @@
 	        bottomTabImageHeight: 0,
 	        bottomTabImageWidth: 0,
 	        buttonBgColor: null,
+
+	        wishLampCopy: null,
 	        //            bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
 	        bgImage: 'slider_bg_image.png',
-	        //            productList: [],
-	        productList: [
-	        //                {
-	        //                    itemStyle: "1",
-	        //                    tabName: "魅族",
-	        //                    btmLogo: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1497236240&di=8ea6a518f36ef15963f7605141042cb3&src=http://cdn.waaaat.welovead.com/upload/rss_download/20151022/600_0/201510221902419993.jpg",
-	        //                    hitCopy: "您许的愿望已为您备好，魅族",
-	        //                    logo: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1497236240&di=8ea6a518f36ef15963f7605141042cb3&src=http://cdn.waaaat.welovead.com/upload/rss_download/20151022/600_0/201510221902419993.jpg",
-	        //                    topPic: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1497236240&di=8ea6a518f36ef15963f7605141042cb3&src=http://cdn.waaaat.welovead.com/upload/rss_download/20151022/600_0/201510221902419993.jpg",
-	        //                    middlePic: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1497236240&di=8ea6a518f36ef15963f7605141042cb3&src=http://cdn.waaaat.welovead.com/upload/rss_download/20151022/600_0/201510221902419993.jpg"
-	        //                },
-	        {
-	            itemStyle: "1",
-	            tabName: "华为",
-	            btmLogo: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1496912449&di=1d908831b09e08208c79e53dce78fc73&src=http://pic.qiantucdn.com/58pic/12/38/18/13758PIC4GV.jpg",
-	            hitCopy: "您许的愿望已为您备好，华为",
-	            logo: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496753668189&di=a3af9cf6e8a0736098ff56e9ba464e7b&imgtype=0&src=http%3A%2F%2Fpic40.nipic.com%2F20140418%2F11353228_172109208105_2.jpg",
-	            topPic: "https://img20.360buyimg.com/da/jfs/t5611/170/1386290369/74627/83bc5dc2/59263308N4c6c741d.jpg",
-	            middlePic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t3226/304/5090006819/188905/a115943a/586078b9N92942b62.jpg!q70.jpg"
-	        }, {
-	            itemStyle: "1",
-	            tabName: "小米",
-	            btmLogo: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497517343&di=baff522d5450339011176b5c1fea1302&imgtype=jpg&er=1&src=http%3A%2F%2Fm.qqzhi.com%2Fupload%2Fimg_0_96973789D2128229081_23.jpg",
-	            hitCopy: "您许的愿望已为您备好，小米",
-	            logo: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1052774542,692148190&fm=26&gp=0.jpg",
-	            topPic: "https://img1.360buyimg.com/da/jfs/t5878/144/1093343417/94022/3cd88574/5923d027N60c1c8b9.jpg",
-	            middlePic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t2008/329/2598526651/294767/23b295e4/570f2dcdN2cc4a19c.jpg!q70.jpg"
-	        }, {
-	            itemStyle: "1",
-	            tabName: "魅族",
-	            btmLogo: "https://ss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/tam-ogel/bbaf504ee7a59061636863a02b0a54c0_222_222.jpg",
-	            hitCopy: "您许的愿望已为您备好，魅族",
-	            logo: "https://ss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/tam-ogel/bbaf504ee7a59061636863a02b0a54c0_222_222.jpg",
-	            topPic: "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1497236240&di=8ea6a518f36ef15963f7605141042cb3&src=http://cdn.waaaat.welovead.com/upload/rss_download/20151022/600_0/201510221902419993.jpg",
-	            middlePic: "https://ss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/tam-ogel/bbaf504ee7a59061636863a02b0a54c0_222_222.jpg"
-	        }, {
-	            itemStyle: "1",
-	            tabName: "格力",
-	            btmLogo: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922663211&di=fd30c4a8b7b1ba325925c91cb2a32586&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F12%2F57%2F08%2F92G58PICHbX.jpg",
-	            hitCopy: "您许的愿望已为您备好，格力",
-	            logo: "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=572491635,2679502336&fm=26&gp=0.jpg",
-	            topPic: "https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1496644651&di=472e2fbb406dadcc758f19f6228be092&src=http://images.ali213.net/picfile/middlePic/2013-01-22/927_p56.jpg ",
-	            middlePic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t2287/140/2518661178/69983/61cb59dc/570e1db2Nf5b0ebe3.jpg!q70.jpg"
-	        }, {
-	            tabName: "心愿灯",
-	            itemStyle: "2",
-	            btmLogo: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg",
-	            hitCopy: "要降价!京东和阿里打价格战:刘强东发飙",
-	            middlePic: "https://m.360buyimg.com/mobilecms/s400x400_jfs/t1870/20/2688983380/490055/66145088/5715bc6aN4933b67c.jpg!q70.jpg",
-	            brandList: [{
-	                lampState: '1',
-	                brandId: '111',
-	                img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg'
-	            }, {
-	                lampState: '1',
-	                brandId: '112',
-	                img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497517343&di=baff522d5450339011176b5c1fea1302&imgtype=jpg&er=1&src=http%3A%2F%2Fm.qqzhi.com%2Fupload%2Fimg_0_96973789D2128229081_23.jpg'
-	            }, {
-	                lampState: '1',
-	                brandId: '113',
-	                img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922663211&di=fd30c4a8b7b1ba325925c91cb2a32586&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F12%2F57%2F08%2F92G58PICHbX.jpg'
-	            }, {
-	                lampState: '1',
-	                brandId: '114',
-	                img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg'
-	            }, {
-	                lampState: '1',
-	                brandId: '115',
-	                img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg'
-	            }, {
-	                lampState: '1',
-	                brandId: '116',
-	                img: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg'
-	            }]
-	        }]
+	        productList: []
 	    },
+	    //        方法
 	    methods: {
 
+	        //底部tab按钮点击事件
 	        buttonClick: function buttonClick(index) {
 	            this.selectIndex = index;
 	        },
 
+	        // 滑动组件change事件
 	        changeEvent: function changeEvent(e) {
 	            var selectIndexStr = e["index"];
 
@@ -348,10 +288,11 @@
 	        /*
 	         获取品牌列表和心愿灯列表的网络请求
 	         预发：http:// beta-api.m.jd.com/client.action
-	         todo: activityId 怎么传？
 	         */
 	        fetchList: function fetchList() {
 	            var _this = this;
+	            //                var reqBody = new Dictionary();
+	            //                dictionary.set('encodedActivityId', "47fWAZihZPCoKesZmyPrDD8QokKG");
 	            communicate.send("kBrandPromotionHomeCallBack", {
 	                "domain": "request",
 	                "info": "qryExclusiveDiscount",
@@ -364,39 +305,125 @@
 	                console.log('qryExclusiveDiscount-backData-code:' + result.code);
 	                if (String(result.code) === '0') {
 
-	                    //                    todo:开始填充信息逻辑添加 根据result
+	                    _this.encodedActivityId = result.encodedActivityId;
+	                    //                            页面大背景图
+	                    _this.bgImage = result.head.bgPic;
+	                    //                            心愿灯上部文案是wishLampCopy
+	                    _this.wishLampCopy = result.head.wishLampCopy;
 	                    //todo:sample
-	                    _this.productList = result.brands.slice(0, 4);
-	                    _this.productList.forEach(function (item, index) {
-	                        console.log('forEach=' + item['brandId']);
-	                        if (typeof item.itemStyle == 'undefined') {
-	                            console.log('注册中 =====');
-	                            //全局注册
-	                            Vue.set(item, "itemStyle", "1");
+	                    var _proList = result.brands;
+	                    if (_proList.length) {
+
+	                        _this.productList = _proList.slice(0, 4);
+	                        _this.productList.forEach(function (item, index) {
+	                            console.log('forEach=' + item['brandId']);
+	                            if (typeof item.itemStyle == 'undefined') {
+	                                console.log('注册中 =====');
+	                                //全局注册
+	                                Vue.set(item, "itemStyle", "1");
+	                            }
+	                        });
+
+	                        var _wishLamps = result.wishLamps;
+
+	                        if (_wishLamps.length) {
+	                            console.log('_wishLamps=======有货');
+	                            //                           lampState 1是正常状态 2是已点亮 3是不可点亮变灰状态
+	                            //                           1、 首先遍历出是否已经点亮的逻辑
+	                            //                                _wishLamps.forEach(function (item, index) {
+	                            //////                                    foreach不支持直接break
+	                            //                                });
+
+	                            for (var i = 0; i < _wishLamps.length; i++) {
+	                                var wishItem = _wishLamps[i];
+	                                if (wishItem.lightened) {
+	                                    _this.isHaveLightened = true;
+	                                    console.log('_wishLamps=======break');
+	                                    //                                        foreach.break = new Error("已点亮 跳出");
+
+	                                    break;
+	                                }
+	                            }
+	                            //                            2、从上面的是否点亮逻辑来重新添加规划属性
+	                            _wishLamps.forEach(function (item, index) {
+	                                if (typeof item.lampState == 'undefined') {
+	                                    console.log('lampState =====');
+
+	                                    var stateString = '1';
+	                                    if (_this.isHaveLightened) {
+	                                        if (item.lightened) {
+	                                            stateString = '2';
+	                                        } else {
+	                                            stateString = '3';
+	                                        }
+	                                    } else {
+	                                        stateString = '1';
+	                                    }
+
+	                                    //全局注册
+	                                    Vue.set(item, "lampState", stateString);
+	                                }
+	                            });
+
+	                            var wishLampDict = {
+	                                'itemStyle': '2',
+	                                'btmLogo': "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg",
+	                                'tabName': "心愿灯",
+	                                'wishLampCopy': _this.wishLampCopy,
+	                                'brandList': _wishLamps
+	                            };
+
+	                            console.log('_wishLamps=======已添加');
+	                            _this.productList.push(wishLampDict);
+	                        } else {
+	                            //返回成功但是暂无数据情况
+
+	                            _this.sendErrorToNative();
 	                        }
-	                    });
-
-	                    var _wishLamps = result.wishLamps;
-	                    var wishLampDict = {
-	                        'itemStyle': '2',
-	                        'btmLogo': "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg",
-	                        'tabName': "心愿灯",
-	                        'brandList': _wishLamps
-	                    };
-
-	                    _this.productList.push(wishLampDict);
+	                    }
 	                } else {
-	                    communicate.send("kBrandPromotionHomeCallBack", {
-	                        "domain": "error",
-	                        "info": "",
-	                        "params": null
-	                    }, function (result) {});
 
-	                    return;
+	                    _this.sendErrorToNative();
 	                }
 	            });
+	        },
+
+	        //点击品牌跳转到详情页面事件
+	        clickBrandEvent: function clickBrandEvent(index) {
+	            console.log('clickBrandEvent=====0hahahahahahah');
+	            //需要传给详情页面的入参
+	            var materialIds = [];
+	            for (var i = 0; i < this.productList.length; i++) {
+	                var item = this.productList[i];
+	                if (item.itemStyle == '1') {
+	                    materialIds.push(item.materialId);
+	                }
+	            }
+
+	            console.log('clickBrandEvent=====');
+	            //                var dictionary = new Dictionary();
+	            //                dictionary.set('selectIndex', index);
+	            //                dictionary.set('materialIds', materialIds);
+	            //                dictionary.set('activityId', this.activityId);
+
+	            communicate.send("kBrandPromotionHomeCallBack", {
+	                "domain": "jump",
+	                "info": "toBrandDetail",
+	                "params": {
+	                    "body": { 'selectIndex': index, 'materialIds': materialIds, 'encodedActivityId': this.encodedActivityId }
+	                }
+	            }, function (result) {});
+	        },
+	        //            发送错误信息到native
+	        sendErrorToNative: function sendErrorToNative() {
+	            communicate.send("kBrandPromotionHomeCallBack", {
+	                "domain": "error",
+	                "info": "qryExclusiveDiscount",
+	                "params": null
+	            }, function (result) {});
 	        }
 	    },
+	    //        生命周期created函数 不要写在metods体内
 	    created: function created() {
 	        //
 	        var platform = this.$getConfig().env.platform.toLowerCase();
@@ -441,9 +468,10 @@
 	            _nSpace = 30;
 	        }
 	        this.neighborSpace = _PromotionUtil2.default.scale(this) * _nSpace;
+	        this.brandItemBgWidth = _PromotionUtil2.default.scale(this) * 606;
 
-	        //           todo: 添加网络请求逻辑
-	        //            this.fetchList();
+	        // 添加网络请求逻辑
+	        this.fetchList();
 	    }
 	};
 	module.exports = exports['default'];
@@ -640,7 +668,7 @@
 	__vue_exports__ = __webpack_require__(9)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(11)
+	var __vue_template__ = __webpack_require__(12)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -759,9 +787,14 @@
 
 	var _PromotionUtil2 = _interopRequireDefault(_PromotionUtil);
 
+	var _PDBus = __webpack_require__(11);
+
+	var _PDBus2 = _interopRequireDefault(_PDBus);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var communicate = jud.requireModule('communicate'); //
+	//
 	//
 	//
 	//
@@ -934,19 +967,59 @@
 	        itemProduct: {
 	            type: Object,
 	            default: {}
+	        },
+
+	        parentList: {
+	            type: Object,
+	            default: {}
+	        },
+
+	        activityId: {
+	            type: Object,
+	            default: {}
+	        },
+
+	        selectIndex: {
+	            type: Object,
+	            default: {}
+	        },
+	        clickBrandEvent: {
+	            type: Function
 	        }
 	    },
 	    methods: {
-	        toSeeClick: function toSeeClick() {
-	            console.log('--------toSeeClick----+++');
+	        clickBrandEvent: function clickBrandEvent() {
+	            console.log('clickBrandEvent=====0');
+	            //需要传给详情页面的入参
+	            var materialIds = [];
+	            for (var i = 0; i < this.parentList.length; i++) {
+	                var item = this.parentList[i];
+	                if (item.itemStyle == '1') {
+	                    materialIds.push(item.materialId);
+	                }
+	            }
+
+	            console.log('clickBrandEvent=====' + materialIds);
+	            //                var dictionary = new Dictionary();
+	            //                dictionary.set('selectIndex', index);
+	            //                dictionary.set('materialIds', materialIds);
+	            //                dictionary.set('activityId', this.activityId);
 
 	            communicate.send("kBrandPromotionHomeCallBack", {
 	                "domain": "jump",
-	                "info": "ToBandDetail",
+	                "info": "toBrandDetail",
 	                "params": {
-	                    "body": null
+	                    "body": { 'selectIndex': this.selectIndex, 'materialIds': materialIds, 'activityId': this.activityId }
 	                }
 	            }, function (result) {});
+	        },
+	        toSeeClick: function toSeeClick() {
+	            console.log('--------toSeeClick----+++');
+	            //                this.clickBrandEvent();
+	            //                console.log(this.clickBrandEvent());
+	            this.$emit('kClickBrand');
+	            //                 触发组件 A 中的事件
+	            //                bus.$emit('id-selected', 1)
 	        }
 	    },
 	    created: function created() {
@@ -1149,6 +1222,37 @@
 /* 11 */
 /***/ (function(module, exports) {
 
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = []
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/wenyongjun/private_workspace/JSTestFolder/jud-ios/assets/PDBus.vue"
+	__vue_options__.style = __vue_options__.style || {}
+	__vue_styles__.forEach(function (module) {
+	  for (var name in module) {
+	    __vue_options__.style[name] = module[name]
+	  }
+	})
+	if (typeof __register_static_styles__ === "function") {
+	  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+	}
+
+	module.exports = __vue_exports__
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: ["rootDiv"],
@@ -1180,7 +1284,8 @@
 	      width: _vm.brandItemWidth
 	    },
 	    attrs: {
-	      "src": _vm.itemProduct.topPic
+	      "src": _vm.itemProduct.titleAtmoPic,
+	      "placeholder": "native://zs_detail_brand_placeholder"
 	    }
 	  }), _c('div', {
 	    staticClass: ["topItemContent"],
@@ -1191,7 +1296,6 @@
 	    staticStyle: {
 	      width: "212px",
 	      height: "70px",
-	      backgroundColor: "aquamarine",
 	      marginTop: "18px"
 	    },
 	    style: {
@@ -1199,7 +1303,7 @@
 	      width: _vm.brandLogoWidth
 	    },
 	    attrs: {
-	      "src": _vm.itemProduct.logo
+	      "placeholder": "native://zs_detail_brand_placeholder"
 	    }
 	  }), _c('image', {
 	    staticClass: ["seperateicon"],
@@ -1221,7 +1325,8 @@
 	      width: _vm.brandItemWidth
 	    },
 	    attrs: {
-	      "src": _vm.curveImage
+	      "src": _vm.curveImage,
+	      "placeholder": "native://promotion_rectagle_icon"
 	    }
 	  })])]), _c('image', {
 	    staticClass: ["bottom-image"],
@@ -1230,7 +1335,8 @@
 	      width: _vm.brandItemWidth
 	    },
 	    attrs: {
-	      "src": _vm.itemProduct.middlePic
+	      "src": _vm.itemProduct.middlePic,
+	      "placeholder": "native://zs_detail_brand_placeholder"
 	    }
 	  })]), _c('div', {
 	    staticClass: ["bottomDiv"],
@@ -1256,28 +1362,29 @@
 	      height: "76px"
 	    },
 	    attrs: {
-	      "src": _vm.seeButtonImage
+	      "src": _vm.seeButtonImage,
+	      "placeholder": "native://see_button"
 	    }
 	  })])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(13)
+	__vue_styles__.push(__webpack_require__(14)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(14)
+	__vue_exports__ = __webpack_require__(15)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(19)
+	var __vue_template__ = __webpack_require__(20)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1307,7 +1414,7 @@
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -1356,7 +1463,7 @@
 	}
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1365,7 +1472,7 @@
 	    value: true
 	});
 
-	var _PromotionWishLampItemView = __webpack_require__(15);
+	var _PromotionWishLampItemView = __webpack_require__(16);
 
 	var _PromotionWishLampItemView2 = _interopRequireDefault(_PromotionWishLampItemView);
 
@@ -1516,7 +1623,9 @@
 	//
 	//
 	//
+	//
 
+	var communicate = jud.requireModule('communicate');
 	exports.default = {
 	    components: {
 	        PromotionWishLampItemView: _PromotionWishLampItemView2.default
@@ -1556,40 +1665,46 @@
 	        },
 
 	        //todo: 点亮心愿灯网络请求
-	        lightenBrandWishLampEvent: function lightenBrandWishLampEvent() {
+	        lightenBrandWishLampEvent: function lightenBrandWishLampEvent(brandId) {
+	            var _this = this;
+	            console.log('lightenBrandWishLampEvent==brandId' + brandId);
 	            communicate.send("kBrandPromotionHomeCallBack", {
 	                "domain": "request",
 	                "info": "lightenBrandWishLamp",
 	                "params": {
 	                    "functionId": "lightenBrandWishLamp",
-	                    "body": self.ibrand
+	                    "body": { 'brandId': brandId }
 	                }
 	            }, function (result) {
 
-	                if (String(result.code) === '1') {
-	                    communicate.send("lighten_Brand_Wish_Lamp", {
+	                if (String(result.code) === '0') {
+	                    console.log("lightenBrandWishLampEvent------===请求成功");
+	                    //表示请求成功
+	                    //                            _this.updateLampData();
+	                    _this.wishLampObject.brandList.forEach(function (item, index) {
+	                        console.log('brandId=' + item['brandId']);
+	                        if (item['brandId'] === brandId) {
+	                            item['lampState'] = '2';
+	                            console.log('changeLampStateEvent====lampState=2');
+	                        } else {
+	                            console.log('changeLampStateEvent====lampState=3');
+	                            item['lampState'] = '3';
+	                        }
+	                    });
+	                } else {
+	                    communicate.send("kBrandPromotionHomeCallBack", {
 	                        "domain": "error",
-	                        "info": "",
+	                        "info": "lightenBrandWishLamp",
 	                        "params": result
 	                    }, function (result) {});
-
-	                    return;
 	                }
-
-	                //                    todo 点亮成功逻辑
-	                //todo:sample
 	            });
 	        },
-	        changeLampStateEvent: function changeLampStateEvent(lampItem) {
-	            console.log('changeLampStateEvent=====' + lampItem + '获取到');
-	            console.log('array=' + this.wishLampObject.brandList);
-
-	            //                todo:添加点亮心愿灯网络请求逻辑
-	            //                this.lightenBrandWishLampEvent();
-
+	        updateLampData: function updateLampData() {
+	            console.log("updateLampData------===");
 	            this.wishLampObject.brandList.forEach(function (item, index) {
 	                console.log('brandId=' + item['brandId']);
-	                if (item['brandId'] === lampItem) {
+	                if (item['brandId'] === lampItemID) {
 	                    item['lampState'] = '2';
 	                    console.log('changeLampStateEvent====lampState=2');
 	                } else {
@@ -1597,6 +1712,13 @@
 	                    item['lampState'] = '3';
 	                }
 	            });
+	        },
+	        changeLampStateEvent: function changeLampStateEvent(lampItemID) {
+	            console.log('changeLampStateEvent=====' + lampItemID + '获取到');
+	            console.log('array=' + this.wishLampObject.brandList);
+
+	            //                todo:添加点亮心愿灯网络请求逻辑
+	            this.lightenBrandWishLampEvent(lampItemID);
 	        }
 	    },
 	    created: function created() {
@@ -1617,21 +1739,21 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(16)
+	__vue_styles__.push(__webpack_require__(17)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(17)
+	__vue_exports__ = __webpack_require__(18)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(18)
+	var __vue_template__ = __webpack_require__(19)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1661,7 +1783,7 @@
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -1691,7 +1813,7 @@
 	}
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1706,6 +1828,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	//
 	//
 	//
@@ -1840,7 +1971,10 @@
 	            wishLampSelectBtn: "wish_lamp_select_btn.png",
 	            wishLampDisableBtn: "wish_lamp_disable_btn.png",
 
-	            tipContent: '30天内努力为你备好，请持续关注'
+	            tipContent: '30天内努力为你备好，请持续关注',
+	            isShowSelect: false,
+	            lampPlaceHolderIcon: 'native://wish_lamp_normal_icon.png',
+	            wishLampBtnIcon: 'native://wish_lamp_normal_btn.png'
 	        };
 	    },
 	    props: {
@@ -1853,24 +1987,15 @@
 	        wishLampItem: {
 	            handler: function handler(wishLampItem) {
 	                console.log("watch=====wishLampItem");
-	                if (this.wishLampItem.lampState === '2') {
-	                    this.lampText = "已点亮";
-	                    //                        this.lampTextColor = "#ffb5b7";
-	                } else if (this.wishLampItem.lampState === '3') {
-	                    //                        this.lampText = "已变灰";
-	                    this.lampTextColor = "#999999";
-	                    this.brandLogoImageOpacity = 0.5;
-	                }
+	                this.updateLampState();
 	            },
 	            deep: true
 	        }
 	    },
 	    mounted: function mounted() {
-	        if (this.wishLampItem.lampState === '2') {
-	            this.lampText = "已点亮";
-	        } else if (this.wishLampItem.lampState === '3') {
-	            this.lampText = "已变灰";
-	        }
+	        console.log("mounted=====wishLampItem");
+
+	        this.updateLampState();
 	    },
 	    created: function created() {
 	        this.lampItemWidth = _PromotionUtil2.default.getLampItemWidth(this);
@@ -1886,6 +2011,24 @@
 	        this.lampButtonIconWidth = _PromotionUtil2.default.getLampButtonBgIconHeight(this);
 	    },
 	    methods: {
+	        updateLampState: function updateLampState() {
+	            if (this.wishLampItem.lampState === '2') {
+	                this.lampText = "已点亮";
+	                //                        this.lampTextColor = "#ffb5b7";
+	                this.isShowSelect = true;
+	                this.lampPlaceHolderIcon = 'native://wish_lamp_select_icon.png';
+	                this.wishLampBtnIcon = 'native://wish_lamp_select_btn.png';
+	            } else if (this.wishLampItem.lampState === '3') {
+	                //                        this.lampText = "已变灰";
+	                this.lampTextColor = "#999999";
+	                this.brandLogoImageOpacity = 0.5;
+	                this.lampPlaceHolderIcon = 'native://wish_lamp_disable_icon.png';
+	                this.wishLampBtnIcon = 'native://wish_lamp_disable_btn.png';
+	            } else {
+	                this.lampPlaceHolderIcon = 'native://wish_lamp_normal_icon.png';
+	                this.wishLampBtnIcon = 'native://wish_lamp_normal_btn.png';
+	            }
+	        },
 	        clickLampEvent: function clickLampEvent() {
 	            //                lampState 1是正常状态 2是已点亮 3是不可点亮变灰状态
 	            //                如果lampState是2 || 3直接return掉 因为 点亮后不再允许再点亮
@@ -1915,7 +2058,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1937,34 +2080,16 @@
 	      height: _vm.lampIconHeight,
 	      width: _vm.lampItemWidth
 	    }
-	  }, [(_vm.wishLampItem.lampState == 1) ? _c('image', {
+	  }, [_c('image', {
 	    staticClass: ["lampIcon"],
 	    style: {
 	      height: _vm.lampIconHeight,
 	      width: _vm.lampItemWidth
 	    },
 	    attrs: {
-	      "src": _vm.wishLampNomalIcon
+	      "src": _vm.lampPlaceHolderIcon
 	    }
-	  }) : _vm._e(), (_vm.wishLampItem.lampState == 2) ? _c('image', {
-	    staticClass: ["lampSelectIcon"],
-	    style: {
-	      height: _vm.lampIconHeight,
-	      width: _vm.lampItemWidth
-	    },
-	    attrs: {
-	      "src": _vm.wishLampSelectIcon
-	    }
-	  }) : _vm._e(), (_vm.wishLampItem.lampState == 3) ? _c('image', {
-	    staticClass: ["lampIcon"],
-	    style: {
-	      height: _vm.lampIconHeight,
-	      width: _vm.lampItemWidth
-	    },
-	    attrs: {
-	      "src": _vm.wishLampDisableIcon
-	    }
-	  }) : _vm._e(), _c('div', {
+	  }), _c('div', {
 	    staticStyle: {
 	      position: "absolute",
 	      top: "0",
@@ -1991,34 +2116,16 @@
 	      height: _vm.lampButtonBgHeight,
 	      width: _vm.lampItemWidth
 	    }
-	  }, [(_vm.wishLampItem.lampState == 1) ? _c('image', {
+	  }, [_c('image', {
 	    staticClass: ["lampButtonIcon"],
 	    style: {
 	      height: _vm.lampButtonBgHeight,
 	      width: _vm.lampButtonIconWidth
 	    },
 	    attrs: {
-	      "src": _vm.wishLampNomalBtn
+	      "src": _vm.wishLampBtnIcon
 	    }
-	  }) : _vm._e(), (_vm.wishLampItem.lampState == 2) ? _c('image', {
-	    staticClass: ["lampButtonIcon"],
-	    style: {
-	      height: _vm.lampButtonBgHeight,
-	      width: _vm.lampButtonIconWidth
-	    },
-	    attrs: {
-	      "src": _vm.wishLampSelectBtn
-	    }
-	  }) : _vm._e(), (_vm.wishLampItem.lampState == 3) ? _c('image', {
-	    staticClass: ["lampButtonIcon"],
-	    style: {
-	      height: _vm.lampButtonBgHeight,
-	      width: _vm.lampButtonIconWidth
-	    },
-	    attrs: {
-	      "src": _vm.wishLampDisableBtn
-	    }
-	  }) : _vm._e(), _c('div', {
+	  }), _c('div', {
 	    staticStyle: {
 	      position: "absolute",
 	      top: "0",
@@ -2041,7 +2148,7 @@
 	module.exports.render._withStripped = true
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -2060,7 +2167,8 @@
 	      width: _vm.wishRootWidth
 	    },
 	    attrs: {
-	      "src": _vm.wishLampBg
+	      "src": _vm.wishLampBg,
+	      "placeholder": "native://wish_lamp_bg_placeholder"
 	    }
 	  })]), _c('div', {
 	    staticClass: ["contentDiv"]
@@ -2091,7 +2199,7 @@
 	      fontSize: _vm.contentFontSize,
 	      marginTop: _vm.contentTop
 	    }
-	  }, [_vm._v(_vm._s(_vm.tipContent))])])]), _c('div', {
+	  }, [_vm._v(_vm._s(_vm.wishLampObject.wishLampCopy))])])]), _c('div', {
 	    staticStyle: {
 	      flexDirection: "row"
 	    }
@@ -2189,11 +2297,11 @@
 	module.exports.render._withStripped = true
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
+	  return (_vm.productList.length != 0) ? _c('div', {
 	    staticClass: ["rootDiv"]
 	  }, [_c('div', {
 	    staticClass: ["bgView"],
@@ -2207,7 +2315,7 @@
 	    },
 	    attrs: {
 	      "src": _vm.bgImage,
-	      "placeholder": "http://ww2.sinaimg.cn/large/006tKfTcgy1fez04i56w5j31hc0kuwhz.jpg"
+	      "placeholder": "native://slider_bg_image"
 	    }
 	  })]), _c('div', {
 	    staticClass: ["contentView"],
@@ -2230,14 +2338,24 @@
 	    on: {
 	      "change": _vm.changeEvent
 	    }
-	  }, _vm._l((_vm.productList), function(itemProduct) {
+	  }, _vm._l((_vm.productList), function(itemProduct, index) {
 	    return _c('div', {
-	      on: {
-	        "click": _vm.clickEvent
+	      staticStyle: {
+	        alignItems: "center",
+	        justifyContent: "center"
+	      },
+	      style: {
+	        height: _vm.sliderHeight,
+	        width: _vm.brandItemBgWidth
 	      }
 	    }, [(itemProduct.itemStyle == 1) ? _c('promotion-product-view', {
 	      attrs: {
 	        "itemProduct": itemProduct
+	      },
+	      on: {
+	        "kClickBrand": function($event) {
+	          _vm.clickBrandEvent(index)
+	        }
 	      }
 	    }) : _vm._e(), (itemProduct.itemStyle == 2) ? _c('promotion-wish-lamp-view', {
 	      attrs: {
@@ -2274,7 +2392,7 @@
 	        "src": itemProduct.btmLogo
 	      }
 	    })])
-	  }))])], 1)])
+	  }))])], 1)]) : _vm._e()
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 

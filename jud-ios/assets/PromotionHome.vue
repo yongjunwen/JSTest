@@ -14,7 +14,8 @@
                              :index="selectIndex" @change="changeEvent" :style="{height:sliderHeight}">
 
                 <!--:style="{backgroundColor:'#EE7A22'}"-->
-                <div v-for="(itemProduct,index) in productList">
+                <div v-for="(itemProduct,index) in productList" :style="{height:sliderHeight,width:brandItemBgWidth}"
+                     style="align-items: center;justify-content: center;">
 
                     <promotion-product-view
                             :itemProduct="itemProduct"
@@ -74,6 +75,7 @@
             contentTop: 0,
             selectIndex: 0,
             neighborSpace: 0,
+            brandItemBgWidth: 0,
             buttonBgSelectColor: "#000000",
             deviceHeight: 10,
             sliderHeight: 0,
@@ -409,6 +411,8 @@
                 _nSpace = 30;
             }
             this.neighborSpace = Util.scale(this) * _nSpace;
+            this.brandItemBgWidth = Util.scale(this) * 606;
+
 
 
             // 添加网络请求逻辑
@@ -452,7 +456,7 @@
         /*border-width: 1px;*/
         /*border-style: solid;*/
         /*border-color: #41B883;*/
-        /*justify-content: center;*/
+        justify-content: center;
         align-items: center;
         /*background-color: #41B883;*/
     }
