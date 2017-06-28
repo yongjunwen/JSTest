@@ -2125,6 +2125,10 @@
 	    }
 	  }, _vm._l((_vm.productList), function(itemProduct) {
 	    return _c('div', {
+	      staticStyle: {
+	        alignItems: "center",
+	        justifyContent: "center"
+	      },
 	      style: {
 	        height: _vm.sliderHeight,
 	        width: '750',
