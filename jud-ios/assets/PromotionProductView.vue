@@ -19,6 +19,7 @@
                         <div class="brandtexticon-p"></div>
                         <div class="brandtext-p">
                             <text class='brandtext'>{{itemProduct.name}}</text>
+                            <text class='brandtext'>{{itemProduct.name}}</text>
                         </div>
                         <div class="brandtexticon-p"></div>
                         <image class='brandtexticonleft' :src="brandtexticonleft"></image>

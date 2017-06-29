@@ -1075,6 +1075,7 @@
 	//
 	//
 	//
+	//
 
 	exports.default = {
 	    data: function data() {
@@ -1455,6 +1456,8 @@
 	  }), _c('div', {
 	    staticClass: ["brandtext-p"]
 	  }, [_c('text', {
+	    staticClass: ["brandtext"]
+	  }, [_vm._v(_vm._s(_vm.itemProduct.name))]), _c('text', {
 	    staticClass: ["brandtext"]
 	  }, [_vm._v(_vm._s(_vm.itemProduct.name))])]), _c('div', {
 	    staticClass: ["brandtexticon-p"]
