@@ -220,6 +220,8 @@
 	//
 	//
 
+	var mta = jud.requireModule('mta');
+
 	var modal = jud.requireModule('modal');
 	exports.default = {
 	    //        组件注册
@@ -259,8 +261,22 @@
 	        //底部tab按钮点击事件
 	        buttonClick: function buttonClick(index) {
 	            this.selectIndex = index;
+	            this.addTabSelectMta(index);
 	        },
 
+	        addTabSelectMta: function addTabSelectMta(index) {
+	            //埋点
+	            //                page_id_param_event_id_param_next
+	            //               分别是： pageName,pageId,pageParam,eventName,eventId,eventParam,nextPageName
+	            var item = this.productList[index];
+	            var srv = item.srv; //todo:底部tab相应的srv ？
+	            mta.page_id_param_event_id_param_next("PromotionHome", "Discount_Out", "", "addTabSelectMta", "CustomMade_ActCardFooter", srv, "");
+	        },
+	        addCardSlideMta: function addCardSlideMta(index) {
+	            var item = this.productList[index];
+	            var srv = item.srv;
+	            mta.page_id_param_event_id_param_next("PromotionHome", "Discount_Out", "", "addCardSlideMta", "CustomMade_ActCardSlide", srv, "");
+	        },
 	        // 滑动组件change事件
 	        changeEvent: function changeEvent(e) {
 	            var selectIndexStr = e["index"];
@@ -271,6 +287,8 @@
 	            //                })
 
 	            this.selectIndex = Number(selectIndexStr);
+	            //添加滑动埋点
+	            this.addCardSlideMta(selectIndexStr);
 	        },
 
 	        /*
@@ -376,7 +394,7 @@
 
 	        //点击品牌跳转到详情页面事件
 	        clickBrandEvent: function clickBrandEvent(index) {
-	            console.log('clickBrandEvent=====0hahahahahahah');
+	            console.log('clickBrandEvent=====jumpToBrand');
 	            //需要传给详情页面的入参
 	            var materialIds = [];
 	            for (var i = 0; i < this.productList.length; i++) {
@@ -392,6 +410,7 @@
 	            //                dictionary.set('materialIds', materialIds);
 	            //                dictionary.set('activityId', this.activityId);
 
+	            //                发送到原生去跳转到详情
 	            communicate.send("kBrandPromotionHomeCallBack", {
 	                "domain": "jump",
 	                "info": "toBrandDetail",
@@ -403,6 +422,12 @@
 	                    }
 	                }
 	            }, function (result) {});
+	            //添加跳转到原生的埋点
+	            //                page_id_param_event_id_param_next
+	            //               分别是： pageName,pageId,pageParam,eventName,eventId,eventParam,nextPageName
+	            var item = this.productList[index];
+	            var srv = item.srv;
+	            mta.page_id_param_event_id_param_next("PromotionHome", "Discount_Out", "", "点击品牌到详情事件", "CustomMade_ActCard", srv, "");
 	        },
 	        //            发送错误信息到native
 	        sendErrorToNative: function sendErrorToNative() {
@@ -787,6 +812,43 @@
 	  "seeText": {
 	    "color": "#FFFFFF",
 	    "fontSize": 22
+	  },
+	  "brandinfo": {
+	    "marginTop": 22,
+	    "flexDirection": "row",
+	    "marginBottom": 50
+	  },
+	  "brandtext-p": {
+	    "flex": 0.8,
+	    "maxWidth": 448
+	  },
+	  "brandtexticon-p": {
+	    "flex": 0.1,
+	    "width": 39
+	  },
+	  "brandtext": {
+	    "fontSize": 30,
+	    "color": "#ffffff",
+	    "maxWidth": 448,
+	    "textAlign": "center",
+	    "verticalAlign": "center",
+	    "paddingTop": 0
+	  },
+	  "brandtexticonleft": {
+	    "position": "absolute",
+	    "width": 9,
+	    "height": 20,
+	    "left": 0,
+	    "top": 5,
+	    "marginRight": 20
+	  },
+	  "brandtexticonright": {
+	    "position": "absolute",
+	    "bottom": 0,
+	    "right": 0,
+	    "width": 9,
+	    "height": 20,
+	    "marginLeft": 20
 	  }
 	}
 
@@ -960,6 +1022,59 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
 	    data: function data() {
@@ -977,7 +1092,12 @@
 
 	            brandItemCurveHeight: 0,
 	            seeButtonImage: 'see_button.png',
-	            topContentText: '[加入我们，创建未来]'
+	            topContentText: '[加入我们，创建未来]',
+
+	            //                brandtexticonleft: '/img/zs_d_icon_06_left.png',
+	            //                brandtexticonright: '/img/zs_d_icon_06_right.png',
+	            brandtexticonleft: 'https://h5.m.jd.com/dev/36dSd8yihgQ6pgqyBubDq6e8yPtM/pages/76035/img/zs_d_icon_06_left.png',
+	            brandtexticonright: 'https://h5.m.jd.com/dev/36dSd8yihgQ6pgqyBubDq6e8yPtM/pages/76035/img/zs_d_icon_06_right.png'
 	        };
 	    },
 	    props: {
@@ -1328,9 +1448,27 @@
 	    attrs: {
 	      "src": _vm.seperateicon
 	    }
-	  }), _c('text', {
-	    staticClass: ["topItemContentText"]
-	  }, [_vm._v(_vm._s(_vm.topContentText))])]), _c('div', {
+	  }), _c('div', {
+	    staticClass: ["brandinfo"]
+	  }, [_c('div', {
+	    staticClass: ["brandtexticon-p"]
+	  }), _c('div', {
+	    staticClass: ["brandtext-p"]
+	  }, [_c('text', {
+	    staticClass: ["brandtext"]
+	  }, [_vm._v(_vm._s(_vm.itemProduct.name))])]), _c('div', {
+	    staticClass: ["brandtexticon-p"]
+	  }), _c('image', {
+	    staticClass: ["brandtexticonleft"],
+	    attrs: {
+	      "src": _vm.brandtexticonleft
+	    }
+	  }), _c('image', {
+	    staticClass: ["brandtexticonright"],
+	    attrs: {
+	      "src": _vm.brandtexticonright
+	    }
+	  })])]), _c('div', {
 	    staticClass: ["curveImageBg"],
 	    style: {
 	      height: _vm.brandItemCurveHeight,
@@ -2047,6 +2185,21 @@
 	                this.wishLampBtnIcon = 'native://wish_lamp_normal_btn.png';
 	            }
 	        },
+	        addConfirnClickLampMta: function addConfirnClickLampMta() {
+	            var srv = this.wishLampItem.srv;
+	            mta.page_id_param_event_id_param_next("PromotionWishLampItemView", "Discount_Out", "", "addConfirnClickLampMta", "CustomMade_WishBrandConfirm", srv, "");
+	        },
+	        addCancelClickLampMta: function addCancelClickLampMta() {
+	            var srv = this.wishLampItem.srv;
+	            mta.page_id_param_event_id_param_next("PromotionWishLampItemView", "Discount_Out", "", "addCancelClickLampMta", "CustomMade_WishBrandCancel", srv, "");
+	        },
+	        addClickLampMta: function addClickLampMta() {
+	            //埋点
+	            //                page_id_param_event_id_param_next
+	            //               分别是： pageName,pageId,pageParam,eventName,eventId,eventParam,nextPageName
+	            var srv = this.wishLampItem.srv;
+	            mta.page_id_param_event_id_param_next("PromotionWishLampItemView", "Discount_Out", "", "addClickLampMta", "CustomMade_WishBrand", srv, "");
+	        },
 	        clickLampEvent: function clickLampEvent() {
 	            //                lampState 1是正常状态 2是已点亮 3是不可点亮变灰状态
 	            //                如果lampState是2 || 3直接return掉 因为 点亮后不再允许再点亮
@@ -2056,6 +2209,9 @@
 	                //                    modal.alert({message: "已经点亮，不允许再点亮许愿灯", okTitle: "确认", cancelTitle: '取消'});
 	                return;
 	            }
+	            //点击埋点
+	            this.addClickLampMta();
+
 	            console.log('=======clickLampEvent======');
 	            //                this.lampText = "已点亮";
 	            //                this.wishLampItem.lampState = '2'; //todo:同时通知其他变成3的状态
@@ -2068,6 +2224,9 @@
 	                console.log("confirm====" + ret);
 	                if (ret === okString) {
 	                    _this.$emit('changeLampState', _this.wishLampItem.brandId);
+	                    _this.addConfirnClickLampMta();
+	                } else {
+	                    _this.addCancelClickLampMta();
 	                }
 	            });
 	        }

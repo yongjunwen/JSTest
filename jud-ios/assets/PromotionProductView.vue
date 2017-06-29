@@ -14,7 +14,17 @@
                             placeholder="native://zs_detail_brand_placeholder"></image>
                     <!--<text class="lineItem">-·-</text>-->
                     <image class="seperateicon" :src="seperateicon"></image>
-                    <text class="topItemContentText">{{topContentText}}</text>
+                    <!--添加括号信息-->
+                    <div class='brandinfo'>
+                        <div class="brandtexticon-p"></div>
+                        <div class="brandtext-p">
+                            <text class='brandtext'>{{itemProduct.name}}</text>
+                        </div>
+                        <div class="brandtexticon-p"></div>
+                        <image class='brandtexticonleft' :src="brandtexticonleft"></image>
+                        <image class='brandtexticonright' :src="brandtexticonright"></image>
+                    </div>
+                    <!--<text class="topItemContentText">{{topContentText}}</text>-->
                 </div>
 
                 <!--弧度样式视图图层-->
@@ -146,6 +156,49 @@
         color: white;
         font-size: 22px;
     }
+
+    .brandinfo {
+        margin-top: 22px;
+        flex-direction: row;
+        margin-bottom: 50px;
+    }
+
+    .brandtext-p {
+        flex: 0.8;
+        max-width: 448px;
+    }
+
+    .brandtexticon-p {
+        flex: 0.1;
+        width: 39px;
+    }
+
+    .brandtext {
+        font-size: 30px;
+        color: #fff;
+        max-width: 448px;
+        text-align: center;
+        vertical-align: center;
+        padding-top: 0px;
+    }
+
+    .brandtexticonleft {
+        position: absolute;
+        width: 9px;
+        height: 20px;
+        left: 0px;
+        top: 5px;
+        margin-right: 20px;
+    }
+
+    .brandtexticonright {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        width: 9px;
+        height: 20px;
+        margin-left: 20px;
+    }
 </style>
 
 <script>
@@ -168,7 +221,12 @@
 
                 brandItemCurveHeight: 0,
                 seeButtonImage: 'see_button.png',
-                topContentText: '[加入我们，创建未来]'
+                topContentText: '[加入我们，创建未来]',
+
+//                brandtexticonleft: '/img/zs_d_icon_06_left.png',
+//                brandtexticonright: '/img/zs_d_icon_06_right.png',
+                brandtexticonleft: 'https://h5.m.jd.com/dev/36dSd8yihgQ6pgqyBubDq6e8yPtM/pages/76035/img/zs_d_icon_06_left.png',
+                brandtexticonright: 'https://h5.m.jd.com/dev/36dSd8yihgQ6pgqyBubDq6e8yPtM/pages/76035/img/zs_d_icon_06_right.png'
             }
         },
         props: {
