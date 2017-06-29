@@ -30,16 +30,16 @@
                 <image class="lampButtonIcon" :src="wishLampBtnIcon"
                        :style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"></image>
                 <!--<image class="lampButtonIcon" :src="wishLampNomalBtn" placeholder="native://wish_lamp_normal_btn"-->
-                       <!--:style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"-->
-                       <!--v-if="wishLampItem.lampState==1"></image>-->
+                <!--:style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"-->
+                <!--v-if="wishLampItem.lampState==1"></image>-->
 
                 <!--<image class="lampButtonIcon" :src="wishLampSelectBtn" placeholder="native://wish_lamp_select_btn"-->
-                       <!--:style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"-->
-                       <!--v-if="wishLampItem.lampState==2"></image>-->
+                <!--:style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"-->
+                <!--v-if="wishLampItem.lampState==2"></image>-->
 
                 <!--<image class="lampButtonIcon" :src="wishLampDisableBtn" placeholder="native://wish_lamp_disable_btn"-->
-                       <!--:style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"-->
-                       <!--v-if="wishLampItem.lampState==3"></image>-->
+                <!--:style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"-->
+                <!--v-if="wishLampItem.lampState==3"></image>-->
 
 
                 <div style="position: absolute;top: 0;justify-content: center;align-items: center;width: 132px;height: 46px"
@@ -200,6 +200,24 @@
                     this.wishLampBtnIcon = 'native://wish_lamp_normal_btn.png';
                 }
             },
+            addConfirnClickLampMta: function () {
+                var srv = this.wishLampItem.srv;
+                mta.page_id_param_event_id_param_next("PromotionWishLampItemView", "Discount_Out", "",
+                    "addConfirnClickLampMta", "CustomMade_WishBrandConfirm", srv, "");
+            },
+            addCancelClickLampMta: function () {
+                var srv = this.wishLampItem.srv;
+                mta.page_id_param_event_id_param_next("PromotionWishLampItemView", "Discount_Out", "",
+                    "addCancelClickLampMta", "CustomMade_WishBrandCancel", srv, "");
+            },
+            addClickLampMta: function () {
+                //埋点
+//                page_id_param_event_id_param_next
+//               分别是： pageName,pageId,pageParam,eventName,eventId,eventParam,nextPageName
+                var srv = this.wishLampItem.srv;
+                mta.page_id_param_event_id_param_next("PromotionWishLampItemView", "Discount_Out", "",
+                    "addClickLampMta", "CustomMade_WishBrand", srv, "");
+            },
             clickLampEvent: function () {
 //                lampState 1是正常状态 2是已点亮 3是不可点亮变灰状态
 //                如果lampState是2 || 3直接return掉 因为 点亮后不再允许再点亮
@@ -209,6 +227,9 @@
 //                    modal.alert({message: "已经点亮，不允许再点亮许愿灯", okTitle: "确认", cancelTitle: '取消'});
                     return;
                 }
+                //点击埋点
+                this.addClickLampMta();
+
                 console.log('=======clickLampEvent======');
 //                this.lampText = "已点亮";
 //                this.wishLampItem.lampState = '2'; //todo:同时通知其他变成3的状态
@@ -221,6 +242,10 @@
                     console.log("confirm====" + ret)
                     if (ret === okString) {
                         _this.$emit('changeLampState', _this.wishLampItem.brandId);
+                        _this.addConfirnClickLampMta();
+                    } else {
+                        _this.addCancelClickLampMta();
+
                     }
                 });
             }

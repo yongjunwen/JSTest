@@ -58,6 +58,7 @@
     import Util from './PromotionUtil.js'
     import bus from './PDBus.vue'
     var communicate = jud.requireModule('communicate');
+    var mta = jud.requireModule('mta');
 
     const modal = jud.requireModule('modal');
     export default {
@@ -98,8 +99,24 @@
             //底部tab按钮点击事件
             buttonClick: function (index) {
                 this.selectIndex = index;
+                this.addTabSelectMta(index);
             },
 
+            addTabSelectMta: function (index) {
+                //埋点
+//                page_id_param_event_id_param_next
+//               分别是： pageName,pageId,pageParam,eventName,eventId,eventParam,nextPageName
+                var item = this.productList[index];
+                var srv = item.srv; //todo:底部tab相应的srv ？
+                mta.page_id_param_event_id_param_next("PromotionHome", "Discount_Out", "",
+                    "addTabSelectMta", "CustomMade_ActCardFooter", srv, "");
+            },
+            addCardSlideMta: function (index) {
+                var item = this.productList[index];
+                var srv = item.srv;
+                mta.page_id_param_event_id_param_next("PromotionHome", "Discount_Out", "",
+                    "addCardSlideMta", "CustomMade_ActCardSlide", srv, "");
+            },
             // 滑动组件change事件
             changeEvent: function (e) {
                 var selectIndexStr = e["index"];
@@ -110,6 +127,8 @@
 //                })
 
                 this.selectIndex = Number(selectIndexStr);
+                //添加滑动埋点
+                this.addCardSlideMta(selectIndexStr);
             },
 
             /*
@@ -220,7 +239,7 @@
 
             //点击品牌跳转到详情页面事件
             clickBrandEvent: function (index) {
-                console.log('clickBrandEvent=====0hahahahahahah');
+                console.log('clickBrandEvent=====jumpToBrand');
                 //需要传给详情页面的入参
                 var materialIds = [];
                 for (var i = 0; i < this.productList.length; i++) {
@@ -237,6 +256,7 @@
 //                dictionary.set('materialIds', materialIds);
 //                dictionary.set('activityId', this.activityId);
 
+//                发送到原生去跳转到详情
                 communicate.send("kBrandPromotionHomeCallBack",
                     {
                         "domain": "jump",
@@ -252,7 +272,12 @@
                     function (result) {
 
                     });
-
+//添加跳转到原生的埋点
+//                page_id_param_event_id_param_next
+//               分别是： pageName,pageId,pageParam,eventName,eventId,eventParam,nextPageName
+                var item = this.productList[index];
+                var srv = item.srv;
+                mta.page_id_param_event_id_param_next("PromotionHome", "Discount_Out", "", "点击品牌到详情事件", "CustomMade_ActCard", srv, "");
             },
 //            发送错误信息到native
             sendErrorToNative: function () {
