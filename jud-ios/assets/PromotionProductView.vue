@@ -5,21 +5,22 @@
 
         <div class="slider-item" :style="{height:brandItemHeight,width:brandItemWidth}" @click="toSeeClick()">
             <div class="topItemBg" :style="{height:topItemBgHeight,width:brandItemWidth}">
-                <image class="topItemBgImage" :src="itemProduct.titleAtmoPic" placeholder="native://zs_detail_brand_placeholder"
+                <image class="topItemBgImage" :src="itemProduct.titleAtmoPic"
+                       placeholder="native://zs_detail_brand_placeholder"
                        :style="{height:topItemBgHeight,width:brandItemWidth}"></image>
                 <div class="topItemContent" :style="{width:brandItemWidth}">
                     <!--:src="itemProduct.logo"-->
                     <image style="width:212px;height: 70px; margin-top: 18px;"
                            :style="{height:brandLogoHeight,width:brandLogoWidth}"
-                            placeholder="native://zs_detail_brand_placeholder"></image>
+                           placeholder="native://zs_detail_brand_placeholder"></image>
                     <!--<text class="lineItem">-·-</text>-->
                     <image class="seperateicon" :src="seperateicon"></image>
                     <!--添加括号信息-->
                     <div class='brandinfo'>
                         <div class="brandtexticon-p"></div>
                         <div class="brandtext-p">
-                            <text class='brandtext'>{{itemProduct.name}}</text>
-                            <text class='brandtext'>{{itemProduct.name}}</text>
+                            <text class='brandtext'>{{topName}}</text>
+                            <text class='brandtext'>{{topContent}}</text>
                         </div>
                         <div class="brandtexticon-p"></div>
                         <image class='brandtexticonleft' :src="brandtexticonleft"></image>
@@ -30,7 +31,7 @@
 
                 <!--弧度样式视图图层-->
                 <div class="curveImageBg" :style="{height:brandItemCurveHeight,width:brandItemWidth}">
-                    <image class="curveImage" :src="curveImage"  placeholder="native://promotion_rectagle_icon"
+                    <image class="curveImage" :src="curveImage" placeholder="native://promotion_rectagle_icon"
                            :style="{height:brandItemCurveHeight,width:brandItemWidth}"></image>
                 </div>
             </div>
@@ -223,6 +224,8 @@
                 brandItemCurveHeight: 0,
                 seeButtonImage: 'see_button.png',
                 topContentText: '[加入我们，创建未来]',
+                topName: '',
+                topContent: '',
 
 //                brandtexticonleft: '/img/zs_d_icon_06_left.png',
 //                brandtexticonright: '/img/zs_d_icon_06_right.png',
@@ -267,7 +270,7 @@
                     }
                 }
 
-                console.log('clickBrandEvent====='+ materialIds);
+                console.log('clickBrandEvent=====' + materialIds);
 //                var dictionary = new Dictionary();
 //                dictionary.set('selectIndex', index);
 //                dictionary.set('materialIds', materialIds);
@@ -278,7 +281,11 @@
                         "domain": "jump",
                         "info": "toBrandDetail",
                         "params": {
-                            "body": {'selectIndex':this.selectIndex,'materialIds':materialIds,'activityId':this.activityId}
+                            "body": {
+                                'selectIndex': this.selectIndex,
+                                'materialIds': materialIds,
+                                'activityId': this.activityId
+                            }
                         }
                     },
                     function (result) {
@@ -308,6 +315,11 @@
             this.brandLogoWidth = Util.getBrandLogoWidth(this);
 
             this.brandItemBottomImageHeight = Util.getBrandBottomImageHeight(this);
+
+
+            var nameArray = this.itemProduct.name.split("%");
+            this.topName = nameArray[0];
+            this.topContent = nameArray[1];
         }
     }
 </script>

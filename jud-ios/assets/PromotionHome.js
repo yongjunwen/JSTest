@@ -1076,6 +1076,7 @@
 	//
 	//
 	//
+	//
 
 	exports.default = {
 	    data: function data() {
@@ -1094,6 +1095,8 @@
 	            brandItemCurveHeight: 0,
 	            seeButtonImage: 'see_button.png',
 	            topContentText: '[加入我们，创建未来]',
+	            topName: '',
+	            topContent: '',
 
 	            //                brandtexticonleft: '/img/zs_d_icon_06_left.png',
 	            //                brandtexticonright: '/img/zs_d_icon_06_right.png',
@@ -1147,7 +1150,11 @@
 	                "domain": "jump",
 	                "info": "toBrandDetail",
 	                "params": {
-	                    "body": { 'selectIndex': this.selectIndex, 'materialIds': materialIds, 'activityId': this.activityId }
+	                    "body": {
+	                        'selectIndex': this.selectIndex,
+	                        'materialIds': materialIds,
+	                        'activityId': this.activityId
+	                    }
 	                }
 	            }, function (result) {});
 	        },
@@ -1173,6 +1180,10 @@
 	        this.brandLogoWidth = _PromotionUtil2.default.getBrandLogoWidth(this);
 
 	        this.brandItemBottomImageHeight = _PromotionUtil2.default.getBrandBottomImageHeight(this);
+
+	        var nameArray = this.itemProduct.name.split("%");
+	        this.topName = nameArray[0];
+	        this.topContent = nameArray[1];
 	    }
 	};
 	module.exports = exports['default'];
@@ -1457,9 +1468,9 @@
 	    staticClass: ["brandtext-p"]
 	  }, [_c('text', {
 	    staticClass: ["brandtext"]
-	  }, [_vm._v(_vm._s(_vm.itemProduct.name))]), _c('text', {
+	  }, [_vm._v(_vm._s(_vm.topName))]), _c('text', {
 	    staticClass: ["brandtext"]
-	  }, [_vm._v(_vm._s(_vm.itemProduct.name))])]), _c('div', {
+	  }, [_vm._v(_vm._s(_vm.topContent))])]), _c('div', {
 	    staticClass: ["brandtexticon-p"]
 	  }), _c('image', {
 	    staticClass: ["brandtexticonleft"],
