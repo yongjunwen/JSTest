@@ -87,7 +87,7 @@
             bottomTabImageWidth: 0,
             buttonBgColor: null,
 
-            wishLampCopy:null,
+            wishLampCopy: null,
 //            bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
             bgImage: 'slider_bg_image.png',
             productList: [],
@@ -240,7 +240,7 @@
                             _this.bgImage = result.head.bgPic;
 //                            心愿灯上部文案是wishLampCopy
                             _this.wishLampCopy = result.head.wishLampCopy;
-                            //todo:sample
+                            //1、如果品牌列表有数据
                             var _proList = result.brands;
                             if (_proList.length) {
 
@@ -253,64 +253,60 @@
                                         Vue.set(item, "itemStyle", "1");
                                     }
                                 });
+                            }
 
-                                var _wishLamps = result.wishLamps;
-
-                                if (_wishLamps.length) {
-                                    console.log('_wishLamps=======有货');
+                            //2、如果心愿灯列表有数据
+                            var _wishLamps = result.wishLamps;
+                            if (_wishLamps.length) {
+                                console.log('_wishLamps=======有货');
 //                           lampState 1是正常状态 2是已点亮 3是不可点亮变灰状态
 //                           1、 首先遍历出是否已经点亮的逻辑
 //                                _wishLamps.forEach(function (item, index) {
 //////                                    foreach不支持直接break
 //                                });
 
-                                    for (var i = 0; i < _wishLamps.length; i++) {
-                                        var wishItem = _wishLamps[i];
-                                        if (wishItem.lightened) {
-                                            _this.isHaveLightened = true;
-                                            console.log('_wishLamps=======break');
+                                for (var i = 0; i < _wishLamps.length; i++) {
+                                    var wishItem = _wishLamps[i];
+                                    if (wishItem.lightened) {
+                                        _this.isHaveLightened = true;
+                                        console.log('_wishLamps=======break');
 //                                        foreach.break = new Error("已点亮 跳出");
 
-                                            break;
-                                        }
+                                        break;
                                     }
+                                }
 //                            2、从上面的是否点亮逻辑来重新添加规划属性
-                                    _wishLamps.forEach(function (item, index) {
-                                        if (typeof item.lampState == 'undefined') {
-                                            console.log('lampState =====');
+                                _wishLamps.forEach(function (item, index) {
+                                    if (typeof item.lampState == 'undefined') {
+                                        console.log('lampState =====');
 
-                                            var stateString = '1';
-                                            if (_this.isHaveLightened) {
-                                                if (item.lightened) {
-                                                    stateString = '2';
-                                                } else {
-                                                    stateString = '3';
-                                                }
+                                        var stateString = '1';
+                                        if (_this.isHaveLightened) {
+                                            if (item.lightened) {
+                                                stateString = '2';
                                             } else {
-                                                stateString = '1';
+                                                stateString = '3';
                                             }
-
-                                            //全局注册
-                                            Vue.set(item, "lampState", stateString);
+                                        } else {
+                                            stateString = '1';
                                         }
 
-                                    });
+                                        //全局注册
+                                        Vue.set(item, "lampState", stateString);
+                                    }
 
-                                    var wishLampDict = {
-                                        'itemStyle': '2',
-                                        'btmLogo': "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg",
-                                        'tabName': "心愿灯",
-                                        'wishLampCopy': _this.wishLampCopy,
-                                        'brandList': _wishLamps
-                                    };
+                                });
 
-                                    console.log('_wishLamps=======已添加');
-                                    _this.productList.push(wishLampDict);
-                                } else {
-//返回成功但是暂无数据情况
+                                var wishLampDict = {
+                                    'itemStyle': '2',
+                                    'btmLogo': "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg",
+                                    'tabName': "心愿灯",
+                                    'wishLampCopy': _this.wishLampCopy,
+                                    'brandList': _wishLamps
+                                };
 
-                                    _this.sendErrorToNative();
-                                }
+                                console.log('_wishLamps=======已添加');
+                                _this.productList.push(wishLampDict);
                             }
 
                         } else {
@@ -318,6 +314,11 @@
                             _this.sendErrorToNative();
                         }
 
+                        //返回成功但是暂无数据情况
+                        if (this.productList.length == 0) {
+                            console.log('_wishLamps=======已添加');
+                            _this.sendErrorToNative();
+                        }
 
                     });
             },
@@ -346,7 +347,11 @@
                         "domain": "jump",
                         "info": "toBrandDetail",
                         "params": {
-                            "body": {'selectIndex':index,'materialIds':materialIds,'encodedActivityId':this.encodedActivityId}
+                            "body": {
+                                'selectIndex': index,
+                                'materialIds': materialIds,
+                                'encodedActivityId': this.encodedActivityId
+                            }
                         }
                     },
                     function (result) {
@@ -412,7 +417,6 @@
             }
             this.neighborSpace = Util.scale(this) * _nSpace;
             this.brandItemBgWidth = Util.scale(this) * 606;
-
 
 
             // 添加网络请求逻辑
