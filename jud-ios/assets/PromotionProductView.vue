@@ -237,6 +237,7 @@
             }
         },
         created: function () {
+            console.log("品牌卡片开始创建")
             this.brandRootHeight = Util.getSliderHeight(this);
             this.brandItemHeight = Util.getBrandItemHeight(this);
             this.brandItemWidth = Util.getBrandItemWidth(this);

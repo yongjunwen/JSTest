@@ -130,7 +130,9 @@
                         }
                     },
                     function (result) {
-                        console.log('qryExclusiveDiscount-backData:' + result);
+                        var str = JSON.stringify(result);
+                        console.log('qryExclusiveDiscount-backData:' + str);
+                        console.log('qryExclusiveDiscount-backData:' + result.toString());
                         console.log('qryExclusiveDiscount-backData-code:' + result.code);
                         if (String(result.code) === '0') {
 
