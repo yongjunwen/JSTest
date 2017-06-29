@@ -362,13 +362,13 @@
 	                        _this.productList.push(wishLampDict);
 	                    }
 	                } else {
-
+	                    console.log('code非0返回状态======sendErrorToNative');
 	                    _this.sendErrorToNative();
 	                }
 
 	                //返回成功但是暂无数据情况
-	                if (this.productList.length == 0) {
-	                    console.log('_wishLamps=======已添加');
+	                if (_this.productList.length == 0) {
+	                    console.log('返回成功但是暂无数据情况=======sendErrorToNative');
 	                    _this.sendErrorToNative();
 	                }
 	            });
