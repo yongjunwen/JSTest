@@ -267,22 +267,6 @@
 	            //                })
 
 	            this.selectIndex = Number(selectIndexStr);
-	            // if(this.selectIndex  == 0){
-	            //   this.selectIndex  = 1;
-	            // }else{
-	            //   this.selectIndex  = 0;
-	            // }
-	            console.log(e);
-	            //                和原生端进行通信协议
-	            var nativeEventHandle = __jud_require_module__('nativeEventHandle');
-
-	            var self = this;
-	            //                nativeEventHandle.handleEvent(
-	            //                    "kScrollChangeKey", //通信key
-	            //                    {"index": e},
-	            //                    function (ret) {
-	            //                        // ret就是我们传入的{"Hello": "World"}
-	            //                    });
 	        },
 
 	        /*
@@ -328,20 +312,14 @@
 	                    //2、如果心愿灯列表有数据
 	                    var _wishLamps = result.wishLamps;
 	                    if (_wishLamps.length) {
-	                        console.log('_wishLamps=======有货');
+	                        console.log('心愿灯=======有货');
 	                        //                           lampState 1是正常状态 2是已点亮 3是不可点亮变灰状态
 	                        //                           1、 首先遍历出是否已经点亮的逻辑
-	                        //                                _wishLamps.forEach(function (item, index) {
-	                        //////                                    foreach不支持直接break
-	                        //                                });
-
 	                        for (var i = 0; i < _wishLamps.length; i++) {
 	                            var wishItem = _wishLamps[i];
 	                            if (wishItem.lightened) {
 	                                _this.isHaveLightened = true;
-	                                console.log('_wishLamps=======break');
-	                                //                                        foreach.break = new Error("已点亮 跳出");
-
+	                                console.log('第一次获取心愿灯=======已经存在点亮');
 	                                break;
 	                            }
 	                        }
@@ -478,6 +456,9 @@
 
 	        // 添加网络请求逻辑
 	        this.fetchList();
+	    },
+	    destroyed: function destroyed() {
+	        console.log("destroyed-=========");
 	    }
 	};
 	module.exports = exports['default'];

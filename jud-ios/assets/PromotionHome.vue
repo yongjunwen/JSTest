@@ -314,6 +314,10 @@
 
             // 添加网络请求逻辑
             this.fetchList();
+        },
+        destroyed: function () {
+            //页面销毁调用事件
+            console.log("destroyed-=========");
         }
     }
 </script>
