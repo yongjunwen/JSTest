@@ -222,7 +222,7 @@
                 brandItemBottomImageHeight: 0,
 
                 brandItemCurveHeight: 0,
-                seeButtonImage: 'see_button.png',
+                seeButtonImage: '/img/see_button.png',
                 topContentText: '[加入我们，创建未来]',
                 topName: '',
                 topContent: '',

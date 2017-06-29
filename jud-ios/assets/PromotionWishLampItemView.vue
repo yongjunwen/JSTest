@@ -134,13 +134,13 @@
                 brandLogoImageOpacity: 1,
 
 //                灯笼背景图片
-                wishLampNomalIcon: "wish_lamp_normal_icon.png",
-                wishLampSelectIcon: "wish_lamp_select_icon.png",
-                wishLampDisableIcon: "wish_lamp_disable_icon.png",
+                wishLampNomalIcon: "/img/wish_lamp_normal_icon.png",
+                wishLampSelectIcon: "/img/wish_lamp_select_icon.png",
+                wishLampDisableIcon: "/img/wish_lamp_disable_icon.png",
 
-                wishLampNomalBtn: "wish_lamp_normal_btn.png",
-                wishLampSelectBtn: "wish_lamp_select_btn.png",
-                wishLampDisableBtn: "wish_lamp_disable_btn.png",
+                wishLampNomalBtn: "/img/wish_lamp_normal_btn.png",
+                wishLampSelectBtn: "/img/wish_lamp_select_btn.png",
+                wishLampDisableBtn: "/img/wish_lamp_disable_btn.png",
 
                 tipContent: '30天内努力为你备好，请持续关注',
                 isShowSelect: false,

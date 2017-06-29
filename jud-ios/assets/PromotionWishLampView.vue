@@ -165,8 +165,8 @@
                 marginTop3: 0,
 
                 cardTitle: "心愿灯",
-                seperateicon: 'zs_d_icon_05.png',
-                wishLampBg: "wish_lamp_bg_image.png",
+                seperateicon: '/img/zs_d_icon_05.png',
+                wishLampBg: "/img/wish_lamp_bg_image.png",
                 tipContent: '30天内努力为你备好，请持续关注',
                 bottomTipContent: '每天仅有有1次许愿机会'
             }

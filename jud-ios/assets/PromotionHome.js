@@ -1077,6 +1077,8 @@
 	//
 	//
 	//
+	//
+	//
 
 	exports.default = {
 	    data: function data() {
@@ -1093,7 +1095,7 @@
 	            brandItemBottomImageHeight: 0,
 
 	            brandItemCurveHeight: 0,
-	            seeButtonImage: 'see_button.png',
+	            seeButtonImage: '/img/see_button.png',
 	            topContentText: '[加入我们，创建未来]',
 	            topName: '',
 	            topContent: '',
@@ -1532,8 +1534,7 @@
 	      height: "76px"
 	    },
 	    attrs: {
-	      "src": _vm.seeButtonImage,
-	      "placeholder": "native://see_button"
+	      "src": "native://see_button"
 	    }
 	  })])])])
 	},staticRenderFns: []}
@@ -1817,8 +1818,8 @@
 	            marginTop3: 0,
 
 	            cardTitle: "心愿灯",
-	            seperateicon: 'zs_d_icon_05.png',
-	            wishLampBg: "wish_lamp_bg_image.png",
+	            seperateicon: '/img/zs_d_icon_05.png',
+	            wishLampBg: "/img/wish_lamp_bg_image.png",
 	            tipContent: '30天内努力为你备好，请持续关注',
 	            bottomTipContent: '每天仅有有1次许愿机会'
 	        };
@@ -2133,13 +2134,13 @@
 	            brandLogoImageOpacity: 1,
 
 	            //                灯笼背景图片
-	            wishLampNomalIcon: "wish_lamp_normal_icon.png",
-	            wishLampSelectIcon: "wish_lamp_select_icon.png",
-	            wishLampDisableIcon: "wish_lamp_disable_icon.png",
+	            wishLampNomalIcon: "/img/wish_lamp_normal_icon.png",
+	            wishLampSelectIcon: "/img/wish_lamp_select_icon.png",
+	            wishLampDisableIcon: "/img/wish_lamp_disable_icon.png",
 
-	            wishLampNomalBtn: "wish_lamp_normal_btn.png",
-	            wishLampSelectBtn: "wish_lamp_select_btn.png",
-	            wishLampDisableBtn: "wish_lamp_disable_btn.png",
+	            wishLampNomalBtn: "/img/wish_lamp_normal_btn.png",
+	            wishLampSelectBtn: "/img/wish_lamp_select_btn.png",
+	            wishLampDisableBtn: "/img/wish_lamp_disable_btn.png",
 
 	            tipContent: '30天内努力为你备好，请持续关注',
 	            isShowSelect: false,
