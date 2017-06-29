@@ -1732,8 +1732,10 @@ NSComparisonResult sliderNeighorCompareViewDepth(UIView *view1, UIView *view2, J
 
 - (void)updateSliderPage:(BOOL)animate
 {
-    NSLog(@"self.sliderView items=%d",self.sliderView.numberOfItems);
+//    NSLog(@"self.sliderView items=%d",self.sliderView.numberOfItems);
+    //如果只有一个元素就不要在滑动和动画缩放了
     if(self.sliderView.numberOfItems <=1){
+        self.sliderView.scrollEnabled = NO;
         return;
     }
     __block UIView * currentView  = [self.sliderView itemViewAtIndex:[_sliderView currentItemIndex]];
