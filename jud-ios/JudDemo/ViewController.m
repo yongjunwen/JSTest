@@ -83,9 +83,9 @@
     _instance.updateFinish = ^(UIView *view) {
         NSLog(@"update Finish");
     };   
-//    NSString *url = [NSString stringWithFormat:@"file://%@/PromotionHome.js",[NSBundle mainBundle].bundlePath];
+    NSString *url = [NSString stringWithFormat:@"file://%@/PromotionHome.js",[NSBundle mainBundle].bundlePath];
     
-    NSString *url = @"https://github.com/yongjunwen/JSTest/blob/fix-628/jud-ios/assets/PromotionHome.js";
+//    NSString *url = @"https://github.com/yongjunwen/JSTest/blob/fix-628/jud-ios/assets/PromotionHome.js";
     
     [_instance renderWithURL:[NSURL URLWithString:url] options:@{@"bundleUrl":url} data:nil];
 }

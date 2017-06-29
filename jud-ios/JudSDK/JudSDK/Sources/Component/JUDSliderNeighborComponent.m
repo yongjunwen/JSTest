@@ -1732,6 +1732,10 @@ NSComparisonResult sliderNeighorCompareViewDepth(UIView *view1, UIView *view2, J
 
 - (void)updateSliderPage:(BOOL)animate
 {
+    NSLog(@"self.sliderView items=%d",self.sliderView.numberOfItems);
+    if(self.sliderView.numberOfItems <=1){
+        return;
+    }
     __block UIView * currentView  = [self.sliderView itemViewAtIndex:[_sliderView currentItemIndex]];
     __block UIView * lastView  = [self.sliderView itemViewAtIndex:[_sliderView lastItemIndex]];
     __block UIView * nextView  = [self.sliderView itemViewAtIndex:[_sliderView nextItemIndex]];
