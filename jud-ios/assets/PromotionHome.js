@@ -2368,7 +2368,7 @@
 	        "wishLampObject": itemProduct
 	      }
 	    }) : _vm._e()], 1)
-	  })), _c('div', {
+	  })), (_vm.productList.length > 1) ? _c('div', {
 	    staticClass: ["bottomTab"],
 	    style: {
 	      height: _vm.bottomTabHeight
@@ -2398,7 +2398,7 @@
 	        "src": itemProduct.btmLogo
 	      }
 	    })])
-	  }))])], 1)]) : _vm._e()
+	  }))]) : _vm._e()], 1)]) : _vm._e()
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 

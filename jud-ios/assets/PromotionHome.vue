@@ -30,7 +30,7 @@
 
             </slider-neighbor>
             <!-- 底部按钮背景视图 -->
-            <div class="bottomTab" :style="{height:bottomTabHeight}">
+            <div class="bottomTab" :style="{height:bottomTabHeight}" v-if="productList.length > 1">
                 <!--<div v-for="(item,index) in productList" >-->
                 <!--<promotion-bottom :item="item" :index="index" v-if="item"></promotion-bottom>-->
                 <!--</div>-->
