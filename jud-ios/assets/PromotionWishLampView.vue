@@ -125,6 +125,8 @@
         margin-top: 34px;
         color: #ffffff;
         font-size: 26px;
+        lines:1;
+        text-overflow:ellipsis;
     }
 
     .contentDiv {
@@ -137,6 +139,8 @@
         margin-top: 40px;
         color: white;
         font-size: 22px;
+        lines:1;
+        text-overflow:ellipsis;
     }
 
 </style>

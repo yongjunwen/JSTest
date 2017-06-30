@@ -143,6 +143,8 @@
     .wishText {
         font-size: 25px;
         color: #333333;
+        lines:1;
+        text-overflow:ellipsis;
     }
 
     .seeDiv {
@@ -183,8 +185,8 @@
         /*max-width: 448px;*/
         text-align: center;
         vertical-align: center;
-        lines:1;
         padding-top: 0px;
+        lines:1;
         text-overflow:ellipsis;
     }
 
