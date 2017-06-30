@@ -34,7 +34,7 @@
                 <!--<div v-for="(item,index) in productList" >-->
                 <!--<promotion-bottom :item="item" :index="index" v-if="item"></promotion-bottom>-->
                 <!--</div>-->
-                <div class="bottomTabContentBg">
+                <div class="bottomTabContentBg" :style="{height:bottomTabHeight,borderRadius:borderRadius}">
 
                     <div class="bottomTextBgDiv" v-for="(itemProduct,index) in productList"
                          :style="{'backgroundColor':(index==selectIndex?buttonBgSelectColor:buttonBgColor), height:bottomTabHeight,width:bottomTextWidth}"
@@ -87,6 +87,7 @@
             bottomTabImageHeight: 0,
             bottomTabImageWidth: 0,
             buttonBgColor: null,
+            borderRadius: 0,
 
             wishLampCopy: null,
 //            bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
@@ -329,6 +330,7 @@
             this.bottomTabHeight = Util.scale(this) * 90;
             this.bottomTextWidth = Util.scale(this) * 130;
             this.bottomTabImageHeight = Util.scale(this) * 70;
+            this.borderRadius = this.bottomTabHeight / 2;
             this.bottomTabImageWidth = Util.scale(this) * 100;
 
             var _nSpace = 55;
