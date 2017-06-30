@@ -180,10 +180,12 @@
     .brandtext {
         font-size: 30px;
         color: #fff;
-        max-width: 448px;
+        /*max-width: 448px;*/
         text-align: center;
         vertical-align: center;
+        lines:1;
         padding-top: 0px;
+        text-overflow:ellipsis;
     }
 
     .brandtexticonleft {
@@ -229,10 +231,10 @@
                 topName: '',
                 topContent: '',
 
-//                brandtexticonleft: '/img/zs_d_icon_06_left.png',
-//                brandtexticonright: '/img/zs_d_icon_06_right.png',
-                brandtexticonleft: 'https://h5.m.jd.com/dev/36dSd8yihgQ6pgqyBubDq6e8yPtM/pages/76035/img/zs_d_icon_06_left.png',
-                brandtexticonright: 'https://h5.m.jd.com/dev/36dSd8yihgQ6pgqyBubDq6e8yPtM/pages/76035/img/zs_d_icon_06_right.png'
+                brandtexticonleft: '/img/zs_d_icon_06_left.png',
+                brandtexticonright: '/img/zs_d_icon_06_right.png',
+//                brandtexticonleft: 'https://h5.m.jd.com/dev/36dSd8yihgQ6pgqyBubDq6e8yPtM/pages/76035/img/zs_d_icon_06_left.png',
+//                brandtexticonright: 'https://h5.m.jd.com/dev/36dSd8yihgQ6pgqyBubDq6e8yPtM/pages/76035/img/zs_d_icon_06_right.png'
             }
         },
         props: {

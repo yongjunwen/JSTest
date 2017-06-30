@@ -249,6 +249,7 @@
 	        bottomTabImageHeight: 0,
 	        bottomTabImageWidth: 0,
 	        buttonBgColor: null,
+	        borderRadius: 0,
 
 	        wishLampCopy: null,
 	        //            bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
@@ -476,6 +477,7 @@
 	        this.bottomTabHeight = _PromotionUtil2.default.scale(this) * 90;
 	        this.bottomTextWidth = _PromotionUtil2.default.scale(this) * 130;
 	        this.bottomTabImageHeight = _PromotionUtil2.default.scale(this) * 70;
+	        this.borderRadius = this.bottomTabHeight / 2;
 	        this.bottomTabImageWidth = _PromotionUtil2.default.scale(this) * 100;
 
 	        var _nSpace = 55;
@@ -829,10 +831,11 @@
 	  "brandtext": {
 	    "fontSize": 30,
 	    "color": "#ffffff",
-	    "maxWidth": 448,
 	    "textAlign": "center",
 	    "verticalAlign": "center",
-	    "paddingTop": 0
+	    "lines": 1,
+	    "paddingTop": 0,
+	    "textOverflow": "ellipsis"
 	  },
 	  "brandtexticonleft": {
 	    "position": "absolute",
@@ -1079,6 +1082,8 @@
 	//
 	//
 	//
+	//
+	//
 
 	exports.default = {
 	    data: function data() {
@@ -1100,10 +1105,8 @@
 	            topName: '',
 	            topContent: '',
 
-	            //                brandtexticonleft: '/img/zs_d_icon_06_left.png',
-	            //                brandtexticonright: '/img/zs_d_icon_06_right.png',
-	            brandtexticonleft: 'https://h5.m.jd.com/dev/36dSd8yihgQ6pgqyBubDq6e8yPtM/pages/76035/img/zs_d_icon_06_left.png',
-	            brandtexticonright: 'https://h5.m.jd.com/dev/36dSd8yihgQ6pgqyBubDq6e8yPtM/pages/76035/img/zs_d_icon_06_right.png'
+	            brandtexticonleft: '/img/zs_d_icon_06_left.png',
+	            brandtexticonright: '/img/zs_d_icon_06_right.png'
 	        };
 	    },
 	    props: {
@@ -2561,7 +2564,11 @@
 	      height: _vm.bottomTabHeight
 	    }
 	  }, [_c('div', {
-	    staticClass: ["bottomTabContentBg"]
+	    staticClass: ["bottomTabContentBg"],
+	    style: {
+	      height: _vm.bottomTabHeight,
+	      borderRadius: _vm.borderRadius
+	    }
 	  }, _vm._l((_vm.productList), function(itemProduct, index) {
 	    return _c('div', {
 	      staticClass: ["bottomTextBgDiv"],
