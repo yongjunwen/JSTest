@@ -1634,8 +1634,12 @@
 	    "position": "absolute",
 	    "top": 0
 	  },
+	  "bottom": {
+	    "position": "absolute",
+	    "bottom": 80
+	  },
 	  "bottomTipContent": {
-	    "marginTop": 40,
+	    "marginTop": 1,
 	    "color": "#FFFFFF",
 	    "fontSize": 22,
 	    "lines": 1,
@@ -1810,6 +1814,12 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	var communicate = jud.requireModule('communicate');
 	exports.default = {
@@ -1833,7 +1843,7 @@
 	            marginTop3: 0,
 
 	            cardTitle: "心愿灯",
-	            seperateicon: '/img/zs_d_icon_05.png',
+	            seperateicon: '/img/promotion_seperation_icon.png',
 	            wishLampBg: "/img/wish_lamp_bg_image.png",
 	            tipContent: '30天内努力为你备好，请持续关注',
 	            bottomTipContent: '每天仅有有1次许愿机会'
@@ -2524,7 +2534,7 @@
 	    on: {
 	      "changeLampState": _vm.changeLampStateEvent
 	    }
-	  }) : _vm._e()], 1)]), _c('div', {
+	  }) : _vm._e()], 1)])]), _c('div', {
 	    staticClass: ["bottom"],
 	    staticStyle: {
 	      width: "610px"
@@ -2539,7 +2549,7 @@
 	    }
 	  }, [_c('text', {
 	    staticClass: ["bottomTipContent"]
-	  }, [_vm._v(_vm._s(_vm.bottomTipContent))])])])])])
+	  }, [_vm._v(_vm._s(_vm.bottomTipContent))])])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 

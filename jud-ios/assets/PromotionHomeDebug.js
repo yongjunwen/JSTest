@@ -371,7 +371,7 @@
 
 	                        var wishLampDict = {
 	                            'itemStyle': '2',
-	                            'btmLogo': "//m.360buyimg.com/babel/jfs/t5728/264/4826994645/1304/ad397e28/5955ef60Nb89e8bb1.png",
+	                            'btmLogo': "//m.360buyimg.com/babel/jfs/t6667/253/1686240451/1304/ad397e28/5956002dNf1b6b2ef.png",
 	                            'tabName': "心愿灯",
 	                            'wishLampCopy': _this.wishLampCopy,
 	                            'brandList': _wishLamps
@@ -1093,8 +1093,8 @@
 	    data: function data() {
 	        return {
 	            seeContent: '进去看看',
-	            curveImage: '//m.360buyimg.com/babel/jfs/t5638/20/4871202095/1811/4efb2ba7/5955ef60N5ac4eed6.png',
-	            seperateicon: '//m.360buyimg.com/babel/jfs/t6490/199/1645189729/135/9145b873/5955ef67N4f926f0c.png',
+	            curveImage: '//m.360buyimg.com/babel/jfs/t6121/168/3603777011/1811/4efb2ba7/5956002cNef6880d7.png',
+	            seperateicon: '//m.360buyimg.com/babel/jfs/t6658/253/1640102820/135/9145b873/5956002cN3fb89542.png',
 	            brandRootHeight: 0,
 	            brandItemHeight: 0,
 	            brandItemWidth: 0,
@@ -1104,13 +1104,13 @@
 	            brandItemBottomImageHeight: 0,
 
 	            brandItemCurveHeight: 0,
-	            seeButtonImage: '//m.360buyimg.com/babel/jfs/t5662/334/4770791554/7372/a1b66fb2/5955ef67N39bd42b6.png',
+	            seeButtonImage: '//m.360buyimg.com/babel/jfs/t5647/122/4865043217/7372/a1b66fb2/5956002cNebd432f2.png',
 	            topContentText: '[加入我们，创建未来]',
 	            topName: '',
 	            topContent: '',
 
-	            brandtexticonleft: '//m.360buyimg.com/babel/jfs/t6313/335/1603428735/78/1450f9a0/5955ef67N18365aa8.png',
-	            brandtexticonright: '//m.360buyimg.com/babel/jfs/t6322/356/1632725617/81/894e25e6/5955ef67N0b8760ff.png'
+	            brandtexticonleft: '//m.360buyimg.com/babel/jfs/t5635/290/4829178508/78/1450f9a0/5956002cN4293e862.png',
+	            brandtexticonright: '//m.360buyimg.com/babel/jfs/t6517/261/1670797056/81/894e25e6/5956002dN4ded3d68.png'
 	        };
 	    },
 	    props: {
@@ -1634,8 +1634,12 @@
 	    "position": "absolute",
 	    "top": 0
 	  },
+	  "bottom": {
+	    "position": "absolute",
+	    "bottom": 80
+	  },
 	  "bottomTipContent": {
-	    "marginTop": 40,
+	    "marginTop": 1,
 	    "color": "#FFFFFF",
 	    "fontSize": 22,
 	    "lines": 1,
@@ -1810,6 +1814,12 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	var communicate = jud.requireModule('communicate');
 	exports.default = {
@@ -1833,8 +1843,8 @@
 	            marginTop3: 0,
 
 	            cardTitle: "心愿灯",
-	            seperateicon: '/img/zs_d_icon_05.png',
-	            wishLampBg: "//m.360buyimg.com/babel/jfs/t6325/144/1674068818/31577/8df354a9/5955ef67N58da0fb9.png",
+	            seperateicon: '//m.360buyimg.com/babel/jfs/t6658/253/1640102820/135/9145b873/5956002cN3fb89542.png',
+	            wishLampBg: "//m.360buyimg.com/babel/jfs/t5857/115/4874868561/31577/8df354a9/5956002dN2b099827.png",
 	            tipContent: '30天内努力为你备好，请持续关注',
 	            bottomTipContent: '每天仅有有1次许愿机会'
 	        };
@@ -2151,13 +2161,13 @@
 	            brandLogoImageOpacity: 1,
 
 	            //                灯笼背景图片
-	            wishLampNomalIcon: "//m.360buyimg.com/babel/jfs/t6283/90/1710589547/4170/f05595f2/5955ef67N01247005.png",
-	            wishLampSelectIcon: "//m.360buyimg.com/babel/jfs/t5734/71/4887426022/11476/f960b54d/5955ef60Nbaa5476a.png",
-	            wishLampDisableIcon: "//m.360buyimg.com/babel/jfs/t6649/23/1672553167/3633/a1cf0ca8/5955ef66N0bced493.png",
+	            wishLampNomalIcon: "//m.360buyimg.com/babel/jfs/t5857/148/4837635150/4170/f05595f2/5956002dN335257e6.png",
+	            wishLampSelectIcon: "//m.360buyimg.com/babel/jfs/t6385/313/1643272045/11476/f960b54d/59560026N00520c8f.png",
+	            wishLampDisableIcon: "//m.360buyimg.com/babel/jfs/t5848/293/4868398660/3633/a1cf0ca8/5956002dN706090c6.png",
 
-	            wishLampNomalBtn: "//m.360buyimg.com/babel/jfs/t5650/5/4839640198/1722/af53e8f/5955ef67N366af7dd.png",
-	            wishLampSelectBtn: "//m.360buyimg.com/babel/jfs/t6241/349/1673929077/1784/14121242/5955ef67N4cd4a225.png",
-	            wishLampDisableBtn: "//m.360buyimg.com/babel/jfs/t6244/272/1659852721/1746/dea13798/5955ef67Nc4c221f7.png",
+	            wishLampNomalBtn: "//m.360buyimg.com/babel/jfs/t6244/233/1680686925/1722/af53e8f/5956002dN16419ae1.png",
+	            wishLampSelectBtn: "//m.360buyimg.com/babel/jfs/t6244/244/1691177654/1784/14121242/5956002dN25d5096e.png",
+	            wishLampDisableBtn: "//m.360buyimg.com/babel/jfs/t6247/277/1641336627/1746/dea13798/5956002dNe0d5b16d.png",
 
 	            tipContent: '30天内努力为你备好，请持续关注',
 	            isShowSelect: false,
@@ -2524,7 +2534,7 @@
 	    on: {
 	      "changeLampState": _vm.changeLampStateEvent
 	    }
-	  }) : _vm._e()], 1)]), _c('div', {
+	  }) : _vm._e()], 1)])]), _c('div', {
 	    staticClass: ["bottom"],
 	    staticStyle: {
 	      width: "610px"
@@ -2539,7 +2549,7 @@
 	    }
 	  }, [_c('text', {
 	    staticClass: ["bottomTipContent"]
-	  }, [_vm._v(_vm._s(_vm.bottomTipContent))])])])])])
+	  }, [_vm._v(_vm._s(_vm.bottomTipContent))])])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 

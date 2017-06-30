@@ -6,7 +6,7 @@
         <div class="bgImageDiv">
             <!-- placeholder="native://wish_lamp_bg_placeholder" 暂时放弃-->
             <image class="bgImage" :src="wishLampBg" :style="{height:wishRootHeight,width:wishRootWidth}"
-                  ></image>
+            ></image>
         </div>
         <!--内容显示区域-->
         <div class="contentDiv">
@@ -61,12 +61,11 @@
 
                 </div>
             </div>
-
-            <!--底部文案区域-->
-            <div class="bottom" style="width: 610px" :style="{width:wishRootWidth}">
-                <div style="align-items: center;justify-content: center;">
-                    <text class="bottomTipContent">{{bottomTipContent}}</text>
-                </div>
+        </div>
+        <!--底部文案区域-->
+        <div class="bottom" style="width: 610px" :style="{width:wishRootWidth}">
+            <div style="align-items: center;justify-content: center;">
+                <text class="bottomTipContent">{{bottomTipContent}}</text>
             </div>
         </div>
     </div>
@@ -125,8 +124,8 @@
         margin-top: 34px;
         color: #ffffff;
         font-size: 26px;
-        lines:1;
-        text-overflow:ellipsis;
+        lines: 1;
+        text-overflow: ellipsis;
     }
 
     .contentDiv {
@@ -135,12 +134,19 @@
         top: 0;
     }
 
+    .bottom {
+        position: absolute;
+        bottom:80px;
+        /*margin-bottom: 10px;*/
+        /*background-color: #EE7A23;*/
+    }
+
     .bottomTipContent {
-        margin-top: 40px;
+        margin-top: 1px;
         color: white;
         font-size: 22px;
-        lines:1;
-        text-overflow:ellipsis;
+        lines: 1;
+        text-overflow: ellipsis;
     }
 
 </style>
@@ -170,7 +176,7 @@
                 marginTop3: 0,
 
                 cardTitle: "心愿灯",
-                seperateicon: '/img/zs_d_icon_05.png',
+                seperateicon: '/img/promotion_seperation_icon.png',
                 wishLampBg: "/img/wish_lamp_bg_image.png",
                 tipContent: '30天内努力为你备好，请持续关注',
                 bottomTipContent: '每天仅有有1次许愿机会'
