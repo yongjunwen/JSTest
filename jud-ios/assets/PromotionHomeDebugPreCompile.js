@@ -2289,16 +2289,37 @@
 	      height: _vm.lampIconHeight,
 	      width: _vm.lampItemWidth
 	    }
-	  }, [_c('image', {
+	  }, [(_vm.wishLampItem.lampState == 1) ? _c('image', {
 	    staticClass: ["lampIcon"],
 	    style: {
 	      height: _vm.lampIconHeight,
 	      width: _vm.lampItemWidth
 	    },
 	    attrs: {
-	      "src": _vm.lampPlaceHolderIcon
+	      "src": _vm.wishLampNomalIcon,
+	      "placeholder": "native://wish_lamp_normal_icon"
 	    }
-	  }), _c('div', {
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 2) ? _c('image', {
+	    staticClass: ["lampSelectIcon"],
+	    style: {
+	      height: _vm.lampIconHeight,
+	      width: _vm.lampItemWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampSelectIcon,
+	      "placeholder": "native://wish_lamp_select_icon"
+	    }
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 3) ? _c('image', {
+	    staticClass: ["lampIcon"],
+	    style: {
+	      height: _vm.lampIconHeight,
+	      width: _vm.lampItemWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampDisableIcon,
+	      "placeholder": "native://wish_lamp_disable_icon"
+	    }
+	  }) : _vm._e(), _c('div', {
 	    staticStyle: {
 	      position: "absolute",
 	      top: "0",
@@ -2325,16 +2346,34 @@
 	      height: _vm.lampButtonBgHeight,
 	      width: _vm.lampItemWidth
 	    }
-	  }, [_c('image', {
+	  }, [(_vm.wishLampItem.lampState == 1) ? _c('image', {
 	    staticClass: ["lampButtonIcon"],
 	    style: {
 	      height: _vm.lampButtonBgHeight,
 	      width: _vm.lampButtonIconWidth
 	    },
 	    attrs: {
-	      "src": _vm.wishLampBtnIcon
+	      "src": _vm.wishLampNomalBtn
 	    }
-	  }), _c('div', {
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 2) ? _c('image', {
+	    staticClass: ["lampButtonIcon"],
+	    style: {
+	      height: _vm.lampButtonBgHeight,
+	      width: _vm.lampButtonIconWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampSelectBtn
+	    }
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 3) ? _c('image', {
+	    staticClass: ["lampButtonIcon"],
+	    style: {
+	      height: _vm.lampButtonBgHeight,
+	      width: _vm.lampButtonIconWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampDisableBtn
+	    }
+	  }) : _vm._e(), _c('div', {
 	    staticStyle: {
 	      position: "absolute",
 	      top: "0",

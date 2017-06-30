@@ -7,17 +7,17 @@
 
             <div class="lampIconBg" :style="{height:lampIconHeight,width:lampItemWidth}">
                 <!--正常状态-->
-                <image class="lampIcon" :src="lampPlaceHolderIcon"
-                       :style="{height:lampIconHeight,width:lampItemWidth}"></image>
-                <!--&lt;!&ndash;正常状态&ndash;&gt;-->
-                <!--<image class="lampIcon" :src="wishLampNomalIcon" placeholder="native://wish_lamp_normal_icon"-->
-                <!--:style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==1"></image>-->
-                <!--&lt;!&ndash;点亮状态&ndash;&gt;-->
-                <!--<image class="lampSelectIcon" :src="wishLampSelectIcon" placeholder="native://wish_lamp_select_icon"-->
-                <!--:style="{height:lampIconHeight,width:lampItemWidth}" v-if="isShowSelect==true"></image>-->
-                <!--&lt;!&ndash;变暗状态&ndash;&gt;-->
-                <!--<image class="lampIcon" :src="wishLampDisableIcon" placeholder="native://wish_lamp_disable_icon"-->
-                <!--:style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==3"></image>-->
+                <!--<image class="lampIcon" :src="lampPlaceHolderIcon"-->
+                       <!--:style="{height:lampIconHeight,width:lampItemWidth}"></image>-->
+                <!--正常状态-->
+                <image class="lampIcon" :src="wishLampNomalIcon" placeholder="native://wish_lamp_normal_icon"
+                :style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==1"></image>
+                <!--点亮状态-->
+                <image class="lampSelectIcon" :src="wishLampSelectIcon" placeholder="native://wish_lamp_select_icon"
+                :style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==2"></image>
+                <!--变暗状态-->
+                <image class="lampIcon" :src="wishLampDisableIcon" placeholder="native://wish_lamp_disable_icon"
+                :style="{height:lampIconHeight,width:lampItemWidth}" v-if="wishLampItem.lampState==3"></image>
 
                 <div style="position: absolute;top: 0;justify-content: center;align-items: center;"
                      :style="{height:lampIconHeight,width:lampItemWidth}">
@@ -27,19 +27,19 @@
                 </div>
             </div>
             <div class="lampButtonBg" :style="{height:lampButtonBgHeight,width:lampItemWidth}">
-                <image class="lampButtonIcon" :src="wishLampBtnIcon"
-                       :style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"></image>
-                <!--<image class="lampButtonIcon" :src="wishLampNomalBtn" placeholder="native://wish_lamp_normal_btn"-->
-                <!--:style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"-->
-                <!--v-if="wishLampItem.lampState==1"></image>-->
+                <!--<image class="lampButtonIcon" :src="wishLampBtnIcon"-->
+                       <!--:style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"></image>-->
+                <image class="lampButtonIcon" :src="wishLampNomalBtn"
+                :style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"
+                v-if="wishLampItem.lampState==1"></image>
 
-                <!--<image class="lampButtonIcon" :src="wishLampSelectBtn" placeholder="native://wish_lamp_select_btn"-->
-                <!--:style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"-->
-                <!--v-if="wishLampItem.lampState==2"></image>-->
+                <image class="lampButtonIcon" :src="wishLampSelectBtn"
+                :style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"
+                v-if="wishLampItem.lampState==2"></image>
 
-                <!--<image class="lampButtonIcon" :src="wishLampDisableBtn" placeholder="native://wish_lamp_disable_btn"-->
-                <!--:style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"-->
-                <!--v-if="wishLampItem.lampState==3"></image>-->
+                <image class="lampButtonIcon" :src="wishLampDisableBtn"
+                :style="{height:lampButtonBgHeight,width:lampButtonIconWidth}"
+                v-if="wishLampItem.lampState==3"></image>
 
 
                 <div style="position: absolute;top: 0;justify-content: center;align-items: center;width: 132px;height: 46px"

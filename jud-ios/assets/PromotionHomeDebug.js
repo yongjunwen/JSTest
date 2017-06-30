@@ -371,7 +371,7 @@
 
 	                        var wishLampDict = {
 	                            'itemStyle': '2',
-	                            'btmLogo': "//m.360buyimg.com/babel/jfs/t6646/24/1637270202/1304/ad397e28/5955dc45N77838942.png",
+	                            'btmLogo': "//m.360buyimg.com/babel/jfs/t5728/264/4826994645/1304/ad397e28/5955ef60Nb89e8bb1.png",
 	                            'tabName': "心愿灯",
 	                            'wishLampCopy': _this.wishLampCopy,
 	                            'brandList': _wishLamps
@@ -1093,8 +1093,8 @@
 	    data: function data() {
 	        return {
 	            seeContent: '进去看看',
-	            curveImage: '//m.360buyimg.com/babel/jfs/t5800/210/4884712543/1811/4efb2ba7/5955dc46N5f017e2a.png',
-	            seperateicon: '//m.360buyimg.com/babel/jfs/t5722/242/4775015307/135/9145b873/5955dc46N591b593a.png',
+	            curveImage: '//m.360buyimg.com/babel/jfs/t5638/20/4871202095/1811/4efb2ba7/5955ef60N5ac4eed6.png',
+	            seperateicon: '//m.360buyimg.com/babel/jfs/t6490/199/1645189729/135/9145b873/5955ef67N4f926f0c.png',
 	            brandRootHeight: 0,
 	            brandItemHeight: 0,
 	            brandItemWidth: 0,
@@ -1104,13 +1104,13 @@
 	            brandItemBottomImageHeight: 0,
 
 	            brandItemCurveHeight: 0,
-	            seeButtonImage: '//m.360buyimg.com/babel/jfs/t6592/35/1692422389/7372/a1b66fb2/5955dc48N17f569c8.png',
+	            seeButtonImage: '//m.360buyimg.com/babel/jfs/t5662/334/4770791554/7372/a1b66fb2/5955ef67N39bd42b6.png',
 	            topContentText: '[加入我们，创建未来]',
 	            topName: '',
 	            topContent: '',
 
-	            brandtexticonleft: '/img/zs_d_icon_06_left.png',
-	            brandtexticonright: '/img/zs_d_icon_06_right.png'
+	            brandtexticonleft: '//m.360buyimg.com/babel/jfs/t6313/335/1603428735/78/1450f9a0/5955ef67N18365aa8.png',
+	            brandtexticonright: '//m.360buyimg.com/babel/jfs/t6322/356/1632725617/81/894e25e6/5955ef67N0b8760ff.png'
 	        };
 	    },
 	    props: {
@@ -1834,7 +1834,7 @@
 
 	            cardTitle: "心愿灯",
 	            seperateicon: '/img/zs_d_icon_05.png',
-	            wishLampBg: "//m.360buyimg.com/babel/jfs/t5857/297/4807402191/31577/8df354a9/5955dc48Nba2778aa.png",
+	            wishLampBg: "//m.360buyimg.com/babel/jfs/t6325/144/1674068818/31577/8df354a9/5955ef67N58da0fb9.png",
 	            tipContent: '30天内努力为你备好，请持续关注',
 	            bottomTipContent: '每天仅有有1次许愿机会'
 	        };
@@ -2151,13 +2151,13 @@
 	            brandLogoImageOpacity: 1,
 
 	            //                灯笼背景图片
-	            wishLampNomalIcon: "//m.360buyimg.com/babel/jfs/t5635/52/4786133457/4170/f05595f2/5955dc48Ncbf6c23f.png",
-	            wishLampSelectIcon: "//m.360buyimg.com/babel/jfs/t6412/42/1691364926/11476/f960b54d/5955dc47Ne05dad91.png",
-	            wishLampDisableIcon: "//m.360buyimg.com/babel/jfs/t5599/15/4879910482/3633/a1cf0ca8/5955dc3bN76fd8ce4.png",
+	            wishLampNomalIcon: "//m.360buyimg.com/babel/jfs/t6283/90/1710589547/4170/f05595f2/5955ef67N01247005.png",
+	            wishLampSelectIcon: "//m.360buyimg.com/babel/jfs/t5734/71/4887426022/11476/f960b54d/5955ef60Nbaa5476a.png",
+	            wishLampDisableIcon: "//m.360buyimg.com/babel/jfs/t6649/23/1672553167/3633/a1cf0ca8/5955ef66N0bced493.png",
 
-	            wishLampNomalBtn: "//m.360buyimg.com/babel/jfs/t6160/201/1672815571/1722/af53e8f/5955dc48N0091f2dd.png",
-	            wishLampSelectBtn: "//m.360buyimg.com/babel/jfs/t5785/61/4795357623/1784/14121242/5955dc48N5e5ee975.png",
-	            wishLampDisableBtn: "//m.360buyimg.com/babel/jfs/t6619/189/1654163812/1746/dea13798/5955dc48N7f72158c.png",
+	            wishLampNomalBtn: "//m.360buyimg.com/babel/jfs/t5650/5/4839640198/1722/af53e8f/5955ef67N366af7dd.png",
+	            wishLampSelectBtn: "//m.360buyimg.com/babel/jfs/t6241/349/1673929077/1784/14121242/5955ef67N4cd4a225.png",
+	            wishLampDisableBtn: "//m.360buyimg.com/babel/jfs/t6244/272/1659852721/1746/dea13798/5955ef67Nc4c221f7.png",
 
 	            tipContent: '30天内努力为你备好，请持续关注',
 	            isShowSelect: false,
@@ -2289,16 +2289,37 @@
 	      height: _vm.lampIconHeight,
 	      width: _vm.lampItemWidth
 	    }
-	  }, [_c('image', {
+	  }, [(_vm.wishLampItem.lampState == 1) ? _c('image', {
 	    staticClass: ["lampIcon"],
 	    style: {
 	      height: _vm.lampIconHeight,
 	      width: _vm.lampItemWidth
 	    },
 	    attrs: {
-	      "src": _vm.lampPlaceHolderIcon
+	      "src": _vm.wishLampNomalIcon,
+	      "placeholder": "native://wish_lamp_normal_icon"
 	    }
-	  }), _c('div', {
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 2) ? _c('image', {
+	    staticClass: ["lampSelectIcon"],
+	    style: {
+	      height: _vm.lampIconHeight,
+	      width: _vm.lampItemWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampSelectIcon,
+	      "placeholder": "native://wish_lamp_select_icon"
+	    }
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 3) ? _c('image', {
+	    staticClass: ["lampIcon"],
+	    style: {
+	      height: _vm.lampIconHeight,
+	      width: _vm.lampItemWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampDisableIcon,
+	      "placeholder": "native://wish_lamp_disable_icon"
+	    }
+	  }) : _vm._e(), _c('div', {
 	    staticStyle: {
 	      position: "absolute",
 	      top: "0",
@@ -2325,16 +2346,34 @@
 	      height: _vm.lampButtonBgHeight,
 	      width: _vm.lampItemWidth
 	    }
-	  }, [_c('image', {
+	  }, [(_vm.wishLampItem.lampState == 1) ? _c('image', {
 	    staticClass: ["lampButtonIcon"],
 	    style: {
 	      height: _vm.lampButtonBgHeight,
 	      width: _vm.lampButtonIconWidth
 	    },
 	    attrs: {
-	      "src": _vm.wishLampBtnIcon
+	      "src": _vm.wishLampNomalBtn
 	    }
-	  }), _c('div', {
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 2) ? _c('image', {
+	    staticClass: ["lampButtonIcon"],
+	    style: {
+	      height: _vm.lampButtonBgHeight,
+	      width: _vm.lampButtonIconWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampSelectBtn
+	    }
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 3) ? _c('image', {
+	    staticClass: ["lampButtonIcon"],
+	    style: {
+	      height: _vm.lampButtonBgHeight,
+	      width: _vm.lampButtonIconWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampDisableBtn
+	    }
+	  }) : _vm._e(), _c('div', {
 	    staticStyle: {
 	      position: "absolute",
 	      top: "0",
