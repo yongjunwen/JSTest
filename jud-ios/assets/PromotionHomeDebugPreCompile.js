@@ -1078,13 +1078,14 @@
 	//
 	//
 	//
+	//
 
 	exports.default = {
 	    data: function data() {
 	        return {
 	            seeContent: '进去看看',
-	            curveImage: 'promotion_rectagle_icon.png',
-	            seperateicon: 'zs_d_icon_05.png',
+	            curveImage: '/img/promotion_rectagle_icon.png',
+	            seperateicon: '/img/promotion_seperation_icon.png',
 	            brandRootHeight: 0,
 	            brandItemHeight: 0,
 	            brandItemWidth: 0,
@@ -1496,8 +1497,7 @@
 	      width: _vm.brandItemWidth
 	    },
 	    attrs: {
-	      "src": _vm.curveImage,
-	      "placeholder": "native://promotion_rectagle_icon"
+	      "src": _vm.curveImage
 	    }
 	  })])]), _c('image', {
 	    staticClass: ["bottom-image"],

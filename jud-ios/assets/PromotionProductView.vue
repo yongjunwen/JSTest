@@ -30,8 +30,9 @@
                 </div>
 
                 <!--弧度样式视图图层-->
+                <!--placeholder="native://promotion_rectagle_icon" 暂且未要占位模式-->
                 <div class="curveImageBg" :style="{height:brandItemCurveHeight,width:brandItemWidth}">
-                    <image class="curveImage" :src="curveImage" placeholder="native://promotion_rectagle_icon"
+                    <image class="curveImage" :src="curveImage"
                            :style="{height:brandItemCurveHeight,width:brandItemWidth}"></image>
                 </div>
             </div>
@@ -46,8 +47,9 @@
             <div class="seeDiv"
                  @click="toSeeClick()">
                 <!--<text class="seeText">{{seeContent}}</text>-->
+                <!-- placeholder='native://see_button'-->
                 <image style="width:216px;height: 76px ;"
-                       :src="seeButtonImage" placeholder='native://see_button'></image>
+                       :src="seeButtonImage"></image>
             </div>
 
         </div>
@@ -211,8 +213,8 @@
         data: function () {
             return {
                 seeContent: '进去看看',
-                curveImage: 'promotion_rectagle_icon.png',
-                seperateicon: 'zs_d_icon_05.png',
+                curveImage: '/img/promotion_rectagle_icon.png',
+                seperateicon: '/img/promotion_seperation_icon.png',
                 brandRootHeight: 0,
                 brandItemHeight: 0,
                 brandItemWidth: 0,
