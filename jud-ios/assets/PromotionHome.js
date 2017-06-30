@@ -249,6 +249,7 @@
 	        bottomTabImageHeight: 0,
 	        bottomTabImageWidth: 0,
 	        buttonBgColor: null,
+	        borderRadius: 0,
 
 	        wishLampCopy: null,
 	        //            bgImage: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496657297580&di=65b23dc612d8be5a0c5d1ec3677e3878&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F18%2F48%2F27%2F5627c379d629c_1024.jpg",
@@ -370,7 +371,7 @@
 
 	                        var wishLampDict = {
 	                            'itemStyle': '2',
-	                            'btmLogo': "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg",
+	                            'btmLogo': "//m.360buyimg.com/babel/jfs/t5632/272/4808200280/1304/ad397e28/59560469N93beeaea.png",
 	                            'tabName': "心愿灯",
 	                            'wishLampCopy': _this.wishLampCopy,
 	                            'brandList': _wishLamps
@@ -476,6 +477,7 @@
 	        this.bottomTabHeight = _PromotionUtil2.default.scale(this) * 90;
 	        this.bottomTextWidth = _PromotionUtil2.default.scale(this) * 130;
 	        this.bottomTabImageHeight = _PromotionUtil2.default.scale(this) * 70;
+	        this.borderRadius = this.bottomTabHeight / 2;
 	        this.bottomTabImageWidth = _PromotionUtil2.default.scale(this) * 100;
 
 	        var _nSpace = 55;
@@ -800,7 +802,9 @@
 	  },
 	  "wishText": {
 	    "fontSize": 25,
-	    "color": "#333333"
+	    "color": "#333333",
+	    "lines": 1,
+	    "textOverflow": "ellipsis"
 	  },
 	  "seeDiv": {
 	    "marginTop": 10,
@@ -829,10 +833,11 @@
 	  "brandtext": {
 	    "fontSize": 30,
 	    "color": "#ffffff",
-	    "maxWidth": 448,
 	    "textAlign": "center",
 	    "verticalAlign": "center",
-	    "paddingTop": 0
+	    "paddingTop": 0,
+	    "lines": 1,
+	    "textOverflow": "ellipsis"
 	  },
 	  "brandtexticonleft": {
 	    "position": "absolute",
@@ -1078,13 +1083,18 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
 	    data: function data() {
 	        return {
 	            seeContent: '进去看看',
-	            curveImage: 'promotion_rectagle_icon.png',
-	            seperateicon: 'zs_d_icon_05.png',
+	            curveImage: '//m.360buyimg.com/babel/jfs/t5920/13/3691157836/1811/4efb2ba7/59560469Nc370f630.png',
+	            seperateicon: '//m.360buyimg.com/babel/jfs/t5806/164/4895064585/135/9145b873/59560469N68e55406.png',
 	            brandRootHeight: 0,
 	            brandItemHeight: 0,
 	            brandItemWidth: 0,
@@ -1094,15 +1104,13 @@
 	            brandItemBottomImageHeight: 0,
 
 	            brandItemCurveHeight: 0,
-	            seeButtonImage: '/img/see_button.png',
+	            seeButtonImage: '//m.360buyimg.com/babel/jfs/t5794/62/4828721250/7372/a1b66fb2/59560469Nac52ed65.png',
 	            topContentText: '[加入我们，创建未来]',
 	            topName: '',
 	            topContent: '',
 
-	            //                brandtexticonleft: '/img/zs_d_icon_06_left.png',
-	            //                brandtexticonright: '/img/zs_d_icon_06_right.png',
-	            brandtexticonleft: 'https://h5.m.jd.com/dev/36dSd8yihgQ6pgqyBubDq6e8yPtM/pages/76035/img/zs_d_icon_06_left.png',
-	            brandtexticonright: 'https://h5.m.jd.com/dev/36dSd8yihgQ6pgqyBubDq6e8yPtM/pages/76035/img/zs_d_icon_06_right.png'
+	            brandtexticonleft: '//m.360buyimg.com/babel/jfs/t6163/266/1690495517/78/1450f9a0/59560469Nb221b8f2.png',
+	            brandtexticonright: '//m.360buyimg.com/babel/jfs/t5812/342/4862767994/81/894e25e6/59560469N9369d31c.png'
 	        };
 	    },
 	    props: {
@@ -1496,8 +1504,7 @@
 	      width: _vm.brandItemWidth
 	    },
 	    attrs: {
-	      "src": _vm.curveImage,
-	      "placeholder": "native://promotion_rectagle_icon"
+	      "src": _vm.curveImage
 	    }
 	  })])]), _c('image', {
 	    staticClass: ["bottom-image"],
@@ -1619,16 +1626,24 @@
 	  "tipContent": {
 	    "marginTop": 34,
 	    "color": "#ffffff",
-	    "fontSize": 26
+	    "fontSize": 26,
+	    "lines": 1,
+	    "textOverflow": "ellipsis"
 	  },
 	  "contentDiv": {
 	    "position": "absolute",
 	    "top": 0
 	  },
+	  "bottom": {
+	    "position": "absolute",
+	    "bottom": 80
+	  },
 	  "bottomTipContent": {
-	    "marginTop": 40,
+	    "marginTop": 1,
 	    "color": "#FFFFFF",
-	    "fontSize": 22
+	    "fontSize": 22,
+	    "lines": 1,
+	    "textOverflow": "ellipsis"
 	  }
 	}
 
@@ -1794,6 +1809,17 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	var communicate = jud.requireModule('communicate');
 	exports.default = {
@@ -1817,8 +1843,8 @@
 	            marginTop3: 0,
 
 	            cardTitle: "心愿灯",
-	            seperateicon: '/img/zs_d_icon_05.png',
-	            wishLampBg: "/img/wish_lamp_bg_image.png",
+	            seperateicon: '//m.360buyimg.com/babel/jfs/t5806/164/4895064585/135/9145b873/59560469N68e55406.png',
+	            wishLampBg: "//m.360buyimg.com/babel/jfs/t5803/211/4921072235/31577/8df354a9/59560469N1e672e65.png",
 	            tipContent: '30天内努力为你备好，请持续关注',
 	            bottomTipContent: '每天仅有有1次许愿机会'
 	        };
@@ -2111,6 +2137,8 @@
 	//
 
 	var modal = jud.requireModule('modal');
+
+	var mta = jud.requireModule('mta');
 	exports.default = {
 	    //        vue子视图引用的话data要写成如下方法样式
 	    data: function data() {
@@ -2133,13 +2161,13 @@
 	            brandLogoImageOpacity: 1,
 
 	            //                灯笼背景图片
-	            wishLampNomalIcon: "/img/wish_lamp_normal_icon.png",
-	            wishLampSelectIcon: "/img/wish_lamp_select_icon.png",
-	            wishLampDisableIcon: "/img/wish_lamp_disable_icon.png",
+	            wishLampNomalIcon: "//m.360buyimg.com/babel/jfs/t6190/260/1684733963/4170/f05595f2/59560469Na3e20d14.png",
+	            wishLampSelectIcon: "//m.360buyimg.com/babel/jfs/t6694/40/1711069630/11476/f960b54d/59560469N6d18000c.png",
+	            wishLampDisableIcon: "//m.360buyimg.com/babel/jfs/t5923/21/3659823436/3633/a1cf0ca8/59560469N1c6e055a.png",
 
-	            wishLampNomalBtn: "/img/wish_lamp_normal_btn.png",
-	            wishLampSelectBtn: "/img/wish_lamp_select_btn.png",
-	            wishLampDisableBtn: "/img/wish_lamp_disable_btn.png",
+	            wishLampNomalBtn: "//m.360buyimg.com/babel/jfs/t5800/83/4860746123/1722/af53e8f/59560469Nfa416c98.png",
+	            wishLampSelectBtn: "//m.360buyimg.com/babel/jfs/t6097/91/3595167729/1784/14121242/59560469Nf823a352.png",
+	            wishLampDisableBtn: "//m.360buyimg.com/babel/jfs/t6670/335/1672543657/1746/dea13798/59560462Nace32dbe.png",
 
 	            tipContent: '30天内努力为你备好，请持续关注',
 	            isShowSelect: false,
@@ -2271,16 +2299,37 @@
 	      height: _vm.lampIconHeight,
 	      width: _vm.lampItemWidth
 	    }
-	  }, [_c('image', {
+	  }, [(_vm.wishLampItem.lampState == 1) ? _c('image', {
 	    staticClass: ["lampIcon"],
 	    style: {
 	      height: _vm.lampIconHeight,
 	      width: _vm.lampItemWidth
 	    },
 	    attrs: {
-	      "src": _vm.lampPlaceHolderIcon
+	      "src": _vm.wishLampNomalIcon,
+	      "placeholder": "native://wish_lamp_normal_icon"
 	    }
-	  }), _c('div', {
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 2) ? _c('image', {
+	    staticClass: ["lampSelectIcon"],
+	    style: {
+	      height: _vm.lampIconHeight,
+	      width: _vm.lampItemWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampSelectIcon,
+	      "placeholder": "native://wish_lamp_select_icon"
+	    }
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 3) ? _c('image', {
+	    staticClass: ["lampIcon"],
+	    style: {
+	      height: _vm.lampIconHeight,
+	      width: _vm.lampItemWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampDisableIcon,
+	      "placeholder": "native://wish_lamp_disable_icon"
+	    }
+	  }) : _vm._e(), _c('div', {
 	    staticStyle: {
 	      position: "absolute",
 	      top: "0",
@@ -2307,16 +2356,34 @@
 	      height: _vm.lampButtonBgHeight,
 	      width: _vm.lampItemWidth
 	    }
-	  }, [_c('image', {
+	  }, [(_vm.wishLampItem.lampState == 1) ? _c('image', {
 	    staticClass: ["lampButtonIcon"],
 	    style: {
 	      height: _vm.lampButtonBgHeight,
 	      width: _vm.lampButtonIconWidth
 	    },
 	    attrs: {
-	      "src": _vm.wishLampBtnIcon
+	      "src": _vm.wishLampNomalBtn
 	    }
-	  }), _c('div', {
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 2) ? _c('image', {
+	    staticClass: ["lampButtonIcon"],
+	    style: {
+	      height: _vm.lampButtonBgHeight,
+	      width: _vm.lampButtonIconWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampSelectBtn
+	    }
+	  }) : _vm._e(), (_vm.wishLampItem.lampState == 3) ? _c('image', {
+	    staticClass: ["lampButtonIcon"],
+	    style: {
+	      height: _vm.lampButtonBgHeight,
+	      width: _vm.lampButtonIconWidth
+	    },
+	    attrs: {
+	      "src": _vm.wishLampDisableBtn
+	    }
+	  }) : _vm._e(), _c('div', {
 	    staticStyle: {
 	      position: "absolute",
 	      top: "0",
@@ -2358,8 +2425,7 @@
 	      width: _vm.wishRootWidth
 	    },
 	    attrs: {
-	      "src": _vm.wishLampBg,
-	      "placeholder": "native://wish_lamp_bg_placeholder"
+	      "src": _vm.wishLampBg
 	    }
 	  })]), _c('div', {
 	    staticClass: ["contentDiv"]
@@ -2468,7 +2534,7 @@
 	    on: {
 	      "changeLampState": _vm.changeLampStateEvent
 	    }
-	  }) : _vm._e()], 1)]), _c('div', {
+	  }) : _vm._e()], 1)])]), _c('div', {
 	    staticClass: ["bottom"],
 	    staticStyle: {
 	      width: "610px"
@@ -2483,7 +2549,7 @@
 	    }
 	  }, [_c('text', {
 	    staticClass: ["bottomTipContent"]
-	  }, [_vm._v(_vm._s(_vm.bottomTipContent))])])])])])
+	  }, [_vm._v(_vm._s(_vm.bottomTipContent))])])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
@@ -2559,7 +2625,11 @@
 	      height: _vm.bottomTabHeight
 	    }
 	  }, [_c('div', {
-	    staticClass: ["bottomTabContentBg"]
+	    staticClass: ["bottomTabContentBg"],
+	    style: {
+	      height: _vm.bottomTabHeight,
+	      borderRadius: _vm.borderRadius
+	    }
 	  }, _vm._l((_vm.productList), function(itemProduct, index) {
 	    return _c('div', {
 	      staticClass: ["bottomTextBgDiv"],
