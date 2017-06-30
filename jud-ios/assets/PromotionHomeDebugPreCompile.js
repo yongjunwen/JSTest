@@ -1794,6 +1794,7 @@
 	//
 	//
 	//
+	//
 
 	var communicate = jud.requireModule('communicate');
 	exports.default = {
@@ -2360,8 +2361,7 @@
 	      width: _vm.wishRootWidth
 	    },
 	    attrs: {
-	      "src": _vm.wishLampBg,
-	      "placeholder": "native://wish_lamp_bg_placeholder"
+	      "src": _vm.wishLampBg
 	    }
 	  })]), _c('div', {
 	    staticClass: ["contentDiv"]

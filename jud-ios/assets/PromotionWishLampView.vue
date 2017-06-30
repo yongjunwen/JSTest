@@ -4,8 +4,9 @@
     <div class="rooDiv" :style="{height:wishRootHeight,width:wishRootWidth}">
         <!--todo:背景图片待添加-->
         <div class="bgImageDiv">
+            <!-- placeholder="native://wish_lamp_bg_placeholder" 暂时放弃-->
             <image class="bgImage" :src="wishLampBg" :style="{height:wishRootHeight,width:wishRootWidth}"
-                   placeholder="native://wish_lamp_bg_placeholder"></image>
+                  ></image>
         </div>
         <!--内容显示区域-->
         <div class="contentDiv">
