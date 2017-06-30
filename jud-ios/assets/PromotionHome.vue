@@ -214,7 +214,7 @@
 
                                 var wishLampDict = {
                                     'itemStyle': '2',
-                                    'btmLogo': "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496922709466&di=6d896346a90c4aa1c9bc6cbf81686781&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F11%2F30%2F48%2F30p58PICNc5.jpg",
+                                    'btmLogo': "/img/wish_lamp_bottom_icon.png",
                                     'tabName': "心愿灯",
                                     'wishLampCopy': _this.wishLampCopy,
                                     'brandList': _wishLamps
