@@ -112,6 +112,7 @@
 <script>
     const modal = jud.requireModule('modal')
     import Util from './PromotionUtil.js'
+    var mta = jud.requireModule('mta');
     export default {
 //        vue子视图引用的话data要写成如下方法样式
         data: function () {

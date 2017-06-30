@@ -2111,6 +2111,8 @@
 	//
 
 	var modal = jud.requireModule('modal');
+
+	var mta = jud.requireModule('mta');
 	exports.default = {
 	    //        vue子视图引用的话data要写成如下方法样式
 	    data: function data() {
